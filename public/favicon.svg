@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Ícono original del Equipo LexCode (GPL-3.0-or-later) -->
+  <path d="M32 4 8 13v17c0 15 10.2 26.4 24 30 13.8-3.6 24-15 24-30V13L32 4Z" fill="#0f766e" stroke="#5eead4" stroke-width="3" stroke-linejoin="round"/>
+  <path d="m24 24-7 8 7 8M40 24l7 8-7 8" fill="none" stroke="#ecfeff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="m35 21-6 22" stroke="#fbbf24" stroke-width="4" stroke-linecap="round"/>
+</svg>
