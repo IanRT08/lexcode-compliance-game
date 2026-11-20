@@ -45,6 +45,7 @@ export default function PrivacyGateModal({ open, onClose, onAccept }) {
       open={open}
       onClose={onClose}
       icon={view === 'simple' ? Lock : ScrollText}
+      kicker="Paso previo obligatorio · LFPDPPP"
       title={view === 'simple' ? 'Aviso de Privacidad Simplificado' : 'Aviso de Privacidad Integral'}
       size={view === 'simple' ? 'md' : 'lg'}
       footer={
@@ -73,26 +74,26 @@ export default function PrivacyGateModal({ open, onClose, onAccept }) {
           <button
             type="button"
             onClick={() => setView('full')}
-            className="inline-flex items-center gap-1.5 text-sm font-medium text-brand-300 underline-offset-4 hover:underline"
+            className="btn-outline text-sm"
           >
             <ScrollText className="size-4" aria-hidden="true" /> Leer el Aviso de Privacidad Integral
           </button>
 
-          <label className="flex cursor-pointer items-start gap-3 rounded-xl border border-desk-600 bg-desk-800 p-3.5">
+          <label className="flex cursor-pointer items-start gap-3 rounded border border-sage bg-[color-mix(in_oklab,var(--surface-paper)_80%,var(--surface-panel))] p-3.5">
             <input
               type="checkbox"
               checked={accepted}
               onChange={(e) => setAccepted(e.target.checked)}
-              className="mt-0.5 size-4 shrink-0 accent-brand-500"
+              className="mt-0.5 size-4 shrink-0 accent-[var(--brand-primary)]"
             />
-            <span className="text-sm text-ink-300">
-              He leído el Aviso de Privacidad y <strong className="text-ink-100">otorgo mi consentimiento expreso</strong>{' '}
+            <span className="text-sm text-app">
+              He leído el Aviso de Privacidad y <strong className="font-semibold">otorgo mi consentimiento expreso</strong>{' '}
               para que mi alias se guarde localmente en este navegador con las finalidades descritas.
             </span>
           </label>
 
           <div>
-            <label htmlFor={nameId} className="mb-1.5 block text-sm font-medium text-ink-100">
+            <label htmlFor={nameId} className="mb-1.5 block text-sm font-semibold text-app">
               Alias para tu credencial de Oficial de Cumplimiento
             </label>
             <input
@@ -107,11 +108,11 @@ export default function PrivacyGateModal({ open, onClose, onAccept }) {
               onBlur={() => setTouched(true)}
               aria-invalid={touched && accepted && !nameValid}
               aria-describedby={errorId}
-              className="w-full rounded-lg border border-desk-600 bg-desk-950 px-3.5 py-2.5 text-sm text-ink-100 placeholder:text-ink-500 focus:border-brand-400 disabled:opacity-50"
+              className="w-full rounded border-[1.5px] border-olive-2 bg-white/60 px-3 py-2 font-mono text-sm text-app placeholder:text-olive-2 focus:border-olive disabled:opacity-50"
             />
-            <p id={errorId} className="mt-1.5 text-xs text-ink-500">
+            <p id={errorId} className="mt-1.5 text-xs text-olive">
               {touched && accepted && !nameValid ? (
-                <span className="text-bad">
+                <span className="font-semibold text-crimson">
                   Escribe entre {NAME_MIN} y {NAME_MAX} caracteres.
                 </span>
               ) : (

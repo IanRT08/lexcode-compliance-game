@@ -40,7 +40,7 @@ export default function DeleteDataDialog({ open, onClose, onConfirm, hasData }) 
           </p>
         </div>
       ) : (
-        <p className="text-sm text-ink-300">
+        <p className="text-sm text-app">
           No hay datos personales guardados en este navegador. El juego solo almacena información después de que
           aceptas el aviso de privacidad.
         </p>

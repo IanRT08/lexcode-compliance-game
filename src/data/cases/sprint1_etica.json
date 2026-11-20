@@ -1,1 +1,500 @@
-[]
+[
+  {
+    "id": "U1_C01",
+    "unidad": 1,
+    "subtema": "Ética en el desarrollo de software: moral, ética y normatividad",
+    "titulo": "Liberación de NovaPay 2.4 con un defecto conocido",
+    "remitente": "Rodrigo Salas — Director Comercial",
+    "contexto": "Banco Solaris, el cliente más grande de NovaByte, espera hoy a las 18:00 la versión 2.4 de NovaPay, la app de pagos que integra en su banca móvil.\n\nEsta mañana QA reportó un defecto en el cálculo de mensualidades sin intereses: el redondeo cobra hasta $1.00 MXN de más en cada mensualidad. Rodrigo exige liberar a tiempo. Luis, el tech lead, opina que «no hay ninguna ley que diga cómo redondear, así que no es ilegal».\n\nComo Oficial de Cumplimiento, tu firma es necesaria para el pase a producción.",
+    "pregunta": "¿Qué dictamen emites sobre el pase a producción de la versión 2.4?",
+    "pistaNormativa": "Que una conducta no esté prohibida por la ley no la vuelve correcta. Revisa en el Manual la diferencia entre moral, ética y normatividad, y los principios de calidad y honestidad de los códigos ACM y ACM/IEEE-CS.",
+    "manualRefs": ["U1_M01", "U1_M03", "U1_M04", "U1_M05", "U1_M06"],
+    "evidencias": [
+      {
+        "tipo": "correo",
+        "de": "rodrigo.salas@novabyte.mx",
+        "para": "cumplimiento@novabyte.mx",
+        "cc": "luis.cardenas@novabyte.mx; mariana.ortega@novabyte.mx",
+        "fecha": "Lun 16 nov 2026, 09:14",
+        "asunto": "URGENTE: firma para liberar NovaPay 2.4 hoy",
+        "cuerpo": "Hola:\n\nNecesito tu firma para liberar la 2.4 hoy a las 18:00. Banco Solaris ya anunció la función de mensualidades a sus clientes y no podemos fallarles.\n\nSé que QA encontró un detalle con el redondeo, pero son centavos. Luis ya confirmó que no hay ninguna ley que lo prohíba y lo arreglamos en la 2.5 sin hacer ruido.\n\nSi movemos la fecha, el banco puede aplicar la penalización del contrato ($350,000 MXN).\n\nSaludos,\nRodrigo",
+        "adjuntos": ["QA-2291_reporte.pdf"]
+      },
+      {
+        "tipo": "documento",
+        "nombreArchivo": "QA-2291",
+        "membrete": "NovaByte · Aseguramiento de Calidad",
+        "titulo": "Reporte de defecto QA-2291",
+        "metadatos": {
+          "Severidad": "Alta",
+          "Módulo": "installments",
+          "Reproducible": "Sí",
+          "Impacto estimado": "≈18,000 compras a meses por mes"
+        },
+        "secciones": [
+          {
+            "titulo": "Descripción",
+            "texto": "En compras divididas en mensualidades, cada pago se redondea hacia arriba al peso completo. La suma de las mensualidades supera el precio de la compra."
+          },
+          {
+            "titulo": "Resultado esperado vs. obtenido",
+            "texto": "Compra de $1,000.00 a 7 meses.\nEsperado: 6 pagos de $142.86 y uno de $142.84 (total $1,000.00).\nObtenido: 7 pagos de $143.00 (total $1,001.00)."
+          },
+          {
+            "titulo": "Comentario del tech lead",
+            "texto": "«No es ilegal, ninguna norma regula cómo redondeamos. Lo corregimos en la siguiente versión.» — L. Cárdenas"
+          }
+        ]
+      },
+      {
+        "tipo": "codigo",
+        "nombreArchivo": "src/payments/installments.js",
+        "lenguaje": "javascript",
+        "contenido": "// installments.js — cálculo de mensualidades sin intereses\n// Importes en centavos para evitar errores de punto flotante.\n\nexport function splitPayment(totalCents, months) {\n  // Redondeamos cada mensualidad hacia arriba al peso completo\n  // \"para no perder centavos\" en la conciliación.\n  const monthly = Math.ceil(totalCents / months / 100) * 100;\n  return Array(months).fill(monthly);\n}\n\n// Ejemplo: splitPayment(100000, 7)\n// => [14300, 14300, 14300, 14300, 14300, 14300, 14300]\n// Total cobrado: 100100 centavos ($1,001.00) por una compra de $1,000.00"
+      }
+    ],
+    "opciones": [
+      {
+        "id": "opt_1",
+        "tipo": "aprobar",
+        "etiqueta": "Aprobar el pase a producción: ninguna ley regula el redondeo y el cliente espera la fecha comprometida.",
+        "marcoEtico": "egoismo",
+        "modeloEtico": "Legalismo mínimo y egoísmo ético: «si no es ilegal, es aceptable».",
+        "impacto": { "budget": 10, "ethics": -30, "legal": -15 },
+        "esCorrecta": false,
+        "retroalimentacion": "Confundes legalidad con ética. La normatividad marca el mínimo exigible con sanción; la ética profesional exige más: no liberar software que sabes que perjudica a las personas usuarias. El Código ACM/IEEE-CS pide aprobar software solo si hay fundamento para creer que cumple su especificación (1.03), y el Código ACM exige calidad (2.1) y evaluar los riesgos (2.5). Además, cobrar cantidades no pactadas expone a NovaByte y al banco a reclamaciones de los consumidores.",
+        "fundamento": ["ACM/IEEE-CS SE Code 1.03", "ACM Code 2.1", "ACM Code 2.5"]
+      },
+      {
+        "id": "opt_2",
+        "tipo": "remediar",
+        "etiqueta": "Liberar la 2.4 con el módulo de mensualidades desactivado, corregir y probar el redondeo antes de activarlo, e informar por escrito al banco del defecto y de la nueva fecha.",
+        "marcoEtico": "deontologia",
+        "modeloEtico": "Deontología profesional: deber de calidad y de transparencia con el cliente.",
+        "impacto": { "budget": -5, "ethics": 15, "legal": 10 },
+        "esCorrecta": true,
+        "retroalimentacion": "Dictamen correcto. Cumples la fecha con lo que sí funciona y retienes lo defectuoso hasta corregirlo. Informar al cliente con honestidad aplica el principio 1.3 del Código ACM (ser honesto y digno de confianza) y el 1.04 del Código ACM/IEEE-CS (revelar a quien corresponda los riesgos conocidos del software). Además, la comunicación oportuna permite negociar la penalización en lugar de esconder el problema.",
+        "fundamento": ["ACM Code 1.3", "ACM/IEEE-CS SE Code 1.04", "ACM Code 2.1"]
+      },
+      {
+        "id": "opt_3",
+        "tipo": "aprobar",
+        "etiqueta": "Liberar hoy y corregir en silencio en la 2.5; reembolsar solo a quien presente una queja.",
+        "marcoEtico": "utilitarismo",
+        "modeloEtico": "Utilitarismo mal aplicado: suma los beneficios de la empresa e ignora el daño a miles de usuarios.",
+        "impacto": { "budget": 5, "ethics": -25, "legal": -20 },
+        "esCorrecta": false,
+        "retroalimentacion": "Un cálculo utilitarista honesto debe contar a todas las personas afectadas: miles de cobros indebidos pesan más que una fecha de entrega. Corregir en silencio y reembolsar solo a quien reclame traslada el costo a quienes no lo notan; viola la honestidad (ACM 1.3) y el deber de revelar riesgos (ACM/IEEE-CS 1.04). Si se descubre, el daño reputacional y las reclamaciones serán mayores que la penalización.",
+        "fundamento": ["ACM Code 1.3", "ACM/IEEE-CS SE Code 1.04"]
+      }
+    ],
+    "aprendizaje": "Moral: convicciones personales o de un grupo sobre lo bueno y lo malo («a mí no me parece grave»). Ética: reflexión racional sobre esas conductas; en la profesión se concreta en códigos como los de ACM e IEEE. Normatividad: reglas jurídicas obligatorias cuyo incumplimiento tiene una sanción. Que algo no esté prohibido no lo vuelve correcto: la ley es el mínimo y la ética profesional es el estándar."
+  },
+  {
+    "id": "U1_C02",
+    "unidad": 1,
+    "subtema": "Dilemas éticos: ciberacoso laboral",
+    "titulo": "Memes en #equipo-backend",
+    "remitente": "Daniela Ruiz — Desarrolladora junior (mensaje directo)",
+    "contexto": "Daniela se incorporó hace tres semanas. Desde entonces, en el canal del equipo circulan memes sobre su acento, apodos como «la de servicio social» y capturas de su código con burlas. Óscar, desarrollador senior, inicia la mayoría; otros reaccionan con risas.\n\nHoy Daniela te escribió en privado: dejó de hablar en las juntas diarias y piensa renunciar. NovaByte tiene un Código de Conducta con una política de prevención de violencia laboral, pero nadie la ha aplicado.",
+    "pregunta": "¿Cómo atiendes la situación?",
+    "pistaNormativa": "El ciberacoso entre colegas es una falta ética grave que la empresa está obligada a prevenir y atender. Revisa la NOM-035-STPS-2018 y el protocolo del Código de Conducta de NovaByte.",
+    "manualRefs": ["U1_M11", "U1_M05", "U1_M09"],
+    "evidencias": [
+      {
+        "tipo": "chat",
+        "canal": "equipo-backend",
+        "plataforma": "Chat corporativo",
+        "mensajes": [
+          {
+            "autor": "Óscar Treviño",
+            "rol": "Dev senior",
+            "hora": "09:12",
+            "texto": "Buenos días, equipo. Ya llegó el PR de «la de servicio social», prepárense para reír.",
+            "adjunto": "captura_pr_471.png",
+            "reacciones": "8 reacciones de risa"
+          },
+          {
+            "autor": "Iván Mora",
+            "rol": "Dev",
+            "hora": "09:13",
+            "texto": "jajaja otra vez puso los nombres de variables en español"
+          },
+          {
+            "autor": "Óscar Treviño",
+            "rol": "Dev senior",
+            "hora": "09:15",
+            "texto": "Meme del día: «Cuando Daniela explica su código en la daily».",
+            "adjunto": "meme_acento.jpg",
+            "reacciones": "11 reacciones de risa"
+          },
+          {
+            "autor": "Luis Cárdenas",
+            "rol": "Tech lead",
+            "hora": "09:20",
+            "texto": "Ya, tranquilos. A trabajar."
+          },
+          {
+            "autor": "Óscar Treviño",
+            "rol": "Dev senior",
+            "hora": "09:21",
+            "texto": "Relájate, Luis, es humor de equipo. Si no aguanta una broma, que no se dedique a esto."
+          },
+          {
+            "autor": "Daniela Ruiz",
+            "rol": "Dev junior",
+            "hora": "18:47",
+            "privado": true,
+            "texto": "Hola. No sé si esto te toca a ti, pero ya no sé a quién decirle. Llevo tres semanas así. Ya no hablo en las dailies porque luego lo usan para memes. Estoy pensando en renunciar."
+          }
+        ]
+      },
+      {
+        "tipo": "documento",
+        "nombreArchivo": "codigo_conducta.pdf",
+        "membrete": "NovaByte · Capital Humano",
+        "titulo": "Código de Conducta (extracto)",
+        "metadatos": { "Versión": "3.1", "Vigente desde": "01/03/2026" },
+        "secciones": [
+          {
+            "titulo": "4. Respeto y no violencia",
+            "texto": "Está prohibida toda forma de hostigamiento, burla, exclusión o humillación, presencial o por medios digitales, incluidos los canales de chat de la empresa."
+          },
+          {
+            "titulo": "7. Política de prevención de riesgos psicosociales y violencia laboral",
+            "texto": "En cumplimiento de la NOM-035-STPS-2018, cualquier persona puede reportar actos de violencia laboral a Capital Humano, que debe atender la queja con confidencialidad, proteger a quien denuncia contra represalias y aplicar medidas proporcionales."
+          },
+          {
+            "titulo": "8. Protocolo de atención",
+            "texto": "1) Registro de la queja y resguardo de evidencias.\n2) Entrevista confidencial con la persona afectada.\n3) Medidas de protección inmediatas.\n4) Audiencia a la persona señalada.\n5) Resolución, sanción proporcional y seguimiento."
+          }
+        ]
+      }
+    ],
+    "opciones": [
+      {
+        "id": "opt_1",
+        "tipo": "aprobar",
+        "etiqueta": "Archivar el asunto: es humor de equipo. Sugerir a Daniela que no lo tome personal.",
+        "marcoEtico": "relativismo",
+        "modeloEtico": "Relativismo moral: «es la cultura del equipo, no es para tanto».",
+        "impacto": { "budget": 0, "ethics": -35, "legal": -15 },
+        "esCorrecta": false,
+        "retroalimentacion": "Normalizar burlas reiteradas es tolerar violencia laboral. La repetición, el blanco fijo y la humillación pública distinguen el acoso de una broma, y pedirle a la víctima que «no lo tome personal» la revictimiza. El Código ACM exige evitar el daño (1.2) y la NOM-035-STPS-2018 obliga a la empresa a prevenir y atender la violencia laboral; ignorar la queja expone a NovaByte ante la autoridad laboral y le hace perder talento.",
+        "fundamento": ["ACM Code 1.2", "NOM-035-STPS-2018", "Código de Conducta NovaByte, sec. 4"]
+      },
+      {
+        "id": "opt_2",
+        "tipo": "bloquear",
+        "etiqueta": "Exhibir a Óscar en el canal general con las capturas y expulsarlo de inmediato de todos los canales.",
+        "marcoEtico": "justicia",
+        "modeloEtico": "Justicia punitiva sin debido proceso.",
+        "impacto": { "budget": -10, "ethics": -15, "legal": -20 },
+        "esCorrecta": false,
+        "retroalimentacion": "La intención de proteger es válida, pero exhibir el caso expone otra vez a Daniela sin su consentimiento, humilla públicamente a otra persona y omite el derecho de audiencia del señalado. Una sanción sin procedimiento puede impugnarse y debilita el protocolo. La justicia exige proteger a la víctima y, a la vez, seguir un proceso confidencial y proporcional.",
+        "fundamento": ["ACM Code 1.4", "NOM-035-STPS-2018", "Código de Conducta NovaByte, sec. 8"]
+      },
+      {
+        "id": "opt_3",
+        "tipo": "escalar",
+        "etiqueta": "Activar el protocolo: resguardar la evidencia, ofrecer apoyo confidencial a Daniela, turnar la queja a Capital Humano y pedir medidas de protección mientras se escucha a Óscar.",
+        "marcoEtico": "deontologia",
+        "modeloEtico": "Deontología y ética del cuidado: deber de proteger a la persona afectada con debido proceso.",
+        "impacto": { "budget": -5, "ethics": 20, "legal": 15 },
+        "esCorrecta": true,
+        "retroalimentacion": "Dictamen correcto. Atiendes primero a la persona afectada, con confidencialidad, y canalizas la queja por el protocolo que la empresa debe tener: la NOM-035-STPS-2018 obliga a contar con una política de prevención de la violencia laboral y mecanismos seguros para denunciarla. Las medidas de protección y la audiencia al señalado hacen que el proceso sea justo y que la sanción, si procede, se sostenga.",
+        "fundamento": ["NOM-035-STPS-2018, num. 5.1", "ACM Code 1.2", "Código de Conducta NovaByte, sec. 8"]
+      }
+    ],
+    "aprendizaje": "El ciberacoso entre colegas es una falta ética y laboral: la empresa debe prevenirlo y atenderlo con un protocolo. No toda falta ética es un delito: solo ciertas conductas digitales están tipificadas penalmente (por ejemplo, difundir contenido íntimo sin consentimiento, que verás en la Unidad III). Confundir ambos planos lleva a respuestas desproporcionadas o insuficientes."
+  },
+  {
+    "id": "U1_C03",
+    "unidad": 1,
+    "subtema": "Dilemas éticos: plagio de código fuente",
+    "titulo": "PR #482: motor de riesgo crediticio «original»",
+    "remitente": "Luis Cárdenas — Tech Lead (revisión de código)",
+    "contexto": "Óscar abrió el Pull Request #482 con un motor de puntaje de riesgo para el SDK móvil que NovaByte vende a bancos con licencia propietaria. En la descripción afirma que es «desarrollo original».\n\nEl escáner de similitud del pipeline encontró una coincidencia del 96 % con un repositorio público de GitHub, publicado bajo GNU GPLv3 por la desarrolladora Ana Villalobos. El diff muestra que se eliminaron su aviso de copyright y su licencia. La entrega al banco es el viernes.",
+    "pregunta": "¿Qué dictamen emites sobre el Pull Request #482?",
+    "pistaNormativa": "Que un código sea público no significa que sea de dominio público. Revisa los derechos morales en la LFDA y lo que la GPLv3 exige al distribuir software.",
+    "manualRefs": ["U1_M12", "U1_M05", "U4_M01", "U1_M10"],
+    "evidencias": [
+      {
+        "tipo": "diff",
+        "numero": 482,
+        "titulo": "feat(sdk): motor de riesgo crediticio (desarrollo original)",
+        "autor": "otrevino",
+        "rama": "feature/risk-engine → main",
+        "descripcion": "Implementación propia del algoritmo de scoring. Desarrollo original, sin dependencias externas. Urge para la entrega a Banco Solaris.",
+        "nombreArchivo": "sdk/src/risk/score.js",
+        "contenido": "@@ -1,9 +1,7 @@\n-/*\n- * credit-risk-js — Copyright (C) 2023 Ana Villalobos\n- * Licensed under the GNU General Public License v3.0 or later.\n- * See https://www.gnu.org/licenses/gpl-3.0.html\n- */\n+/* NovaByte Risk Engine — (c) 2026 Óscar Treviño / NovaByte Solutions.\n+ * Todos los derechos reservados. Desarrollo original. */\n export function riskScore(profile) {\n   const w = { income: 0.35, history: 0.4, debt: -0.25 };\n   const base = profile.income * w.income + profile.history * w.history;\n   return Math.max(0, Math.min(850, base + profile.debt * w.debt));\n }"
+      },
+      {
+        "tipo": "log",
+        "nombreArchivo": "similarity-scan.log",
+        "contenido": "[2026-11-18 10:42:07] INFO  scan started: PR #482 (sdk/src/risk/**)\n[2026-11-18 10:42:09] INFO  comparing against public index (1.2M repos)\n[2026-11-18 10:42:15] MATCH 96.4% sdk/src/risk/score.js <-> github.com/avillalobos/credit-risk-js/src/score.js\n[2026-11-18 10:42:15] MATCH license of source: GPL-3.0-or-later\n[2026-11-18 10:42:15] WARN  copyright notice removed in PR\n[2026-11-18 10:42:16] ALERT target artifact: novabyte-sdk (proprietary, distributed to clients)\n[2026-11-18 10:42:16] ERROR policy violation: copyleft code in proprietary distributed artifact"
+      }
+    ],
+    "opciones": [
+      {
+        "id": "opt_1",
+        "tipo": "bloquear",
+        "etiqueta": "Rechazar el PR: restaurar el reconocimiento de autoría, retirar el código del SDK propietario y reescribir el módulo desde cero (implementación limpia) o negociar una licencia con la autora.",
+        "marcoEtico": "virtud",
+        "modeloEtico": "Ética de la virtud: honestidad e integridad profesional.",
+        "impacto": { "budget": -10, "ethics": 20, "legal": 20 },
+        "esCorrecta": true,
+        "retroalimentacion": "Dictamen correcto. Presentar como propio el trabajo de otra persona es plagio: una falta de honestidad (ACM 1.3) y de respeto al trabajo creativo ajeno (ACM 1.5). Eliminar el aviso de copyright desconoce además el derecho moral de paternidad de la autora (LFDA, Art. 21, fr. II) y las condiciones de la GPLv3, que exige conservar los avisos y licenciar bajo GPL toda obra derivada que se distribuya, algo incompatible con un SDK propietario. Reescribir o negociar es la salida legítima.",
+        "fundamento": ["ACM Code 1.3", "ACM Code 1.5", "LFDA Art. 21, fr. II", "GPLv3, secs. 4 y 5"]
+      },
+      {
+        "id": "opt_2",
+        "tipo": "aprobar",
+        "etiqueta": "Aprobar: el código está publicado en GitHub, así que cualquiera puede usarlo como quiera.",
+        "marcoEtico": "egoismo",
+        "modeloEtico": "Egoísmo ético basado en un error: «si está en internet, es gratis».",
+        "impacto": { "budget": 10, "ethics": -25, "legal": -35 },
+        "esCorrecta": false,
+        "retroalimentacion": "Público no es lo mismo que dominio público. El código en GitHub conserva sus derechos de autor y solo puede usarse según su licencia. La GPLv3 permite usarlo, pero al distribuirlo exige conservar los avisos y liberar el código derivado bajo la misma licencia. Incorporarlo a un SDK propietario sin cumplir esas condiciones, y además borrando la autoría, infringe los derechos de la autora y expone a NovaByte a reclamaciones.",
+        "fundamento": ["LFDA Art. 21, fr. II", "GPLv3, secs. 4 y 5", "ACM Code 1.5"]
+      },
+      {
+        "id": "opt_3",
+        "tipo": "remediar",
+        "etiqueta": "Aprobar si Óscar cambia nombres de variables y reordena funciones para que el escáner ya no detecte la coincidencia.",
+        "marcoEtico": "egoismo",
+        "modeloEtico": "Encubrimiento: prioriza no ser descubierto sobre actuar correctamente.",
+        "impacto": { "budget": 5, "ethics": -35, "legal": -30 },
+        "esCorrecta": false,
+        "retroalimentacion": "Disfrazar el código no cambia su origen: sigue siendo una obra derivada del trabajo de Ana Villalobos y su uso sigue sujeto a la GPLv3. Además agrega encubrimiento deliberado, lo que agrava la falta ética (ACM 1.3) y elimina cualquier argumento de buena fe ante una reclamación.",
+        "fundamento": ["ACM Code 1.3", "LFDA Art. 21, fr. II"]
+      }
+    ],
+    "aprendizaje": "Plagio es atribuirse la autoría de un trabajo ajeno; es una falta ética aunque nadie lo descubra. Puede ser además una infracción de derechos de autor (Unidad II) y, si hay reproducción con fines de lucro, incluso un delito (Unidad III). Reutilizar código es legítimo cuando respetas su licencia y reconoces a sus autores."
+  },
+  {
+    "id": "U1_C04",
+    "unidad": 1,
+    "subtema": "Ética en el desarrollo de software: plagio frente a reutilización legítima",
+    "titulo": "PR #490: ¿plagio o reutilización?",
+    "remitente": "Óscar Treviño — Desarrollador senior",
+    "contexto": "Después del caso del PR #482, Óscar revisa todo con lupa. Ahora marcó como «plagio» el Pull Request #490 de Daniela: para normalizar nombres en el buscador de clientes, ella integró la librería de código abierto slug-mx (licencia MIT) en el backend.\n\nÓscar exige rechazarlo y que Daniela escriba todo desde cero «para que nadie nos acuse de copiar». Reescribir costaría una semana de trabajo.",
+    "pregunta": "¿Qué dictamen emites sobre el Pull Request #490?",
+    "pistaNormativa": "Distingue entre plagio (atribuirse algo ajeno) y reutilización legítima (usar una obra conforme a su licencia y con crédito). Revisa qué exige la licencia MIT.",
+    "manualRefs": ["U4_M01", "U1_M12", "U1_M05"],
+    "evidencias": [
+      {
+        "tipo": "diff",
+        "numero": 490,
+        "titulo": "feat(search): normalizar nombres con slug-mx (MIT)",
+        "autor": "druiz",
+        "rama": "feature/search-normalize → main",
+        "descripcion": "Agrega la dependencia slug-mx 3.2.1 (licencia MIT). Se conserva su aviso de copyright y de licencia en THIRD_PARTY_NOTICES.md y se acredita a su autor. Incluye pruebas unitarias.",
+        "nombreArchivo": "package.json · THIRD_PARTY_NOTICES.md",
+        "contenido": "@@ package.json @@\n   \"dependencies\": {\n     \"express\": \"^4.21.2\",\n+    \"slug-mx\": \"3.2.1\"\n   }\n@@ THIRD_PARTY_NOTICES.md @@\n+## slug-mx 3.2.1\n+Copyright (c) 2021 Rafael Quintero\n+Licensed under the MIT License.\n+Permission is hereby granted, free of charge, to any person obtaining a copy\n+of this software [...] (texto completo de la licencia MIT)"
+      },
+      {
+        "tipo": "chat",
+        "canal": "code-review",
+        "plataforma": "Chat corporativo",
+        "mensajes": [
+          {
+            "autor": "Óscar Treviño",
+            "rol": "Dev senior",
+            "hora": "11:02",
+            "texto": "Esto es usar código ajeno. Si lo aprobamos somos igual que el #482. Que lo reescriba."
+          },
+          {
+            "autor": "Daniela Ruiz",
+            "rol": "Dev junior",
+            "hora": "11:06",
+            "texto": "No lo presenté como mío: es una dependencia declarada, con su licencia MIT y el aviso del autor en THIRD_PARTY_NOTICES. Revisé que la MIT permite nuestro uso."
+          },
+          {
+            "autor": "Luis Cárdenas",
+            "rol": "Tech lead",
+            "hora": "11:10",
+            "texto": "Cumplimiento, ¿qué opinas? Necesitamos el buscador el lunes."
+          }
+        ]
+      }
+    ],
+    "opciones": [
+      {
+        "id": "opt_1",
+        "tipo": "bloquear",
+        "etiqueta": "Rechazar el PR: usar cualquier código escrito por otra persona es plagio; Daniela debe reescribir todo desde cero.",
+        "marcoEtico": "deontologia",
+        "modeloEtico": "Rigorismo mal informado: aplica una regla que no existe y confunde reutilizar con plagiar.",
+        "impacto": { "budget": -15, "ethics": -10, "legal": 0 },
+        "esCorrecta": false,
+        "retroalimentacion": "Rechazar sin fundamento castiga a quien actuó bien y cuesta una semana de trabajo. Plagio es ocultar o usurpar la autoría; aquí la autoría está reconocida y la licencia se cumple. Confundir la reutilización legítima con el plagio frena la innovación y desconoce cómo funciona el software libre y de código abierto.",
+        "fundamento": ["Licencia MIT", "ACM Code 1.5"]
+      },
+      {
+        "id": "opt_2",
+        "tipo": "aprobar",
+        "etiqueta": "Aprobar el PR: es reutilización legítima. La dependencia está declarada, la licencia MIT lo permite y se conserva el aviso de copyright del autor.",
+        "marcoEtico": "deontologia",
+        "modeloEtico": "Deontología: cumplir las condiciones de la licencia y reconocer la autoría.",
+        "impacto": { "budget": 5, "ethics": 10, "legal": 10 },
+        "esCorrecta": true,
+        "retroalimentacion": "Dictamen correcto. No hay plagio: Daniela no se atribuye la obra, la usa conforme a su licencia y acredita a su autor. La licencia MIT permite usar, copiar, modificar y distribuir el software con la condición de conservar el aviso de copyright y de licencia, que es justo lo que hace THIRD_PARTY_NOTICES.md. Reutilizar componentes probados respetando sus licencias es una buena práctica profesional (ACM 1.5 y 2.3).",
+        "fundamento": ["Licencia MIT", "ACM Code 1.5", "ACM Code 2.3"]
+      },
+      {
+        "id": "opt_3",
+        "tipo": "escalar",
+        "etiqueta": "Escalar al área legal y congelar todas las dependencias de código abierto del proyecto hasta nuevo aviso.",
+        "marcoEtico": "utilitarismo",
+        "modeloEtico": "Aversión al riesgo desproporcionada: sacrifica la operación de todo el equipo para evitar un riesgo inexistente.",
+        "impacto": { "budget": -20, "ethics": -5, "legal": 0 },
+        "esCorrecta": false,
+        "retroalimentacion": "Revisar licencias es sano, pero congelar todo el código abierto es desproporcionado: casi cualquier sistema moderno depende de él. Lo profesional es contar con una política de dependencias (inventario, licencias permitidas, avisos) y aplicarla caso por caso. Esta dependencia ya cumple: escalarla solo retrasa al equipo.",
+        "fundamento": ["ACM Code 2.3", "Licencia MIT"]
+      }
+    ],
+    "aprendizaje": "Plagio y reutilización no son lo mismo. Usar código ajeno es legítimo si cumples su licencia y reconoces a sus autores; es plagio cuando ocultas su origen o te lo atribuyes. Las licencias permisivas (MIT, Apache 2.0) piden sobre todo conservar los avisos; las copyleft (GPL) además exigen compartir las obras derivadas bajo la misma licencia, como verás a fondo en la Unidad IV."
+  },
+  {
+    "id": "U1_C05",
+    "unidad": 1,
+    "subtema": "Dilemas éticos: discriminación tecnológica y exclusión digital",
+    "titulo": "Filtro automático de candidatos TalentScreen",
+    "remitente": "Fernanda Gil — Capital Humano",
+    "contexto": "NovaByte abrió 15 vacantes y recibió más de 2,000 postulaciones. Para ahorrar tiempo, Capital Humano configuró TalentScreen, un filtro automático que descarta candidaturas antes de que una persona las lea. Jorge, el CEO, pidió «gente joven que aguante el ritmo».\n\nAntes de activarse, el sistema requiere el visto bueno de Cumplimiento.",
+    "pregunta": "¿Autorizas la configuración del filtro?",
+    "pistaNormativa": "La libertad de contratar tiene límites. Revisa la prohibición de discriminación del artículo 1.º constitucional y lo que el artículo 133 de la Ley Federal del Trabajo prohíbe a los patrones.",
+    "manualRefs": ["U1_M13", "U1_M09", "U1_M05"],
+    "evidencias": [
+      {
+        "tipo": "json",
+        "nombreArchivo": "talentscreen.config.json",
+        "contenido": "{\n  \"vacante\": \"Desarrollador/a Full Stack\",\n  \"reglas_descarte\": {\n    \"edad_maxima\": 32,\n    \"zonas_excluidas\": [\"Zona oriente\", \"Asentamientos irregulares\"],\n    \"requiere_fotografia\": true,\n    \"descartar_si_menciona\": [\"embarazo\", \"silla de ruedas\", \"lengua indígena\"],\n    \"penalizar_huecos_laborales_meses\": 6\n  },\n  \"formulario\": {\n    \"compatible_lector_pantalla\": false,\n    \"solo_desde_app_movil\": true\n  },\n  \"criterios_tecnicos\": [\"JavaScript\", \"SQL\", \"Git\"],\n  \"revision_humana\": false\n}"
+      },
+      {
+        "tipo": "correo",
+        "de": "fernanda.gil@novabyte.mx",
+        "para": "cumplimiento@novabyte.mx",
+        "fecha": "Mar 17 nov 2026, 12:30",
+        "asunto": "Visto bueno para activar TalentScreen hoy",
+        "cuerpo": "Hola:\n\nJorge quiere que el filtro quede activo hoy. Las reglas las armamos con lo que nos ha funcionado: gente joven, que viva cerca de la oficina y sin «complicaciones». Así reducimos 2,000 CV a unos 60.\n\n¿Me das el visto bueno? Somos empresa privada, podemos contratar a quien queramos, ¿no?\n\nGracias,\nFernanda"
+      }
+    ],
+    "opciones": [
+      {
+        "id": "opt_1",
+        "tipo": "aprobar",
+        "etiqueta": "Autorizar el filtro tal cual: es una empresa privada y la eficiencia justifica reducir candidaturas.",
+        "marcoEtico": "utilitarismo",
+        "modeloEtico": "Utilitarismo eficientista: maximiza el ahorro de tiempo e ignora a las personas excluidas.",
+        "impacto": { "budget": 10, "ethics": -35, "legal": -35 },
+        "esCorrecta": false,
+        "retroalimentacion": "La eficiencia no justifica excluir personas por su edad, su lugar de residencia, una discapacidad, un embarazo o su origen étnico. El artículo 1.º constitucional prohíbe toda discriminación que atente contra la dignidad humana, y la Ley Federal del Trabajo (Art. 133, fr. I) prohíbe a los patrones negarse a aceptar trabajadores por esos motivos. Automatizar la exclusión la vuelve masiva e invisible, y expone a NovaByte a quejas ante el CONAPRED y a demandas.",
+        "fundamento": ["CPEUM Art. 1, último párrafo", "LFT Art. 133, fr. I", "ACM Code 1.4"]
+      },
+      {
+        "id": "opt_2",
+        "tipo": "remediar",
+        "etiqueta": "Devolver la configuración: eliminar las reglas discriminatorias (edad, zona, fotografía, embarazo, discapacidad u origen), filtrar por competencias del puesto, hacer accesible el formulario y garantizar revisión humana.",
+        "marcoEtico": "justicia",
+        "modeloEtico": "Justicia y derechos: igualdad de oportunidades y no discriminación.",
+        "impacto": { "budget": -5, "ethics": 20, "legal": 20 },
+        "esCorrecta": true,
+        "retroalimentacion": "Dictamen correcto. Conservas la automatización, pero con criterios relacionados con el puesto (competencias técnicas verificables) y eliminas los que excluyen por condiciones protegidas, como exigen el artículo 1.º constitucional y el artículo 133, fr. I, de la LFT. Un formulario accesible y no limitado a la app móvil reduce la exclusión digital, y la revisión humana permite corregir errores del sistema. Es lo que pide el Código ACM: ser justo y actuar para no discriminar (1.4).",
+        "fundamento": ["CPEUM Art. 1, último párrafo", "LFT Art. 133, fr. I", "LFPED", "ACM Code 1.4"]
+      },
+      {
+        "id": "opt_3",
+        "tipo": "aprobar",
+        "etiqueta": "Activar el filtro, pero sin publicar los criterios de descarte para evitar quejas.",
+        "marcoEtico": "egoismo",
+        "modeloEtico": "Egoísmo ético con opacidad: evitar las consecuencias en lugar de corregir la conducta.",
+        "impacto": { "budget": 5, "ethics": -40, "legal": -30 },
+        "esCorrecta": false,
+        "retroalimentacion": "Ocultar los criterios no elimina la discriminación: la agrava, porque impide que las personas afectadas se defiendan. La opacidad algorítmica es en sí un problema ético; el Código ACM exige honestidad (1.3) y no discriminar (1.4). Si se descubre, la sanción reputacional y legal será mayor.",
+        "fundamento": ["CPEUM Art. 1, último párrafo", "ACM Code 1.3", "ACM Code 1.4"]
+      }
+    ],
+    "aprendizaje": "La discriminación tecnológica ocurre cuando un sistema excluye a personas por condiciones como edad, discapacidad, origen o situación social, aunque nadie lo haga «a propósito». La exclusión digital aparece cuando un diseño deja fuera a quien no tiene cierto dispositivo o usa tecnologías de asistencia. En la Unidad IV verás cómo estos sesgos aparecen en modelos de inteligencia artificial."
+  },
+  {
+    "id": "U1_C06",
+    "unidad": 1,
+    "subtema": "Dilemas éticos: desinformación y manipulación algorítmica",
+    "titulo": "Campaña de lanzamiento «NovaPay Protect»",
+    "remitente": "Rodrigo Salas — Director Comercial",
+    "contexto": "NovaByte lanzará NovaPay Protect, un módulo antifraude. Para ganar mercado rápido, Marketing preparó una campaña con tres piezas: un anuncio que promete bloquear «el 99.9 % de los fraudes», 300 cuentas automatizadas que publicarán testimonios de «clientes felices» y una nota con apariencia de noticia que insinúa que un banco competidor «fue vaciado por hackers», sin ninguna fuente.\n\nAdemás, se ajustará el algoritmo de recomendaciones de la app para dar prioridad a las publicaciones que generen indignación.",
+    "pregunta": "¿Qué dictamen emites sobre la campaña?",
+    "pistaNormativa": "La publicidad debe ser veraz y comprobable (LFPC, Art. 32), y la libertad de expresión no ampara afectar derechos de terceros (Art. 6.º constitucional). Compara la cifra anunciada con los resultados de QA.",
+    "manualRefs": ["U1_M14", "U1_M05", "U1_M10"],
+    "evidencias": [
+      {
+        "tipo": "documento",
+        "nombreArchivo": "brief_campana.pdf",
+        "membrete": "NovaByte · Marketing",
+        "titulo": "Brief de campaña: NovaPay Protect",
+        "metadatos": { "Presupuesto": "$1.2 M MXN", "Lanzamiento": "25/11/2026", "Estado": "Pendiente de Cumplimiento" },
+        "secciones": [
+          {
+            "titulo": "Mensaje principal",
+            "texto": "«NovaPay Protect bloquea el 99.9 % de los fraudes.» Fuente: estimación del equipo comercial."
+          },
+          {
+            "titulo": "Prueba social",
+            "texto": "Red de 300 perfiles automatizados, con fotos de bancos de imágenes, que publicarán reseñas de cinco estrellas durante 30 días."
+          },
+          {
+            "titulo": "Contenido de alto impacto",
+            "texto": "Nota estilo noticia: «Clientes de Banco Atlante pierden sus ahorros por hackeo masivo». Sin fuente; el objetivo es que se viralice."
+          },
+          {
+            "titulo": "Amplificación",
+            "texto": "Ajustar el feed de la app para priorizar publicaciones con más reacciones de enojo: retienen 40 % más tiempo de uso."
+          }
+        ]
+      },
+      {
+        "tipo": "log",
+        "nombreArchivo": "qa-antifraude-resultados.log",
+        "contenido": "[2026-11-10 16:02:11] INFO  dataset: 48,000 transacciones etiquetadas (oct 2026)\n[2026-11-10 16:09:45] INFO  fraudes reales en la muestra: 1,200\n[2026-11-10 16:09:45] INFO  fraudes bloqueados: 852\n[2026-11-10 16:09:45] WARN  tasa de detección: 71.0 %\n[2026-11-10 16:09:45] WARN  falsos positivos: 3.4 % (pagos legítimos bloqueados)\n[2026-11-10 16:09:46] INFO  conclusión QA: no apto para afirmar cifras > 75 %"
+      }
+    ],
+    "opciones": [
+      {
+        "id": "opt_1",
+        "tipo": "aprobar",
+        "etiqueta": "Aprobar la campaña completa: el mercado es competitivo y el engagement financiará el crecimiento.",
+        "marcoEtico": "egoismo",
+        "modeloEtico": "Egoísmo ético: el crecimiento de la empresa justifica engañar.",
+        "impacto": { "budget": 15, "ethics": -40, "legal": -30 },
+        "esCorrecta": false,
+        "retroalimentacion": "La campaña engaña con una cifra falsa (99.9 % frente al 71 % medido), simula opiniones con cuentas falsas y difunde una noticia inventada contra un competidor. La LFPC (Art. 32) exige publicidad veraz, comprobable y clara, y la nota falsa puede afectar derechos de terceros, un límite a la libertad de expresión (Art. 6.º constitucional). Premiar la indignación en el algoritmo agrava la desinformación. El Código ACM exige honestidad (1.3) y evitar el daño (1.2).",
+        "fundamento": ["LFPC Art. 32", "CPEUM Art. 6", "ACM Code 1.2", "ACM Code 1.3"]
+      },
+      {
+        "id": "opt_2",
+        "tipo": "remediar",
+        "etiqueta": "Aprobar los testimonios de las 300 cuentas y el ajuste al algoritmo, pero retirar la nota sobre el competidor.",
+        "marcoEtico": "utilitarismo",
+        "modeloEtico": "Utilitarismo parcial: elimina el riesgo más visible y conserva el engaño rentable.",
+        "impacto": { "budget": 5, "ethics": -25, "legal": -15 },
+        "esCorrecta": false,
+        "retroalimentacion": "Retirar la nota falsa es necesario pero insuficiente. Los testimonios de cuentas automatizadas son opiniones simuladas que inducen a error a los consumidores, y la cifra del 99.9 % sigue sin sustento. Ajustar el algoritmo para premiar la indignación amplifica contenido polarizante y desinformación en la propia plataforma de NovaByte. Corregir a medias sigue siendo engañar.",
+        "fundamento": ["LFPC Art. 32", "ACM Code 1.3"]
+      },
+      {
+        "id": "opt_3",
+        "tipo": "bloquear",
+        "etiqueta": "Bloquear la campaña: usar solo la cifra comprobada (71 %), eliminar las cuentas falsas y la nota inventada, identificar el contenido patrocinado y no ajustar el algoritmo para premiar la indignación.",
+        "marcoEtico": "virtud",
+        "modeloEtico": "Ética de la virtud: veracidad y responsabilidad con la sociedad.",
+        "impacto": { "budget": -10, "ethics": 20, "legal": 15 },
+        "esCorrecta": true,
+        "retroalimentacion": "Dictamen correcto. La campaña puede salir con información veraz y comprobable, como exige la LFPC (Art. 32). Eliminar perfiles falsos y la nota inventada evita engañar a los consumidores y dañar a un tercero, un límite a la libertad de expresión reconocido en el artículo 6.º constitucional. Rechazar la amplificación de la indignación es responsabilidad de quien diseña algoritmos: el Código ACM pide contribuir al bienestar social (1.1) y evitar el daño (1.2).",
+        "fundamento": ["LFPC Art. 32", "CPEUM Art. 6", "ACM Code 1.1", "ACM Code 1.2"]
+      }
+    ],
+    "aprendizaje": "La desinformación no es solo publicar noticias falsas: también incluye cifras sin sustento, opiniones simuladas con bots y algoritmos que premian el contenido que más enoja. Quien diseña sistemas de recomendación tiene responsabilidad ética sobre lo que amplifica. La libertad de expresión es un derecho fundamental, pero no ampara engañar ni dañar a otras personas."
+  }
+]

@@ -1,1 +1,229 @@
-[]
+[
+  {
+    "id": "U1_M01",
+    "unidad": 1,
+    "categoria": "Concepto",
+    "titulo": "Moral",
+    "fuente": "Fundamentos de la ética en TIC",
+    "resumen": "Conjunto de normas, costumbres y convicciones que una persona o un grupo social considera buenas o malas. Es práctica, se aprende en la familia y la comunidad, y puede variar entre culturas y épocas.",
+    "puntosClave": [
+      "Responde a la pregunta: ¿qué se considera correcto aquí y ahora?",
+      "No tiene sanción jurídica; su sanción es social o de conciencia (culpa, rechazo del grupo).",
+      "Ejemplo: «a mí no me parece grave cobrar un peso de más» es un juicio moral personal."
+    ],
+    "palabrasClave": ["costumbre", "convicción", "conciencia", "bueno", "malo"]
+  },
+  {
+    "id": "U1_M02",
+    "unidad": 1,
+    "categoria": "Concepto",
+    "titulo": "Valores",
+    "fuente": "Fundamentos de la ética en TIC",
+    "resumen": "Cualidades que una persona u organización estima como deseables y que orientan sus decisiones: honestidad, responsabilidad, respeto, justicia, transparencia. Son el «para qué» detrás de una conducta.",
+    "puntosClave": [
+      "Los valores se jerarquizan: en un dilema, dos valores pueden chocar (lealtad a la empresa frente a honestidad con el usuario).",
+      "En una empresa de software suelen expresarse en su código de conducta.",
+      "Declarar valores no basta: se demuestran en las decisiones difíciles."
+    ],
+    "palabrasClave": ["honestidad", "responsabilidad", "respeto", "transparencia", "integridad"]
+  },
+  {
+    "id": "U1_M03",
+    "unidad": 1,
+    "categoria": "Concepto",
+    "titulo": "Ética",
+    "fuente": "Fundamentos de la ética en TIC",
+    "resumen": "Disciplina filosófica que reflexiona de manera racional y sistemática sobre la moral: analiza por qué una conducta es correcta o incorrecta y propone criterios para decidir. La ética profesional aplica esa reflexión a una profesión.",
+    "puntosClave": [
+      "Responde a la pregunta: ¿por qué esto es correcto y cómo lo justifico ante cualquiera?",
+      "En la ingeniería de software se concreta en códigos como el de la ACM y el ACM/IEEE-CS.",
+      "La ética suele exigir más que la ley: algo puede ser legal y aun así ser antiético."
+    ],
+    "palabrasClave": ["reflexión", "justificación", "ética profesional", "deber"]
+  },
+  {
+    "id": "U1_M04",
+    "unidad": 1,
+    "categoria": "Concepto",
+    "titulo": "Normatividad y legalidad",
+    "fuente": "Fundamentos de la ética en TIC",
+    "resumen": "La normatividad jurídica es el conjunto de reglas obligatorias emitidas por el Estado (Constitución, leyes, reglamentos, normas oficiales). La legalidad es actuar conforme a ellas. A diferencia de la moral y la ética, su incumplimiento tiene una sanción impuesta por una autoridad.",
+    "puntosClave": [
+      "Es heterónoma (la impone otro) y coercible (se puede exigir por la fuerza pública).",
+      "La ley marca el mínimo exigible; la ética profesional marca el estándar deseable.",
+      "Que algo no esté prohibido no lo vuelve correcto; que algo sea legal no lo vuelve ético.",
+      "Una falta ética no siempre es un delito: solo lo es si la ley penal la describe y sanciona."
+    ],
+    "palabrasClave": ["ley", "sanción", "obligatorio", "legal", "ilegal", "delito", "falta ética"]
+  },
+  {
+    "id": "U1_M05",
+    "unidad": 1,
+    "categoria": "Código de ética",
+    "titulo": "Código de Ética y Conducta Profesional de la ACM",
+    "fuente": "ACM Code of Ethics and Professional Conduct (2018)",
+    "resumen": "Código de la Association for Computing Machinery que orienta a quienes trabajan en computación. Se organiza en principios generales, responsabilidades profesionales y de liderazgo. Paráfrasis de los principios más usados en LexCode:",
+    "puntosClave": [
+      "1.1 Contribuir a la sociedad y al bienestar humano.",
+      "1.2 Evitar el daño.",
+      "1.3 Ser honesto y digno de confianza.",
+      "1.4 Ser justo y actuar para no discriminar.",
+      "1.5 Respetar el trabajo necesario para crear ideas, obras y artefactos computacionales (reconocer la autoría).",
+      "1.6 Respetar la privacidad.",
+      "2.1 Buscar la más alta calidad en procesos y productos.",
+      "2.3 Conocer y respetar las reglas que rigen el trabajo profesional.",
+      "2.5 Evaluar de forma completa los sistemas y sus impactos, incluidos los riesgos."
+    ],
+    "palabrasClave": ["ACM", "código de ética", "calidad", "honestidad", "daño", "discriminación", "autoría", "riesgos"]
+  },
+  {
+    "id": "U1_M06",
+    "unidad": 1,
+    "categoria": "Código de ética",
+    "titulo": "Código de Ética de Ingeniería de Software ACM/IEEE-CS",
+    "fuente": "Software Engineering Code of Ethics and Professional Practice, v5.2 (ACM/IEEE-CS, 1999)",
+    "resumen": "Código conjunto de la ACM y la IEEE Computer Society. Establece ocho principios ordenados por los actores a los que se debe el ingeniero de software: público, cliente y empleador, producto, juicio, gestión, profesión, colegas y uno mismo. El interés público prevalece.",
+    "puntosClave": [
+      "Principio 1 (Público): actuar de forma coherente con el interés público.",
+      "1.03 Aprobar software solo si hay fundamento para creer que es seguro, cumple su especificación y pasó pruebas adecuadas (paráfrasis).",
+      "1.04 Revelar a las personas o autoridades adecuadas cualquier peligro real o potencial que el software pueda causar (paráfrasis).",
+      "Principio 3 (Producto): asegurar que los productos cumplan los estándares profesionales más altos posibles.",
+      "Principio 7 (Colegas): ser justo con los colegas y apoyarlos."
+    ],
+    "palabrasClave": ["IEEE", "ACM", "ingeniería de software", "interés público", "producto", "colegas", "defecto"]
+  },
+  {
+    "id": "U1_M07",
+    "unidad": 1,
+    "categoria": "Modelo ético",
+    "titulo": "Utilitarismo (enfoque de consecuencias)",
+    "fuente": "Modelos de toma de decisiones éticas",
+    "resumen": "Una acción es correcta si produce el mayor bienestar para el mayor número de personas afectadas. Se evalúan las consecuencias, no la intención.",
+    "puntosClave": [
+      "Pregunta guía: ¿qué opción genera más beneficio y menos daño en total?",
+      "Error frecuente: contar solo los beneficios de la empresa y olvidar a usuarios y terceros.",
+      "Riesgo: puede justificar sacrificar a una minoría si la mayoría gana."
+    ],
+    "palabrasClave": ["consecuencias", "bienestar", "mayoría", "costo beneficio"]
+  },
+  {
+    "id": "U1_M08",
+    "unidad": 1,
+    "categoria": "Modelo ético",
+    "titulo": "Deontología (enfoque del deber)",
+    "fuente": "Modelos de toma de decisiones éticas",
+    "resumen": "Hay deberes y principios que deben cumplirse sin importar el resultado: decir la verdad, cumplir la palabra, respetar la dignidad de las personas. Asociada a Immanuel Kant y a los códigos profesionales.",
+    "puntosClave": [
+      "Pregunta guía: ¿qué deber o norma me obliga aquí?",
+      "Trata a las personas siempre como fines y nunca solo como medios.",
+      "Riesgo: aplicar reglas de forma rígida sin entender su propósito."
+    ],
+    "palabrasClave": ["deber", "Kant", "norma", "principio", "dignidad"]
+  },
+  {
+    "id": "U1_M09",
+    "unidad": 1,
+    "categoria": "Modelo ético",
+    "titulo": "Justicia y derechos",
+    "fuente": "Modelos de toma de decisiones éticas",
+    "resumen": "Una decisión es correcta si respeta los derechos de todas las personas y distribuye beneficios y cargas con equidad. Se preocupa por quienes tienen menos poder en la situación.",
+    "puntosClave": [
+      "Pregunta guía: ¿se respetan los derechos de todos y se trata igual a quienes están en igual situación?",
+      "Incluye el debido proceso: escuchar a todas las partes antes de sancionar.",
+      "Útil para analizar discriminación, privacidad y acceso a la tecnología."
+    ],
+    "palabrasClave": ["equidad", "igualdad", "derechos humanos", "debido proceso", "Rawls"]
+  },
+  {
+    "id": "U1_M10",
+    "unidad": 1,
+    "categoria": "Modelo ético",
+    "titulo": "Ética de la virtud",
+    "fuente": "Modelos de toma de decisiones éticas",
+    "resumen": "Se centra en el carácter: la acción correcta es la que haría una persona íntegra, prudente y honesta. Asociada a Aristóteles; en la profesión, se traduce en integridad y excelencia.",
+    "puntosClave": [
+      "Pregunta guía: ¿qué haría una profesional ejemplar? ¿Podría explicar esta decisión en público sin avergonzarme?",
+      "Virtudes clave en TI: honestidad, prudencia, responsabilidad, valentía para decir no.",
+      "Complementa a los demás modelos cuando no hay una regla clara."
+    ],
+    "palabrasClave": ["carácter", "integridad", "Aristóteles", "honestidad", "prudencia"]
+  },
+  {
+    "id": "U1_M11",
+    "unidad": 1,
+    "categoria": "Norma oficial",
+    "titulo": "Ciberacoso y violencia laboral",
+    "fuente": "NOM-035-STPS-2018 (DOF 23/10/2018) · LFT Art. 132, fr. XXXI",
+    "resumen": "El ciberacoso es hostigar, humillar, excluir o intimidar a una persona de forma reiterada por medios digitales. En el trabajo, la NOM-035-STPS-2018 considera la violencia laboral (hostigamiento, acoso y malos tratos) un factor de riesgo psicosocial que el patrón debe prevenir.",
+    "puntosClave": [
+      "NOM-035, numeral 5.1: el patrón debe establecer, implantar y difundir por escrito una política de prevención de riesgos psicosociales y de la violencia laboral.",
+      "La norma prevé mecanismos seguros y confidenciales para recibir quejas y denunciar actos de violencia laboral, sin represalias para quien denuncia.",
+      "LFT Art. 132, fr. XXXI: obligación patronal de implementar un protocolo para prevenir la discriminación por razones de género y atender casos de violencia y acoso u hostigamiento sexual.",
+      "Señales de acoso frente a broma: repetición, blanco fijo, desequilibrio de poder y humillación.",
+      "No todo ciberacoso es delito: solo ciertas conductas están tipificadas (por ejemplo, difundir contenido íntimo sin consentimiento, Unidad III)."
+    ],
+    "palabrasClave": ["ciberacoso", "cyberbullying", "acoso laboral", "hostigamiento", "violencia laboral", "NOM-035", "protocolo", "Ley Federal del Trabajo"]
+  },
+  {
+    "id": "U1_M12",
+    "unidad": 1,
+    "categoria": "Ley",
+    "titulo": "Plagio y derechos morales de autor",
+    "fuente": "Ley Federal del Derecho de Autor (LFDA), Art. 21",
+    "resumen": "El plagio es presentar como propia una obra ajena, total o parcialmente. En software implica copiar código o documentación ocultando su origen. La LFDA reconoce a los autores derechos morales que no se pierden aunque la obra sea pública.",
+    "puntosClave": [
+      "LFDA Art. 21, fr. II: el autor puede exigir en todo tiempo el reconocimiento de su calidad de autor (derecho de paternidad).",
+      "LFDA Art. 21, fr. III: el autor puede oponerse a deformaciones o modificaciones que perjudiquen la obra o su reputación.",
+      "Público no es lo mismo que dominio público: el código en GitHub conserva sus derechos y su licencia.",
+      "Reutilizar no es plagiar si se cumple la licencia y se reconoce la autoría.",
+      "El plagio es una falta ética; puede ser además infracción de derechos de autor (Unidad II) e incluso delito si hay reproducción con fines de lucro (Unidad III)."
+    ],
+    "palabrasClave": ["plagio", "autoría", "paternidad", "derechos morales", "copiar código", "LFDA", "GitHub"]
+  },
+  {
+    "id": "U1_M13",
+    "unidad": 1,
+    "categoria": "Constitución y leyes",
+    "titulo": "No discriminación y exclusión digital",
+    "fuente": "CPEUM Art. 1, último párrafo · LFT Art. 133, fr. I · LFPED",
+    "resumen": "La Constitución prohíbe toda discriminación motivada por origen étnico o nacional, género, edad, discapacidades, condición social, condiciones de salud, religión, opiniones, preferencias sexuales, estado civil o cualquier otra que atente contra la dignidad humana.",
+    "puntosClave": [
+      "LFT Art. 133, fr. I: los patrones no pueden negarse a aceptar trabajadores por origen, género, edad, discapacidad, condición social, condiciones de salud, religión, estado civil u otro criterio discriminatorio.",
+      "La Ley Federal para Prevenir y Eliminar la Discriminación (LFPED) desarrolla este derecho; el CONAPRED recibe quejas.",
+      "Discriminación tecnológica: sistemas que excluyen por variables protegidas o por variables «proxy» (código postal como sustituto de condición social).",
+      "Exclusión digital: diseños inaccesibles (sin soporte para lector de pantalla, solo desde un dispositivo) que dejan fuera a grupos completos.",
+      "Automatizar una regla discriminatoria la vuelve masiva e invisible."
+    ],
+    "palabrasClave": ["discriminación", "edad", "discapacidad", "accesibilidad", "exclusión digital", "CONAPRED", "contratación", "artículo 1"]
+  },
+  {
+    "id": "U1_M14",
+    "unidad": 1,
+    "categoria": "Constitución y leyes",
+    "titulo": "Desinformación, publicidad veraz y libertad de expresión",
+    "fuente": "LFPC Art. 32 · CPEUM Arts. 6 y 7",
+    "resumen": "La desinformación incluye noticias falsas, cifras sin sustento, opiniones simuladas con cuentas automatizadas y algoritmos que amplifican contenido engañoso o polarizante. La ley exige que la publicidad sea veraz y comprobable, y la libertad de expresión tiene límites.",
+    "puntosClave": [
+      "LFPC Art. 32: la información y publicidad de bienes y servicios debe ser veraz, comprobable, clara y exenta de textos o imágenes que induzcan a error o confusión.",
+      "CPEUM Art. 6, primer párrafo: la manifestación de ideas no será objeto de inquisición, salvo que ataque la moral, la vida privada o los derechos de terceros, provoque algún delito o perturbe el orden público.",
+      "CPEUM Art. 7: garantiza la libertad de difundir opiniones e información por cualquier medio, con los límites del Art. 6.",
+      "Manipulación algorítmica: optimizar un sistema de recomendación para maximizar indignación o tiempo de uso es una decisión ética de diseño."
+    ],
+    "palabrasClave": ["desinformación", "fake news", "noticias falsas", "bots", "publicidad engañosa", "Profeco", "libertad de expresión", "algoritmo"]
+  },
+  {
+    "id": "U4_M01",
+    "unidad": 4,
+    "categoria": "Licenciamiento",
+    "titulo": "Licencias permisivas y copyleft (nociones)",
+    "fuente": "Licencia MIT · GNU GPL v3.0",
+    "resumen": "Las licencias de software libre y de código abierto permiten usar, estudiar, modificar y distribuir un programa, pero con condiciones distintas. Las permisivas piden sobre todo conservar los avisos; las copyleft exigen además compartir las obras derivadas bajo la misma licencia.",
+    "puntosClave": [
+      "MIT (permisiva): permite casi cualquier uso, incluso en software propietario, si se conserva el aviso de copyright y de licencia.",
+      "GPLv3 (copyleft): al distribuir el programa o una obra derivada hay que conservar los avisos (sección 4) y licenciar toda la obra derivada bajo GPLv3, poniendo a disposición el código fuente (secciones 5 y 6).",
+      "Por eso no se puede incorporar código GPL en un producto propietario que se distribuye a clientes sin liberar ese producto bajo GPL.",
+      "En la Unidad IV se estudia la compatibilidad entre licencias (MIT, Apache 2.0, GPLv3, CC-BY)."
+    ],
+    "palabrasClave": ["licencia", "MIT", "GPL", "copyleft", "código abierto", "software libre", "dependencia", "avisos"]
+  }
+]

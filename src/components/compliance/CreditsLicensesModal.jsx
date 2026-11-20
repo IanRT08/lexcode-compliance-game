@@ -1,6 +1,6 @@
 import { ExternalLink, Users } from 'lucide-react';
 import Modal from '../ui/Modal.jsx';
-import { OWN_ASSETS, PROJECT, TEAM, THIRD_PARTY } from '../../data/project.js';
+import { INSTITUTIONAL_MARKS, OWN_ASSETS, PROJECT, TEAM, THIRD_PARTY } from '../../data/project.js';
 
 /** Matriz oficial de atribuciones y propiedad intelectual (Criterio 7). */
 export default function CreditsLicensesModal({ open, onClose }) {
@@ -9,6 +9,7 @@ export default function CreditsLicensesModal({ open, onClose }) {
       open={open}
       onClose={onClose}
       icon={Users}
+      kicker="Matriz de atribuciones"
       title="Créditos y propiedad intelectual"
       size="xl"
       footer={
@@ -19,22 +20,22 @@ export default function CreditsLicensesModal({ open, onClose }) {
     >
       <div className="space-y-6">
         <section aria-labelledby="credits-team">
-          <SectionTitle id="credits-team">Equipo LexCode</SectionTitle>
+          <SectionTitle id="credits-team">Equipo LexCode — autores de la obra</SectionTitle>
           <ul className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
             {TEAM.map((m) => (
-              <li key={m.name} className="rounded-lg border border-desk-700 bg-desk-800 px-3 py-2">
-                <p className="text-sm font-medium text-ink-100">{m.name}</p>
-                <p className="text-xs text-ink-400">{m.role}</p>
+              <li key={m.name} className="rounded border border-sage px-3 py-2">
+                <p className="text-sm font-semibold">{m.name}</p>
+                <p className="text-xs text-olive">{m.role}</p>
               </li>
             ))}
           </ul>
-          <p className="mt-2 text-xs text-ink-500">
+          <p className="mt-2 text-xs text-olive">
             {PROJECT.course} · {PROJECT.program} · Docente: {PROJECT.teacher}
           </p>
         </section>
 
         <section aria-labelledby="credits-third">
-          <SectionTitle id="credits-third">Recursos de terceros</SectionTitle>
+          <SectionTitle id="credits-third">Software y tipografías de terceros</SectionTitle>
           <CreditsTable
             headers={['Categoría', 'Recurso', 'Autor / organización', 'Licencia', 'Referencia']}
             rows={THIRD_PARTY.map((r) => [
@@ -47,12 +48,35 @@ export default function CreditsLicensesModal({ open, onClose }) {
                 href={r.url}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-1 text-brand-300 hover:underline"
+                className="inline-flex items-center gap-1 font-medium text-earth hover:underline"
               >
-                Repositorio <ExternalLink className="size-3" aria-hidden="true" />
+                Repositorio <ExternalLink className="size-4" aria-hidden="true" />
               </a>,
             ])}
           />
+        </section>
+
+        <section aria-labelledby="credits-marks">
+          <SectionTitle id="credits-marks">Marcas institucionales (excluidas de la licencia del proyecto)</SectionTitle>
+          <CreditsTable
+            headers={['Categoría', 'Recurso', 'Titular', 'Licencia', 'Uso autorizado']}
+            rows={INSTITUTIONAL_MARKS.map((r) => [
+              r.category,
+              r.resource,
+              r.owner,
+              <LicenseTag key="l" tone="crimson">
+                {r.license}
+              </LicenseTag>,
+              r.usage,
+            ])}
+          />
+          <p className="mt-2 text-xs text-olive">
+            Los logotipos son signos distintivos de la UTEZ protegidos en materia de propiedad industrial (Ley Federal de
+            Protección a la Propiedad Industrial). La universidad los proporcionó al equipo para este trabajo académico;
+            se reproducen sin alteraciones y solo para identificar el origen del proyecto. Esa autorización es para el
+            Equipo LexCode: quien redistribuya LexCode bajo la GPL o CC BY-SA debe retirarlos si no cuenta con su propia
+            autorización de la universidad.
+          </p>
         </section>
 
         <section aria-labelledby="credits-own">
@@ -68,12 +92,17 @@ export default function CreditsLicensesModal({ open, onClose }) {
           <ul>
             <li>
               <strong>Sin hotlinking ni recursos protegidos:</strong> no se cargan imágenes, audios ni fuentes desde
-              sitios externos; todo se distribuye junto con el proyecto y con licencia verificada.
+              sitios externos; todo se distribuye junto con el proyecto y con licencia o autorización verificada.
             </li>
             <li>
               <strong>Textos legales citados:</strong> los artículos de leyes y de la Constitución que se citan no son
               objeto de protección por derecho de autor (Art. 14, fracción VIII, de la Ley Federal del Derecho de
               Autor). Los casos que los aplican son redacción original del equipo.
+            </li>
+            <li>
+              <strong>Códigos de ética profesionales:</strong> los principios del Código de Ética de la ACM y del Código
+              de Ética de Ingeniería de Software ACM/IEEE-CS se citan de forma breve y parafraseada, con fines
+              educativos y con referencia a su fuente.
             </li>
             <li>
               <strong>Inspiración de diseño:</strong> la mecánica de «inspector de documentos» y gestión de indicadores
@@ -82,8 +111,8 @@ export default function CreditsLicensesModal({ open, onClose }) {
               música ni ningún otro recurso de juegos existentes.
             </li>
             <li>
-              <strong>Personajes y empresas ficticios:</strong> cualquier parecido de los casos con personas u
-              organizaciones reales es coincidencia.
+              <strong>Personajes y empresas ficticios:</strong> NovaByte Solutions y todas las personas de los casos son
+              inventadas; cualquier parecido con personas u organizaciones reales es coincidencia.
             </li>
           </ul>
         </section>
@@ -94,15 +123,19 @@ export default function CreditsLicensesModal({ open, onClose }) {
 
 function SectionTitle({ id, children }) {
   return (
-    <h3 id={id} className="mb-2.5 text-sm font-semibold tracking-wide text-brand-300 uppercase">
+    <h3 id={id} className="label-caps mb-2.5 border-b border-sage pb-1.5 text-olive">
       {children}
     </h3>
   );
 }
 
-function LicenseTag({ children }) {
+function LicenseTag({ children, tone = 'olive' }) {
+  const tones = {
+    olive: 'border-olive-2 text-olive',
+    crimson: 'border-crimson text-crimson',
+  };
   return (
-    <span className="inline-block rounded-md bg-desk-700 px-2 py-0.5 font-mono text-xs whitespace-nowrap text-ink-100">
+    <span className={`inline-block rounded-sm border px-1.5 py-0.5 font-mono text-[11px] font-semibold whitespace-nowrap ${tones[tone]}`}>
       {children}
     </span>
   );
@@ -110,22 +143,22 @@ function LicenseTag({ children }) {
 
 function CreditsTable({ headers, rows }) {
   return (
-    <div className="overflow-x-auto rounded-xl border border-desk-700">
-      <table className="w-full min-w-[640px] text-left text-sm">
-        <thead className="bg-desk-800 text-xs tracking-wide text-ink-400 uppercase">
+    <div className="overflow-x-auto rounded border border-sage">
+      <table className="w-full min-w-[680px] text-left text-sm">
+        <thead className="bg-panel/60">
           <tr>
             {headers.map((h) => (
-              <th key={h} scope="col" className="px-3 py-2.5 font-semibold">
+              <th key={h} scope="col" className="label-caps px-3 py-2 text-app">
                 {h}
               </th>
             ))}
           </tr>
         </thead>
-        <tbody className="divide-y divide-desk-700">
+        <tbody className="divide-y divide-sage/60">
           {rows.map((cells, i) => (
             <tr key={i} className="align-top">
               {cells.map((c, j) => (
-                <td key={j} className={`px-3 py-2.5 ${j === 1 ? 'font-medium text-ink-100' : 'text-ink-300'}`}>
+                <td key={j} className={`px-3 py-2 ${j === 1 ? 'font-semibold' : ''}`}>
                   {c}
                 </td>
               ))}

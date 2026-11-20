@@ -30,6 +30,14 @@ Proyecto final de **Ética y Legislación en Tecnologías de la Información (E-
 - **Sin backend ni base de datos.** El avance se guarda solo en el `localStorage` del navegador, y únicamente después de aceptar el Aviso de Privacidad.
 - Motor basado en datos: los casos viven en `src/data/cases/*.json` y el Manual Jurídico en `src/data/legalManual.json`.
 - Efectos de sonido sintetizados con la **Web Audio API** (sin archivos de audio de terceros).
+- Interfaz tipo estación de trabajo: HUD fijo, expediente con pestañas a la izquierda, dictamen y Manual Jurídico a la derecha. Paleta institucional de 10 tonos definida como variables CSS en `src/styles/globals.css`.
+
+## Cómo se juega
+
+1. Cada ticket llega con un **expediente**: contexto y evidencias (correos, chats, código, diffs, bitácoras, contratos, configuraciones).
+2. El **Manual Jurídico** se consulta sin costo; la **pista normativa** del despacho externo cuesta presupuesto.
+3. Se sella un **dictamen** (Aprobar, Bloquear, Remediar o Escalar). Cada dictamen muestra de inmediato el fundamento ético y legal, el modelo ético aplicado, el dictamen recomendado si fallaste y el aprendizaje clave.
+4. Si **Presupuesto**, **Reputación Ética** o **Cumplimiento Legal** llegan a 0, la partida termina con un final temático. Al cerrar cada Sprint se muestra el perfil de decisión ética del jugador.
 
 ## Desarrollo local
 
@@ -79,6 +87,15 @@ El juego solo pide un **alias** (recomendamos no usar el nombre real), después 
 | Tipografía | Inter (vía @fontsource/inter) | The Inter Project Authors (Rasmus Andersson) | SIL OFL 1.1 | https://github.com/rsms/inter |
 | Tipografía | JetBrains Mono (vía @fontsource/jetbrains-mono) | The JetBrains Mono Project Authors | SIL OFL 1.1 | https://github.com/JetBrains/JetBrainsMono |
 
+### Marcas institucionales (excluidas de las licencias del proyecto)
+
+| Categoría | Recurso | Archivo | Titular | Licencia | Uso |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| Imagen (marca) | Logotipo de la UTEZ | `public/assets/institucional/utez-logo.png` | Universidad Tecnológica Emiliano Zapata del Estado de Morelos | Todos los derechos reservados | Proporcionado por la UTEZ al equipo para trabajos académicos; identificación institucional, sin modificaciones ni fines comerciales |
+| Imagen (marca) | Logotipo de la División Académica de Tecnologías de la Información y Diseño | `public/assets/institucional/datid-logo.png` | Universidad Tecnológica Emiliano Zapata del Estado de Morelos | Todos los derechos reservados | Proporcionado por la UTEZ al equipo para trabajos académicos; identificación de la división, sin modificaciones |
+
+Los logotipos son signos distintivos de la UTEZ, protegidos en materia de propiedad industrial (LFPPI). La universidad los proporcionó al Equipo LexCode para este trabajo académico. **No** están cubiertos por la GPLv3 ni por la CC BY-SA 4.0 de LexCode: esa autorización es para el equipo, así que si redistribuyes el proyecto sin autorización propia de la universidad, retíralos.
+
 ### Recursos propios
 
 | Categoría | Recurso | Detalle | Licencia |
@@ -91,6 +108,7 @@ El juego solo pide un **alias** (recomendamos no usar el nombre real), después 
 
 - No se enlazan imágenes, audios ni fuentes desde sitios externos (*hotlinking*): todo se distribuye con el proyecto y con licencia verificada.
 - Los textos legislativos citados no son objeto de protección por derecho de autor (Art. 14, fracción VIII, LFDA). Los casos que los aplican son redacción original.
+- Los principios del Código de Ética de la ACM y del Código de Ética de Ingeniería de Software ACM/IEEE-CS se citan de forma breve y parafraseada, con fines educativos y referencia a su fuente.
 - La mecánica de «inspector de documentos» con indicadores se inspira en el género de simuladores de toma de decisiones. Las ideas y mecánicas no son objeto de protección por derecho de autor (Art. 14, fracción I, LFDA). LexCode no usa nombres, arte, música ni otros recursos de juegos existentes.
 - Personas y empresas de los casos son ficticias.
 

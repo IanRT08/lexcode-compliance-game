@@ -28,7 +28,7 @@ export function PrivacyNoticeSimplified() {
 export function PrivacyNoticeFull() {
   return (
     <div className="prose-legal">
-      <p className="text-xs! text-ink-500!">Última actualización: {PROJECT.privacyNoticeUpdated}</p>
+      <p className="font-mono text-xs! text-olive!">Última actualización: {PROJECT.privacyNoticeUpdated}</p>
 
       <h3>1. Identidad del responsable</h3>
       <p>
@@ -44,7 +44,7 @@ export function PrivacyNoticeFull() {
       </ul>
       <p>
         Medio de contacto: sección de <em>Issues</em> del repositorio público{' '}
-        <a href={PROJECT.repoUrl} target="_blank" rel="noreferrer" className="text-brand-300 underline">
+        <a href={PROJECT.repoUrl} target="_blank" rel="noreferrer">
           {PROJECT.repoUrl.replace('https://', '')}
         </a>
         .

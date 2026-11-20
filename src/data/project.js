@@ -58,6 +58,28 @@ export const OWN_ASSETS = [
   },
 ];
 
+// Marcas institucionales: propiedad de terceros, uso académico, excluidas de las licencias del proyecto.
+export const INSTITUTIONAL_MARKS = [
+  {
+    category: 'Imagen (marca)',
+    resource: 'Logotipo de la UTEZ',
+    file: 'public/assets/institucional/utez-logo.png',
+    owner: 'Universidad Tecnológica Emiliano Zapata del Estado de Morelos',
+    license: 'Todos los derechos reservados',
+    usage:
+      'Proporcionado por la UTEZ al equipo para su uso en trabajos académicos. Identificación institucional del proyecto, sin modificaciones ni fines comerciales.',
+  },
+  {
+    category: 'Imagen (marca)',
+    resource: 'Logotipo de la División Académica de Tecnologías de la Información y Diseño (DATID)',
+    file: 'public/assets/institucional/datid-logo.png',
+    owner: 'Universidad Tecnológica Emiliano Zapata del Estado de Morelos',
+    license: 'Todos los derechos reservados',
+    usage:
+      'Proporcionado por la UTEZ al equipo para su uso en trabajos académicos. Identificación de la división académica del programa educativo, sin modificaciones.',
+  },
+];
+
 // Matriz oficial de atribuciones de terceros (Criterio 7).
 export const THIRD_PARTY = [
   {

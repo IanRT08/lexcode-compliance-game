@@ -5,29 +5,27 @@ import { OWN_LICENSES, PROJECT } from '../../data/project.js';
 export default function FooterLegal({ onOpen }) {
   const links = [
     { key: 'privacy', label: 'Aviso de Privacidad', icon: ScrollText },
-    { key: 'license', label: `Licencia ${OWN_LICENSES.code.id.replace('-or-later', '+')}`, icon: Scale },
+    { key: 'license', label: 'Licencia GPL-3.0+', icon: Scale },
     { key: 'credits', label: 'Créditos y PI', icon: Users },
-    { key: 'delete', label: 'Eliminar mis datos locales', icon: Trash },
+    { key: 'delete', label: 'Eliminar mis datos locales', icon: Trash, danger: true },
   ];
 
   return (
-    <footer className="border-t border-desk-700 bg-desk-950/80">
-      <div className="mx-auto flex max-w-7xl flex-col gap-3 px-4 py-3 sm:flex-row sm:items-center sm:justify-between">
-        <p className="text-xs text-ink-500">
+    <footer className="shrink-0 border-t border-olive-2 bg-[color-mix(in_oklab,var(--bg-app)_85%,black)]">
+      <div className="flex flex-col gap-1.5 px-4 py-1.5 md:flex-row md:items-center md:justify-between">
+        <p className="font-mono text-[11px] text-panel">
           © {PROJECT.year} Equipo LexCode · UTEZ · Código {OWN_LICENSES.code.id} · Contenido {OWN_LICENSES.content.id}
         </p>
         <nav aria-label="Información legal">
-          <ul className="flex flex-wrap gap-x-4 gap-y-1.5">
-            {links.map(({ key, label, icon: Icon }) => (
+          <ul className="-mx-2 flex flex-wrap">
+            {links.map(({ key, label, icon: Icon, danger }) => (
               <li key={key}>
                 <button
                   type="button"
                   onClick={() => onOpen(key)}
-                  className={`inline-flex cursor-pointer items-center gap-1.5 text-xs font-medium hover:underline ${
-                    key === 'delete' ? 'text-bad/90' : 'text-ink-300 hover:text-brand-300'
-                  }`}
+                  className={`btn-ghost px-2 py-1 text-xs font-medium ${danger ? 'text-muted' : 'text-paper'}`}
                 >
-                  <Icon className="size-3.5" aria-hidden="true" />
+                  <Icon className="size-4" aria-hidden="true" />
                   {label}
                 </button>
               </li>

@@ -11,6 +11,11 @@ const SAVE_VERSION = 1;
 
 export const METRIC_KEYS = ['budget', 'ethics', 'legal'];
 
+/** Costo de pedir la pista normativa al área jurídica externa. */
+export const HINT_COST = 3;
+/** Presupuesto que la dirección asigna al iniciar cada nuevo Sprint (trimestre). */
+export const SPRINT_BUDGET_BONUS = 15;
+
 export const initialState = {
   player: {
     name: '',
@@ -23,6 +28,7 @@ export const initialState = {
   metrics: { budget: 100, ethics: 100, legal: 100 },
   activeFeedback: null, // Dictamen del último caso resuelto (VerdictModal)
   decisionHistory: [], // Registro para estadísticas y certificado final
+  hintsUsed: [], // IDs de casos en los que se pidió la pista normativa
   endReason: null, // 'budget' | 'ethics' | 'legal' cuando hay GAME_OVER
   gameStatus: 'START', // 'START' | 'PLAYING' | 'SPRINT_SUMMARY' | 'GAME_OVER' | 'VICTORY'
 };
@@ -59,6 +65,16 @@ function gameReducer(state, action) {
       if (!state.player.privacyAccepted) return state;
       return freshRun(state);
 
+    case 'USE_HINT': {
+      if (state.gameStatus !== 'PLAYING' || state.activeFeedback) return state;
+      if (state.hintsUsed.includes(action.caseId) || state.metrics.budget <= HINT_COST) return state;
+      return {
+        ...state,
+        hintsUsed: [...state.hintsUsed, action.caseId],
+        metrics: { ...state.metrics, budget: clamp(state.metrics.budget - HINT_COST) },
+      };
+    }
+
     case 'RESOLVE_CASE': {
       if (state.gameStatus !== 'PLAYING' || state.activeFeedback) return state;
       const { caseData, optionId } = action;
@@ -89,6 +105,9 @@ function gameReducer(state, action) {
             sprint: state.currentSprint,
             subtema: caseData.subtema,
             optionId: option.id,
+            tipo: option.tipo ?? null,
+            marcoEtico: option.marcoEtico ?? null,
+            usedHint: state.hintsUsed.includes(caseData.id),
             esCorrecta: Boolean(option.esCorrecta),
             impacto: option.impacto ?? {},
             at: new Date().toISOString(),
@@ -114,7 +133,13 @@ function gameReducer(state, action) {
     case 'ADVANCE_SPRINT':
       if (state.gameStatus !== 'SPRINT_SUMMARY') return state;
       if (state.currentSprint >= TOTAL_SPRINTS) return { ...state, gameStatus: 'VICTORY' };
-      return { ...state, currentSprint: state.currentSprint + 1, currentCaseIndex: 0, gameStatus: 'PLAYING' };
+      return {
+        ...state,
+        currentSprint: state.currentSprint + 1,
+        currentCaseIndex: 0,
+        metrics: { ...state.metrics, budget: clamp(state.metrics.budget + SPRINT_BUDGET_BONUS) },
+        gameStatus: 'PLAYING',
+      };
 
     case 'TOGGLE_SOUND':
       return { ...state, soundEnabled: !state.soundEnabled };
@@ -145,6 +170,7 @@ function readSave() {
       player: { ...initialState.player, ...saved.player },
       metrics: { ...initialState.metrics, ...saved.metrics },
       decisionHistory: Array.isArray(saved.decisionHistory) ? saved.decisionHistory : [],
+      hintsUsed: Array.isArray(saved.hintsUsed) ? saved.hintsUsed : [],
     };
   } catch {
     return null;
@@ -175,6 +201,7 @@ export function GameProvider({ children }) {
     () => ({
       acceptPrivacy: (name) => dispatch({ type: 'ACCEPT_PRIVACY', name }),
       startGame: () => dispatch({ type: 'START_GAME' }),
+      useHint: (caseId) => dispatch({ type: 'USE_HINT', caseId }),
       resolveCase: (caseData, optionId) => dispatch({ type: 'RESOLVE_CASE', caseData, optionId }),
       acknowledgeFeedback: () => dispatch({ type: 'ACKNOWLEDGE_FEEDBACK' }),
       advanceSprint: () => dispatch({ type: 'ADVANCE_SPRINT' }),

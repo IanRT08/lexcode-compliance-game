@@ -2,10 +2,11 @@ import { useEffect, useId, useRef } from 'react';
 import { X } from 'lucide-react';
 
 /**
- * Diálogo modal accesible: role="dialog", aria-modal, cierre con Escape,
+ * Diálogo modal accesible con aspecto de documento oficial: encabezado institucional
+ * en verde olivo y cuerpo en papel. role="dialog", aria-modal, cierre con Escape,
  * foco inicial dentro del diálogo, ciclo de Tab contenido y retorno del foco al cerrar.
  */
-export default function Modal({ open, onClose, title, icon: Icon, children, footer, size = 'lg', dismissible = true }) {
+export default function Modal({ open, onClose, title, kicker, icon: Icon, children, footer, size = 'lg', dismissible = true }) {
   const titleId = useId();
   const dialogRef = useRef(null);
   // onClose en ref: evita re-ejecutar el efecto (y robar el foco) en cada render del padre.
@@ -53,9 +54,9 @@ export default function Modal({ open, onClose, title, icon: Icon, children, foot
   const widths = { sm: 'max-w-md', md: 'max-w-xl', lg: 'max-w-3xl', xl: 'max-w-5xl' };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-end justify-center p-0 sm:items-center sm:p-4">
+    <div className="fixed inset-0 z-50 flex items-end justify-center sm:items-center sm:p-4">
       <div
-        className="absolute inset-0 bg-desk-950/80 backdrop-blur-sm"
+        className="absolute inset-0 bg-[color-mix(in_oklab,var(--bg-app)_70%,black)]/85"
         onClick={dismissible ? onClose : undefined}
         aria-hidden="true"
       />
@@ -65,27 +66,25 @@ export default function Modal({ open, onClose, title, icon: Icon, children, foot
         aria-modal="true"
         aria-labelledby={titleId}
         tabIndex={-1}
-        className={`panel relative flex max-h-[92vh] w-full ${widths[size]} flex-col overflow-hidden rounded-b-none shadow-2xl shadow-black/50 outline-none sm:rounded-2xl`}
+        className={`on-paper relative flex max-h-[94dvh] w-full ${widths[size]} flex-col overflow-hidden rounded-t-md border border-sage bg-paper text-app outline-none sm:rounded-md`}
       >
-        <header className="flex items-center gap-3 border-b border-desk-700 px-5 py-4">
-          {Icon && <Icon className="size-5 shrink-0 text-brand-300" aria-hidden="true" />}
-          <h2 id={titleId} className="flex-1 text-base font-semibold text-ink-100">
-            {title}
-          </h2>
+        <header className="flex items-center gap-3 border-b-2 border-olive-2 bg-olive px-5 py-3 text-paper">
+          {Icon && <Icon className="size-[18px] shrink-0" aria-hidden="true" />}
+          <div className="min-w-0 flex-1">
+            {kicker && <p className="label-caps text-panel">{kicker}</p>}
+            <h2 id={titleId} className="truncate text-[15px] font-semibold">
+              {title}
+            </h2>
+          </div>
           {dismissible && (
-            <button
-              type="button"
-              onClick={onClose}
-              className="rounded-md p-1.5 text-ink-400 hover:bg-desk-700 hover:text-ink-100"
-              aria-label="Cerrar"
-            >
-              <X className="size-5" aria-hidden="true" />
+            <button type="button" onClick={onClose} className="btn-ghost p-1.5" aria-label="Cerrar">
+              <X className="size-[18px]" aria-hidden="true" />
             </button>
           )}
         </header>
-        <div className="flex-1 overflow-y-auto px-5 py-4">{children}</div>
+        <div className="scroll-pane flex-1 overflow-y-auto px-5 py-4">{children}</div>
         {footer && (
-          <footer className="flex flex-col-reverse gap-2 border-t border-desk-700 px-5 py-4 sm:flex-row sm:justify-end">
+          <footer className="flex flex-col-reverse gap-2 border-t border-sage bg-[color-mix(in_oklab,var(--surface-paper)_88%,var(--surface-panel))] px-5 py-3 sm:flex-row sm:justify-end">
             {footer}
           </footer>
         )}

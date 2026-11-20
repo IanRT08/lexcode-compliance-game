@@ -78,18 +78,18 @@ export default function LicenseModal({ open, onClose }) {
 
 function LicenseCard({ label, id, name, url, note }) {
   return (
-    <div className="rounded-xl border border-desk-600 bg-desk-800 p-4">
-      <p className="text-xs font-semibold tracking-wide text-ink-500 uppercase">{label}</p>
-      <p className="mt-1 font-mono text-sm font-semibold text-brand-300">{id}</p>
-      <p className="mt-1 text-sm! text-ink-100!">{name}</p>
-      <p className="mt-1 text-xs! text-ink-400!">{note}</p>
+    <div className="rounded border border-sage bg-[color-mix(in_oklab,var(--surface-paper)_75%,var(--surface-panel))] p-4">
+      <p className="label-caps text-olive">{label}</p>
+      <p className="mt-1 font-mono text-sm font-semibold text-earth">{id}</p>
+      <p className="mt-1 text-sm! font-medium">{name}</p>
+      <p className="mt-1 text-xs! text-olive!">{note}</p>
       <a
         href={url}
         target="_blank"
         rel="noreferrer"
-        className="mt-2 inline-flex items-center gap-1 text-xs font-medium text-brand-300 hover:underline"
+        className="mt-2 inline-flex items-center gap-1 text-xs font-medium text-earth hover:underline"
       >
-        Texto oficial <ExternalLink className="size-3" aria-hidden="true" />
+        Texto oficial <ExternalLink className="size-4" aria-hidden="true" />
       </a>
     </div>
   );

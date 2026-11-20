@@ -2,26 +2,23 @@ import { Hammer, RotateCcw } from 'lucide-react';
 import { useGame } from '../../context/GameContext.jsx';
 import { getSprint } from '../../data/sprints.js';
 
-/**
- * Pantalla temporal de la Etapa 1. Se reemplaza en la Etapa 2 por el escritorio de
- * auditoría (CaseWorkspace, EvidenceInspector, LegalManualDrawer y VerdictModal).
- */
+/** Aviso para Sprints cuyos casos todavía no se publican (desarrollo por etapas). */
 export default function ConstructionScreen() {
   const { state, actions } = useGame();
   const sprint = getSprint(state.currentSprint);
   return (
-    <div className="mx-auto grid max-w-2xl place-items-center px-4 py-20 text-center">
-      <div className="panel w-full p-8">
-        <Hammer className="mx-auto size-10 text-budget" aria-hidden="true" />
-        <p className="mt-4 font-mono text-xs text-brand-300">
-          SPRINT {sprint.id} · UNIDAD {sprint.unidad} · ESTADO: {state.gameStatus}
+    <div className="grid h-full place-items-center overflow-y-auto px-4 py-10">
+      <div className="paper w-full max-w-xl p-8 text-center">
+        <Hammer className="mx-auto size-[18px] text-earth" aria-hidden="true" />
+        <p className="label-caps mt-3 text-earth">
+          Sprint {sprint.id} · Unidad {sprint.unidad} · En construcción
         </p>
         <h1 className="mt-2 text-2xl font-bold">{sprint.titulo}</h1>
-        <p className="mt-3 text-sm text-ink-300">
-          Bienvenido, <strong className="text-ink-100">{state.player.name}</strong>. El escritorio de auditoría y los
-          casos de este Sprint se están construyendo. Tu consentimiento y tu avance ya se guardan localmente.
+        <p className="mt-3 text-sm">
+          Los casos de este Sprint se publicarán en la siguiente etapa del desarrollo. Tu avance se conserva en este
+          navegador.
         </p>
-        <button type="button" className="btn-ghost mt-6" onClick={actions.restart}>
+        <button type="button" className="btn-outline mt-6" onClick={actions.restart}>
           <RotateCcw className="size-4" aria-hidden="true" /> Reiniciar partida
         </button>
       </div>
