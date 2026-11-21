@@ -110,8 +110,9 @@ export function PrivacyNoticeFull() {
       <h3>7. Marco normativo</h3>
       <p>
         Este aviso se elabora con base en la Ley Federal de Protección de Datos Personales en Posesión de los
-        Particulares (publicada en el DOF el 20 de marzo de 2025) y el Art. 16 constitucional, con fines académicos y
-        como ejercicio de congruencia ética del propio proyecto.
+        Particulares (publicada en el DOF el 20 de marzo de 2025), cuyos Arts. 15 y 16 fijan el contenido del aviso
+        integral y del simplificado, y el Art. 16 constitucional, con fines académicos y como ejercicio de congruencia
+        ética del propio proyecto. La autoridad en la materia es la Secretaría Anticorrupción y Buen Gobierno.
       </p>
     </div>
   );

@@ -225,5 +225,365 @@
       "En la Unidad IV se estudia la compatibilidad entre licencias (MIT, Apache 2.0, GPLv3, CC-BY)."
     ],
     "palabrasClave": ["licencia", "MIT", "GPL", "copyleft", "código abierto", "software libre", "dependencia", "avisos"]
+  },
+  {
+    "id": "U2_M01",
+    "unidad": 2,
+    "categoria": "Constitución",
+    "titulo": "Art. 6.º: libertad de expresión y derecho de acceso a la información",
+    "fuente": "CPEUM Art. 6 (última reforma al artículo: DOF 20/12/2024)",
+    "resumen": "La manifestación de las ideas no será objeto de inquisición judicial o administrativa, salvo que ataque la moral, la vida privada o los derechos de terceros, provoque algún delito o perturbe el orden público. El derecho a la información será garantizado por el Estado.",
+    "puntosClave": [
+      "Toda persona tiene derecho al libre acceso a información plural y oportuna, y a buscar, recibir y difundir información por cualquier medio.",
+      "El Estado garantiza el acceso a las TIC, incluidos banda ancha e Internet.",
+      "Apartado A, fr. I: la información en posesión de autoridades y de cualquier persona física o moral que reciba y ejerza recursos públicos es pública; solo puede reservarse temporalmente. Rige el principio de máxima publicidad.",
+      "Apartado A, fr. II: la vida privada y los datos personales se protegen en los términos que fijen las leyes.",
+      "Apartado A, fr. V: los sujetos obligados deben preservar sus documentos en archivos actualizados.",
+      "La reforma de diciembre de 2024 eliminó el organismo autónomo garante (antes INAI); la revisión corresponde ahora a las autoridades que fijen las leyes en la materia."
+    ],
+    "palabrasClave": ["artículo 6", "transparencia", "acceso a la información", "máxima publicidad", "versión pública", "libertad de expresión", "INAI", "sujeto obligado"]
+  },
+  {
+    "id": "U2_M02",
+    "unidad": 2,
+    "categoria": "Constitución",
+    "titulo": "Art. 7.º: libertad de difundir ideas en cualquier medio",
+    "fuente": "CPEUM Art. 7, primer párrafo",
+    "resumen": "Es inviolable la libertad de difundir opiniones, información e ideas a través de cualquier medio. No puede restringirse por vías o medios indirectos, incluidas las tecnologías de la información y comunicación encaminadas a impedir la circulación de ideas.",
+    "puntosClave": [
+      "Filtrar o borrar críticas por su contenido político es una restricción indirecta prohibida.",
+      "Sus límites son los del Art. 6: vida privada, derechos de terceros, comisión de delitos u orden público.",
+      "Una política de moderación legítima es pública, proporcional, se aplica igual a todos y permite apelar."
+    ],
+    "palabrasClave": ["artículo 7", "libertad de expresión", "censura", "moderación", "redes sociales", "foro"]
+  },
+  {
+    "id": "U2_M03",
+    "unidad": 2,
+    "categoria": "Constitución",
+    "titulo": "Art. 8.º: derecho de petición",
+    "fuente": "CPEUM Art. 8",
+    "resumen": "Los funcionarios y empleados públicos deben respetar el derecho de petición formulado por escrito, de manera pacífica y respetuosa. A toda petición debe recaer un acuerdo escrito de la autoridad, que debe darlo a conocer en breve término al peticionario.",
+    "puntosClave": [
+      "Aplica a peticiones dirigidas a autoridades; los medios electrónicos son una forma válida de presentarlas por escrito.",
+      "El derecho no garantiza una respuesta favorable, sino una respuesta escrita, congruente y notificada.",
+      "Un sistema que marca peticiones como «atendidas» sin acuerdo escrito vulnera este derecho.",
+      "En materia política, solo los ciudadanos de la República pueden ejercerlo."
+    ],
+    "palabrasClave": ["artículo 8", "derecho de petición", "ventanilla", "gobierno digital", "respuesta", "breve término"]
+  },
+  {
+    "id": "U2_M04",
+    "unidad": 2,
+    "categoria": "Constitución",
+    "titulo": "Art. 16: privacidad, datos personales y comunicaciones privadas",
+    "fuente": "CPEUM Art. 16, párrafos segundo y relativo a comunicaciones privadas",
+    "resumen": "Toda persona tiene derecho a la protección de sus datos personales, al acceso, rectificación y cancelación de los mismos, y a manifestar su oposición (derechos ARCO), en los términos que fije la ley. Las comunicaciones privadas son inviolables.",
+    "puntosClave": [
+      "Los derechos ARCO son derechos humanos de la persona titular, no un favor de la empresa.",
+      "La ley penal sanciona cualquier acto contra la libertad y privacidad de las comunicaciones privadas.",
+      "Las excepciones solo proceden por seguridad nacional, orden público, seguridad y salud públicas o derechos de terceros, conforme a la ley."
+    ],
+    "palabrasClave": ["artículo 16", "privacidad", "ARCO", "datos personales", "comunicaciones privadas", "intimidad"]
+  },
+  {
+    "id": "U2_M05",
+    "unidad": 2,
+    "categoria": "Ley",
+    "titulo": "LFPDPPP 2025: principios y consentimiento",
+    "fuente": "LFPDPPP (DOF 20/03/2025), Arts. 2, 5, 7 y 8",
+    "resumen": "La nueva ley de datos personales en posesión de particulares abrogó la de 2010. Exige observar los principios de licitud, finalidad, lealtad, consentimiento, calidad, proporcionalidad, información y responsabilidad (Art. 5). La autoridad es la Secretaría Anticorrupción y Buen Gobierno (Art. 2, fr. XV).",
+    "puntosClave": [
+      "Art. 7: por regla general es válido el consentimiento tácito (el aviso se puso a disposición y la persona no se opuso).",
+      "Art. 7: los datos financieros o patrimoniales requieren consentimiento expreso; el consentimiento puede revocarse en cualquier momento.",
+      "Art. 8: los datos sensibles requieren consentimiento expreso y por escrito, mediante firma autógrafa, firma electrónica u otro mecanismo de autenticación.",
+      "Art. 2, fr. VI: datos sensibles son los que afectan la esfera más íntima de la persona o cuyo uso indebido puede causar discriminación o un riesgo grave (origen étnico, salud, información genética, creencias, opiniones políticas, preferencia sexual).",
+      "Una casilla premarcada no es consentimiento expreso: el consentimiento debe ser una manifestación inequívoca de la persona."
+    ],
+    "palabrasClave": ["LFPDPPP", "consentimiento", "tácito", "expreso", "datos sensibles", "salud", "biométricos", "principios", "Secretaría Anticorrupción"]
+  },
+  {
+    "id": "U2_M06",
+    "unidad": 2,
+    "categoria": "Ley",
+    "titulo": "Aviso de privacidad integral y simplificado",
+    "fuente": "LFPDPPP (2025), Arts. 14, 15 y 16",
+    "resumen": "El responsable debe informar a la persona titular la existencia y características del tratamiento mediante el aviso de privacidad (Art. 14).",
+    "puntosClave": [
+      "Art. 15, contenido mínimo del aviso integral: I identidad y domicilio del responsable; II datos que se tratarán, identificando los sensibles; III finalidades, distinguiendo las que requieren consentimiento; IV opciones y medios para limitar el uso o divulgación; V medios para ejercer los derechos ARCO; VI procedimiento para comunicar cambios al aviso.",
+      "Art. 16: cuando los datos se obtienen por medios electrónicos, puede darse un aviso simplificado con al menos las fracciones I a IV del Art. 15 y la indicación de dónde consultar el aviso integral.",
+      "Un aviso válido no tiene que ser largo: tiene que ser completo, claro y estar disponible antes de recabar los datos."
+    ],
+    "palabrasClave": ["aviso de privacidad", "integral", "simplificado", "finalidades", "artículo 15", "artículo 16"]
+  },
+  {
+    "id": "U2_M07",
+    "unidad": 2,
+    "categoria": "Ley",
+    "titulo": "Derechos ARCO: procedimiento y plazos",
+    "fuente": "LFPDPPP (2025), Arts. 22 a 34",
+    "resumen": "Acceso (Art. 22), Rectificación (Art. 23), Cancelación (Art. 24, con periodo de bloqueo) y Oposición (Art. 26). La solicitud se presenta conforme a los Arts. 27 y 28.",
+    "puntosClave": [
+      "Art. 31: el responsable comunica su determinación en máximo 20 días (hábiles, Art. 2, fr. VIII) desde la recepción y, si procede, la hace efectiva dentro de los 15 días siguientes; cada plazo puede ampliarse una vez por un periodo igual, justificadamente.",
+      "Art. 34: el ejercicio de los derechos ARCO es gratuito; solo pueden cobrarse costos de reproducción, copias o envío.",
+      "Cancelación: los datos se bloquean y después se suprimen, salvo los que deban conservarse por una obligación legal.",
+      "La empresa no es «dueña» de los datos: la LFDA (Art. 107) protege la estructura de una base de datos, pero no los datos en sí mismos."
+    ],
+    "palabrasClave": ["ARCO", "acceso", "rectificación", "cancelación", "oposición", "plazo", "20 días", "gratuito", "bloqueo"]
+  },
+  {
+    "id": "U2_M08",
+    "unidad": 2,
+    "categoria": "Ley",
+    "titulo": "Seguridad, vulneraciones, sanciones y delitos en datos personales",
+    "fuente": "LFPDPPP (2025), Arts. 18–20, 58, 59, 62–64",
+    "resumen": "El responsable debe mantener medidas de seguridad administrativas, técnicas y físicas (Art. 18) e informar de inmediato a las personas titulares las vulneraciones que afecten significativamente sus derechos (Art. 19). La confidencialidad subsiste aun después de terminar la relación laboral (Art. 20).",
+    "puntosClave": [
+      "Art. 58, fr. XIII: es infracción recabar o transferir datos sin el consentimiento expreso cuando este sea exigible.",
+      "Art. 59, fr. III: multa de 200 a 320,000 UMA para las infracciones de las fracciones VIII a XVIII; con datos sensibles los montos pueden incrementarse hasta dos veces.",
+      "Art. 62: de 3 meses a 3 años de prisión a quien, autorizado para tratar datos, con ánimo de lucro provoque una vulneración de seguridad.",
+      "Art. 63: de 6 meses a 5 años de prisión a quien trate datos mediante engaño para obtener un lucro indebido.",
+      "Art. 64: tratándose de datos sensibles, las penas se duplican."
+    ],
+    "palabrasClave": ["seguridad", "vulneración", "brecha", "notificación", "multa", "UMA", "delito", "datos sensibles", "confidencialidad"]
+  },
+  {
+    "id": "U2_M09",
+    "unidad": 2,
+    "categoria": "Ley",
+    "titulo": "LFDA: el software como obra protegida",
+    "fuente": "LFDA Arts. 13, 21, 24, 29, 101, 102, 106 y 162 (última reforma DOF 14/05/2026)",
+    "resumen": "El programa de computación es la expresión original, en cualquier forma, lenguaje o código, de un conjunto de instrucciones para que una computadora realice una tarea (Art. 101). Se protege en los mismos términos que las obras literarias, incluidos los programas de inteligencia artificial, en código fuente u objeto (Art. 102, reformado en 2026).",
+    "puntosClave": [
+      "Art. 13, fr. XI: los programas de cómputo son una rama de obras protegidas.",
+      "Derechos morales (Art. 21): divulgación, paternidad, integridad, oponerse a que se atribuya una obra ajena. Son inalienables, imprescriptibles, irrenunciables e inembargables (Art. 19).",
+      "Derechos patrimoniales (Arts. 24 y 106): autorizar o prohibir la reproducción, modificación, distribución, decompilación y comunicación pública del programa.",
+      "Art. 29: los derechos patrimoniales duran la vida del autor y 100 años más.",
+      "Art. 162: las obras quedan protegidas aun sin registro; el Registro Público del Derecho de Autor (INDAUTOR) da seguridad jurídica y publicidad.",
+      "Art. 102: no se protegen los programas cuyo objeto sea causar efectos nocivos (malware)."
+    ],
+    "palabrasClave": ["LFDA", "derecho de autor", "software", "programa de computación", "INDAUTOR", "registro", "derechos morales", "derechos patrimoniales", "inteligencia artificial"]
+  },
+  {
+    "id": "U2_M10",
+    "unidad": 2,
+    "categoria": "Ley",
+    "titulo": "¿De quién es el software? Empleados y obra por encargo",
+    "fuente": "LFDA Arts. 83, 84 y 103",
+    "resumen": "La titularidad de los derechos patrimoniales depende de cómo se creó el programa.",
+    "puntosClave": [
+      "Art. 103: salvo pacto en contrario, los derechos patrimoniales sobre un programa y su documentación creados por empleados en ejercicio de sus funciones o por instrucciones del empleador corresponden a este. La cesión no tiene límite de tiempo.",
+      "Art. 83: quien comisiona una obra o la produce con colaboración remunerada es titular de los derechos patrimoniales, salvo pacto en contrario; para que sea obra por encargo, el contrato debe ser claro y preciso (en caso de duda, prevalece lo más favorable al autor).",
+      "El autor conserva siempre su derecho moral a ser mencionado (Arts. 21 y 83).",
+      "Riesgo típico en una auditoría: proveedores o freelancers sin contrato escrito de encargo o de cesión."
+    ],
+    "palabrasClave": ["titularidad", "empleado", "freelancer", "obra por encargo", "cesión", "contrato", "artículo 103"]
+  },
+  {
+    "id": "U2_M11",
+    "unidad": 2,
+    "categoria": "Ley",
+    "titulo": "LFPPI: patentes, modelos, diseños y marcas (no confundir con derecho de autor)",
+    "fuente": "LFPPI (DOF 01/07/2020), Arts. 47, 53, 62, 78 y 178",
+    "resumen": "La propiedad industrial (IMPI) protege invenciones y signos distintivos; el derecho de autor (INDAUTOR) protege obras, incluido el software. Son figuras distintas con autoridades distintas.",
+    "puntosClave": [
+      "Art. 47, fr. V: los programas de computación no se consideran invenciones (no son patentables como tales).",
+      "Patente: 20 años improrrogables (Art. 53). Modelo de utilidad: 15 años (Art. 62).",
+      "Diseño industrial: 5 años, renovable hasta 25 (Art. 78).",
+      "Marca: 10 años desde su otorgamiento, renovable por periodos iguales (Art. 178). El nombre de una app se protege como marca, no como derecho de autor.",
+      "Error frecuente: «patentar el código». El código se protege por derecho de autor; la marca protege el nombre; el secreto industrial protege información confidencial."
+    ],
+    "palabrasClave": ["LFPPI", "IMPI", "patente", "marca", "modelo de utilidad", "diseño industrial", "propiedad industrial", "programas de computación"]
+  },
+  {
+    "id": "U2_M12",
+    "unidad": 2,
+    "categoria": "Ley",
+    "titulo": "Secreto industrial",
+    "fuente": "LFPPI Arts. 163, 164, 386 fr. XIV, 402 y 403",
+    "resumen": "Secreto industrial es la información de aplicación industrial o comercial que se mantiene confidencial, otorga una ventaja competitiva o económica y respecto de la cual se adoptan medios suficientes para preservar su confidencialidad y acceso restringido (Art. 163, fr. I).",
+    "puntosClave": [
+      "No es secreto la información de dominio público, la generalmente conocida o la que deba divulgarse por ley u orden judicial.",
+      "Art. 164: la ingeniería inversa de productos adquiridos lícitamente y el descubrimiento independiente no son apropiación indebida.",
+      "Infracción administrativa: apropiarse indebidamente de un secreto industrial (Art. 386, fr. XIV).",
+      "Delito (Art. 402, fr. III a VI): divulgar, apoderarse, usar o apropiarse indebidamente de un secreto industrial. Pena (Art. 403): de 2 a 6 años de prisión y multa de 1,000 a 300,000 UMA. Se persigue por querella de la parte ofendida.",
+      "Si el modelo está en un repositorio público, ya no hay «medios suficientes» de confidencialidad."
+    ],
+    "palabrasClave": ["secreto industrial", "confidencialidad", "NDA", "know-how", "algoritmo", "querella", "artículo 163"]
+  },
+  {
+    "id": "U2_M13",
+    "unidad": 2,
+    "categoria": "Práctica de cumplimiento",
+    "titulo": "Auditoría legal de código y repositorios",
+    "fuente": "Buenas prácticas de cumplimiento en propiedad intelectual",
+    "resumen": "Revisión sistemática de un repositorio para confirmar que la empresa es titular de lo que vende y que cumple las licencias de lo que usa. Es obligatoria en inversiones, fusiones y licitaciones.",
+    "puntosClave": [
+      "Inventario de dependencias y licencias (SBOM) y verificación de compatibilidad.",
+      "Autoría y titularidad: contratos laborales (LFDA 103), contratos de encargo o cesión con externos (LFDA 83).",
+      "Avisos de copyright conservados, ausencia de código copiado sin licencia (escáner de similitud).",
+      "Activos (imágenes, fuentes, audio) con licencia o autorización documentada.",
+      "Sin secretos ni credenciales en el historial de git; sin datos personales reales en el repositorio.",
+      "Afirmaciones públicas veraces: no declarar patentes que no existen."
+    ],
+    "palabrasClave": ["auditoría", "due diligence", "SBOM", "repositorio", "licencias", "titularidad", "credenciales", "revisión de código"]
+  },
+  {
+    "id": "U3_M01",
+    "unidad": 3,
+    "categoria": "Concepto",
+    "titulo": "Clasificación de los delitos informáticos y principio de legalidad",
+    "fuente": "CPEUM Art. 14 · Código Penal Federal · leyes especiales",
+    "resumen": "Una conducta solo es delito si una ley la describe y le asigna una pena: en materia penal está prohibido imponer penas por analogía (Art. 14 constitucional). Por eso, una falta ética no es automáticamente un delito.",
+    "puntosClave": [
+      "Contra el patrimonio: fraude (CPF 386), alteración o destrucción de información (CPF 211 bis 1 y ss.), extorsión (Ley General en materia de extorsión, 2025).",
+      "Contra la propiedad intelectual: piratería con especulación comercial (CPF 424 bis), sustituir el nombre del autor (CPF 427), elusión de medidas tecnológicas (CPF 427 Bis y 427 Ter), secreto industrial (LFPPI 402).",
+      "TI como medio delictivo: phishing para fraude, violación a la intimidad sexual (CPF 199 Octies), contacto con menores con fines sexuales (CPF 199 Septies).",
+      "Datos personales: vulneraciones con ánimo de lucro y tratamiento mediante engaño (LFPDPPP 62 a 64).",
+      "Algunas conductas no tienen tipo penal federal autónomo (por ejemplo, la suplantación de identidad) y se persiguen a través de otros delitos o de códigos penales estatales."
+    ],
+    "palabrasClave": ["delito informático", "clasificación", "tipicidad", "legalidad", "falta ética", "patrimonio", "propiedad intelectual"]
+  },
+  {
+    "id": "U3_M02",
+    "unidad": 3,
+    "categoria": "Código penal",
+    "titulo": "Acceso ilícito a sistemas y equipos de informática",
+    "fuente": "CPF Arts. 211 bis 1 a 211 bis 7 (texto vigente, última reforma del CPF DOF 13/03/2026)",
+    "resumen": "Sanciona a quien, sin autorización, modifique, destruya, provoque pérdida, conozca o copie información en sistemas protegidos por algún mecanismo de seguridad. Las penas aumentan si los sistemas son del Estado o del sistema financiero.",
+    "puntosClave": [
+      "211 bis 1 (particulares): modificar, destruir o provocar pérdida, 6 meses a 2 años y 100 a 300 días multa; conocer o copiar, 3 meses a 1 año y 50 a 150 días multa.",
+      "211 bis 2 (Estado): modificar o destruir, 1 a 4 años; conocer o copiar, 6 meses a 2 años.",
+      "211 bis 3: personal autorizado del Estado que indebidamente modifica o destruye, 2 a 8 años.",
+      "211 bis 4 y 5 (sistema financiero): 6 meses a 4 años por modificar o destruir; penas +50 % si lo cometen sus empleados.",
+      "211 bis 7: las penas aumentan hasta en una mitad si la información se usa en provecho propio o ajeno.",
+      "Contraatacar («hack back») el servidor de un atacante también es acceso ilícito."
+    ],
+    "palabrasClave": ["211 bis", "acceso ilícito", "hackeo", "hack back", "sistemas", "informática", "copiar información", "ransomware"]
+  },
+  {
+    "id": "U3_M03",
+    "unidad": 3,
+    "categoria": "Código penal",
+    "titulo": "Fraude, phishing y suplantación",
+    "fuente": "CPF Art. 386",
+    "resumen": "Comete fraude quien, engañando a otro o aprovechándose de su error, se hace ilícitamente de alguna cosa o alcanza un lucro indebido. El phishing y el smishing son técnicas de engaño que suelen encuadrar en fraude, y en acceso ilícito cuando se usan las credenciales robadas.",
+    "puntosClave": [
+      "Penas según el monto: hasta 10 veces el salario, 3 días a 6 meses; de 10 a 500 veces, 6 meses a 3 años; más de 500 veces, 3 a 12 años de prisión.",
+      "Que la víctima haya entregado su contraseña no elimina el delito: el engaño es precisamente el medio comisivo.",
+      "El Código Penal Federal no tiene un tipo autónomo de suplantación o usurpación de identidad; algunos códigos penales estatales sí lo prevén.",
+      "Además de la denuncia, la empresa debe notificar la vulneración a las personas afectadas (LFPDPPP Art. 19)."
+    ],
+    "palabrasClave": ["fraude", "phishing", "smishing", "suplantación", "identidad", "engaño", "386"]
+  },
+  {
+    "id": "U3_M04",
+    "unidad": 3,
+    "categoria": "Ley especial",
+    "titulo": "Extorsión y ransomware",
+    "fuente": "Ley General para Prevenir, Investigar y Sancionar los Delitos en Materia de Extorsión (DOF 28/11/2025) · CPF 211 bis 1",
+    "resumen": "La extorsión dejó de regularse en el Código Penal Federal (su Art. 390 fue derogado el 28/11/2025) y pasó a una ley general que homologa las sanciones en todo el país, prevé agravantes por el uso de medios electrónicos o plataformas digitales y ordena perseguirla de oficio.",
+    "puntosClave": [
+      "Un ataque de ransomware puede implicar extorsión (exigir un pago bajo amenaza) y acceso ilícito (cifrar información equivale a modificarla o provocar su pérdida, CPF 211 bis 1).",
+      "Pagar el rescate no garantiza recuperar los datos y financia a grupos delictivos.",
+      "Preservar la evidencia y denunciar ante la Fiscalía es parte del cumplimiento; también lo es notificar a las personas cuyos datos se vieron afectados (LFPDPPP Art. 19)."
+    ],
+    "palabrasClave": ["extorsión", "ransomware", "rescate", "cifrado", "390 derogado", "ley general"]
+  },
+  {
+    "id": "U3_M05",
+    "unidad": 3,
+    "categoria": "Código penal",
+    "titulo": "Delitos en materia de derechos de autor (piratería y elusión)",
+    "fuente": "CPF Arts. 424 bis, 427, 427 Bis y 427 Ter · LFDA Art. 232 Ter",
+    "resumen": "La piratería de software es delito cuando se reproduce, distribuye o vende con fin de especulación comercial y sin autorización. La elusión de medidas tecnológicas de protección también se sanciona, penal o administrativamente.",
+    "puntosClave": [
+      "424 bis: 3 a 10 años de prisión y 2,000 a 20,000 días multa a quien reproduzca, distribuya o venda copias de obras protegidas con fin de especulación comercial (fr. I), o fabrique con fin de lucro un dispositivo para desactivar la protección de un programa (fr. II).",
+      "427: 6 meses a 6 años a quien publique a sabiendas una obra sustituyendo el nombre del autor.",
+      "427 Bis: 6 meses a 6 años y 500 a 1,000 días multa a quien, a sabiendas y con fines de lucro, eluda una medida tecnológica de protección efectiva. 427 Ter: misma pena por comercializar dispositivos para eludirla.",
+      "LFDA 232 Ter: multa administrativa de 1,000 a 10,000 UMA por eludir una medida tecnológica de protección.",
+      "Aunque un uso interno no llegue a delito, sigue siendo infracción y genera responsabilidad civil."
+    ],
+    "palabrasClave": ["piratería", "424 bis", "crack", "activador", "keygen", "medidas tecnológicas", "elusión", "licencias"]
+  },
+  {
+    "id": "U3_M06",
+    "unidad": 3,
+    "categoria": "Código penal",
+    "titulo": "Violación a la intimidad sexual (Ley Olimpia)",
+    "fuente": "CPF Arts. 199 Octies, 199 Nonies y 199 Decies (DOF 01/06/2021)",
+    "resumen": "Comete el delito quien divulgue, comparta, distribuya o publique imágenes, videos o audios de contenido íntimo sexual de una persona mayor de edad sin su consentimiento, o quien los grabe o elabore sin consentimiento. Pena: de 3 a 6 años de prisión y multa de 500 a 1,000 UMA.",
+    "puntosClave": [
+      "199 Nonies: misma pena cuando el contenido no corresponde con la persona señalada (por ejemplo, imágenes manipuladas o generadas con IA).",
+      "199 Decies: la pena aumenta hasta en una mitad si lo comete la pareja o expareja, un servidor público, con fines lucrativos, entre otros supuestos.",
+      "Una plataforma responsable retira el contenido de inmediato, impide su re-publicación, preserva la evidencia con acceso restringido y orienta a la víctima para denunciar.",
+      "«Ley Olimpia» es el nombre del conjunto de reformas penales y a la Ley General de Acceso de las Mujeres a una Vida Libre de Violencia sobre violencia digital."
+    ],
+    "palabrasClave": ["Ley Olimpia", "intimidad sexual", "violencia digital", "deepfake", "199 Octies", "contenido íntimo", "moderación"]
+  },
+  {
+    "id": "U3_M07",
+    "unidad": 3,
+    "categoria": "Tratado internacional",
+    "titulo": "Convenio de Budapest sobre la Ciberdelincuencia",
+    "fuente": "Consejo de Europa, Convenio n.º 185 (2001)",
+    "resumen": "Primer tratado internacional sobre ciberdelitos. Busca tipificar de forma homogénea los delitos, dar a las autoridades herramientas para obtener evidencia digital y agilizar la cooperación internacional.",
+    "puntosClave": [
+      "Delitos que pide tipificar: acceso ilícito (art. 2), interceptación ilícita (art. 3), interferencia en datos (art. 4) y en sistemas (art. 5), abuso de dispositivos (art. 6), falsificación y fraude informáticos (arts. 7 y 8), pornografía infantil (art. 9) e infracciones a la propiedad intelectual (art. 10).",
+      "Prevé la conservación rápida de datos y una red de contacto 24/7 entre países.",
+      "México NO es Parte del Convenio: ha sido invitado a adherirse y participa como observador. Sirve como referencia para armonizar la legislación nacional, no como ley vigente en México.",
+      "Los ataques suelen ser transnacionales: sin cooperación internacional, la evidencia (servidores, dominios) queda fuera del alcance."
+    ],
+    "palabrasClave": ["Budapest", "convenio", "cooperación internacional", "evidencia digital", "tratado", "Consejo de Europa"]
+  },
+  {
+    "id": "U3_M08",
+    "unidad": 3,
+    "categoria": "Práctica de cumplimiento",
+    "titulo": "Compliance y respuesta a incidentes",
+    "fuente": "Ciclo de respuesta a incidentes (guía NIST SP 800-61) · LFPDPPP Arts. 18 y 19",
+    "resumen": "El cumplimiento normativo (compliance) en ciberseguridad combina prevención, detección y una respuesta ordenada que proteja a las personas afectadas y preserve la posibilidad de perseguir el delito.",
+    "puntosClave": [
+      "Fases: preparación, detección y análisis, contención, erradicación, recuperación y lecciones aprendidas.",
+      "Cadena de custodia: copiar y resguardar la evidencia (bitácoras, imágenes forenses) antes de borrar o reinstalar.",
+      "Denunciar ante la Fiscalía General de la República o la fiscalía local; la policía cibernética puede orientar.",
+      "Notificar de inmediato a las personas titulares cuando la vulneración afecte significativamente sus derechos (LFPDPPP Art. 19).",
+      "Controles preventivos: autenticación multifactor, mínimo privilegio, baja inmediata de accesos al terminar una relación laboral, respaldos fuera de línea probados.",
+      "Nunca contraatacar ni negociar en secreto: ambas cosas pueden constituir delitos o agravar el daño."
+    ],
+    "palabrasClave": ["compliance", "respuesta a incidentes", "cadena de custodia", "evidencia", "denuncia", "MFA", "respaldos", "offboarding"]
+  },
+  {
+    "id": "U3_M09",
+    "unidad": 3,
+    "categoria": "Responsabilidad ambiental",
+    "titulo": "Residuos electrónicos, obsolescencia y huella energética",
+    "fuente": "LGPGIR (residuos de manejo especial) · NOM-161-SEMARNAT-2011 · ACM/IEEE-CS SE Code 1.03",
+    "resumen": "Los residuos tecnológicos de la industria informática y de fabricantes de electrónicos son residuos de manejo especial cuando están en los listados sujetos a planes de manejo; la NOM-161-SEMARNAT-2011 establece los criterios y el listado. Deben entregarse a gestores autorizados, nunca a tiraderos o centros informales.",
+    "puntosClave": [
+      "Los equipos contienen metales pesados y compuestos que contaminan suelo y agua si se desmantelan sin control.",
+      "Antes de desechar o donar, se aplica un borrado seguro certificado: un disco con datos de clientes es una vulneración en potencia (LFPDPPP Art. 18).",
+      "Jerarquía responsable: reducir, reutilizar o reacondicionar, reciclar con gestor autorizado.",
+      "Obsolescencia programada: diseñar productos para que dejen de funcionar antes de tiempo traslada costos a las personas usuarias y multiplica los residuos.",
+      "Los centros de datos consumen grandes cantidades de energía y agua; medir y reducir esa huella es parte de la responsabilidad social.",
+      "El Código ACM/IEEE-CS (1.03) incluye no dañar el medio ambiente como condición para aprobar software."
+    ],
+    "palabrasClave": ["e-waste", "residuos electrónicos", "RAEE", "manejo especial", "NOM-161", "obsolescencia programada", "huella de carbono", "centros de datos"]
+  },
+  {
+    "id": "U3_M10",
+    "unidad": 3,
+    "categoria": "Regulación de IA",
+    "titulo": "Marcos regulatorios de la inteligencia artificial",
+    "fuente": "UNESCO (2021) · Reglamento (UE) 2024/1689 (AI Act) · Digital Omnibus (2026) · LFDA y LFPDPPP",
+    "resumen": "La regulación de la IA sigue un enfoque basado en riesgos: cuanto mayor es el riesgo para los derechos de las personas, más obligaciones; algunos usos están prohibidos.",
+    "puntosClave": [
+      "UNESCO, Recomendación sobre la Ética de la IA (2021): proporcionalidad, seguridad, equidad y no discriminación, privacidad, supervisión humana, transparencia, responsabilidad y sostenibilidad.",
+      "AI Act de la UE, riesgo inaceptable (prohibido desde el 2/2/2025): puntuación social, manipulación que cause daño y reconocimiento de emociones en el trabajo y en la educación, entre otros. Multas de hasta 35 millones de euros o el 7 % de la facturación mundial.",
+      "AI Act, alto riesgo (empleo, crédito, educación): obligaciones aplazadas por el Digital Omnibus al 2/12/2027. Transparencia (por ejemplo, avisar que se interactúa con una IA): 2/8/2026.",
+      "El AI Act aplica a proveedores de fuera de la UE cuando sus sistemas se usan en la UE.",
+      "México: al cierre de 2026 no tiene una ley general de IA (hay iniciativas en el Congreso), pero sí aplican la LFPDPPP (datos biométricos y de salud) y la LFDA reformada en 2026 (protege programas de IA y exige consentimiento expreso para clonar la voz o imagen de intérpretes)."
+    ],
+    "palabrasClave": ["inteligencia artificial", "IA", "AI Act", "UNESCO", "riesgo", "reconocimiento de emociones", "biometría", "regulación"]
   }
 ]

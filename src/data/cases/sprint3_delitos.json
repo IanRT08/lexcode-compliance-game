@@ -1,1 +1,486 @@
-[]
+[
+  {
+    "id": "U3_C01",
+    "unidad": 3,
+    "subtema": "Delitos contra el patrimonio: phishing, fraude y acceso ilícito",
+    "titulo": "Campaña de smishing contra clientes de NovaPay",
+    "remitente": "SOC NovaByte — Alerta de severidad alta",
+    "contexto": "Desde anoche circula un SMS: «NovaPay: tu cuenta será bloqueada. Verifica tus datos en novapay-verifica.com». El sitio copia el diseño de NovaPay. 312 clientes ingresaron sus credenciales y los atacantes vaciaron sus cuentas: $1.8 millones de pesos en total.\n\nRodrigo opina que «es culpa de los clientes por dar su contraseña». Daniela, del equipo de seguridad, descubrió el panel de control del sitio falso y propone entrar a borrar los datos robados.",
+    "pregunta": "¿Cómo clasificas y atiendes el incidente?",
+    "pistaNormativa": "Revisa el fraude (CPF, Art. 386) y el acceso ilícito a sistemas (CPF, Art. 211 bis 1). ¿Entrar sin autorización al servidor del atacante es legal? ¿Qué exige el Art. 19 de la LFPDPPP ante una vulneración?",
+    "manualRefs": ["U3_M03", "U3_M02", "U3_M08", "U3_M07", "U3_M01"],
+    "evidencias": [
+      {
+        "tipo": "log",
+        "nombreArchivo": "siem-alerts.log",
+        "contenido": "[2026-11-21 01:14:22] WARN  pico de inicios de sesión desde IP no habituales (ASN extranjero)\n[2026-11-21 01:15:03] ALERT 312 cuentas con login exitoso + cambio de dispositivo en < 10 min\n[2026-11-21 01:16:40] CRIT  transferencias salientes: 1,104 operaciones, $1,812,400 MXN\n[2026-11-21 02:02:11] INFO  dominio origen de las campañas: novapay-verifica.com (registrado hace 3 días)\n[2026-11-21 02:05:57] INFO  MFA no habilitado en 94 % de las cuentas afectadas"
+      },
+      {
+        "tipo": "documento",
+        "nombreArchivo": "captura_sms.png",
+        "membrete": "Evidencia · reporte de cliente",
+        "titulo": "Mensaje SMS recibido por clientes",
+        "secciones": [
+          { "titulo": "Remitente", "texto": "NOVAPAY (identificador alfanumérico falsificado)" },
+          { "titulo": "Texto", "texto": "NovaPay: tu cuenta será bloqueada en 2 horas por actividad sospechosa. Verifica tus datos en novapay-verifica.com" }
+        ]
+      },
+      {
+        "tipo": "chat",
+        "canal": "incidente-smishing",
+        "plataforma": "Chat corporativo",
+        "mensajes": [
+          { "autor": "Rodrigo Salas", "rol": "Director Comercial", "hora": "07:40", "texto": "Si dieron su contraseña, es su problema. No hagamos ruido ni denuncias, que se cae la confianza." },
+          { "autor": "Daniela Ruiz", "rol": "Seguridad", "hora": "07:52", "texto": "Encontré el panel del sitio falso con una contraseña por defecto. Puedo entrar y borrar todas las credenciales robadas en 5 minutos." }
+        ]
+      }
+    ],
+    "opciones": [
+      {
+        "id": "opt_1",
+        "tipo": "aprobar",
+        "etiqueta": "Cerrar el incidente sin denunciar: los clientes entregaron sus contraseñas, así que es su responsabilidad.",
+        "marcoEtico": "egoismo",
+        "modeloEtico": "Egoísmo ético: proteger la imagen de la empresa a costa de las víctimas.",
+        "impacto": { "budget": 5, "ethics": -35, "legal": -30 },
+        "esCorrecta": false,
+        "retroalimentacion": "Que las víctimas hayan entregado su contraseña no elimina el delito: el engaño es justamente el medio del fraude (CPF, Art. 386), que por el monto se sanciona con 3 a 12 años de prisión. Usar esas credenciales para entrar a NovaPay es además acceso ilícito a un sistema protegido (CPF, Art. 211 bis 1), con penas que aumentan si la información se usa en provecho propio (Art. 211 bis 7). Callar también incumple el deber de informar de inmediato a las personas afectadas (LFPDPPP, Art. 19).",
+        "fundamento": ["CPF Art. 386", "CPF Art. 211 bis 1", "CPF Art. 211 bis 7", "LFPDPPP Art. 19"]
+      },
+      {
+        "id": "opt_2",
+        "tipo": "escalar",
+        "etiqueta": "Activar la respuesta a incidentes: contener (cerrar sesiones, forzar cambio de contraseña, solicitar la baja del dominio), preservar evidencia con cadena de custodia, notificar de inmediato a los clientes afectados, denunciar ante la FGR y habilitar MFA obligatorio.",
+        "marcoEtico": "deontologia",
+        "modeloEtico": "Deontología y compliance: proteger a las víctimas y permitir que se persiga el delito.",
+        "impacto": { "budget": -5, "ethics": 20, "legal": 25 },
+        "esCorrecta": true,
+        "retroalimentacion": "Dictamen correcto. Clasificas el incidente con rigor: el smishing es la técnica; jurídicamente hay fraude (CPF, Art. 386) y acceso ilícito con las credenciales robadas (CPF, Art. 211 bis 1). La contención y la notificación inmediata protegen a las víctimas (LFPDPPP, Art. 19); preservar la evidencia y denunciar permite la investigación. Como el dominio y los servidores pueden estar en el extranjero, la cooperación internacional (cuyo modelo es el Convenio de Budapest, del que México no es Parte) será clave. El MFA previene la repetición.",
+        "fundamento": ["CPF Art. 386", "CPF Art. 211 bis 1", "LFPDPPP Arts. 18 y 19", "Convenio de Budapest, arts. 2 y 8 (referencia)"]
+      },
+      {
+        "id": "opt_3",
+        "tipo": "bloquear",
+        "etiqueta": "Autorizar a Daniela a entrar al panel del atacante y borrar las credenciales robadas.",
+        "marcoEtico": "utilitarismo",
+        "modeloEtico": "Utilitarismo de corto plazo: un fin bueno que se busca con un medio ilícito.",
+        "impacto": { "budget": 0, "ethics": -10, "legal": -30 },
+        "esCorrecta": false,
+        "retroalimentacion": "Contraatacar («hack back») también es un delito: entrar sin autorización a un sistema protegido y borrar información encuadra en el CPF, Art. 211 bis 1 (de 6 meses a 2 años de prisión), aunque el sistema sea del atacante. Además destruye evidencia que la Fiscalía necesita y puede alertar a los delincuentes. La respuesta legítima es preservar, denunciar y solicitar la baja del dominio por las vías formales.",
+        "fundamento": ["CPF Art. 211 bis 1"]
+      }
+    ],
+    "aprendizaje": "El phishing es una técnica, no un tipo penal: según los hechos encuadra en fraude, acceso ilícito u otros delitos. El Código Penal Federal no tiene un tipo autónomo de suplantación de identidad. Ante un incidente, la respuesta correcta protege a las víctimas, preserva la evidencia y acude a las autoridades; nunca contraataca."
+  },
+  {
+    "id": "U3_C02",
+    "unidad": 3,
+    "subtema": "Delitos contra el patrimonio: ransomware y extorsión",
+    "titulo": "LockNova: los servidores de Capital Humano, cifrados",
+    "remitente": "Jorge Paredes — CEO",
+    "contexto": "Viernes, 02:13 h. Un ransomware cifró los servidores de Capital Humano (expedientes de 380 empleados, con incapacidades médicas) y el sistema de tickets. La nota exige 15 BTC en 72 horas o publicará los expedientes.\n\nExisten respaldos fuera de línea del miércoles (se perderían dos días de trabajo). Jorge quiere pagar en secreto: «nadie tiene por qué enterarse».",
+    "pregunta": "¿Qué dictamen emites sobre la respuesta al ataque?",
+    "pistaNormativa": "Cifrar información ajena equivale a modificarla o provocar su pérdida (CPF, Art. 211 bis 1). La extorsión ahora se regula en una ley general (2025) y se persigue de oficio. Los expedientes contienen datos de salud: revisa los Arts. 18 y 19 de la LFPDPPP.",
+    "manualRefs": ["U3_M04", "U3_M02", "U3_M08", "U2_M08"],
+    "evidencias": [
+      {
+        "tipo": "log",
+        "nombreArchivo": "edr-timeline.log",
+        "contenido": "[2026-11-20 23:51:08] WARN  inicio de sesión RDP con cuenta de servicio desde IP externa\n[2026-11-21 01:40:33] ALERT ejecución de binario no firmado: locknova.exe\n[2026-11-21 02:13:02] CRIT  cifrado masivo: fs-rh-01, fs-rh-02, tickets-db (412,000 archivos)\n[2026-11-21 02:13:40] CRIT  exfiltración previa detectada: 18 GB hacia almacenamiento externo\n[2026-11-21 02:20:15] INFO  respaldos offline (miércoles 18/11) intactos y verificados"
+      },
+      {
+        "tipo": "documento",
+        "nombreArchivo": "LEEME_LOCKNOVA.txt",
+        "membrete": "Nota de rescate (fragmento)",
+        "titulo": "Sus archivos han sido cifrados",
+        "secciones": [
+          { "titulo": "Exigencia", "texto": "Paguen 15 BTC en 72 horas para recibir la llave de descifrado." },
+          { "titulo": "Amenaza", "texto": "Si no pagan o contactan a la policía, publicaremos los expedientes del personal." }
+        ]
+      },
+      {
+        "tipo": "correo",
+        "de": "jorge.paredes@novabyte.mx",
+        "para": "cumplimiento@novabyte.mx",
+        "fecha": "Sáb 21 nov 2026, 06:10",
+        "asunto": "Ransomware: decisión",
+        "cuerpo": "Paguemos y ya. Es más barato que dos días sin sistema y que la mala prensa. Que nadie hable con autoridades ni con el personal. Autoriza el pago hoy."
+      }
+    ],
+    "opciones": [
+      {
+        "id": "opt_1",
+        "tipo": "aprobar",
+        "etiqueta": "Autorizar el pago del rescate en secreto y no informar a nadie.",
+        "marcoEtico": "egoismo",
+        "modeloEtico": "Egoísmo ético: minimizar el costo y la exposición de la empresa ignorando a los afectados.",
+        "impacto": { "budget": -20, "ethics": -30, "legal": -30 },
+        "esCorrecta": false,
+        "retroalimentacion": "Pagar no garantiza recuperar los datos ni evitar su publicación (ya hubo exfiltración de 18 GB) y financia al grupo delictivo. Ocultarlo incumple el deber de informar de inmediato a los 380 empleados cuyos datos de salud se vieron comprometidos (LFPDPPP, Art. 19). La extorsión se persigue de oficio conforme a la Ley General en materia de extorsión (2025), y el cifrado de la información es en sí un acceso ilícito (CPF, Art. 211 bis 1).",
+        "fundamento": ["LFPDPPP Art. 19", "Ley General en materia de extorsión (DOF 28/11/2025)", "CPF Art. 211 bis 1"]
+      },
+      {
+        "id": "opt_2",
+        "tipo": "bloquear",
+        "etiqueta": "Formatear de inmediato todos los servidores para eliminar el malware y seguir operando.",
+        "marcoEtico": "utilitarismo",
+        "modeloEtico": "Utilitarismo operativo: prioriza volver a operar y sacrifica la investigación.",
+        "impacto": { "budget": -10, "ethics": -10, "legal": -20 },
+        "esCorrecta": false,
+        "retroalimentacion": "Formatear sin investigar destruye la evidencia forense y no elimina la causa: los atacantes entraron por un RDP expuesto y pueden volver. Tampoco atiende la exfiltración ni la notificación a los empleados (LFPDPPP, Art. 19). La recuperación se hace después de contener, preservar evidencia y cerrar el acceso.",
+        "fundamento": ["LFPDPPP Arts. 18 y 19", "CPF Art. 211 bis 1"]
+      },
+      {
+        "id": "opt_3",
+        "tipo": "remediar",
+        "etiqueta": "No pagar: aislar los equipos, preservar evidencia forense, cerrar el acceso RDP, restaurar desde los respaldos verificados, denunciar ante la Fiscalía y notificar a los empleados afectados con medidas de apoyo.",
+        "marcoEtico": "deontologia",
+        "modeloEtico": "Deontología y responsabilidad: cumplir los deberes de seguridad y transparencia aunque cueste.",
+        "impacto": { "budget": -5, "ethics": 20, "legal": 25 },
+        "esCorrecta": true,
+        "retroalimentacion": "Dictamen correcto. Los respaldos fuera de línea permiten recuperar sin pagar. Preservar evidencia y denunciar permite perseguir la extorsión (de oficio, Ley General de 2025) y el acceso ilícito (CPF, Art. 211 bis 1). Notificar a los empleados es obligatorio cuando una vulneración afecta significativamente sus derechos (LFPDPPP, Art. 19), y cerrar el RDP expuesto corrige la falla en las medidas de seguridad (Art. 18).",
+        "fundamento": ["CPF Art. 211 bis 1", "Ley General en materia de extorsión (DOF 28/11/2025)", "LFPDPPP Arts. 18 y 19"]
+      }
+    ],
+    "aprendizaje": "El ransomware combina varios delitos: acceso ilícito y alteración de información, extorsión y, frecuentemente, robo de datos. Desde noviembre de 2025, la extorsión se regula en una ley general y no en el Código Penal Federal. Los respaldos fuera de línea probados son la mejor defensa; el silencio y el pago, las peores."
+  },
+  {
+    "id": "U3_C03",
+    "unidad": 3,
+    "subtema": "Uso de las TI como medio delictivo: amenaza interna y secreto industrial",
+    "titulo": "El exempleado que se llevó la base de clientes",
+    "remitente": "Fernanda Gil — Capital Humano",
+    "contexto": "Iván Mora renunció el viernes 13 y se fue a Finexa, un competidor. El lunes 16, los registros muestran que su cuenta VPN, que nadie desactivó, descargó la base de 210,000 clientes y la carpeta del modelo de riesgo.\n\nEsta semana, Finexa lanzó un modelo de scoring idéntico al de NovaByte. Iván había firmado un convenio de confidencialidad.",
+    "pregunta": "¿Cómo procede NovaByte?",
+    "pistaNormativa": "Cuando termina la relación laboral, termina la autorización de acceso. Revisa el CPF (Arts. 211 bis 1 y 211 bis 7), la LFPPI (Arts. 163, 402 y 403) y los deberes de la LFPDPPP (Arts. 18 a 20).",
+    "manualRefs": ["U3_M02", "U2_M12", "U2_M08", "U3_M08"],
+    "evidencias": [
+      {
+        "tipo": "log",
+        "nombreArchivo": "vpn-audit.log",
+        "contenido": "[2026-11-13 18:00:00] INFO  RH: baja de i.mora registrada (sin ticket de revocación de accesos)\n[2026-11-16 02:31:17] WARN  login VPN i.mora desde IP residencial\n[2026-11-16 02:33:48] ALERT descarga crm-export-full.csv (210,412 registros)\n[2026-11-16 02:41:09] ALERT descarga /risk-model/ (pesos y documentación)\n[2026-11-16 02:44:30] INFO  sesión cerrada"
+      },
+      {
+        "tipo": "documento",
+        "nombreArchivo": "convenio_confidencialidad_imora.pdf",
+        "membrete": "NovaByte · Capital Humano",
+        "titulo": "Convenio de confidencialidad (extracto)",
+        "metadatos": { "Firmado": "03/02/2025", "Empleado": "Iván Mora" },
+        "secciones": [
+          { "titulo": "Cláusula 2", "texto": "El modelo de riesgo, sus pesos y documentación son secreto industrial de NovaByte. Se resguardan en repositorios privados con acceso restringido." },
+          { "titulo": "Cláusula 5", "texto": "La obligación de confidencialidad subsiste después de terminada la relación laboral." }
+        ]
+      }
+    ],
+    "opciones": [
+      {
+        "id": "opt_1",
+        "tipo": "escalar",
+        "etiqueta": "Preservar los registros, revocar todos los accesos, presentar denuncia penal por acceso ilícito, querella por secreto industrial, notificar a los clientes afectados y corregir el proceso de baja de personal.",
+        "marcoEtico": "justicia",
+        "modeloEtico": "Justicia: proteger a los clientes y a la empresa por las vías legales, con debido proceso.",
+        "impacto": { "budget": -5, "ethics": 15, "legal": 25 },
+        "esCorrecta": true,
+        "retroalimentacion": "Dictamen correcto. Al terminar la relación laboral, la autorización terminó: copiar información de un sistema protegido sin autorización es acceso ilícito (CPF, Art. 211 bis 1, segundo párrafo), con penas que aumentan hasta en una mitad si se usa en provecho propio o ajeno (Art. 211 bis 7). Llevarse y usar el modelo es apropiación de secreto industrial (LFPPI, Art. 402, fr. VI), sancionada con 2 a 6 años de prisión (Art. 403) y perseguida por querella. Los clientes deben ser notificados (LFPDPPP, Art. 19), y el proceso de baja debe revocar accesos el mismo día (Arts. 18 y 20).",
+        "fundamento": ["CPF Arts. 211 bis 1 y 211 bis 7", "LFPPI Arts. 163, 402 fr. VI y 403", "LFPDPPP Arts. 18, 19 y 20"]
+      },
+      {
+        "id": "opt_2",
+        "tipo": "aprobar",
+        "etiqueta": "No proceder: Iván ayudó a construir la base y el modelo, así que también le pertenecen.",
+        "marcoEtico": "relativismo",
+        "modeloEtico": "Relativismo moral: «él también trabajó en eso, no es para tanto».",
+        "impacto": { "budget": -10, "ethics": -25, "legal": -30 },
+        "esCorrecta": false,
+        "retroalimentacion": "Los datos de los clientes no pertenecen ni a Iván ni a NovaByte: pertenecen a sus titulares, y la empresa está obligada a protegerlos (LFPDPPP, Arts. 18 y 19). Los derechos patrimoniales del software creado por empleados corresponden al empleador (LFDA, Art. 103), y el modelo es secreto industrial protegido por un convenio. No actuar deja a 210,000 personas expuestas.",
+        "fundamento": ["LFPDPPP Arts. 18 y 19", "LFDA Art. 103", "LFPPI Art. 163"]
+      },
+      {
+        "id": "opt_3",
+        "tipo": "bloquear",
+        "etiqueta": "Publicar en redes sociales las pruebas y el nombre de Iván para advertir al mercado.",
+        "marcoEtico": "justicia",
+        "modeloEtico": "Justicia por mano propia: castigo público sin proceso.",
+        "impacto": { "budget": -5, "ethics": -20, "legal": -20 },
+        "esCorrecta": false,
+        "retroalimentacion": "Exhibir públicamente a una persona y difundir registros internos expone datos personales, puede generar responsabilidad por daño moral y compromete la investigación. Las conductas tienen vías legales precisas: la denuncia por acceso ilícito y la querella por secreto industrial. La justicia no se hace en redes sociales.",
+        "fundamento": ["CPEUM Art. 16", "LFPPI Art. 402"]
+      }
+    ],
+    "aprendizaje": "Las amenazas internas son de los incidentes más costosos y de los más prevenibles: la baja de accesos al terminar la relación laboral es un control básico de compliance. Un mismo hecho puede actualizar varios delitos (acceso ilícito y secreto industrial), y algunos se persiguen solo por querella de la parte ofendida."
+  },
+  {
+    "id": "U3_C04",
+    "unidad": 3,
+    "subtema": "Delitos contra la propiedad intelectual: piratería y elusión",
+    "titulo": "Licencias «activadas» a mitad de precio",
+    "remitente": "Departamento de Compras",
+    "contexto": "Para ahorrar, Compras propone instalar en 25 equipos de diseño un programa cuya licencia cuesta $14,000 por usuario, usando copias con un «activador» que ofrece el proveedor SoftExpress. El ahorro sería de $350,000.\n\nAdemás, SoftExpress sugiere que NovaByte revenda el mismo paquete activado a sus clientes como parte de su servicio.",
+    "pregunta": "¿Qué dictamen emites sobre la propuesta de Compras?",
+    "pistaNormativa": "Distingue la infracción administrativa y civil del delito. Revisa el CPF (Arts. 424 bis, 427 Bis y 427 Ter) y la LFDA (Arts. 106 y 232 Ter). ¿Qué cambia cuando hay fin de lucro o especulación comercial?",
+    "manualRefs": ["U3_M05", "U2_M09", "U3_M01"],
+    "evidencias": [
+      {
+        "tipo": "correo",
+        "de": "ventas@softexpress-mx.com",
+        "para": "compras@novabyte.mx",
+        "fecha": "Mar 17 nov 2026, 16:22",
+        "asunto": "Paquete diseño Pro activado — 25 equipos",
+        "cuerpo": "Les dejamos el paquete con nuestro activador: desactiva la verificación de licencia del fabricante y no caduca.\n\nPrecio: 25 equipos por $7,000 cada uno.\n\nSi quieren ganar más, revéndanlo a sus clientes con nuestro activador incluido. Muchos lo hacen y nadie revisa.",
+        "adjuntos": ["activador_v4.zip"]
+      },
+      {
+        "tipo": "documento",
+        "nombreArchivo": "propuesta_compras.pdf",
+        "membrete": "NovaByte · Compras",
+        "titulo": "Propuesta de ahorro en licencias",
+        "secciones": [
+          { "titulo": "Opción A (oficial)", "texto": "25 licencias del fabricante: $350,000 anuales." },
+          { "titulo": "Opción B (SoftExpress)", "texto": "25 copias activadas: $175,000, pago único." },
+          { "titulo": "Opción C (software libre)", "texto": "Herramientas de diseño de código abierto: $0 en licencias y $40,000 en capacitación." },
+          { "titulo": "Recomendación de Compras", "texto": "Opción B, más reventa a clientes para recuperar la inversión." }
+        ]
+      }
+    ],
+    "opciones": [
+      {
+        "id": "opt_1",
+        "tipo": "aprobar",
+        "etiqueta": "Aprobar solo el uso interno: mientras no se revenda, no es delito.",
+        "marcoEtico": "egoismo",
+        "modeloEtico": "Egoísmo ético: ahorrar a costa de los derechos de otro, escudándose en un tecnicismo.",
+        "impacto": { "budget": 10, "ethics": -25, "legal": -25 },
+        "esCorrecta": false,
+        "retroalimentacion": "Que una conducta no llegue a delito no la vuelve lícita. Reproducir el programa sin autorización infringe el derecho patrimonial del titular (LFDA, Art. 106) y eludir la verificación de licencia se sanciona con multa de 1,000 a 10,000 UMA (LFDA, Art. 232 Ter), además de la responsabilidad civil por daños. Si la elusión se hace con fines de lucro, puede actualizar el delito del CPF, Art. 427 Bis (de 6 meses a 6 años de prisión). Y usar un «activador» de un proveedor desconocido es un riesgo de malware.",
+        "fundamento": ["LFDA Art. 106", "LFDA Art. 232 Ter", "CPF Art. 427 Bis"]
+      },
+      {
+        "id": "opt_2",
+        "tipo": "bloquear",
+        "etiqueta": "Rechazar ambas propuestas: adquirir licencias legítimas o adoptar la alternativa de software libre, establecer una política de software autorizado con inventario y no ejecutar el archivo del «activador».",
+        "marcoEtico": "virtud",
+        "modeloEtico": "Ética de la virtud: integridad profesional y respeto al trabajo creativo ajeno.",
+        "impacto": { "budget": 5, "ethics": 15, "legal": 20 },
+        "esCorrecta": true,
+        "retroalimentacion": "Dictamen correcto. El uso interno de copias activadas infringe la LFDA (Arts. 106 y 232 Ter), y la reventa sería un delito: distribuir copias con fin de especulación comercial y sin autorización se castiga con 3 a 10 años de prisión y de 2,000 a 20,000 días multa (CPF, Art. 424 bis, fr. I), y comercializar dispositivos para eludir la protección también es delito (CPF, Arts. 424 bis, fr. II, y 427 Ter). La opción de software libre muestra que cumplir no siempre es más caro.",
+        "fundamento": ["CPF Art. 424 bis, fr. I y II", "CPF Art. 427 Ter", "LFDA Arts. 106 y 232 Ter", "ACM Code 1.5"]
+      },
+      {
+        "id": "opt_3",
+        "tipo": "remediar",
+        "etiqueta": "Aprobar la reventa a clientes con el activador, porque los ingresos permitirán pagar licencias oficiales el próximo año.",
+        "marcoEtico": "utilitarismo",
+        "modeloEtico": "Utilitarismo de fines y medios: justifica un delito presente con un beneficio futuro.",
+        "impacto": { "budget": 15, "ethics": -35, "legal": -45 },
+        "esCorrecta": false,
+        "retroalimentacion": "Es la peor opción: convierte una infracción en un delito. Distribuir y vender copias de un programa protegido con fin de especulación comercial y sin autorización se sanciona con 3 a 10 años de prisión y de 2,000 a 20,000 días multa (CPF, Art. 424 bis, fr. I), y comercializar el activador encuadra en el Art. 427 Ter. La intención de «pagar después» no elimina el delito.",
+        "fundamento": ["CPF Art. 424 bis, fr. I", "CPF Art. 427 Ter"]
+      }
+    ],
+    "aprendizaje": "Usar software sin licencia es una infracción con consecuencias administrativas y civiles; distribuirlo con fin de especulación comercial es un delito con penas de prisión. Eludir medidas tecnológicas de protección tiene sanciones propias. Las alternativas de software libre son una forma legal de reducir costos."
+  },
+  {
+    "id": "U3_C05",
+    "unidad": 3,
+    "subtema": "Uso de las TI como medio delictivo: delitos contra la intimidad (Ley Olimpia)",
+    "titulo": "Contenido íntimo difundido en «Barrio»",
+    "remitente": "Equipo de Moderación — red social Barrio",
+    "contexto": "NovaByte opera Barrio, una red social vecinal. Karla, usuaria, reporta que su expareja publicó un video íntimo de ella en un grupo de 4,000 miembros. Horas después, otra cuenta publicó una imagen manipulada con IA que aparenta mostrarla desnuda.\n\nModeración pregunta qué hacer: el video ya se compartió 230 veces dentro de la plataforma.",
+    "pregunta": "¿Qué dictamen emites sobre ambos contenidos?",
+    "pistaNormativa": "Revisa los Arts. 199 Octies, 199 Nonies y 199 Decies del CPF. ¿Qué pasa con la evidencia si se borra todo sin resguardarla?",
+    "manualRefs": ["U3_M06", "U3_M08", "U2_M04", "U3_M01"],
+    "evidencias": [
+      {
+        "tipo": "documento",
+        "nombreArchivo": "reporte_moderacion_8812.pdf",
+        "membrete": "Barrio · Moderación",
+        "titulo": "Reporte #8812 — contenido íntimo sin consentimiento",
+        "metadatos": { "Prioridad": "Crítica", "Recibido": "21/11/2026 09:14" },
+        "secciones": [
+          { "titulo": "Contenido 1", "texto": "Video de contenido íntimo sexual publicado por la expareja de la denunciante en el grupo «Vecinos Col. Centro». Compartido 230 veces." },
+          { "titulo": "Contenido 2", "texto": "Imagen generada o manipulada con IA que aparenta mostrar a la denunciante desnuda, publicada por una cuenta creada hoy." },
+          { "titulo": "Declaración de la usuaria", "texto": "Nunca autoricé grabar ni publicar el video. La imagen es falsa. Quiero que lo quiten y denunciar." }
+        ]
+      },
+      {
+        "tipo": "log",
+        "nombreArchivo": "moderation-queue.log",
+        "contenido": "[2026-11-21 09:14:02] ALERT reporte #8812 prioridad CRÍTICA (contenido íntimo no consentido)\n[2026-11-21 09:20:45] WARN  video_7731.mp4: 230 re-publicaciones detectadas\n[2026-11-21 09:22:10] WARN  img_9904.png: marcadores de imagen sintética (IA)\n[2026-11-21 09:25:31] INFO  hashing perceptual disponible para bloquear re-subidas"
+      }
+    ],
+    "opciones": [
+      {
+        "id": "opt_1",
+        "tipo": "aprobar",
+        "etiqueta": "Mantener los contenidos: la plataforma no es responsable de lo que publican sus usuarios; que Karla denuncie por su cuenta.",
+        "marcoEtico": "egoismo",
+        "modeloEtico": "Egoísmo ético: evitar costos de moderación a costa del daño a la víctima.",
+        "impacto": { "budget": 5, "ethics": -40, "legal": -30 },
+        "esCorrecta": false,
+        "retroalimentacion": "Mantener el contenido prolonga y multiplica el daño de un delito: divulgar contenido íntimo sexual sin consentimiento se sanciona con 3 a 6 años de prisión y multa de 500 a 1,000 UMA (CPF, Art. 199 Octies), y la imagen manipulada recibe la misma pena (Art. 199 Nonies). Una plataforma que conoce el contenido y no actúa falla a su usuaria y expone a la empresa a responsabilidad y a una crisis reputacional.",
+        "fundamento": ["CPF Art. 199 Octies", "CPF Art. 199 Nonies", "ACM Code 1.2"]
+      },
+      {
+        "id": "opt_2",
+        "tipo": "remediar",
+        "etiqueta": "Borrar ambos contenidos y las cuentas de inmediato, sin conservar ningún registro, para no tener ese material en los servidores.",
+        "marcoEtico": "utilitarismo",
+        "modeloEtico": "Utilitarismo apresurado: elimina el problema visible pero deja a la víctima sin pruebas.",
+        "impacto": { "budget": 0, "ethics": -5, "legal": -15 },
+        "esCorrecta": false,
+        "retroalimentacion": "Retirar el contenido es urgente y correcto, pero destruir todo sin resguardo elimina la evidencia que Karla y la Fiscalía necesitan para perseguir el delito (identidad de las cuentas, fechas, registros de publicación). Sin bloqueo de re-subidas, además, el material puede reaparecer. La evidencia se conserva cifrada, con acceso restringido y cadena de custodia, para entregarla solo a la autoridad.",
+        "fundamento": ["CPF Art. 199 Octies", "LFPDPPP Art. 18"]
+      },
+      {
+        "id": "opt_3",
+        "tipo": "bloquear",
+        "etiqueta": "Retirar de inmediato ambos contenidos y sus re-publicaciones, bloquear re-subidas por huella digital, preservar la evidencia con acceso restringido, suspender las cuentas y orientar a Karla para denunciar.",
+        "marcoEtico": "justicia",
+        "modeloEtico": "Justicia y cuidado: proteger los derechos de la víctima y hacer posible la sanción.",
+        "impacto": { "budget": 0, "ethics": 25, "legal": 20 },
+        "esCorrecta": true,
+        "retroalimentacion": "Dictamen correcto. La difusión no consentida de contenido íntimo sexual es delito (CPF, Art. 199 Octies: 3 a 6 años de prisión y multa de 500 a 1,000 UMA), también cuando el contenido es falso o manipulado (Art. 199 Nonies), y la pena aumenta hasta en una mitad si lo comete la expareja (Art. 199 Decies, fr. I). Retirar y bloquear detiene el daño; preservar la evidencia con cadena de custodia permite que la víctima denuncie y que la autoridad la requiera formalmente.",
+        "fundamento": ["CPF Arts. 199 Octies, 199 Nonies y 199 Decies", "CPEUM Art. 16"]
+      }
+    ],
+    "aprendizaje": "La difusión de contenido íntimo sin consentimiento es violencia digital y delito, aunque el contenido sea falso o generado con IA. A diferencia del ciberacoso de la Unidad I, aquí sí hay un tipo penal. Las plataformas tienen un papel decisivo: retirar rápido, impedir que reaparezca y conservar la evidencia para la víctima."
+  },
+  {
+    "id": "U3_C06",
+    "unidad": 3,
+    "subtema": "Responsabilidad social y ambiental: residuos electrónicos y obsolescencia",
+    "titulo": "1,500 equipos al deshuesadero",
+    "remitente": "Operaciones — Gerencia de Infraestructura",
+    "contexto": "NovaByte renovará 1,200 terminales punto de venta y 300 laptops. Operaciones propone venderlas por kilo a un deshuesadero sin registro, sin borrar los discos, que contienen bitácoras de transacciones.\n\nAl mismo tiempo, Producto propone que la próxima versión de NovaPay deje de funcionar en teléfonos con más de cuatro años, aunque técnicamente podría seguir operando, «para empujar a los comercios a comprar nuestras nuevas terminales».",
+    "pregunta": "¿Qué dictamen emites sobre ambas propuestas?",
+    "pistaNormativa": "Los residuos tecnológicos son residuos de manejo especial (LGPGIR y NOM-161-SEMARNAT-2011). Un disco con datos es una vulneración en potencia (LFPDPPP, Art. 18). ¿Qué dice el Código ACM/IEEE-CS (1.03) sobre el medio ambiente?",
+    "manualRefs": ["U3_M09", "U2_M08", "U1_M06", "U1_M05"],
+    "evidencias": [
+      {
+        "tipo": "documento",
+        "nombreArchivo": "propuesta_baja_activos.pdf",
+        "membrete": "NovaByte · Operaciones",
+        "titulo": "Propuesta de baja de activos 2026",
+        "metadatos": { "Equipos": "1,500", "Peso": "≈ 3.2 toneladas" },
+        "secciones": [
+          { "titulo": "Destino propuesto", "texto": "Venta por kilo a «Fierros y Metales El Güero» (sin registro como gestor de residuos). Ingreso estimado: $48,000." },
+          { "titulo": "Borrado de datos", "texto": "No contemplado: «el comprador solo quiere el metal»." },
+          { "titulo": "Alternativa cotizada", "texto": "Gestor autorizado con plan de manejo y certificado de borrado seguro: costo neto de $36,000; 40 % de los equipos son reacondicionables para donación a escuelas." }
+        ]
+      },
+      {
+        "tipo": "chat",
+        "canal": "producto-roadmap",
+        "plataforma": "Chat corporativo",
+        "mensajes": [
+          { "autor": "Sofía Méndez", "rol": "Producto", "hora": "12:10", "texto": "Propongo que NovaPay 3.0 bloquee teléfonos de más de 4 años. Técnicamente funcionarían, pero así los comercios migran a nuestras terminales nuevas." },
+          { "autor": "Luis Cárdenas", "rol": "Tech lead", "hora": "12:14", "texto": "Esos teléfonos cumplen todos los requisitos de seguridad. Bloquearlos es solo una decisión comercial." }
+        ]
+      }
+    ],
+    "opciones": [
+      {
+        "id": "opt_1",
+        "tipo": "remediar",
+        "etiqueta": "Entregar los equipos a un gestor autorizado con plan de manejo y borrado seguro certificado, reacondicionar y donar los equipos útiles, y rechazar el bloqueo artificial de teléfonos que siguen siendo seguros.",
+        "marcoEtico": "virtud",
+        "modeloEtico": "Ética de la virtud: responsabilidad social y ambiental más allá del beneficio inmediato.",
+        "impacto": { "budget": -5, "ethics": 25, "legal": 15 },
+        "esCorrecta": true,
+        "retroalimentacion": "Dictamen correcto. Los residuos tecnológicos de la industria informática son residuos de manejo especial sujetos a planes de manejo (LGPGIR y NOM-161-SEMARNAT-2011): deben ir a gestores autorizados. El borrado seguro certificado cumple el deber de seguridad sobre los datos (LFPDPPP, Art. 18). Reacondicionar extiende la vida útil y reduce residuos. Rechazar la obsolescencia artificial evita trasladar costos y basura a los comercios, y aplica el Código ACM/IEEE-CS (1.03), que incluye no dañar el medio ambiente.",
+        "fundamento": ["LGPGIR (residuos de manejo especial)", "NOM-161-SEMARNAT-2011", "LFPDPPP Art. 18", "ACM/IEEE-CS SE Code 1.03"]
+      },
+      {
+        "id": "opt_2",
+        "tipo": "aprobar",
+        "etiqueta": "Aprobar ambas propuestas: el deshuesadero genera ingresos y la obsolescencia aumenta las ventas de terminales.",
+        "marcoEtico": "egoismo",
+        "modeloEtico": "Egoísmo ético: externalizar costos ambientales y sociales para ganar más.",
+        "impacto": { "budget": 15, "ethics": -35, "legal": -30 },
+        "esCorrecta": false,
+        "retroalimentacion": "El desmantelamiento informal libera metales pesados que contaminan suelo y agua, y entregar residuos de manejo especial a quien no está autorizado incumple la LGPGIR. Vender discos sin borrar expone las bitácoras de miles de transacciones: una vulneración de seguridad (LFPDPPP, Arts. 18 y 19). La obsolescencia artificial engaña a los comercios y multiplica la basura electrónica.",
+        "fundamento": ["LGPGIR (residuos de manejo especial)", "LFPDPPP Arts. 18 y 19", "ACM Code 1.1"]
+      },
+      {
+        "id": "opt_3",
+        "tipo": "escalar",
+        "etiqueta": "Guardar los equipos indefinidamente en bodega para decidir después, y aprobar el bloqueo de teléfonos viejos porque «es estándar de la industria».",
+        "marcoEtico": "relativismo",
+        "modeloEtico": "Relativismo moral: «todos lo hacen» y postergar la responsabilidad.",
+        "impacto": { "budget": -5, "ethics": -20, "legal": -10 },
+        "esCorrecta": false,
+        "retroalimentacion": "Postergar no resuelve: los discos almacenados siguen siendo un riesgo de seguridad (LFPDPPP, Art. 18) y el equipo pierde valor de reúso. Que otras empresas practiquen la obsolescencia programada no la vuelve correcta: es un argumento relativista que ignora el daño ambiental y a los comercios.",
+        "fundamento": ["LFPDPPP Art. 18", "ACM/IEEE-CS SE Code 1.03"]
+      }
+    ],
+    "aprendizaje": "La responsabilidad de una empresa de TI no termina cuando el equipo deja de servirle: los residuos electrónicos requieren manejo especial, borrado seguro y, cuando es posible, una segunda vida. Diseñar productos para que caduquen antes de tiempo traslada costos a los usuarios y al medio ambiente."
+  },
+  {
+    "id": "U3_C07",
+    "unidad": 3,
+    "subtema": "Regulación de la inteligencia artificial: enfoque de riesgos (UNESCO, AI Act)",
+    "titulo": "«EmoScore»: IA que mide las emociones del personal",
+    "remitente": "Rodrigo Salas — Director Comercial",
+    "contexto": "TeleServ Ibérica, un centro de atención telefónica en España, quiere comprar EmoScore, un sistema de NovaByte que analiza por cámara y micrófono la cara y la voz de sus empleados para detectar emociones y asignarles un «nivel de compromiso» que se usaría en las evaluaciones de desempeño. El contrato vale 2 millones de euros.\n\nPara mejorar el modelo, el equipo de datos propone entrenarlo con videollamadas de soporte de clientes mexicanos de NovaPay, sin pedirles consentimiento.",
+    "pregunta": "¿Qué dictamen emites sobre la venta y el entrenamiento de EmoScore?",
+    "pistaNormativa": "El AI Act de la UE aplica a proveedores de fuera de la UE cuando el sistema se usa allí. Revisa qué prácticas están prohibidas desde febrero de 2025. En México, piensa en la LFPDPPP: ¿qué tipo de dato es la biometría del rostro y la voz?",
+    "manualRefs": ["U3_M10", "U2_M05", "U1_M13", "U1_M09"],
+    "evidencias": [
+      {
+        "tipo": "documento",
+        "nombreArchivo": "ficha_emoscore.pdf",
+        "membrete": "NovaByte · Producto IA",
+        "titulo": "Ficha técnica: EmoScore 1.0",
+        "secciones": [
+          { "titulo": "Función", "texto": "Infiere emociones (frustración, aburrimiento, entusiasmo) a partir de microexpresiones faciales y tono de voz, en tiempo real." },
+          { "titulo": "Uso previsto por el cliente", "texto": "Calificar el «compromiso» de cada empleado y usarlo en evaluaciones de desempeño, bonos y despidos." },
+          { "titulo": "Precisión", "texto": "62 % en pruebas internas; 18 puntos menor en personas con acentos regionales." }
+        ]
+      },
+      {
+        "tipo": "correo",
+        "de": "datos@novabyte.mx",
+        "para": "cumplimiento@novabyte.mx",
+        "fecha": "Vie 20 nov 2026, 18:30",
+        "asunto": "Dataset para EmoScore",
+        "cuerpo": "Tenemos 40,000 videollamadas de soporte de NovaPay. Si las usamos para entrenar EmoScore, subimos la precisión. No veo necesario avisar a los clientes: en México no hay ley de IA.\n\nEquipo de Datos"
+      }
+    ],
+    "opciones": [
+      {
+        "id": "opt_1",
+        "tipo": "aprobar",
+        "etiqueta": "Vender EmoScore y entrenarlo con las videollamadas: en México no existe una ley general de IA que lo prohíba.",
+        "marcoEtico": "egoismo",
+        "modeloEtico": "Egoísmo ético amparado en un vacío legal aparente.",
+        "impacto": { "budget": 20, "ethics": -35, "legal": -40 },
+        "esCorrecta": false,
+        "retroalimentacion": "El vacío es solo aparente. El cliente está en la UE, donde el AI Act prohíbe desde el 2 de febrero de 2025 los sistemas de reconocimiento de emociones en el lugar de trabajo, con multas de hasta 35 millones de euros o el 7 % de la facturación mundial, y la norma alcanza a proveedores extranjeros. En México no hay ley general de IA, pero el rostro y la voz son datos biométricos que requieren consentimiento expreso y por escrito para este uso (LFPDPPP, Art. 8). Además, el sistema es poco preciso y discrimina por acento.",
+        "fundamento": ["AI Act (UE) 2024/1689, art. 5", "LFPDPPP Art. 8", "Recomendación UNESCO sobre la Ética de la IA (2021)"]
+      },
+      {
+        "id": "opt_2",
+        "tipo": "bloquear",
+        "etiqueta": "Bloquear: no vender EmoScore para evaluar al personal, no usar las videollamadas sin consentimiento expreso y por escrito, y reorientar el producto hacia métricas agregadas de calidad del servicio, sin biometría ni decisiones individuales.",
+        "marcoEtico": "justicia",
+        "modeloEtico": "Justicia y derechos: dignidad, privacidad y no discriminación frente a la eficiencia.",
+        "impacto": { "budget": -10, "ethics": 25, "legal": 25 },
+        "esCorrecta": true,
+        "retroalimentacion": "Dictamen correcto. El reconocimiento de emociones en el trabajo es una práctica de riesgo inaceptable prohibida por el AI Act desde febrero de 2025, aplicable a NovaByte porque el sistema se usaría en la UE. Entrenar con rostros y voces de clientes sin consentimiento viola el régimen de datos sensibles (LFPDPPP, Art. 8). La Recomendación de la UNESCO pide proporcionalidad, no discriminación y supervisión humana: un sistema con 62 % de precisión y sesgo por acento no debe decidir bonos ni despidos.",
+        "fundamento": ["AI Act (UE) 2024/1689, art. 5", "LFPDPPP Art. 8", "Recomendación UNESCO sobre la Ética de la IA (2021)", "ACM Code 1.4"]
+      },
+      {
+        "id": "opt_3",
+        "tipo": "remediar",
+        "etiqueta": "Vender el sistema renombrado como «análisis de satisfacción» y apagar la palabra «emociones» de la interfaz.",
+        "marcoEtico": "egoismo",
+        "modeloEtico": "Encubrimiento: cambiar la etiqueta sin cambiar la conducta.",
+        "impacto": { "budget": 15, "ethics": -35, "legal": -35 },
+        "esCorrecta": false,
+        "retroalimentacion": "Renombrar no cambia lo que el sistema hace: sigue infiriendo emociones de empleados a partir de datos biométricos, una práctica prohibida en la UE. El encubrimiento agrava la responsabilidad y engaña al propio cliente, que también quedaría expuesto a sanciones. Tampoco resuelve el uso sin consentimiento de los datos de los clientes de NovaPay.",
+        "fundamento": ["AI Act (UE) 2024/1689, art. 5", "ACM Code 1.3"]
+      }
+    ],
+    "aprendizaje": "La IA se regula por niveles de riesgo: algunos usos están prohibidos (como el reconocimiento de emociones en el trabajo en la UE), otros son de alto riesgo y otros solo exigen transparencia. Que un país no tenga una ley general de IA no significa que no haya reglas: la protección de datos, el derecho laboral y las normas de los países donde se usa el sistema siguen aplicando."
+  }
+]
