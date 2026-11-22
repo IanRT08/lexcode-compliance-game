@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react';
-import { BookOpen, Search, X } from 'lucide-react';
+import { BookOpen, ExternalLink, Search, X } from 'lucide-react';
 import manual from '../../data/legalManual.json';
 import { normalize } from '../../utils/text.js';
 
@@ -119,6 +119,23 @@ export default function LegalManualPanel({ relatedIds = [] }) {
                     </ul>
                   )}
                   <p className="label-caps mt-2 text-olive">{e.categoria}</p>
+                  {e.fuentesOficiales?.length > 0 && (
+                    <ul className="mt-2 space-y-1 border-t border-sage/60 pt-2" aria-label="Fuentes oficiales">
+                      {e.fuentesOficiales.map((f) => (
+                        <li key={f.url}>
+                          <a
+                            href={f.url}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="inline-flex items-start gap-1.5 text-xs font-medium text-earth hover:underline"
+                          >
+                            <ExternalLink className="mt-px size-4 shrink-0" aria-hidden="true" />
+                            {f.nombre}
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                 </div>
               </details>
             </li>

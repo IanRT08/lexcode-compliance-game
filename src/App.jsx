@@ -6,7 +6,7 @@ import StartScreen from './components/screens/StartScreen.jsx';
 import CaseWorkspace from './components/game/CaseWorkspace.jsx';
 import SprintSummary from './components/screens/SprintSummary.jsx';
 import GameOverScreen from './components/screens/GameOverScreen.jsx';
-import VictoryScreen from './components/screens/VictoryScreen.jsx';
+import ComplianceCertificate from './components/compliance/ComplianceCertificate.jsx';
 import PrivacyGateModal from './components/compliance/PrivacyGateModal.jsx';
 import PrivacyNoticeModal from './components/compliance/PrivacyNoticeModal.jsx';
 import LicenseModal from './components/compliance/LicenseModal.jsx';
@@ -17,7 +17,7 @@ const SCREENS = {
   PLAYING: CaseWorkspace,
   SPRINT_SUMMARY: SprintSummary,
   GAME_OVER: GameOverScreen,
-  VICTORY: VictoryScreen,
+  VICTORY: ComplianceCertificate,
 };
 
 /**

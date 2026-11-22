@@ -364,7 +364,7 @@
     "remitente": "Fernanda Gil — Capital Humano",
     "contexto": "NovaByte abrió 15 vacantes y recibió más de 2,000 postulaciones. Para ahorrar tiempo, Capital Humano configuró TalentScreen, un filtro automático que descarta candidaturas antes de que una persona las lea. Jorge, el CEO, pidió «gente joven que aguante el ritmo».\n\nAntes de activarse, el sistema requiere el visto bueno de Cumplimiento.",
     "pregunta": "¿Autorizas la configuración del filtro?",
-    "pistaNormativa": "La libertad de contratar tiene límites. Revisa la prohibición de discriminación del artículo 1.º constitucional y lo que el artículo 133 de la Ley Federal del Trabajo prohíbe a los patrones.",
+    "pistaNormativa": "La libertad de contratar tiene límites. Revisa la prohibición de discriminación del artículo 1.º constitucional y lo que el artículo 133 de la Ley Federal del Trabajo prohíbe a las personas empleadoras.",
     "manualRefs": ["U1_M13", "U1_M09", "U1_M05"],
     "evidencias": [
       {
@@ -390,7 +390,7 @@
         "modeloEtico": "Utilitarismo eficientista: maximiza el ahorro de tiempo e ignora a las personas excluidas.",
         "impacto": { "budget": 10, "ethics": -35, "legal": -35 },
         "esCorrecta": false,
-        "retroalimentacion": "La eficiencia no justifica excluir personas por su edad, su lugar de residencia, una discapacidad, un embarazo o su origen étnico. El artículo 1.º constitucional prohíbe toda discriminación que atente contra la dignidad humana, y la Ley Federal del Trabajo (Art. 133, fr. I) prohíbe a los patrones negarse a aceptar trabajadores por esos motivos. Automatizar la exclusión la vuelve masiva e invisible, y expone a NovaByte a quejas ante el CONAPRED y a demandas.",
+        "retroalimentacion": "La eficiencia no justifica excluir personas por su edad, su lugar de residencia, una discapacidad, un embarazo o su origen étnico. El artículo 1.º constitucional prohíbe toda discriminación que atente contra la dignidad humana, y la Ley Federal del Trabajo (Art. 133, fr. I) prohíbe a las personas empleadoras negarse a aceptar trabajadores por esos motivos. Automatizar la exclusión la vuelve masiva e invisible, y expone a NovaByte a quejas ante el CONAPRED y a demandas.",
         "fundamento": ["CPEUM Art. 1, último párrafo", "LFT Art. 133, fr. I", "ACM Code 1.4"]
       },
       {

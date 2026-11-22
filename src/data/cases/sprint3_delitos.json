@@ -116,8 +116,8 @@
         "modeloEtico": "Egoísmo ético: minimizar el costo y la exposición de la empresa ignorando a los afectados.",
         "impacto": { "budget": -20, "ethics": -30, "legal": -30 },
         "esCorrecta": false,
-        "retroalimentacion": "Pagar no garantiza recuperar los datos ni evitar su publicación (ya hubo exfiltración de 18 GB) y financia al grupo delictivo. Ocultarlo incumple el deber de informar de inmediato a los 380 empleados cuyos datos de salud se vieron comprometidos (LFPDPPP, Art. 19). La extorsión se persigue de oficio conforme a la Ley General en materia de extorsión (2025), y el cifrado de la información es en sí un acceso ilícito (CPF, Art. 211 bis 1).",
-        "fundamento": ["LFPDPPP Art. 19", "Ley General en materia de extorsión (DOF 28/11/2025)", "CPF Art. 211 bis 1"]
+        "retroalimentacion": "Pagar no garantiza recuperar los datos ni evitar su publicación (ya hubo exfiltración de 18 GB) y financia al grupo delictivo. Ocultarlo incumple el deber de informar de inmediato a los 380 empleados cuyos datos de salud se vieron comprometidos (LFPDPPP, Art. 19). La extorsión se persigue de oficio (Ley General en materia de extorsión, Art. 6) y se sanciona con 15 a 25 años de prisión (Art. 15), con hasta 12 años más por usar datos privados de la víctima para coaccionarla o medios electrónicos (Art. 17, fr. IV y V); además, el cifrado de la información es en sí un acceso ilícito (CPF, Art. 211 bis 1).",
+        "fundamento": ["LFPDPPP Art. 19", "Ley General en materia de extorsión, Arts. 6, 15 y 17", "CPF Art. 211 bis 1"]
       },
       {
         "id": "opt_2",
@@ -138,8 +138,8 @@
         "modeloEtico": "Deontología y responsabilidad: cumplir los deberes de seguridad y transparencia aunque cueste.",
         "impacto": { "budget": -5, "ethics": 20, "legal": 25 },
         "esCorrecta": true,
-        "retroalimentacion": "Dictamen correcto. Los respaldos fuera de línea permiten recuperar sin pagar. Preservar evidencia y denunciar permite perseguir la extorsión (de oficio, Ley General de 2025) y el acceso ilícito (CPF, Art. 211 bis 1). Notificar a los empleados es obligatorio cuando una vulneración afecta significativamente sus derechos (LFPDPPP, Art. 19), y cerrar el RDP expuesto corrige la falla en las medidas de seguridad (Art. 18).",
-        "fundamento": ["CPF Art. 211 bis 1", "Ley General en materia de extorsión (DOF 28/11/2025)", "LFPDPPP Arts. 18 y 19"]
+        "retroalimentacion": "Dictamen correcto. Los respaldos fuera de línea permiten recuperar sin pagar. Preservar evidencia y denunciar permite perseguir la extorsión, que se investiga de oficio y se agrava por amenazar con publicar datos privados y por usar medios electrónicos (Ley General en materia de extorsión, Arts. 6, 15 y 17) y el acceso ilícito (CPF, Art. 211 bis 1). Notificar a los empleados es obligatorio cuando una vulneración afecta significativamente sus derechos (LFPDPPP, Art. 19), y cerrar el RDP expuesto corrige la falla en las medidas de seguridad (Art. 18).",
+        "fundamento": ["CPF Art. 211 bis 1", "Ley General en materia de extorsión, Arts. 6, 15 y 17", "LFPDPPP Arts. 18 y 19"]
       }
     ],
     "aprendizaje": "El ransomware combina varios delitos: acceso ilícito y alteración de información, extorsión y, frecuentemente, robo de datos. Desde noviembre de 2025, la extorsión se regula en una ley general y no en el Código Penal Federal. Los respaldos fuera de línea probados son la mejor defensa; el silencio y el pago, las peores."

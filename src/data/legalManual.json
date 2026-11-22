@@ -11,7 +11,13 @@
       "No tiene sanción jurídica; su sanción es social o de conciencia (culpa, rechazo del grupo).",
       "Ejemplo: «a mí no me parece grave cobrar un peso de más» es un juicio moral personal."
     ],
-    "palabrasClave": ["costumbre", "convicción", "conciencia", "bueno", "malo"]
+    "palabrasClave": [
+      "costumbre",
+      "convicción",
+      "conciencia",
+      "bueno",
+      "malo"
+    ]
   },
   {
     "id": "U1_M02",
@@ -25,7 +31,13 @@
       "En una empresa de software suelen expresarse en su código de conducta.",
       "Declarar valores no basta: se demuestran en las decisiones difíciles."
     ],
-    "palabrasClave": ["honestidad", "responsabilidad", "respeto", "transparencia", "integridad"]
+    "palabrasClave": [
+      "honestidad",
+      "responsabilidad",
+      "respeto",
+      "transparencia",
+      "integridad"
+    ]
   },
   {
     "id": "U1_M03",
@@ -39,7 +51,12 @@
       "En la ingeniería de software se concreta en códigos como el de la ACM y el ACM/IEEE-CS.",
       "La ética suele exigir más que la ley: algo puede ser legal y aun así ser antiético."
     ],
-    "palabrasClave": ["reflexión", "justificación", "ética profesional", "deber"]
+    "palabrasClave": [
+      "reflexión",
+      "justificación",
+      "ética profesional",
+      "deber"
+    ]
   },
   {
     "id": "U1_M04",
@@ -54,7 +71,21 @@
       "Que algo no esté prohibido no lo vuelve correcto; que algo sea legal no lo vuelve ético.",
       "Una falta ética no siempre es un delito: solo lo es si la ley penal la describe y sanciona."
     ],
-    "palabrasClave": ["ley", "sanción", "obligatorio", "legal", "ilegal", "delito", "falta ética"]
+    "palabrasClave": [
+      "ley",
+      "sanción",
+      "obligatorio",
+      "legal",
+      "ilegal",
+      "delito",
+      "falta ética"
+    ],
+    "fuentesOficiales": [
+      {
+        "nombre": "CPEUM (Cámara de Diputados, texto vigente)",
+        "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf"
+      }
+    ]
   },
   {
     "id": "U1_M05",
@@ -74,7 +105,22 @@
       "2.3 Conocer y respetar las reglas que rigen el trabajo profesional.",
       "2.5 Evaluar de forma completa los sistemas y sus impactos, incluidos los riesgos."
     ],
-    "palabrasClave": ["ACM", "código de ética", "calidad", "honestidad", "daño", "discriminación", "autoría", "riesgos"]
+    "palabrasClave": [
+      "ACM",
+      "código de ética",
+      "calidad",
+      "honestidad",
+      "daño",
+      "discriminación",
+      "autoría",
+      "riesgos"
+    ],
+    "fuentesOficiales": [
+      {
+        "nombre": "ACM Code of Ethics and Professional Conduct",
+        "url": "https://www.acm.org/code-of-ethics"
+      }
+    ]
   },
   {
     "id": "U1_M06",
@@ -90,7 +136,21 @@
       "Principio 3 (Producto): asegurar que los productos cumplan los estándares profesionales más altos posibles.",
       "Principio 7 (Colegas): ser justo con los colegas y apoyarlos."
     ],
-    "palabrasClave": ["IEEE", "ACM", "ingeniería de software", "interés público", "producto", "colegas", "defecto"]
+    "palabrasClave": [
+      "IEEE",
+      "ACM",
+      "ingeniería de software",
+      "interés público",
+      "producto",
+      "colegas",
+      "defecto"
+    ],
+    "fuentesOficiales": [
+      {
+        "nombre": "Software Engineering Code of Ethics (ACM)",
+        "url": "https://ethics.acm.org/code-of-ethics/software-engineering-code/"
+      }
+    ]
   },
   {
     "id": "U1_M07",
@@ -104,7 +164,12 @@
       "Error frecuente: contar solo los beneficios de la empresa y olvidar a usuarios y terceros.",
       "Riesgo: puede justificar sacrificar a una minoría si la mayoría gana."
     ],
-    "palabrasClave": ["consecuencias", "bienestar", "mayoría", "costo beneficio"]
+    "palabrasClave": [
+      "consecuencias",
+      "bienestar",
+      "mayoría",
+      "costo beneficio"
+    ]
   },
   {
     "id": "U1_M08",
@@ -118,7 +183,13 @@
       "Trata a las personas siempre como fines y nunca solo como medios.",
       "Riesgo: aplicar reglas de forma rígida sin entender su propósito."
     ],
-    "palabrasClave": ["deber", "Kant", "norma", "principio", "dignidad"]
+    "palabrasClave": [
+      "deber",
+      "Kant",
+      "norma",
+      "principio",
+      "dignidad"
+    ]
   },
   {
     "id": "U1_M09",
@@ -132,7 +203,13 @@
       "Incluye el debido proceso: escuchar a todas las partes antes de sancionar.",
       "Útil para analizar discriminación, privacidad y acceso a la tecnología."
     ],
-    "palabrasClave": ["equidad", "igualdad", "derechos humanos", "debido proceso", "Rawls"]
+    "palabrasClave": [
+      "equidad",
+      "igualdad",
+      "derechos humanos",
+      "debido proceso",
+      "Rawls"
+    ]
   },
   {
     "id": "U1_M10",
@@ -146,7 +223,13 @@
       "Virtudes clave en TI: honestidad, prudencia, responsabilidad, valentía para decir no.",
       "Complementa a los demás modelos cuando no hay una regla clara."
     ],
-    "palabrasClave": ["carácter", "integridad", "Aristóteles", "honestidad", "prudencia"]
+    "palabrasClave": [
+      "carácter",
+      "integridad",
+      "Aristóteles",
+      "honestidad",
+      "prudencia"
+    ]
   },
   {
     "id": "U1_M11",
@@ -162,7 +245,26 @@
       "Señales de acoso frente a broma: repetición, blanco fijo, desequilibrio de poder y humillación.",
       "No todo ciberacoso es delito: solo ciertas conductas están tipificadas (por ejemplo, difundir contenido íntimo sin consentimiento, Unidad III)."
     ],
-    "palabrasClave": ["ciberacoso", "cyberbullying", "acoso laboral", "hostigamiento", "violencia laboral", "NOM-035", "protocolo", "Ley Federal del Trabajo"]
+    "palabrasClave": [
+      "ciberacoso",
+      "cyberbullying",
+      "acoso laboral",
+      "hostigamiento",
+      "violencia laboral",
+      "NOM-035",
+      "protocolo",
+      "Ley Federal del Trabajo"
+    ],
+    "fuentesOficiales": [
+      {
+        "nombre": "NOM-035-STPS-2018 (Diario Oficial de la Federación)",
+        "url": "https://dof.gob.mx/nota_detalle.php?codigo=5541828&fecha=23/10/2018"
+      },
+      {
+        "nombre": "Ley Federal del Trabajo (Cámara de Diputados, texto vigente)",
+        "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFT.pdf"
+      }
+    ]
   },
   {
     "id": "U1_M12",
@@ -178,23 +280,60 @@
       "Reutilizar no es plagiar si se cumple la licencia y se reconoce la autoría.",
       "El plagio es una falta ética; puede ser además infracción de derechos de autor (Unidad II) e incluso delito si hay reproducción con fines de lucro (Unidad III)."
     ],
-    "palabrasClave": ["plagio", "autoría", "paternidad", "derechos morales", "copiar código", "LFDA", "GitHub"]
+    "palabrasClave": [
+      "plagio",
+      "autoría",
+      "paternidad",
+      "derechos morales",
+      "copiar código",
+      "LFDA",
+      "GitHub"
+    ],
+    "fuentesOficiales": [
+      {
+        "nombre": "Ley Federal del Derecho de Autor (Cámara de Diputados, texto vigente)",
+        "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFDA.pdf"
+      }
+    ]
   },
   {
     "id": "U1_M13",
     "unidad": 1,
     "categoria": "Constitución y leyes",
     "titulo": "No discriminación y exclusión digital",
-    "fuente": "CPEUM Art. 1, último párrafo · LFT Art. 133, fr. I · LFPED",
+    "fuente": "CPEUM Art. 1, último párrafo · LFT Art. 133, fr. I · LFPED Art. 1, fr. III",
     "resumen": "La Constitución prohíbe toda discriminación motivada por origen étnico o nacional, género, edad, discapacidades, condición social, condiciones de salud, religión, opiniones, preferencias sexuales, estado civil o cualquier otra que atente contra la dignidad humana.",
     "puntosClave": [
-      "LFT Art. 133, fr. I: los patrones no pueden negarse a aceptar trabajadores por origen, género, edad, discapacidad, condición social, condiciones de salud, religión, estado civil u otro criterio discriminatorio.",
-      "La Ley Federal para Prevenir y Eliminar la Discriminación (LFPED) desarrolla este derecho; el CONAPRED recibe quejas.",
+      "LFT Art. 133, fr. I: queda prohibido a las personas empleadoras negarse a aceptar trabajadores por origen étnico o nacional, género, edad, discapacidad, condición social, condiciones de salud, religión, opiniones, preferencias sexuales, estado civil o cualquier otro criterio discriminatorio.",
+      "LFPED Art. 1, fr. III: discriminación es toda distinción, exclusión o restricción que, por acción u omisión, con intención o sin ella, no sea objetiva, racional ni proporcional y anule o menoscabe derechos. El CONAPRED recibe quejas.",
       "Discriminación tecnológica: sistemas que excluyen por variables protegidas o por variables «proxy» (código postal como sustituto de condición social).",
       "Exclusión digital: diseños inaccesibles (sin soporte para lector de pantalla, solo desde un dispositivo) que dejan fuera a grupos completos.",
       "Automatizar una regla discriminatoria la vuelve masiva e invisible."
     ],
-    "palabrasClave": ["discriminación", "edad", "discapacidad", "accesibilidad", "exclusión digital", "CONAPRED", "contratación", "artículo 1"]
+    "palabrasClave": [
+      "discriminación",
+      "edad",
+      "discapacidad",
+      "accesibilidad",
+      "exclusión digital",
+      "CONAPRED",
+      "contratación",
+      "artículo 1"
+    ],
+    "fuentesOficiales": [
+      {
+        "nombre": "CPEUM (Cámara de Diputados, texto vigente)",
+        "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf"
+      },
+      {
+        "nombre": "Ley Federal del Trabajo (Cámara de Diputados, texto vigente)",
+        "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFT.pdf"
+      },
+      {
+        "nombre": "Ley Federal para Prevenir y Eliminar la Discriminación (Cámara de Diputados, texto vigente)",
+        "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFPED.pdf"
+      }
+    ]
   },
   {
     "id": "U1_M14",
@@ -209,7 +348,26 @@
       "CPEUM Art. 7: garantiza la libertad de difundir opiniones e información por cualquier medio, con los límites del Art. 6.",
       "Manipulación algorítmica: optimizar un sistema de recomendación para maximizar indignación o tiempo de uso es una decisión ética de diseño."
     ],
-    "palabrasClave": ["desinformación", "fake news", "noticias falsas", "bots", "publicidad engañosa", "Profeco", "libertad de expresión", "algoritmo"]
+    "palabrasClave": [
+      "desinformación",
+      "fake news",
+      "noticias falsas",
+      "bots",
+      "publicidad engañosa",
+      "Profeco",
+      "libertad de expresión",
+      "algoritmo"
+    ],
+    "fuentesOficiales": [
+      {
+        "nombre": "Ley Federal de Protección al Consumidor (Cámara de Diputados, texto vigente)",
+        "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFPC.pdf"
+      },
+      {
+        "nombre": "CPEUM (Cámara de Diputados, texto vigente)",
+        "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf"
+      }
+    ]
   },
   {
     "id": "U4_M01",
@@ -224,7 +382,26 @@
       "Por eso no se puede incorporar código GPL en un producto propietario que se distribuye a clientes sin liberar ese producto bajo GPL.",
       "En la Unidad IV se estudia la compatibilidad entre licencias (MIT, Apache 2.0, GPLv3, CC-BY)."
     ],
-    "palabrasClave": ["licencia", "MIT", "GPL", "copyleft", "código abierto", "software libre", "dependencia", "avisos"]
+    "palabrasClave": [
+      "licencia",
+      "MIT",
+      "GPL",
+      "copyleft",
+      "código abierto",
+      "software libre",
+      "dependencia",
+      "avisos"
+    ],
+    "fuentesOficiales": [
+      {
+        "nombre": "GNU GPL v3.0 (Free Software Foundation)",
+        "url": "https://www.gnu.org/licenses/gpl-3.0.html"
+      },
+      {
+        "nombre": "FSF: lista de licencias y compatibilidad con la GPL (act. 2026)",
+        "url": "https://www.gnu.org/licenses/license-list.html"
+      }
+    ]
   },
   {
     "id": "U2_M01",
@@ -241,7 +418,22 @@
       "Apartado A, fr. V: los sujetos obligados deben preservar sus documentos en archivos actualizados.",
       "La reforma de diciembre de 2024 eliminó el organismo autónomo garante (antes INAI); la revisión corresponde ahora a las autoridades que fijen las leyes en la materia."
     ],
-    "palabrasClave": ["artículo 6", "transparencia", "acceso a la información", "máxima publicidad", "versión pública", "libertad de expresión", "INAI", "sujeto obligado"]
+    "palabrasClave": [
+      "artículo 6",
+      "transparencia",
+      "acceso a la información",
+      "máxima publicidad",
+      "versión pública",
+      "libertad de expresión",
+      "INAI",
+      "sujeto obligado"
+    ],
+    "fuentesOficiales": [
+      {
+        "nombre": "CPEUM (Cámara de Diputados, texto vigente)",
+        "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf"
+      }
+    ]
   },
   {
     "id": "U2_M02",
@@ -255,7 +447,20 @@
       "Sus límites son los del Art. 6: vida privada, derechos de terceros, comisión de delitos u orden público.",
       "Una política de moderación legítima es pública, proporcional, se aplica igual a todos y permite apelar."
     ],
-    "palabrasClave": ["artículo 7", "libertad de expresión", "censura", "moderación", "redes sociales", "foro"]
+    "palabrasClave": [
+      "artículo 7",
+      "libertad de expresión",
+      "censura",
+      "moderación",
+      "redes sociales",
+      "foro"
+    ],
+    "fuentesOficiales": [
+      {
+        "nombre": "CPEUM (Cámara de Diputados, texto vigente)",
+        "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf"
+      }
+    ]
   },
   {
     "id": "U2_M03",
@@ -270,7 +475,20 @@
       "Un sistema que marca peticiones como «atendidas» sin acuerdo escrito vulnera este derecho.",
       "En materia política, solo los ciudadanos de la República pueden ejercerlo."
     ],
-    "palabrasClave": ["artículo 8", "derecho de petición", "ventanilla", "gobierno digital", "respuesta", "breve término"]
+    "palabrasClave": [
+      "artículo 8",
+      "derecho de petición",
+      "ventanilla",
+      "gobierno digital",
+      "respuesta",
+      "breve término"
+    ],
+    "fuentesOficiales": [
+      {
+        "nombre": "CPEUM (Cámara de Diputados, texto vigente)",
+        "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf"
+      }
+    ]
   },
   {
     "id": "U2_M04",
@@ -284,7 +502,20 @@
       "La ley penal sanciona cualquier acto contra la libertad y privacidad de las comunicaciones privadas.",
       "Las excepciones solo proceden por seguridad nacional, orden público, seguridad y salud públicas o derechos de terceros, conforme a la ley."
     ],
-    "palabrasClave": ["artículo 16", "privacidad", "ARCO", "datos personales", "comunicaciones privadas", "intimidad"]
+    "palabrasClave": [
+      "artículo 16",
+      "privacidad",
+      "ARCO",
+      "datos personales",
+      "comunicaciones privadas",
+      "intimidad"
+    ],
+    "fuentesOficiales": [
+      {
+        "nombre": "CPEUM (Cámara de Diputados, texto vigente)",
+        "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf"
+      }
+    ]
   },
   {
     "id": "U2_M05",
@@ -300,7 +531,23 @@
       "Art. 2, fr. VI: datos sensibles son los que afectan la esfera más íntima de la persona o cuyo uso indebido puede causar discriminación o un riesgo grave (origen étnico, salud, información genética, creencias, opiniones políticas, preferencia sexual).",
       "Una casilla premarcada no es consentimiento expreso: el consentimiento debe ser una manifestación inequívoca de la persona."
     ],
-    "palabrasClave": ["LFPDPPP", "consentimiento", "tácito", "expreso", "datos sensibles", "salud", "biométricos", "principios", "Secretaría Anticorrupción"]
+    "palabrasClave": [
+      "LFPDPPP",
+      "consentimiento",
+      "tácito",
+      "expreso",
+      "datos sensibles",
+      "salud",
+      "biométricos",
+      "principios",
+      "Secretaría Anticorrupción"
+    ],
+    "fuentesOficiales": [
+      {
+        "nombre": "LFPDPPP 2025 (Cámara de Diputados, texto vigente)",
+        "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFPDPPP.pdf"
+      }
+    ]
   },
   {
     "id": "U2_M06",
@@ -314,7 +561,20 @@
       "Art. 16: cuando los datos se obtienen por medios electrónicos, puede darse un aviso simplificado con al menos las fracciones I a IV del Art. 15 y la indicación de dónde consultar el aviso integral.",
       "Un aviso válido no tiene que ser largo: tiene que ser completo, claro y estar disponible antes de recabar los datos."
     ],
-    "palabrasClave": ["aviso de privacidad", "integral", "simplificado", "finalidades", "artículo 15", "artículo 16"]
+    "palabrasClave": [
+      "aviso de privacidad",
+      "integral",
+      "simplificado",
+      "finalidades",
+      "artículo 15",
+      "artículo 16"
+    ],
+    "fuentesOficiales": [
+      {
+        "nombre": "LFPDPPP 2025 (Cámara de Diputados, texto vigente)",
+        "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFPDPPP.pdf"
+      }
+    ]
   },
   {
     "id": "U2_M07",
@@ -329,7 +589,27 @@
       "Cancelación: los datos se bloquean y después se suprimen, salvo los que deban conservarse por una obligación legal.",
       "La empresa no es «dueña» de los datos: la LFDA (Art. 107) protege la estructura de una base de datos, pero no los datos en sí mismos."
     ],
-    "palabrasClave": ["ARCO", "acceso", "rectificación", "cancelación", "oposición", "plazo", "20 días", "gratuito", "bloqueo"]
+    "palabrasClave": [
+      "ARCO",
+      "acceso",
+      "rectificación",
+      "cancelación",
+      "oposición",
+      "plazo",
+      "20 días",
+      "gratuito",
+      "bloqueo"
+    ],
+    "fuentesOficiales": [
+      {
+        "nombre": "LFPDPPP 2025 (Cámara de Diputados, texto vigente)",
+        "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFPDPPP.pdf"
+      },
+      {
+        "nombre": "Ley Federal del Derecho de Autor (Cámara de Diputados, texto vigente)",
+        "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFDA.pdf"
+      }
+    ]
   },
   {
     "id": "U2_M08",
@@ -345,7 +625,23 @@
       "Art. 63: de 6 meses a 5 años de prisión a quien trate datos mediante engaño para obtener un lucro indebido.",
       "Art. 64: tratándose de datos sensibles, las penas se duplican."
     ],
-    "palabrasClave": ["seguridad", "vulneración", "brecha", "notificación", "multa", "UMA", "delito", "datos sensibles", "confidencialidad"]
+    "palabrasClave": [
+      "seguridad",
+      "vulneración",
+      "brecha",
+      "notificación",
+      "multa",
+      "UMA",
+      "delito",
+      "datos sensibles",
+      "confidencialidad"
+    ],
+    "fuentesOficiales": [
+      {
+        "nombre": "LFPDPPP 2025 (Cámara de Diputados, texto vigente)",
+        "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFPDPPP.pdf"
+      }
+    ]
   },
   {
     "id": "U2_M09",
@@ -362,7 +658,23 @@
       "Art. 162: las obras quedan protegidas aun sin registro; el Registro Público del Derecho de Autor (INDAUTOR) da seguridad jurídica y publicidad.",
       "Art. 102: no se protegen los programas cuyo objeto sea causar efectos nocivos (malware)."
     ],
-    "palabrasClave": ["LFDA", "derecho de autor", "software", "programa de computación", "INDAUTOR", "registro", "derechos morales", "derechos patrimoniales", "inteligencia artificial"]
+    "palabrasClave": [
+      "LFDA",
+      "derecho de autor",
+      "software",
+      "programa de computación",
+      "INDAUTOR",
+      "registro",
+      "derechos morales",
+      "derechos patrimoniales",
+      "inteligencia artificial"
+    ],
+    "fuentesOficiales": [
+      {
+        "nombre": "Ley Federal del Derecho de Autor (Cámara de Diputados, texto vigente)",
+        "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFDA.pdf"
+      }
+    ]
   },
   {
     "id": "U2_M10",
@@ -377,7 +689,21 @@
       "El autor conserva siempre su derecho moral a ser mencionado (Arts. 21 y 83).",
       "Riesgo típico en una auditoría: proveedores o freelancers sin contrato escrito de encargo o de cesión."
     ],
-    "palabrasClave": ["titularidad", "empleado", "freelancer", "obra por encargo", "cesión", "contrato", "artículo 103"]
+    "palabrasClave": [
+      "titularidad",
+      "empleado",
+      "freelancer",
+      "obra por encargo",
+      "cesión",
+      "contrato",
+      "artículo 103"
+    ],
+    "fuentesOficiales": [
+      {
+        "nombre": "Ley Federal del Derecho de Autor (Cámara de Diputados, texto vigente)",
+        "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFDA.pdf"
+      }
+    ]
   },
   {
     "id": "U2_M11",
@@ -393,7 +719,22 @@
       "Marca: 10 años desde su otorgamiento, renovable por periodos iguales (Art. 178). El nombre de una app se protege como marca, no como derecho de autor.",
       "Error frecuente: «patentar el código». El código se protege por derecho de autor; la marca protege el nombre; el secreto industrial protege información confidencial."
     ],
-    "palabrasClave": ["LFPPI", "IMPI", "patente", "marca", "modelo de utilidad", "diseño industrial", "propiedad industrial", "programas de computación"]
+    "palabrasClave": [
+      "LFPPI",
+      "IMPI",
+      "patente",
+      "marca",
+      "modelo de utilidad",
+      "diseño industrial",
+      "propiedad industrial",
+      "programas de computación"
+    ],
+    "fuentesOficiales": [
+      {
+        "nombre": "Ley Federal de Protección a la Propiedad Industrial (Cámara de Diputados, texto vigente)",
+        "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFPPI.pdf"
+      }
+    ]
   },
   {
     "id": "U2_M12",
@@ -409,7 +750,21 @@
       "Delito (Art. 402, fr. III a VI): divulgar, apoderarse, usar o apropiarse indebidamente de un secreto industrial. Pena (Art. 403): de 2 a 6 años de prisión y multa de 1,000 a 300,000 UMA. Se persigue por querella de la parte ofendida.",
       "Si el modelo está en un repositorio público, ya no hay «medios suficientes» de confidencialidad."
     ],
-    "palabrasClave": ["secreto industrial", "confidencialidad", "NDA", "know-how", "algoritmo", "querella", "artículo 163"]
+    "palabrasClave": [
+      "secreto industrial",
+      "confidencialidad",
+      "NDA",
+      "know-how",
+      "algoritmo",
+      "querella",
+      "artículo 163"
+    ],
+    "fuentesOficiales": [
+      {
+        "nombre": "Ley Federal de Protección a la Propiedad Industrial (Cámara de Diputados, texto vigente)",
+        "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFPPI.pdf"
+      }
+    ]
   },
   {
     "id": "U2_M13",
@@ -426,7 +781,26 @@
       "Sin secretos ni credenciales en el historial de git; sin datos personales reales en el repositorio.",
       "Afirmaciones públicas veraces: no declarar patentes que no existen."
     ],
-    "palabrasClave": ["auditoría", "due diligence", "SBOM", "repositorio", "licencias", "titularidad", "credenciales", "revisión de código"]
+    "palabrasClave": [
+      "auditoría",
+      "due diligence",
+      "SBOM",
+      "repositorio",
+      "licencias",
+      "titularidad",
+      "credenciales",
+      "revisión de código"
+    ],
+    "fuentesOficiales": [
+      {
+        "nombre": "Ley Federal del Derecho de Autor (Cámara de Diputados, texto vigente)",
+        "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFDA.pdf"
+      },
+      {
+        "nombre": "Ley Federal de Protección a la Propiedad Industrial (Cámara de Diputados, texto vigente)",
+        "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFPPI.pdf"
+      }
+    ]
   },
   {
     "id": "U3_M01",
@@ -442,7 +816,25 @@
       "Datos personales: vulneraciones con ánimo de lucro y tratamiento mediante engaño (LFPDPPP 62 a 64).",
       "Algunas conductas no tienen tipo penal federal autónomo (por ejemplo, la suplantación de identidad) y se persiguen a través de otros delitos o de códigos penales estatales."
     ],
-    "palabrasClave": ["delito informático", "clasificación", "tipicidad", "legalidad", "falta ética", "patrimonio", "propiedad intelectual"]
+    "palabrasClave": [
+      "delito informático",
+      "clasificación",
+      "tipicidad",
+      "legalidad",
+      "falta ética",
+      "patrimonio",
+      "propiedad intelectual"
+    ],
+    "fuentesOficiales": [
+      {
+        "nombre": "CPEUM (Cámara de Diputados, texto vigente)",
+        "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf"
+      },
+      {
+        "nombre": "Código Penal Federal (Cámara de Diputados, texto vigente)",
+        "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CPF.pdf"
+      }
+    ]
   },
   {
     "id": "U3_M02",
@@ -459,7 +851,22 @@
       "211 bis 7: las penas aumentan hasta en una mitad si la información se usa en provecho propio o ajeno.",
       "Contraatacar («hack back») el servidor de un atacante también es acceso ilícito."
     ],
-    "palabrasClave": ["211 bis", "acceso ilícito", "hackeo", "hack back", "sistemas", "informática", "copiar información", "ransomware"]
+    "palabrasClave": [
+      "211 bis",
+      "acceso ilícito",
+      "hackeo",
+      "hack back",
+      "sistemas",
+      "informática",
+      "copiar información",
+      "ransomware"
+    ],
+    "fuentesOficiales": [
+      {
+        "nombre": "Código Penal Federal (Cámara de Diputados, texto vigente)",
+        "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CPF.pdf"
+      }
+    ]
   },
   {
     "id": "U3_M03",
@@ -474,21 +881,58 @@
       "El Código Penal Federal no tiene un tipo autónomo de suplantación o usurpación de identidad; algunos códigos penales estatales sí lo prevén.",
       "Además de la denuncia, la empresa debe notificar la vulneración a las personas afectadas (LFPDPPP Art. 19)."
     ],
-    "palabrasClave": ["fraude", "phishing", "smishing", "suplantación", "identidad", "engaño", "386"]
+    "palabrasClave": [
+      "fraude",
+      "phishing",
+      "smishing",
+      "suplantación",
+      "identidad",
+      "engaño",
+      "386"
+    ],
+    "fuentesOficiales": [
+      {
+        "nombre": "Código Penal Federal (Cámara de Diputados, texto vigente)",
+        "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CPF.pdf"
+      },
+      {
+        "nombre": "LFPDPPP 2025 (Cámara de Diputados, texto vigente)",
+        "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFPDPPP.pdf"
+      }
+    ]
   },
   {
     "id": "U3_M04",
     "unidad": 3,
     "categoria": "Ley especial",
     "titulo": "Extorsión y ransomware",
-    "fuente": "Ley General para Prevenir, Investigar y Sancionar los Delitos en Materia de Extorsión (DOF 28/11/2025) · CPF 211 bis 1",
+    "fuente": "Ley General para Prevenir, Investigar y Sancionar los Delitos en Materia de Extorsión (DOF 28/11/2025), Arts. 6, 15 y 17 · CPF 211 bis 1",
     "resumen": "La extorsión dejó de regularse en el Código Penal Federal (su Art. 390 fue derogado el 28/11/2025) y pasó a una ley general que homologa las sanciones en todo el país, prevé agravantes por el uso de medios electrónicos o plataformas digitales y ordena perseguirla de oficio.",
     "puntosClave": [
-      "Un ataque de ransomware puede implicar extorsión (exigir un pago bajo amenaza) y acceso ilícito (cifrar información equivale a modificarla o provocar su pérdida, CPF 211 bis 1).",
-      "Pagar el rescate no garantiza recuperar los datos y financia a grupos delictivos.",
-      "Preservar la evidencia y denunciar ante la Fiscalía es parte del cumplimiento; también lo es notificar a las personas cuyos datos se vieron afectados (LFPDPPP Art. 19)."
+      "Art. 15: a quien, sin derecho, obligue a otro a dar, hacer, dejar de hacer o tolerar algo, obteniendo un lucro o causando un daño, se le imponen de 15 a 25 años de prisión y multa de 300 a 500 UMA.",
+      "Art. 17: la pena aumenta de 5 a 12 años cuando se usa información privada de la víctima (datos, imágenes o audios reales o manipulados) para coaccionarla (fr. IV) o cuando se emplean medios o plataformas electrónicas (fr. V).",
+      "Art. 6: la extorsión se investiga y persigue de oficio.",
+      "Un ataque de ransomware puede implicar extorsión (pago bajo amenaza de publicar datos) y acceso ilícito (cifrar información equivale a modificarla o provocar su pérdida, CPF 211 bis 1).",
+      "Pagar el rescate no garantiza recuperar los datos y financia a grupos delictivos. Preservar evidencia, denunciar y notificar a las personas afectadas (LFPDPPP Art. 19) es parte del cumplimiento."
     ],
-    "palabrasClave": ["extorsión", "ransomware", "rescate", "cifrado", "390 derogado", "ley general"]
+    "palabrasClave": [
+      "extorsión",
+      "ransomware",
+      "rescate",
+      "cifrado",
+      "390 derogado",
+      "ley general"
+    ],
+    "fuentesOficiales": [
+      {
+        "nombre": "Ley General en materia de extorsión (Cámara de Diputados, DOF 28/11/2025)",
+        "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LGPISDME.pdf"
+      },
+      {
+        "nombre": "Código Penal Federal (Cámara de Diputados, texto vigente)",
+        "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CPF.pdf"
+      }
+    ]
   },
   {
     "id": "U3_M05",
@@ -504,7 +948,26 @@
       "LFDA 232 Ter: multa administrativa de 1,000 a 10,000 UMA por eludir una medida tecnológica de protección.",
       "Aunque un uso interno no llegue a delito, sigue siendo infracción y genera responsabilidad civil."
     ],
-    "palabrasClave": ["piratería", "424 bis", "crack", "activador", "keygen", "medidas tecnológicas", "elusión", "licencias"]
+    "palabrasClave": [
+      "piratería",
+      "424 bis",
+      "crack",
+      "activador",
+      "keygen",
+      "medidas tecnológicas",
+      "elusión",
+      "licencias"
+    ],
+    "fuentesOficiales": [
+      {
+        "nombre": "Código Penal Federal (Cámara de Diputados, texto vigente)",
+        "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CPF.pdf"
+      },
+      {
+        "nombre": "Ley Federal del Derecho de Autor (Cámara de Diputados, texto vigente)",
+        "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFDA.pdf"
+      }
+    ]
   },
   {
     "id": "U3_M06",
@@ -519,7 +982,21 @@
       "Una plataforma responsable retira el contenido de inmediato, impide su re-publicación, preserva la evidencia con acceso restringido y orienta a la víctima para denunciar.",
       "«Ley Olimpia» es el nombre del conjunto de reformas penales y a la Ley General de Acceso de las Mujeres a una Vida Libre de Violencia sobre violencia digital."
     ],
-    "palabrasClave": ["Ley Olimpia", "intimidad sexual", "violencia digital", "deepfake", "199 Octies", "contenido íntimo", "moderación"]
+    "palabrasClave": [
+      "Ley Olimpia",
+      "intimidad sexual",
+      "violencia digital",
+      "deepfake",
+      "199 Octies",
+      "contenido íntimo",
+      "moderación"
+    ],
+    "fuentesOficiales": [
+      {
+        "nombre": "Código Penal Federal (Cámara de Diputados, texto vigente)",
+        "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CPF.pdf"
+      }
+    ]
   },
   {
     "id": "U3_M07",
@@ -534,7 +1011,20 @@
       "México NO es Parte del Convenio: ha sido invitado a adherirse y participa como observador. Sirve como referencia para armonizar la legislación nacional, no como ley vigente en México.",
       "Los ataques suelen ser transnacionales: sin cooperación internacional, la evidencia (servidores, dominios) queda fuera del alcance."
     ],
-    "palabrasClave": ["Budapest", "convenio", "cooperación internacional", "evidencia digital", "tratado", "Consejo de Europa"]
+    "palabrasClave": [
+      "Budapest",
+      "convenio",
+      "cooperación internacional",
+      "evidencia digital",
+      "tratado",
+      "Consejo de Europa"
+    ],
+    "fuentesOficiales": [
+      {
+        "nombre": "Consejo de Europa: Convenio de Budapest (2026)",
+        "url": "https://rm.coe.int/cyber-buda-benefits-1-julio-2026-es/48802c5c23"
+      }
+    ]
   },
   {
     "id": "U3_M08",
@@ -551,15 +1041,30 @@
       "Controles preventivos: autenticación multifactor, mínimo privilegio, baja inmediata de accesos al terminar una relación laboral, respaldos fuera de línea probados.",
       "Nunca contraatacar ni negociar en secreto: ambas cosas pueden constituir delitos o agravar el daño."
     ],
-    "palabrasClave": ["compliance", "respuesta a incidentes", "cadena de custodia", "evidencia", "denuncia", "MFA", "respaldos", "offboarding"]
+    "palabrasClave": [
+      "compliance",
+      "respuesta a incidentes",
+      "cadena de custodia",
+      "evidencia",
+      "denuncia",
+      "MFA",
+      "respaldos",
+      "offboarding"
+    ],
+    "fuentesOficiales": [
+      {
+        "nombre": "LFPDPPP 2025 (Cámara de Diputados, texto vigente)",
+        "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFPDPPP.pdf"
+      }
+    ]
   },
   {
     "id": "U3_M09",
     "unidad": 3,
     "categoria": "Responsabilidad ambiental",
     "titulo": "Residuos electrónicos, obsolescencia y huella energética",
-    "fuente": "LGPGIR (residuos de manejo especial) · NOM-161-SEMARNAT-2011 · ACM/IEEE-CS SE Code 1.03",
-    "resumen": "Los residuos tecnológicos de la industria informática y de fabricantes de electrónicos son residuos de manejo especial cuando están en los listados sujetos a planes de manejo; la NOM-161-SEMARNAT-2011 establece los criterios y el listado. Deben entregarse a gestores autorizados, nunca a tiraderos o centros informales.",
+    "fuente": "LGPGIR Art. 19, fr. VIII · NOM-161-SEMARNAT-2011 · ACM/IEEE-CS SE Code 1.03",
+    "resumen": "La LGPGIR clasifica como residuos de manejo especial los residuos tecnológicos provenientes de las industrias de la informática y de fabricantes de productos electrónicos que, al terminar su vida útil, requieren un manejo específico (Art. 19, fr. VIII). La NOM-161-SEMARNAT-2011 fija los criterios y el listado de residuos sujetos a plan de manejo. Deben entregarse a gestores autorizados, nunca a tiraderos o centros informales.",
     "puntosClave": [
       "Los equipos contienen metales pesados y compuestos que contaminan suelo y agua si se desmantelan sin control.",
       "Antes de desechar o donar, se aplica un borrado seguro certificado: un disco con datos de clientes es una vulneración en potencia (LFPDPPP Art. 18).",
@@ -568,22 +1073,405 @@
       "Los centros de datos consumen grandes cantidades de energía y agua; medir y reducir esa huella es parte de la responsabilidad social.",
       "El Código ACM/IEEE-CS (1.03) incluye no dañar el medio ambiente como condición para aprobar software."
     ],
-    "palabrasClave": ["e-waste", "residuos electrónicos", "RAEE", "manejo especial", "NOM-161", "obsolescencia programada", "huella de carbono", "centros de datos"]
+    "palabrasClave": [
+      "e-waste",
+      "residuos electrónicos",
+      "RAEE",
+      "manejo especial",
+      "NOM-161",
+      "obsolescencia programada",
+      "huella de carbono",
+      "centros de datos"
+    ],
+    "fuentesOficiales": [
+      {
+        "nombre": "Ley General para la Prevención y Gestión Integral de los Residuos (Cámara de Diputados, texto vigente)",
+        "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LGPGIR.pdf"
+      },
+      {
+        "nombre": "Software Engineering Code of Ethics (ACM)",
+        "url": "https://ethics.acm.org/code-of-ethics/software-engineering-code/"
+      }
+    ]
   },
   {
     "id": "U3_M10",
     "unidad": 3,
     "categoria": "Regulación de IA",
     "titulo": "Marcos regulatorios de la inteligencia artificial",
-    "fuente": "UNESCO (2021) · Reglamento (UE) 2024/1689 (AI Act) · Digital Omnibus (2026) · LFDA y LFPDPPP",
+    "fuente": "Reglamento (UE) 2024/1689 (AI Act) · Reglamento (UE) 2026/1744 · UNESCO · Gaceta Parlamentaria (2026)",
     "resumen": "La regulación de la IA sigue un enfoque basado en riesgos: cuanto mayor es el riesgo para los derechos de las personas, más obligaciones; algunos usos están prohibidos.",
     "puntosClave": [
-      "UNESCO, Recomendación sobre la Ética de la IA (2021): proporcionalidad, seguridad, equidad y no discriminación, privacidad, supervisión humana, transparencia, responsabilidad y sostenibilidad.",
-      "AI Act de la UE, riesgo inaceptable (prohibido desde el 2/2/2025): puntuación social, manipulación que cause daño y reconocimiento de emociones en el trabajo y en la educación, entre otros. Multas de hasta 35 millones de euros o el 7 % de la facturación mundial.",
-      "AI Act, alto riesgo (empleo, crédito, educación): obligaciones aplazadas por el Digital Omnibus al 2/12/2027. Transparencia (por ejemplo, avisar que se interactúa con una IA): 2/8/2026.",
-      "El AI Act aplica a proveedores de fuera de la UE cuando sus sistemas se usan en la UE.",
-      "México: al cierre de 2026 no tiene una ley general de IA (hay iniciativas en el Congreso), pero sí aplican la LFPDPPP (datos biométricos y de salud) y la LFDA reformada en 2026 (protege programas de IA y exige consentimiento expreso para clonar la voz o imagen de intérpretes)."
+      "UNESCO, Recomendación sobre la Ética de la IA: proporcionalidad, seguridad, equidad y no discriminación, privacidad, supervisión humana, transparencia, responsabilidad y sostenibilidad.",
+      "AI Act, art. 5 (aplicable desde el 2/2/2025): prohíbe, entre otros, la puntuación social (5.1.c) y los sistemas para inferir emociones en el trabajo y en centros educativos, salvo por motivos médicos o de seguridad (5.1.f).",
+      "AI Act, art. 99.3: violar las prohibiciones del art. 5 se sanciona con multas de hasta 35 000 000 EUR o el 7 % del volumen de negocios mundial anual, si esta cuantía es superior.",
+      "Alto riesgo (art. 6.2 y Anexo III): selección de personal (punto 4.a) y evaluación de solvencia o calificación crediticia (punto 5.b, salvo detección de fraude). El Reglamento (UE) 2026/1744, de 8 de julio de 2026, aplazó estas obligaciones al 2/12/2027.",
+      "Transparencia (art. 50): avisar cuando se interactúa con una IA y hacer público que una ultrasuplantación (deepfake) fue generada o manipulada artificialmente.",
+      "Alcance (art. 2.1.c): aplica a proveedores de terceros países cuando los resultados de salida del sistema se utilicen en la UE.",
+      "México: según la Gaceta Parlamentaria de la Cámara de Diputados (agosto de 2026), el país aún no tiene una regulación específica de IA; hay iniciativas y una reforma al Art. 73 en trámite. Sí aplican la LFPDPPP (datos sensibles) y la LFDA reformada en 2026."
     ],
-    "palabrasClave": ["inteligencia artificial", "IA", "AI Act", "UNESCO", "riesgo", "reconocimiento de emociones", "biometría", "regulación"]
+    "palabrasClave": [
+      "inteligencia artificial",
+      "IA",
+      "AI Act",
+      "UNESCO",
+      "riesgo",
+      "reconocimiento de emociones",
+      "biometría",
+      "regulación"
+    ],
+    "fuentesOficiales": [
+      {
+        "nombre": "Reglamento (UE) 2024/1689, AI Act (EUR-Lex)",
+        "url": "https://eur-lex.europa.eu/legal-content/ES/TXT/?uri=CELEX:32024R1689"
+      },
+      {
+        "nombre": "Reglamento (UE) 2026/1744, Digital Omnibus sobre IA (EUR-Lex)",
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32026R1744"
+      },
+      {
+        "nombre": "UNESCO: Recomendación sobre la Ética de la IA",
+        "url": "https://www.unesco.org/es/artificial-intelligence/recommendation-ethics"
+      },
+      {
+        "nombre": "Gaceta Parlamentaria, Cámara de Diputados (17/08/2026)",
+        "url": "https://gaceta.diputados.gob.mx/Gaceta/66/2026/ago/20260817.html"
+      }
+    ]
+  },
+  {
+    "id": "U4_M02",
+    "unidad": 4,
+    "categoria": "Licenciamiento",
+    "titulo": "Copyright (propietario) frente a Copyleft (software libre)",
+    "fuente": "LFDA Arts. 24, 27 y 106 · GNU GPL v3.0",
+    "resumen": "Todo software está protegido por derecho de autor desde su creación. La diferencia está en la licencia: el software propietario reserva los derechos y solo concede un uso limitado; el software libre concede las libertades de usar, estudiar, modificar y compartir. El copyleft usa el propio derecho de autor para garantizar que esas libertades se conserven en las versiones derivadas.",
+    "puntosClave": [
+      "Propietario («todos los derechos reservados»): el titular autoriza o prohíbe la reproducción, modificación, distribución y decompilación (LFDA Art. 106).",
+      "Permisivo (MIT/Expat, Apache 2.0): permite incluso integrarlo en software propietario si se conservan los avisos.",
+      "Copyleft (GPLv3): quien distribuye el programa o una obra derivada debe hacerlo bajo la misma licencia y poner a disposición el código fuente.",
+      "Libre no significa gratis ni sin dueño: el autor conserva el derecho de autor y sus derechos morales."
+    ],
+    "palabrasClave": [
+      "copyright",
+      "copyleft",
+      "software libre",
+      "propietario",
+      "licencia",
+      "cuatro libertades",
+      "código abierto"
+    ],
+    "fuentesOficiales": [
+      {
+        "nombre": "Ley Federal del Derecho de Autor (Cámara de Diputados, texto vigente)",
+        "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFDA.pdf"
+      },
+      {
+        "nombre": "GNU GPL v3.0 (Free Software Foundation)",
+        "url": "https://www.gnu.org/licenses/gpl-3.0.html"
+      }
+    ]
+  },
+  {
+    "id": "U4_M03",
+    "unidad": 4,
+    "categoria": "Licenciamiento",
+    "titulo": "Compatibilidad de licencias en dependencias (MIT, Apache 2.0, GPLv3, CC-BY)",
+    "fuente": "FSF, lista de licencias (actualizada en 2026) · Apache Software Foundation · Creative Commons",
+    "resumen": "Antes de agregar una dependencia hay que verificar que su licencia sea compatible con la del proyecto y con la forma en que se distribuirá. La compatibilidad no siempre es simétrica.",
+    "puntosClave": [
+      "MIT (Expat): permisiva, compatible con la GNU GPL (FSF).",
+      "Apache 2.0: compatible con la GPLv3, pero NO con la GPLv2 (FSF y ASF). El código Apache puede entrar en un proyecto GPLv3; el código GPLv3 no puede entrar en un proyecto Apache.",
+      "GPLv3 dentro de un producto propietario que se distribuye a clientes: incompatible, salvo que el producto completo se libere bajo GPLv3.",
+      "CC BY-SA 4.0 es compatible con la GPLv3 solo en un sentido (declarado por Creative Commons el 8/10/2015): adaptaciones de material BY-SA pueden licenciarse bajo GPLv3, no al revés.",
+      "Creative Commons y la FSF no recomiendan usar licencias CC para software: son para contenido (textos, imágenes, música).",
+      "Buenas prácticas: inventario de dependencias (SBOM), lista de licencias permitidas, archivo de avisos de terceros."
+    ],
+    "palabrasClave": [
+      "compatibilidad",
+      "package.json",
+      "dependencias",
+      "MIT",
+      "Apache",
+      "GPL",
+      "CC-BY",
+      "Creative Commons",
+      "SBOM",
+      "licencias"
+    ],
+    "fuentesOficiales": [
+      {
+        "nombre": "FSF: lista de licencias y compatibilidad con la GPL (act. 2026)",
+        "url": "https://www.gnu.org/licenses/license-list.html"
+      },
+      {
+        "nombre": "Apache Software Foundation: compatibilidad con la GPL",
+        "url": "https://www.apache.org/licenses/GPL-compatibility.html"
+      },
+      {
+        "nombre": "Creative Commons: licencias compatibles",
+        "url": "https://creativecommons.org/share-your-work/licensing-considerations/compatible-licenses/"
+      }
+    ]
+  },
+  {
+    "id": "U4_M04",
+    "unidad": 4,
+    "categoria": "Ley",
+    "titulo": "Comercio electrónico y protección al consumidor",
+    "fuente": "LFPC Arts. 7 Bis, 32, 76 Bis y 76 Bis 1 (última reforma DOF 12/12/2025)",
+    "resumen": "El Art. 76 Bis de la LFPC rige las transacciones por medios electrónicos. La reforma de diciembre de 2025 agregó reglas sobre cobros recurrentes y cancelación inmediata.",
+    "puntosClave": [
+      "Fr. I y II: confidencialidad de la información del consumidor y medidas de seguridad, informadas antes de la transacción.",
+      "Fr. III: domicilio físico, teléfonos y medios para reclamaciones antes de celebrar la transacción.",
+      "Fr. IV y V: evitar prácticas engañosas; derecho a conocer términos, costos, cargos adicionales y formas de pago.",
+      "Fr. VI: respetar la decisión del consumidor sobre cantidad y calidad de los productos y la de no recibir avisos comerciales.",
+      "Fr. VIII (2025): informar de forma clara y destacada los cobros automáticos recurrentes, que requieren consentimiento expreso e informado; avisar con 5 días naturales antes de una renovación automática.",
+      "Fr. IX (2025): mecanismos para cancelar el servicio, suscripción o membresía de manera inmediata.",
+      "Art. 7 Bis: mostrar de forma notoria el monto total a pagar, con impuestos, comisiones, seguros y cualquier cargo adicional."
+    ],
+    "palabrasClave": [
+      "comercio electrónico",
+      "e-commerce",
+      "Profeco",
+      "76 Bis",
+      "suscripción",
+      "cobro recurrente",
+      "cancelación",
+      "precio total",
+      "consumidor"
+    ],
+    "fuentesOficiales": [
+      {
+        "nombre": "Ley Federal de Protección al Consumidor (Cámara de Diputados, texto vigente)",
+        "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFPC.pdf"
+      }
+    ]
+  },
+  {
+    "id": "U4_M05",
+    "unidad": 4,
+    "categoria": "Práctica de cumplimiento",
+    "titulo": "Patrones oscuros (dark patterns)",
+    "fuente": "Diseño de interfaces · LFPC Arts. 7 Bis, 32 y 76 Bis",
+    "resumen": "Son diseños de interfaz que empujan a la persona a decidir algo que no haría con información clara: comprar de más, suscribirse sin querer o no poder cancelar. La LFPC no usa el término, pero varias de sus reglas los prohíben.",
+    "puntosClave": [
+      "Precio por goteo (cargos que aparecen al final): contrario al monto total visible (Art. 7 Bis) y al derecho a conocer cargos adicionales (Art. 76 Bis, fr. V).",
+      "Casillas preseleccionadas para seguros o extras: no respetan la decisión del consumidor (Art. 76 Bis, fr. VI).",
+      "Suscripción trampa (prueba «gratis» que se renueva sin aviso, cancelación escondida): contraria al Art. 76 Bis, fr. VIII y IX (2025).",
+      "Urgencia o escasez falsas («quedan 2», contadores que se reinician): publicidad engañosa (Art. 32).",
+      "Confirmshaming (botones que avergüenzan: «No, prefiero pagar más»): manipulación contraria a la ética de diseño."
+    ],
+    "palabrasClave": [
+      "dark patterns",
+      "patrones oscuros",
+      "UX",
+      "casilla premarcada",
+      "urgencia falsa",
+      "suscripción",
+      "goteo",
+      "diseño engañoso"
+    ],
+    "fuentesOficiales": [
+      {
+        "nombre": "Ley Federal de Protección al Consumidor (Cámara de Diputados, texto vigente)",
+        "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFPC.pdf"
+      }
+    ]
+  },
+  {
+    "id": "U4_M06",
+    "unidad": 4,
+    "categoria": "Ética aplicada",
+    "titulo": "Ética en la investigación en línea",
+    "fuente": "LFPDPPP Arts. 2 fr. IX, 5, 8 y 9 · ACM Code 1.6",
+    "resumen": "Estudiar el comportamiento de personas en línea (encuestas, experimentos A/B, análisis de publicaciones) exige el mismo respeto que la investigación presencial: consentimiento informado, finalidad clara, mínimo de datos y protección de la identidad.",
+    "puntosClave": [
+      "Consentimiento informado: explicar objetivo, riesgos, uso de los datos y derecho a retirarse; con datos sensibles, consentimiento expreso y por escrito (LFPDPPP Art. 8).",
+      "Disociación (LFPDPPP Art. 2, fr. IX): procedimiento por el que los datos ya no pueden asociarse a la persona; los datos disociados no requieren consentimiento (Art. 9, fr. III).",
+      "Seudonimizar no es anonimizar: si se puede reidentificar cruzando datos, sigue siendo dato personal.",
+      "Experimentar con las emociones o el comportamiento de usuarios sin informarles es contrario a la ética de investigación.",
+      "Cuidado especial con menores de edad y grupos vulnerables."
+    ],
+    "palabrasClave": [
+      "investigación",
+      "consentimiento informado",
+      "anonimización",
+      "disociación",
+      "experimento",
+      "encuesta",
+      "A/B"
+    ],
+    "fuentesOficiales": [
+      {
+        "nombre": "LFPDPPP 2025 (Cámara de Diputados, texto vigente)",
+        "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFPDPPP.pdf"
+      },
+      {
+        "nombre": "ACM Code of Ethics and Professional Conduct",
+        "url": "https://www.acm.org/code-of-ethics"
+      }
+    ]
+  },
+  {
+    "id": "U4_M07",
+    "unidad": 4,
+    "categoria": "Ley",
+    "titulo": "Web scraping responsable frente a extracción abusiva",
+    "fuente": "LFPDPPP Arts. 2 fr. X y 9 · LFDA Arts. 107 a 110 · CPF 211 bis 1",
+    "resumen": "Extraer datos automáticamente de sitios web no es ilegal por sí mismo, pero puede vulnerar datos personales, bases de datos protegidas, términos de uso o sistemas de seguridad.",
+    "puntosClave": [
+      "LFPDPPP Art. 2, fr. X: fuente de acceso público es la que por disposición de ley puede consultarse públicamente; un perfil de red social NO lo es solo por estar visible. Fuera de las excepciones del Art. 9, tratar esos datos requiere consentimiento.",
+      "LFDA Art. 107: las bases de datos originales se protegen como compilaciones (no los datos en sí). Art. 109: publicar o divulgar información privada de personas contenida en bases de datos requiere su autorización previa.",
+      "Eludir mecanismos de seguridad (inicios de sesión, bloqueos) para extraer información puede ser acceso ilícito (CPF 211 bis 1).",
+      "Práctica responsable: respetar robots.txt y términos de uso, limitar la frecuencia de peticiones, extraer solo lo necesario, preferir datos agregados o disociados y APIs oficiales."
+    ],
+    "palabrasClave": [
+      "scraping",
+      "web scraping",
+      "extracción",
+      "robots.txt",
+      "fuente de acceso público",
+      "bases de datos",
+      "crawler",
+      "datos públicos"
+    ],
+    "fuentesOficiales": [
+      {
+        "nombre": "LFPDPPP 2025 (Cámara de Diputados, texto vigente)",
+        "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFPDPPP.pdf"
+      },
+      {
+        "nombre": "Ley Federal del Derecho de Autor (Cámara de Diputados, texto vigente)",
+        "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFDA.pdf"
+      },
+      {
+        "nombre": "Código Penal Federal (Cámara de Diputados, texto vigente)",
+        "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CPF.pdf"
+      }
+    ]
+  },
+  {
+    "id": "U4_M08",
+    "unidad": 4,
+    "categoria": "Ley",
+    "titulo": "Redes sociales: moderación, privacidad y responsabilidad de plataformas",
+    "fuente": "LFDA Art. 114 Octies · CPEUM Arts. 6, 7 y 16 · CPF 199 Octies",
+    "resumen": "Las plataformas deciden con su diseño qué se ve, qué se amplifica y qué se retira. Su responsabilidad depende de cómo actúan cuando conocen un contenido ilícito.",
+    "puntosClave": [
+      "LFDA Art. 114 Octies: los proveedores de servicios en línea no responden por infracciones de derechos de autor de sus usuarios si retiran de manera expedita y eficaz el contenido al recibir un aviso del titular.",
+      "Moderación legítima: reglas públicas, aplicadas por igual, con aviso y apelación; los límites a la expresión son los del Art. 6 constitucional.",
+      "Privacidad por defecto: configuraciones que no expongan ubicación, contactos o datos de menores sin una decisión informada.",
+      "Desinformación: los algoritmos de recomendación son decisiones de diseño con efectos sociales (Unidad I).",
+      "Contenido íntimo sin consentimiento: retiro inmediato y preservación de evidencia (CPF 199 Octies, Unidad III)."
+    ],
+    "palabrasClave": [
+      "redes sociales",
+      "moderación",
+      "plataformas",
+      "responsabilidad",
+      "aviso y retiro",
+      "114 Octies",
+      "privacidad por defecto",
+      "menores"
+    ],
+    "fuentesOficiales": [
+      {
+        "nombre": "Ley Federal del Derecho de Autor (Cámara de Diputados, texto vigente)",
+        "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFDA.pdf"
+      },
+      {
+        "nombre": "CPEUM (Cámara de Diputados, texto vigente)",
+        "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf"
+      },
+      {
+        "nombre": "Código Penal Federal (Cámara de Diputados, texto vigente)",
+        "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CPF.pdf"
+      }
+    ]
+  },
+  {
+    "id": "U4_M09",
+    "unidad": 4,
+    "categoria": "Regulación de IA",
+    "titulo": "Sesgos algorítmicos y discriminación automatizada",
+    "fuente": "LFPED Arts. 1 fr. III y 9 fr. XXX · LFPDPPP Art. 26 fr. II · AI Act art. 10 y Anexo III",
+    "resumen": "Un modelo entrenado con datos históricos puede reproducir discriminaciones del pasado sin que nadie lo programe a propósito. La ley mexicana define la discriminación sin exigir intención.",
+    "puntosClave": [
+      "LFPED Art. 1, fr. III: hay discriminación por acción u omisión, con intención o sin ella, cuando una distinción no es objetiva, racional ni proporcional.",
+      "LFPED Art. 9, fr. XXX: es discriminación negar servicios financieros a personas con discapacidad, adultas mayores o por su condición de salud.",
+      "LFPDPPP Art. 26, fr. II: la persona puede oponerse a un tratamiento automatizado que, sin intervención humana, evalúe su situación económica, fiabilidad o comportamiento y le produzca efectos significativos.",
+      "Variables «proxy» (código postal, lengua, tipo de teléfono) pueden sustituir a categorías protegidas.",
+      "AI Act: la evaluación de solvencia y la selección de personal son de alto riesgo (Anexo III); el art. 10 exige examinar y mitigar posibles sesgos en los datos.",
+      "Mitigación: auditoría de sesgos por grupo, datos representativos, explicabilidad, revisión humana y canal de apelación."
+    ],
+    "palabrasClave": [
+      "sesgo",
+      "sesgo algorítmico",
+      "discriminación",
+      "crédito",
+      "scoring",
+      "proxy",
+      "decisiones automatizadas",
+      "explicabilidad",
+      "IA"
+    ],
+    "fuentesOficiales": [
+      {
+        "nombre": "Ley Federal para Prevenir y Eliminar la Discriminación (Cámara de Diputados, texto vigente)",
+        "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFPED.pdf"
+      },
+      {
+        "nombre": "LFPDPPP 2025 (Cámara de Diputados, texto vigente)",
+        "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFPDPPP.pdf"
+      },
+      {
+        "nombre": "Reglamento (UE) 2024/1689, AI Act (EUR-Lex)",
+        "url": "https://eur-lex.europa.eu/legal-content/ES/TXT/?uri=CELEX:32024R1689"
+      }
+    ]
+  },
+  {
+    "id": "U4_M10",
+    "unidad": 4,
+    "categoria": "Regulación de IA",
+    "titulo": "IA generativa: derechos de autor, voz e imagen y privacidad",
+    "fuente": "SCJN, Amparo Directo 6/2025 · LFDA Arts. 27, 87, 102, 118 fr. VII y 121 (reforma DOF 14/05/2026)",
+    "resumen": "La IA generativa plantea dos preguntas: quién es autor de lo que produce y qué se puede usar para entrenarla o imitar a personas reales.",
+    "puntosClave": [
+      "SCJN, AD 6/2025 (2025): el derecho de autor protege creaciones humanas; las obras generadas de forma autónoma por IA no pueden registrarse como obras (criterio que INDAUTOR reconoció).",
+      "LFDA Art. 102 (2026): los programas de IA sí se protegen como obras literarias; lo que no se protege es el resultado autónomo sin aporte creativo humano.",
+      "Entrenar con obras ajenas implica reproducirlas: el titular puede autorizarlo o prohibirlo (LFDA Art. 27, fr. I); la LFDA no prevé una excepción expresa para minería de textos y datos.",
+      "LFDA Art. 87 (2026): la imagen y la voz de artistas intérpretes, incluidos los resultados generados por IA, solo pueden usarse con su consentimiento expreso. Art. 118, fr. VII: pueden oponerse a la suplantación por IA. Art. 121: toda clonación de voz o imagen requiere acuerdo previo y por escrito.",
+      "Entrenar con fotos, voces o conversaciones de usuarios exige base legal y, si son datos sensibles o biométricos, consentimiento expreso y por escrito (LFPDPPP Art. 8)."
+    ],
+    "palabrasClave": [
+      "IA generativa",
+      "derechos de autor",
+      "entrenamiento",
+      "clonación de voz",
+      "deepfake",
+      "SCJN",
+      "INDAUTOR",
+      "obras generadas por IA"
+    ],
+    "fuentesOficiales": [
+      {
+        "nombre": "SCJN: Amparo Directo 6/2025 (IA y derecho de autor)",
+        "url": "https://transparencia-ciudadana.scjn.gob.mx/resoluciones-relevantes-de-la-SCJN/derechos-digitales/ad-6-2025"
+      },
+      {
+        "nombre": "INDAUTOR (Secretaría de Cultura): comunicado sobre obras creadas con IA",
+        "url": "https://www.gob.mx/cultura/prensa/indautor-reconoce-la-decision-de-la-suprema-corte-de-justicia-de-la-nacion-sobre-el-registro-de-obras-creadas-con-ia"
+      },
+      {
+        "nombre": "Ley Federal del Derecho de Autor (Cámara de Diputados, texto vigente)",
+        "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFDA.pdf"
+      },
+      {
+        "nombre": "LFPDPPP 2025 (Cámara de Diputados, texto vigente)",
+        "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFPDPPP.pdf"
+      }
+    ]
   }
 ]

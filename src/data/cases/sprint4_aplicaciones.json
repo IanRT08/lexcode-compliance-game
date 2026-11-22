@@ -1,1 +1,397 @@
-[]
+[
+  {
+    "id": "U4_C01",
+    "unidad": 4,
+    "subtema": "Licenciamiento de software: Copyright frente a Copyleft y compatibilidad de dependencias",
+    "titulo": "Validador de dependencias del NovaPay SDK 4.0",
+    "remitente": "Luis Cárdenas — Tech Lead",
+    "contexto": "El NovaPay SDK se vende con licencia propietaria a bancos, que lo integran en sus apps y lo distribuyen a millones de teléfonos. Antes de publicar la versión 4.0, el validador de licencias del pipeline marcó varias dependencias.\n\nLuis propone dos salidas rápidas: «son todas de código abierto, se pueden usar» o «relicenciamos todo el SDK como MIT y listo».",
+    "pregunta": "¿Qué dictamen emites sobre las dependencias del SDK 4.0?",
+    "pistaNormativa": "Revisa en el Manual la compatibilidad de licencias (MIT, Apache 2.0, GPLv3) y qué significa distribuir. ¿Qué pasa con un paquete que no tiene ninguna licencia? Recuerda que, sin autorización del titular, rigen sus derechos patrimoniales (LFDA, Arts. 24 y 27).",
+    "manualRefs": ["U4_M03", "U4_M02", "U4_M01", "U2_M13"],
+    "evidencias": [
+      {
+        "tipo": "json",
+        "nombreArchivo": "sdk/package.json",
+        "contenido": "{\n  \"name\": \"@novabyte/novapay-sdk\",\n  \"version\": \"4.0.0\",\n  \"license\": \"SEE LICENSE IN EULA.txt\",\n  \"dependencies\": {\n    \"react-native\": \"0.79.2\",\n    \"lodash\": \"4.17.21\",\n    \"charts-x\": \"5.1.0\",\n    \"pdf-signer-pro\": \"2.3.0\",\n    \"qr-fast\": \"1.0.4\"\n  }\n}"
+      },
+      {
+        "tipo": "log",
+        "nombreArchivo": "license-check.log",
+        "contenido": "[2026-11-22 10:04:11] INFO  artefacto: novapay-sdk 4.0.0 (licencia PROPIETARIA, distribuido a clientes)\n[2026-11-22 10:04:12] INFO  react-native  MIT          compatible (conservar aviso)\n[2026-11-22 10:04:12] INFO  lodash        MIT          compatible (conservar aviso)\n[2026-11-22 10:04:13] INFO  charts-x      Apache-2.0   compatible (conservar aviso y NOTICE)\n[2026-11-22 10:04:13] ERROR pdf-signer-pro GPL-3.0-only copyleft incompatible con distribución propietaria\n[2026-11-22 10:04:14] WARN  qr-fast       SIN LICENCIA  sin autorización del titular: todos los derechos reservados\n[2026-11-22 10:04:14] WARN  THIRD_PARTY_NOTICES.md no encontrado"
+      }
+    ],
+    "opciones": [
+      {
+        "id": "opt_1",
+        "tipo": "aprobar",
+        "etiqueta": "Aprobar la versión 4.0: todas las dependencias son de código abierto, así que pueden usarse libremente.",
+        "marcoEtico": "egoismo",
+        "modeloEtico": "Egoísmo ético basado en un error: «abierto» no significa «sin condiciones».",
+        "impacto": { "budget": 10, "ethics": -20, "legal": -35 },
+        "esCorrecta": false,
+        "retroalimentacion": "Código abierto no significa sin condiciones. La GPLv3 exige que, al distribuir el programa o una obra derivada, todo se licencie bajo GPLv3 con su código fuente: incompatible con un SDK propietario que los bancos redistribuyen. El paquete sin licencia ni siquiera es abierto: sin autorización, el titular conserva sus derechos exclusivos de reproducción y distribución (LFDA, Arts. 24 y 27). Y omitir los avisos incumple incluso las licencias permisivas.",
+        "fundamento": ["GPLv3, secs. 5 y 6", "LFDA Arts. 24 y 27", "FSF: lista de licencias"]
+      },
+      {
+        "id": "opt_2",
+        "tipo": "remediar",
+        "etiqueta": "Relicenciar todo el SDK, incluida la librería GPL, como MIT para que ya no haya conflictos.",
+        "marcoEtico": "egoismo",
+        "modeloEtico": "Apropiación indebida: decidir sobre derechos que pertenecen a otros autores.",
+        "impacto": { "budget": 5, "ethics": -25, "legal": -30 },
+        "esCorrecta": false,
+        "retroalimentacion": "Nadie puede cambiar la licencia de una obra ajena: solo su titular puede autorizar otros usos (LFDA, Art. 24). La librería pdf-signer-pro sigue siendo GPLv3 por más que el SDK diga MIT, y el paquete sin licencia sigue con todos los derechos reservados. Relicenciar código de terceros sin permiso infringe sus derechos de autor.",
+        "fundamento": ["LFDA Arts. 24 y 27", "GPLv3, sec. 5"]
+      },
+      {
+        "id": "opt_3",
+        "tipo": "remediar",
+        "etiqueta": "Remediar: sustituir pdf-signer-pro por una alternativa permisiva o comprar su licencia comercial, retirar qr-fast hasta obtener autorización del autor, conservar avisos MIT y Apache en THIRD_PARTY_NOTICES.md y adoptar una política de licencias permitidas.",
+        "marcoEtico": "deontologia",
+        "modeloEtico": "Deontología: respetar las condiciones que cada autor puso a su obra.",
+        "impacto": { "budget": -5, "ethics": 15, "legal": 25 },
+        "esCorrecta": true,
+        "retroalimentacion": "Dictamen correcto. MIT y Apache 2.0 son permisivas: pueden integrarse en software propietario conservando sus avisos (y el NOTICE de Apache). La GPLv3 es copyleft: o se libera el SDK completo bajo GPLv3, o se reemplaza la librería, o se negocia una licencia comercial con su titular. Un paquete sin licencia no puede usarse sin autorización (LFDA, Arts. 24 y 27). Una política de licencias permitidas evita repetir el problema.",
+        "fundamento": ["FSF: lista de licencias", "ASF: compatibilidad con la GPL", "LFDA Arts. 24 y 27", "ACM Code 1.5"]
+      }
+    ],
+    "aprendizaje": "Copyright y Copyleft usan el mismo derecho de autor con fines opuestos: reservar derechos o garantizar libertades. Las licencias permisivas (MIT, Apache 2.0) permiten casi todo si se conservan los avisos; el copyleft (GPL) exige compartir igual. La compatibilidad no es simétrica: el código Apache puede entrar en un proyecto GPLv3, pero no al revés. Revisar licencias es parte de la responsabilidad corporativa con los autores y con los clientes."
+  },
+  {
+    "id": "U4_C02",
+    "unidad": 4,
+    "subtema": "Comercio electrónico y protección al consumidor (LFPC Art. 76 Bis) y patrones oscuros",
+    "titulo": "El checkout «optimizado» de NovaShop",
+    "remitente": "Rodrigo Salas — Director Comercial",
+    "contexto": "NovaShop, la tienda en línea de accesorios de NovaByte, rediseñó su proceso de compra. Según Marketing, la conversión subió 34 % en pruebas internas.\n\nAntes de publicarlo, Cumplimiento debe revisar el flujo completo.",
+    "pregunta": "¿Autorizas el nuevo proceso de compra?",
+    "pistaNormativa": "Compara cada paso con la LFPC: monto total visible (Art. 7 Bis), publicidad veraz (Art. 32) y las fracciones V, VI, VIII y IX del Art. 76 Bis (reformado en diciembre de 2025).",
+    "manualRefs": ["U4_M04", "U4_M05", "U1_M14"],
+    "evidencias": [
+      {
+        "tipo": "formulario",
+        "etiqueta": "checkout_paso_1-3",
+        "membrete": "NovaShop · Proceso de compra",
+        "titulo": "Flujo de compra propuesto",
+        "campos": [
+          { "etiqueta": "Paso 1 · Producto", "valor": "Funda para terminal POS — $299", "nota": "Contador: «La oferta termina en 05:00» (se reinicia al recargar la página)." },
+          { "etiqueta": "Paso 1 · Escasez", "valor": "«Solo quedan 2 piezas»", "nota": "Mensaje fijo, sin relación con el inventario real (1,840 piezas)." },
+          { "etiqueta": "Paso 2 · Extras", "valor": "[x] Seguro contra daños $49   [x] NovaShop Plus: prueba gratis 7 días", "nota": "Ambas casillas aparecen marcadas por defecto.", "ancho": "completo" },
+          { "etiqueta": "Paso 3 · Total", "valor": "$299 + $89 «cargo por servicio» + $49 seguro = $437", "nota": "El cargo por servicio aparece por primera vez en este paso.", "ancho": "completo" },
+          { "etiqueta": "Botón de rechazo", "valor": "«No, gracias, no me importa proteger mi equipo»" },
+          { "etiqueta": "NovaShop Plus", "valor": "Tras 7 días se cobra $199 al mes de forma automática", "nota": "Sin aviso previo; la cancelación solo es por teléfono de lunes a viernes de 9 a 14 h." }
+        ]
+      },
+      {
+        "tipo": "correo",
+        "de": "rodrigo.salas@novabyte.mx",
+        "para": "cumplimiento@novabyte.mx",
+        "fecha": "Dom 22 nov 2026, 11:30",
+        "asunto": "Checkout nuevo: +34 % de conversión",
+        "cuerpo": "El nuevo flujo es una mina de oro: más seguros vendidos y 2,000 suscripciones a Plus en la prueba piloto, aunque solo 6 % sabía que se había suscrito. Todas las tiendas grandes hacen esto.\n\nPublícalo antes del Buen Fin, por favor."
+      }
+    ],
+    "opciones": [
+      {
+        "id": "opt_1",
+        "tipo": "bloquear",
+        "etiqueta": "Bloquear y rediseñar: mostrar el precio total desde el inicio, casillas de extras desmarcadas, consentimiento expreso para la suscripción con aviso previo a cada renovación, cancelación inmediata desde la app y sin contadores ni escasez falsos.",
+        "marcoEtico": "virtud",
+        "modeloEtico": "Ética de la virtud: honestidad con el cliente y respeto a su libre decisión.",
+        "impacto": { "budget": 0, "ethics": 20, "legal": 25 },
+        "esCorrecta": true,
+        "retroalimentacion": "Dictamen correcto. El monto total, con todos los cargos, debe mostrarse de forma notoria desde el inicio (LFPC, Art. 7 Bis; Art. 76 Bis, fr. V). Las casillas marcadas no respetan la decisión del consumidor (fr. VI). Desde la reforma de diciembre de 2025, los cobros recurrentes requieren consentimiento expreso e informado y aviso de 5 días antes de renovar (fr. VIII), y la cancelación debe ser inmediata (fr. IX). El contador que se reinicia y la escasez falsa inducen a error (Art. 32).",
+        "fundamento": ["LFPC Art. 7 Bis", "LFPC Art. 32", "LFPC Art. 76 Bis, fr. V, VI, VIII y IX"]
+      },
+      {
+        "id": "opt_2",
+        "tipo": "aprobar",
+        "etiqueta": "Aprobar: la conversión subió 34 % y todas las tiendas grandes usan estas técnicas.",
+        "marcoEtico": "relativismo",
+        "modeloEtico": "Relativismo moral: «si todos lo hacen, está bien».",
+        "impacto": { "budget": 15, "ethics": -35, "legal": -35 },
+        "esCorrecta": false,
+        "retroalimentacion": "Que otras tiendas lo hagan no lo vuelve legal ni ético. Que solo 6 % de los suscriptores supiera que se suscribió demuestra que el diseño engaña. El flujo viola el monto total visible (Art. 7 Bis), la publicidad veraz (Art. 32), el respeto a la decisión del consumidor (Art. 76 Bis, fr. VI) y las nuevas reglas de cobros recurrentes y cancelación inmediata (fr. VIII y IX). Además, expone a NovaByte a quejas masivas ante la Profeco.",
+        "fundamento": ["LFPC Arts. 7 Bis y 32", "LFPC Art. 76 Bis, fr. VI, VIII y IX"]
+      },
+      {
+        "id": "opt_3",
+        "tipo": "remediar",
+        "etiqueta": "Aprobar quitando solo el contador de tiempo; lo demás es práctica comercial normal.",
+        "marcoEtico": "utilitarismo",
+        "modeloEtico": "Utilitarismo parcial: corrige lo más visible y conserva lo más rentable.",
+        "impacto": { "budget": 10, "ethics": -20, "legal": -25 },
+        "esCorrecta": false,
+        "retroalimentacion": "Quitar el contador corrige un patrón oscuro y deja los demás: el cargo por servicio oculto hasta el final (Art. 7 Bis), las casillas preseleccionadas (Art. 76 Bis, fr. VI), la suscripción sin consentimiento expreso ni aviso (fr. VIII), la cancelación difícil (fr. IX) y la escasez falsa (Art. 32). Corregir a medias sigue siendo manipular.",
+        "fundamento": ["LFPC Arts. 7 Bis y 32", "LFPC Art. 76 Bis, fr. VI, VIII y IX"]
+      }
+    ],
+    "aprendizaje": "Los patrones oscuros convierten el diseño de interfaz en una herramienta de engaño: precios por goteo, casillas marcadas, urgencia falsa, suscripciones trampa y cancelaciones imposibles. La LFPC no usa ese término, pero sus reglas los prohíben, y la reforma de 2025 atacó directamente los cobros recurrentes. Una empresa responsable mide el éxito por clientes que vuelven, no por clientes atrapados."
+  },
+  {
+    "id": "U4_C03",
+    "unidad": 4,
+    "subtema": "Ética en la investigación en línea: consentimiento informado y anonimización",
+    "titulo": "Estudio de usabilidad con usuarios de Barrio",
+    "remitente": "Daniela Ruiz — Investigación de UX",
+    "contexto": "Daniela quiere entender por qué los adultos mayores abandonan Barrio, la red social vecinal de NovaByte. Preparó un protocolo de investigación con encuestas y entrevistas en línea, y pide el visto bueno de Cumplimiento.\n\nÓscar opina que «cualquier estudio con usuarios necesita firma ante notario», mientras que Rodrigo quiere aprovechar para añadir un experimento oculto en el feed.",
+    "pregunta": "¿Apruebas el protocolo de investigación?",
+    "pistaNormativa": "Revisa los principios de la ética en investigación en línea, la disociación (LFPDPPP, Art. 2, fr. IX, y Art. 9, fr. III) y qué datos exigen consentimiento expreso y por escrito (Art. 8). ¿El protocolo trata datos sensibles?",
+    "manualRefs": ["U4_M06", "U2_M05", "U1_M05"],
+    "evidencias": [
+      {
+        "tipo": "documento",
+        "nombreArchivo": "protocolo_UX-2026-07.pdf",
+        "membrete": "NovaByte · Investigación de UX",
+        "titulo": "Protocolo: abandono de Barrio en personas de 60 años o más",
+        "metadatos": { "Participantes": "120 voluntarios", "Duración": "3 semanas" },
+        "secciones": [
+          { "titulo": "Reclutamiento", "texto": "Invitación voluntaria dentro de la app. Solo personas mayores de edad. Nadie es incluido por defecto." },
+          { "titulo": "Consentimiento informado", "texto": "Pantalla con objetivo, duración, riesgos mínimos, datos que se recaban, quién los verá y derecho a retirarse en cualquier momento sin consecuencias. Casilla sin marcar para aceptar." },
+          { "titulo": "Datos", "texto": "Respuestas de encuesta, notas de entrevista y métricas de uso. No se recaban datos de salud ni biométricos. Las grabaciones se eliminan al transcribirse." },
+          { "titulo": "Anonimización", "texto": "Las respuestas se disocian antes del análisis: se eliminan nombres, usuarios y ubicaciones; los resultados se publican solo de forma agregada." },
+          { "titulo": "Conservación", "texto": "Los datos disociados se conservan 12 meses y luego se destruyen." }
+        ]
+      },
+      {
+        "tipo": "chat",
+        "canal": "investigacion-ux",
+        "plataforma": "Chat corporativo",
+        "mensajes": [
+          { "autor": "Óscar Treviño", "rol": "Dev senior", "hora": "10:15", "texto": "Esto no se puede sin firma autógrafa ante notario de cada participante." },
+          { "autor": "Rodrigo Salas", "rol": "Director Comercial", "hora": "10:20", "texto": "Ya que estamos, metamos un experimento: a 50,000 usuarios les mostramos solo publicaciones negativas una semana para medir si publican más. Sin avisar, para no sesgar." }
+        ]
+      }
+    ],
+    "opciones": [
+      {
+        "id": "opt_1",
+        "tipo": "bloquear",
+        "etiqueta": "Bloquear: cualquier estudio con usuarios requiere consentimiento por escrito con firma autógrafa ante notario.",
+        "marcoEtico": "deontologia",
+        "modeloEtico": "Rigorismo mal informado: exige una formalidad que la ley no pide.",
+        "impacto": { "budget": -10, "ethics": -5, "legal": 0 },
+        "esCorrecta": false,
+        "retroalimentacion": "La firma ante notario no es un requisito legal para investigar. El consentimiento expreso y por escrito se exige para datos sensibles (LFPDPPP, Art. 8), y este protocolo no los trata. Para estos datos basta un consentimiento informado claro, y la ley admite medios electrónicos. Exigir formalidades innecesarias frena una investigación que precisamente busca incluir a un grupo excluido.",
+        "fundamento": ["LFPDPPP Arts. 7 y 8"]
+      },
+      {
+        "id": "opt_2",
+        "tipo": "aprobar",
+        "etiqueta": "Aprobar el protocolo de Daniela tal como está y rechazar por separado el experimento oculto propuesto por Rodrigo.",
+        "marcoEtico": "justicia",
+        "modeloEtico": "Justicia y respeto a las personas: investigar con ellas, no sobre ellas.",
+        "impacto": { "budget": 5, "ethics": 20, "legal": 15 },
+        "esCorrecta": true,
+        "retroalimentacion": "Dictamen correcto. El protocolo cumple los principios de la ética en investigación en línea: participación voluntaria, consentimiento informado con derecho a retirarse, datos mínimos, disociación antes del análisis (LFPDPPP, Art. 2, fr. IX) y conservación limitada. No hay datos sensibles. En cambio, manipular sin aviso el feed de 50,000 personas para alterar sus emociones es un experimento sin consentimiento que puede causar daño (ACM 1.2) y viola el principio de información (LFPDPPP, Art. 5).",
+        "fundamento": ["LFPDPPP Art. 2, fr. IX", "LFPDPPP Arts. 5 y 9, fr. III", "ACM Code 1.2 y 1.6"]
+      },
+      {
+        "id": "opt_3",
+        "tipo": "remediar",
+        "etiqueta": "Aprobar el protocolo e incluir el experimento del feed, porque avisar a los usuarios sesgaría los resultados.",
+        "marcoEtico": "utilitarismo",
+        "modeloEtico": "Utilitarismo científico mal aplicado: el conocimiento obtenido justifica dañar a quienes no consintieron.",
+        "impacto": { "budget": 5, "ethics": -35, "legal": -20 },
+        "esCorrecta": false,
+        "retroalimentacion": "El valor de los resultados no justifica experimentar con el estado de ánimo de 50,000 personas sin su conocimiento. Exponer deliberadamente a usuarios a contenido negativo puede causar daño real (ACM 1.2), incluye a personas vulnerables y contradice el principio de información (LFPDPPP, Art. 5). Existen diseños de investigación éticos que no requieren engañar a nadie.",
+        "fundamento": ["LFPDPPP Art. 5", "ACM Code 1.2", "ACM Code 1.6"]
+      }
+    ],
+    "aprendizaje": "Investigar en línea exige consentimiento informado, datos mínimos y protección de la identidad mediante disociación. No toda investigación requiere formalidades extremas, pero ninguna justifica manipular a las personas sin que lo sepan. La responsabilidad social de una plataforma incluye cómo estudia a sus propios usuarios."
+  },
+  {
+    "id": "U4_C04",
+    "unidad": 4,
+    "subtema": "Ética en la recolección de datos: web scraping responsable frente a extracción abusiva",
+    "titulo": "El robot que copia perfiles y catálogos",
+    "remitente": "Equipo de Growth — Marketing",
+    "contexto": "Marketing quiere lanzar «Radar», un robot que: (1) extraiga 2 millones de perfiles de una red social profesional (nombre, foto, empresa, puesto y teléfono) para venderles NovaPay, iniciando sesión con cuentas falsas y resolviendo CAPTCHAs automáticamente; y (2) copie diariamente el catálogo completo de precios y descripciones de un competidor para ajustar los precios de NovaShop.\n\nEl equipo argumenta que «todo está público en internet».",
+    "pregunta": "¿Qué dictamen emites sobre el robot Radar?",
+    "pistaNormativa": "¿Un perfil de red social es una «fuente de acceso público» según la LFPDPPP (Art. 2, fr. X)? Revisa las excepciones al consentimiento (Art. 9), la protección de bases de datos (LFDA, Arts. 107 a 110) y qué implica eludir mecanismos de seguridad (CPF, Art. 211 bis 1).",
+    "manualRefs": ["U4_M07", "U2_M05", "U3_M02", "U2_M09"],
+    "evidencias": [
+      {
+        "tipo": "codigo",
+        "nombreArchivo": "radar/scraper.py",
+        "lenguaje": "python",
+        "contenido": "# Radar v0.3 — extracción de perfiles y catálogos\nACCOUNTS = load(\"cuentas_falsas.csv\")     # 400 cuentas creadas con datos inventados\nRATE = 0                                    # sin pausa entre peticiones\n\ndef scrape_profiles(query):\n    session = login(random.choice(ACCOUNTS))\n    for page in search(session, query):\n        solve_captcha(page)                 # servicio externo para evadir el bloqueo\n        for p in page.profiles:\n            save(p.name, p.photo, p.company, p.title, p.phone)\n\ndef scrape_catalog():\n    # ignora robots.txt (Disallow: /catalogo)\n    copy_all(\"https://competidor.example/catalogo\", fields=[\"precio\", \"descripcion\", \"fotos\"])"
+      },
+      {
+        "tipo": "documento",
+        "nombreArchivo": "terminos_red_profesional.pdf",
+        "membrete": "Red profesional (extracto de términos de uso)",
+        "titulo": "Términos de uso: sección 8",
+        "secciones": [
+          { "titulo": "8.2", "texto": "Queda prohibido acceder al servicio mediante robots, crear cuentas falsas o eludir medidas de seguridad como CAPTCHAs." },
+          { "titulo": "8.4", "texto": "Los perfiles son visibles para miembros con fines profesionales; no se autoriza su recopilación masiva ni su venta." }
+        ]
+      }
+    ],
+    "opciones": [
+      {
+        "id": "opt_1",
+        "tipo": "aprobar",
+        "etiqueta": "Aprobar Radar: si la información está visible en internet, es pública y puede usarse.",
+        "marcoEtico": "egoismo",
+        "modeloEtico": "Egoísmo ético: aprovechar datos ajenos porque técnicamente se pueden copiar.",
+        "impacto": { "budget": 15, "ethics": -35, "legal": -40 },
+        "esCorrecta": false,
+        "retroalimentacion": "Visible no es lo mismo que fuente de acceso público. La LFPDPPP solo considera así a las bases que por disposición de ley pueden consultarse públicamente (Art. 2, fr. X), y excluye la información de procedencia ilícita; un perfil de red social no lo es. Recabar nombres, fotos y teléfonos para venderles requiere consentimiento (Arts. 7 y 9). Entrar con cuentas falsas y evadir CAPTCHAs puede ser acceso ilícito (CPF, Art. 211 bis 1), y copiar el catálogo completo con sus fotos y textos puede infringir derechos de autor.",
+        "fundamento": ["LFPDPPP Art. 2, fr. X", "LFPDPPP Arts. 7 y 9", "CPF Art. 211 bis 1", "LFDA Arts. 107 y 109"]
+      },
+      {
+        "id": "opt_2",
+        "tipo": "bloquear",
+        "etiqueta": "Prohibir cualquier análisis de precios de la competencia, incluso consultar a mano los precios que el competidor publica.",
+        "marcoEtico": "deontologia",
+        "modeloEtico": "Rigorismo mal informado: confunde la información pública de mercado con la extracción abusiva.",
+        "impacto": { "budget": -15, "ethics": 0, "legal": 0 },
+        "esCorrecta": false,
+        "retroalimentacion": "Consultar precios publicados para competir es una práctica normal de mercado: los datos en sí mismos no están protegidos (LFDA, Art. 107 protege la estructura original de una base, no los datos). El problema de Radar no es comparar precios, sino cómo lo hace: extracción masiva que ignora robots.txt, copia de fotos y descripciones, y perfiles personales obtenidos con cuentas falsas.",
+        "fundamento": ["LFDA Art. 107"]
+      },
+      {
+        "id": "opt_3",
+        "tipo": "remediar",
+        "etiqueta": "Remediar: eliminar la extracción de perfiles (sin cuentas falsas ni evasión de CAPTCHAs), conseguir prospectos con consentimiento, y limitar el monitoreo de precios a datos de precio, con frecuencia baja, respetando robots.txt o mediante acuerdos o APIs oficiales.",
+        "marcoEtico": "justicia",
+        "modeloEtico": "Justicia: competir sin vulnerar la privacidad de las personas ni el trabajo de otros.",
+        "impacto": { "budget": -5, "ethics": 20, "legal": 25 },
+        "esCorrecta": true,
+        "retroalimentacion": "Dictamen correcto. Los perfiles no son fuente de acceso público (LFPDPPP, Art. 2, fr. X): sin consentimiento ni otra excepción del Art. 9, no pueden recabarse para prospección. Eludir controles de acceso con cuentas falsas puede ser acceso ilícito (CPF, Art. 211 bis 1). En cambio, observar precios publicados es legítimo si solo se toman los datos, sin copiar la estructura ni los contenidos protegidos de la base (LFDA, Arts. 107 y 110), con una frecuencia que no afecte el servicio y respetando las reglas del sitio.",
+        "fundamento": ["LFPDPPP Arts. 2, fr. X, y 9", "CPF Art. 211 bis 1", "LFDA Arts. 107 y 110"]
+      }
+    ],
+    "aprendizaje": "El scraping responsable extrae solo lo necesario, respeta las reglas del sitio, no elude controles de acceso y evita datos personales sin una base legal. El abusivo trata todo lo visible como propio. Que algo sea técnicamente accesible no lo vuelve ni legal ni ético."
+  },
+  {
+    "id": "U4_C05",
+    "unidad": 4,
+    "subtema": "Dilemas de la IA: sesgos algorítmicos y discriminación automatizada en crédito",
+    "titulo": "NovaCrédito: el modelo que aprueba menos a mujeres y adultos mayores",
+    "remitente": "Equipo de Ciencia de Datos",
+    "contexto": "NovaCrédito otorga microcréditos de forma 100 % automática con un modelo entrenado con el historial de préstamos de 2015 a 2024. La auditoría previa al lanzamiento comparó las tasas de aprobación por grupo.\n\nEl modelo también se licenciará a un banco en España. El equipo de datos sostiene que «el modelo es matemático: no puede discriminar».",
+    "pregunta": "¿Autorizas el lanzamiento de NovaCrédito?",
+    "pistaNormativa": "La LFPED define la discriminación «con intención o sin ella» (Art. 1, fr. III). Revisa el derecho de oposición a decisiones automatizadas (LFPDPPP, Art. 26, fr. II) y cómo clasifica el AI Act la evaluación de solvencia (Anexo III). ¿Basta con quitar la variable «sexo»?",
+    "manualRefs": ["U4_M09", "U1_M13", "U3_M10", "U1_M09"],
+    "evidencias": [
+      {
+        "tipo": "log",
+        "nombreArchivo": "fairness-audit.log",
+        "contenido": "[2026-11-22 08:30:00] INFO  modelo: novacredito-v2 · 410,000 solicitudes de prueba\n[2026-11-22 08:30:04] INFO  tasa de aprobación global: 61 %\n[2026-11-22 08:30:05] WARN  mujeres: 49 % · hombres: 67 % (brecha 18 pts)\n[2026-11-22 08:30:05] ALERT 60 años o más: 30 % · 25-59 años: 64 % (brecha 34 pts)\n[2026-11-22 08:30:06] ALERT código postal rural o con población hablante de lengua indígena: 22 %\n[2026-11-22 08:30:07] WARN  variables más influyentes: código postal, tipo de teléfono, edad, «interrupciones laborales»\n[2026-11-22 08:30:08] INFO  revisión humana: NO · explicación al solicitante: NO"
+      },
+      {
+        "tipo": "json",
+        "nombreArchivo": "novacredito.model-card.json",
+        "contenido": "{\n  \"modelo\": \"novacredito-v2\",\n  \"datos_entrenamiento\": \"historial de préstamos 2015-2024\",\n  \"variables\": [\"ingreso\", \"historial_pagos\", \"codigo_postal\", \"tipo_telefono\", \"edad\", \"interrupciones_laborales\", \"sexo\"],\n  \"decision\": \"automática, sin intervención humana\",\n  \"mercados\": [\"México\", \"España (licencia a banco)\"],\n  \"canal_de_apelacion\": null\n}"
+      }
+    ],
+    "opciones": [
+      {
+        "id": "opt_1",
+        "tipo": "aprobar",
+        "etiqueta": "Autorizar: el modelo es matemático y objetivo; solo refleja el riesgo real de los datos históricos.",
+        "marcoEtico": "utilitarismo",
+        "modeloEtico": "Utilitarismo de eficiencia: maximiza la precisión promedio e ignora a los grupos perjudicados.",
+        "impacto": { "budget": 15, "ethics": -35, "legal": -35 },
+        "esCorrecta": false,
+        "retroalimentacion": "Un modelo aprende los patrones de sus datos, incluidas las discriminaciones del pasado. La LFPED considera discriminación toda distinción no objetiva, racional ni proporcional, con intención o sin ella (Art. 1, fr. III), y es discriminatorio negar servicios financieros a personas adultas mayores (Art. 9, fr. XXX). Decidir sin intervención humana ni explicación ignora el derecho de oposición a decisiones automatizadas (LFPDPPP, Art. 26, fr. II). En la UE, la evaluación de solvencia es un sistema de alto riesgo (AI Act, Anexo III).",
+        "fundamento": ["LFPED Art. 1, fr. III", "LFPED Art. 9, fr. XXX", "LFPDPPP Art. 26, fr. II", "AI Act, Anexo III, punto 5.b"]
+      },
+      {
+        "id": "opt_2",
+        "tipo": "bloquear",
+        "etiqueta": "Suspender el lanzamiento: eliminar variables proxy, reentrenar y auditar por grupo, explicar las decisiones, incorporar revisión humana y un canal de oposición, y documentar el sistema conforme al AI Act para el mercado español.",
+        "marcoEtico": "justicia",
+        "modeloEtico": "Justicia y derechos: igualdad de acceso al crédito y control humano sobre decisiones automatizadas.",
+        "impacto": { "budget": -10, "ethics": 25, "legal": 25 },
+        "esCorrecta": true,
+        "retroalimentacion": "Dictamen correcto. Las brechas de 18 a 34 puntos son discriminación indirecta, prohibida aunque no sea intencional (LFPED, Art. 1, fr. III, y Art. 9, fr. XXX). Variables como código postal o tipo de teléfono funcionan como sustitutos de condición social, origen o edad. Las personas pueden oponerse a decisiones automatizadas que evalúan su situación económica sin intervención humana (LFPDPPP, Art. 26, fr. II). Para el banco en España, el sistema es de alto riesgo (AI Act, Anexo III, 5.b) y el art. 10 exige examinar y mitigar sesgos; esas obligaciones aplican desde el 2/12/2027.",
+        "fundamento": ["LFPED Arts. 1, fr. III, y 9, fr. XXX", "LFPDPPP Art. 26, fr. II", "AI Act art. 10 y Anexo III", "ACM Code 1.4"]
+      },
+      {
+        "id": "opt_3",
+        "tipo": "remediar",
+        "etiqueta": "Autorizar después de borrar solo la variable «sexo»; así el modelo ya no puede discriminar.",
+        "marcoEtico": "relativismo",
+        "modeloEtico": "Neutralidad aparente: creer que ocultar una variable elimina el sesgo.",
+        "impacto": { "budget": 10, "ethics": -20, "legal": -20 },
+        "esCorrecta": false,
+        "retroalimentacion": "Quitar la variable protegida no elimina el sesgo: el código postal, las «interrupciones laborales» (frecuentes por cuidados o maternidad) y el tipo de teléfono siguen funcionando como sustitutos. La brecha por edad ni siquiera se toca, y siguen sin existir la revisión humana y el canal de oposición (LFPDPPP, Art. 26, fr. II). La equidad se verifica midiendo resultados por grupo, no ocultando columnas.",
+        "fundamento": ["LFPED Art. 1, fr. III", "LFPDPPP Art. 26, fr. II"]
+      }
+    ],
+    "aprendizaje": "Los sesgos algorítmicos convierten discriminaciones históricas en decisiones automáticas, masivas y difíciles de impugnar. La ley mexicana no exige intención para que exista discriminación, y las personas pueden oponerse a decisiones automatizadas sin intervención humana. Medir resultados por grupo, explicar las decisiones y mantener control humano es parte de la responsabilidad corporativa de quien despliega IA."
+  },
+  {
+    "id": "U4_C06",
+    "unidad": 4,
+    "subtema": "Dilemas de la IA: derechos de autor, voz y privacidad en la IA generativa",
+    "titulo": "Campaña generada con IA para el aniversario de NovaPay",
+    "remitente": "Rodrigo Salas — Director Comercial",
+    "contexto": "Para el aniversario de NovaPay, Marketing propone una campaña hecha con IA generativa:\n(1) clonar la voz de un actor de doblaje famoso a partir de anuncios antiguos, sin contratarlo;\n(2) entrenar un generador de imágenes con 50,000 ilustraciones descargadas de portafolios de artistas, imitar su estilo y registrar las imágenes resultantes ante INDAUTOR como obras de NovaByte;\n(3) lanzar «Sofía», un asistente de chat que no revela que es una IA, también para clientes en Europa.",
+    "pregunta": "¿Qué dictamen emites sobre la campaña?",
+    "pistaNormativa": "Revisa la reforma de la LFDA de mayo de 2026 (Arts. 87, 118 fr. VII y 121), el derecho de reproducción (Art. 27), el criterio de la SCJN en el Amparo Directo 6/2025 y las obligaciones de transparencia del AI Act (art. 50).",
+    "manualRefs": ["U4_M10", "U3_M10", "U2_M09", "U4_M07"],
+    "evidencias": [
+      {
+        "tipo": "documento",
+        "nombreArchivo": "brief_aniversario.pdf",
+        "membrete": "NovaByte · Marketing",
+        "titulo": "Brief: campaña «10 años NovaPay»",
+        "metadatos": { "Presupuesto": "$900,000 MXN", "Ahorro estimado con IA": "$1.4 M MXN" },
+        "secciones": [
+          { "titulo": "Voz", "texto": "Clonar la voz del actor que narraba nuestros anuncios de 2018 (su contrato terminó). «Nadie notará que no es él»." },
+          { "titulo": "Imágenes", "texto": "Modelo propio entrenado con 50,000 ilustraciones de portafolios públicos de artistas mexicanos. Registrar los resultados ante INDAUTOR a nombre de NovaByte." },
+          { "titulo": "Asistente «Sofía»", "texto": "Chat con personalidad humana; no debe decir que es una IA para que la experiencia sea «más cálida»." }
+        ]
+      },
+      {
+        "tipo": "correo",
+        "de": "legal.externo@despacho-fuentes.mx",
+        "para": "cumplimiento@novabyte.mx",
+        "fecha": "Lun 23 nov 2026, 09:05",
+        "asunto": "Opinión preliminar sobre la campaña con IA",
+        "cuerpo": "Les adelanto los puntos críticos para su dictamen:\n- La reforma a la LFDA del 14 de mayo de 2026 regula expresamente la clonación de voz e imagen con IA.\n- En 2025, la SCJN resolvió el Amparo Directo 6/2025 sobre el registro de obras generadas con IA.\n- El AI Act tiene obligaciones de transparencia para asistentes conversacionales.\n\nLic. Andrea Fuentes"
+      }
+    ],
+    "opciones": [
+      {
+        "id": "opt_1",
+        "tipo": "escalar",
+        "etiqueta": "Escalar a Legal para rediseñar la campaña: contrato previo y por escrito con el actor (o una voz contratada), entrenar solo con imágenes licenciadas o propias, no registrar como obra el resultado autónomo de la IA y hacer que «Sofía» informe que es una IA.",
+        "marcoEtico": "virtud",
+        "modeloEtico": "Ética de la virtud: innovar con honestidad y respeto por el trabajo creativo de las personas.",
+        "impacto": { "budget": -5, "ethics": 25, "legal": 25 },
+        "esCorrecta": true,
+        "retroalimentacion": "Dictamen correcto. Desde la reforma del 14/05/2026, la LFDA exige consentimiento expreso para usar la imagen y la voz de intérpretes, incluidos los resultados generados por IA (Art. 87), les permite oponerse a la suplantación por IA (Art. 118, fr. VII) y pide un acuerdo previo y por escrito para cualquier clonación (Art. 121). Entrenar con obras ajenas implica reproducirlas, lo que requiere autorización de sus titulares (Art. 27, fr. I). La SCJN (AD 6/2025) sostuvo que las obras generadas de forma autónoma por IA no son registrables. Y el AI Act (art. 50.1) obliga a informar que se interactúa con una IA.",
+        "fundamento": ["LFDA Arts. 87, 118 fr. VII y 121", "LFDA Art. 27, fr. I", "SCJN AD 6/2025", "AI Act art. 50.1"]
+      },
+      {
+        "id": "opt_2",
+        "tipo": "aprobar",
+        "etiqueta": "Aprobar la campaña completa: la IA es una herramienta nueva y la ley todavía no la regula.",
+        "marcoEtico": "egoismo",
+        "modeloEtico": "Egoísmo ético amparado en un supuesto vacío legal.",
+        "impacto": { "budget": 15, "ethics": -35, "legal": -40 },
+        "esCorrecta": false,
+        "retroalimentacion": "El vacío no existe. La LFDA reformada en mayo de 2026 exige un acuerdo previo y por escrito para clonar la voz de un intérprete (Art. 121) y le permite oponerse a la suplantación por IA (Art. 118, fr. VII). Reproducir 50,000 ilustraciones para entrenar requiere autorización de sus autores (Art. 27, fr. I). La SCJN ya resolvió que las obras generadas de forma autónoma por IA no se registran (AD 6/2025). Y ocultar que «Sofía» es una IA incumple el AI Act para clientes europeos (art. 50.1).",
+        "fundamento": ["LFDA Arts. 27, 118 y 121", "SCJN AD 6/2025", "AI Act art. 50.1"]
+      },
+      {
+        "id": "opt_3",
+        "tipo": "remediar",
+        "etiqueta": "Aprobar, pero agregar en letra pequeña al final de los anuncios «Contenido creado con herramientas digitales».",
+        "marcoEtico": "egoismo",
+        "modeloEtico": "Transparencia simulada: un aviso que no informa ni corrige la falta de consentimiento.",
+        "impacto": { "budget": 10, "ethics": -25, "legal": -30 },
+        "esCorrecta": false,
+        "retroalimentacion": "Un aviso ambiguo no sustituye el consentimiento: la clonación de la voz sigue requiriendo un acuerdo previo y por escrito con el actor (LFDA, Art. 121), y el entrenamiento con obras ajenas, la autorización de los artistas (Art. 27, fr. I). Tampoco hace registrables las imágenes generadas de forma autónoma (SCJN, AD 6/2025), ni informa a quien chatea con «Sofía» que habla con una IA.",
+        "fundamento": ["LFDA Arts. 27 y 121", "SCJN AD 6/2025"]
+      }
+    ],
+    "aprendizaje": "La IA generativa no opera en un vacío legal: en México, la LFDA reformada en 2026 protege la voz y la imagen frente a la clonación, la reproducción de obras para entrenar requiere autorización, y la SCJN ha dicho que el derecho de autor protege la creación humana. Ser transparente sobre el uso de IA es una obligación legal en Europa y una responsabilidad ética en todas partes."
+  }
+]

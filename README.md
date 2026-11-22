@@ -38,6 +38,32 @@ Proyecto final de **Ética y Legislación en Tecnologías de la Información (E-
 2. El **Manual Jurídico** se consulta sin costo; la **pista normativa** del despacho externo cuesta presupuesto.
 3. Se sella un **dictamen** (Aprobar, Bloquear, Remediar o Escalar). Cada dictamen muestra de inmediato el fundamento ético y legal, el modelo ético aplicado, el dictamen recomendado si fallaste y el aprendizaje clave.
 4. Si **Presupuesto**, **Reputación Ética** o **Cumplimiento Legal** llegan a 0, la partida termina con un final temático. Al cerrar cada Sprint se muestra el perfil de decisión ética del jugador.
+5. Al completar los 4 Sprints (25 casos) se genera un **certificado imprimible** con el desglose por unidad. Es una constancia lúdica sin validez oficial.
+
+## Fuentes normativas oficiales
+
+El contenido jurídico se verificó en noviembre de 2026 contra los textos vigentes publicados por fuentes oficiales. Cada entrada del Manual Jurídico del juego enlaza a su fuente.
+
+| Norma | Fuente oficial | Última reforma consultada |
+| :--- | :--- | :--- |
+| Constitución Política de los Estados Unidos Mexicanos | [Cámara de Diputados](https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf) | DOF 07/10/2026 |
+| Ley Federal de Protección de Datos Personales en Posesión de los Particulares | [Cámara de Diputados](https://www.diputados.gob.mx/LeyesBiblio/pdf/LFPDPPP.pdf) | DOF 14/11/2025 (ley de 20/03/2025) |
+| Ley Federal del Derecho de Autor | [Cámara de Diputados](https://www.diputados.gob.mx/LeyesBiblio/pdf/LFDA.pdf) | DOF 14/05/2026 |
+| Ley Federal de Protección a la Propiedad Industrial | [Cámara de Diputados](https://www.diputados.gob.mx/LeyesBiblio/pdf/LFPPI.pdf) | DOF 03/04/2026 |
+| Código Penal Federal | [Cámara de Diputados](https://www.diputados.gob.mx/LeyesBiblio/pdf/CPF.pdf) | DOF 13/03/2026 |
+| Ley General en materia de Extorsión | [Cámara de Diputados](https://www.diputados.gob.mx/LeyesBiblio/pdf/LGPISDME.pdf) | DOF 28/11/2025 |
+| Ley Federal de Protección al Consumidor | [Cámara de Diputados](https://www.diputados.gob.mx/LeyesBiblio/pdf/LFPC.pdf) | DOF 12/12/2025 |
+| Ley Federal del Trabajo | [Cámara de Diputados](https://www.diputados.gob.mx/LeyesBiblio/pdf/LFT.pdf) | DOF 14/05/2026 |
+| Ley Federal para Prevenir y Eliminar la Discriminación | [Cámara de Diputados](https://www.diputados.gob.mx/LeyesBiblio/pdf/LFPED.pdf) | DOF 14/11/2025 |
+| Ley General para la Prevención y Gestión Integral de los Residuos | [Cámara de Diputados](https://www.diputados.gob.mx/LeyesBiblio/pdf/LGPGIR.pdf) | DOF 19/01/2026 |
+| NOM-035-STPS-2018 (vigente) | [Diario Oficial de la Federación](https://dof.gob.mx/nota_detalle.php?codigo=5541828&fecha=23/10/2018) | Publicación original |
+| Amparo Directo 6/2025 (IA y derecho de autor) | [SCJN](https://transparencia-ciudadana.scjn.gob.mx/resoluciones-relevantes-de-la-SCJN/derechos-digitales/ad-6-2025) | 2025 |
+| Reglamento (UE) 2024/1689 (AI Act) y Reglamento (UE) 2026/1744 | [EUR-Lex](https://eur-lex.europa.eu/legal-content/ES/TXT/?uri=CELEX:32024R1689) · [EUR-Lex](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32026R1744) | 08/07/2026 |
+| Convenio de Budapest | [Consejo de Europa](https://rm.coe.int/cyber-buda-benefits-1-julio-2026-es/48802c5c23) | Julio de 2026 |
+| Recomendación sobre la Ética de la IA | [UNESCO](https://www.unesco.org/es/artificial-intelligence/recommendation-ethics) | Vigente |
+| Compatibilidad de licencias | [FSF](https://www.gnu.org/licenses/license-list.html) · [Apache](https://www.apache.org/licenses/GPL-compatibility.html) · [Creative Commons](https://creativecommons.org/share-your-work/licensing-considerations/compatible-licenses/) | 2026 |
+
+> Algunos instrumentos se adoptaron hace más de cuatro años (Convenio de Budapest, NOM-035, Recomendación de la UNESCO, GPLv3), pero son los vigentes y se citan desde su fuente oficial actual.
 
 ## Desarrollo local
 
