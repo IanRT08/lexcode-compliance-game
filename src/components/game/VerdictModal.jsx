@@ -45,7 +45,7 @@ export default function VerdictModal() {
       kicker={`Dictamen ${fb.caseId} · ${fb.subtema}`}
       title={fb.titulo}
       footer={
-        <button type="button" className="btn-primary" onClick={actions.acknowledgeFeedback} autoFocus>
+        <button type="button" className="btn-primary" onClick={actions.acknowledgeFeedback} data-autofocus>
           {nextLabel} <ArrowRight className="size-4" aria-hidden="true" />
         </button>
       }

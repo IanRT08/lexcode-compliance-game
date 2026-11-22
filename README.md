@@ -21,7 +21,7 @@ Proyecto final de **Ética y Legislación en Tecnologías de la Información (E-
 | 1 | I | El Código del Desarrollador | Moral, valores, ética y normatividad; ética en el desarrollo de software; ciberacoso, plagio, discriminación y desinformación; modelos de decisión ética |
 | 2 | II | Bóveda de Datos y Autoría | Arts. 6, 7, 8 y 16 constitucionales; LFPDPPP; LFDA vs. LFPPI; auditoría legal de código |
 | 3 | III | Respuesta a Incidentes SOC | Delitos informáticos (CPF), Convenio de Budapest, *compliance*, *e-waste* y regulación de IA |
-| 4 | IV | Lanzamiento Disruptivo | Licenciamiento Copyright/Copyleft, LFPC Art. 76 Bis, investigación en línea, redes sociales y sesgos de IA |
+| 4 | IV | Lanzamiento Disruptivo | Licenciamiento Copyright/Copyleft, LFPC Art. 76 Bis y patrones oscuros, investigación en línea, scraping, redes sociales, sesgos de IA e IA generativa |
 
 ## Tecnología
 
@@ -38,7 +38,8 @@ Proyecto final de **Ética y Legislación en Tecnologías de la Información (E-
 2. El **Manual Jurídico** se consulta sin costo; la **pista normativa** del despacho externo cuesta presupuesto.
 3. Se sella un **dictamen** (Aprobar, Bloquear, Remediar o Escalar). Cada dictamen muestra de inmediato el fundamento ético y legal, el modelo ético aplicado, el dictamen recomendado si fallaste y el aprendizaje clave.
 4. Si **Presupuesto**, **Reputación Ética** o **Cumplimiento Legal** llegan a 0, la partida termina con un final temático. Al cerrar cada Sprint se muestra el perfil de decisión ética del jugador.
-5. Al completar los 4 Sprints (25 casos) se genera un **certificado imprimible** con el desglose por unidad. Es una constancia lúdica sin validez oficial.
+5. Cada Sprint abre con un correo de briefing (narrativa y objetivos de aprendizaje).
+6. Al completar los 4 Sprints (26 casos) se genera un **reconocimiento simbólico imprimible** con el desglose por unidad. Es solo un premio del juego: **no tiene validez legal, oficial ni académica**, no incluye logotipos institucionales y el juego lo advierte antes de descargarlo y dentro del propio documento.
 
 ## Fuentes normativas oficiales
 
@@ -96,6 +97,10 @@ Cada `git push` a la rama `main` vuelve a desplegar el sitio automáticamente.
 Elegimos licencias *Copyleft* por congruencia con la Unidad IV: cualquier versión derivada debe seguir siendo libre y conservar la autoría.
 
 © 2026 Equipo LexCode — UTEZ.
+
+## Términos de uso
+
+El juego incluye Términos de uso (pie de página y paso inicial): es un recurso educativo gratuito que no constituye asesoría legal, todo su contenido es ficticio, el reconocimiento final no tiene validez oficial y el software se ofrece sin garantía conforme a la GPLv3.
 
 ## Privacidad
 

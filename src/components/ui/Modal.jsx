@@ -18,7 +18,9 @@ export default function Modal({ open, onClose, title, kicker, icon: Icon, childr
     const previouslyFocused = document.activeElement;
     const prevOverflow = document.body.style.overflow;
     document.body.style.overflow = 'hidden';
-    dialogRef.current?.focus();
+    // Foco inicial: el elemento marcado con data-autofocus (acción principal) o el propio diálogo.
+    const preferred = dialogRef.current?.querySelector('[data-autofocus]');
+    (preferred ?? dialogRef.current)?.focus();
 
     const onKeyDown = (e) => {
       if (e.key === 'Escape' && dismissible) {

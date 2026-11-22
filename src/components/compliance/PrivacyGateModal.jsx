@@ -1,7 +1,8 @@
 import { useEffect, useId, useState } from 'react';
-import { ArrowLeft, Lock, ScrollText } from 'lucide-react';
+import { ArrowLeft, FileText, Lock, ScrollText } from 'lucide-react';
 import Modal from '../ui/Modal.jsx';
 import { PrivacyNoticeFull, PrivacyNoticeSimplified } from './PrivacyNoticeContent.jsx';
+import TermsContent from './TermsContent.jsx';
 import { playSound } from '../../utils/soundEffects.js';
 
 const NAME_MIN = 2;
@@ -12,7 +13,7 @@ const NAME_MAX = 32;
  * Privacidad y solo después de un consentimiento expreso se recaba el alias.
  */
 export default function PrivacyGateModal({ open, onClose, onAccept }) {
-  const [view, setView] = useState('simple'); // 'simple' | 'full'
+  const [view, setView] = useState('simple'); // 'simple' | 'full' | 'terms'
   const [accepted, setAccepted] = useState(false);
   const [name, setName] = useState('');
   const [touched, setTouched] = useState(false);
@@ -44,14 +45,16 @@ export default function PrivacyGateModal({ open, onClose, onAccept }) {
     <Modal
       open={open}
       onClose={onClose}
-      icon={view === 'simple' ? Lock : ScrollText}
+      icon={view === 'simple' ? Lock : view === 'terms' ? FileText : ScrollText}
       kicker="Paso previo obligatorio · LFPDPPP"
-      title={view === 'simple' ? 'Aviso de Privacidad Simplificado' : 'Aviso de Privacidad Integral'}
+      title={
+        view === 'simple' ? 'Aviso de Privacidad Simplificado' : view === 'terms' ? 'Términos de uso' : 'Aviso de Privacidad Integral'
+      }
       size={view === 'simple' ? 'md' : 'lg'}
       footer={
-        view === 'full' ? (
+        view !== 'simple' ? (
           <button type="button" className="btn-ghost" onClick={() => setView('simple')}>
-            <ArrowLeft className="size-4" aria-hidden="true" /> Volver al aviso simplificado
+            <ArrowLeft className="size-4" aria-hidden="true" /> Volver
           </button>
         ) : (
           <>
@@ -67,17 +70,20 @@ export default function PrivacyGateModal({ open, onClose, onAccept }) {
     >
       {view === 'full' ? (
         <PrivacyNoticeFull />
+      ) : view === 'terms' ? (
+        <TermsContent />
       ) : (
         <form id="privacy-gate-form" onSubmit={submit} noValidate className="space-y-5">
           <PrivacyNoticeSimplified />
 
-          <button
-            type="button"
-            onClick={() => setView('full')}
-            className="btn-outline text-sm"
-          >
-            <ScrollText className="size-4" aria-hidden="true" /> Leer el Aviso de Privacidad Integral
-          </button>
+          <div className="flex flex-wrap gap-2">
+            <button type="button" onClick={() => setView('full')} className="btn-outline text-sm">
+              <ScrollText className="size-4" aria-hidden="true" /> Leer el Aviso de Privacidad Integral
+            </button>
+            <button type="button" onClick={() => setView('terms')} className="btn-outline text-sm">
+              <FileText className="size-4" aria-hidden="true" /> Leer los Términos de uso
+            </button>
+          </div>
 
           <label className="flex cursor-pointer items-start gap-3 rounded border border-sage bg-[color-mix(in_oklab,var(--surface-paper)_80%,var(--surface-panel))] p-3.5">
             <input
@@ -88,7 +94,8 @@ export default function PrivacyGateModal({ open, onClose, onAccept }) {
             />
             <span className="text-sm text-app">
               He leído el Aviso de Privacidad y <strong className="font-semibold">otorgo mi consentimiento expreso</strong>{' '}
-              para que mi alias se guarde localmente en este navegador con las finalidades descritas.
+              para que mi alias se guarde localmente en este navegador con las finalidades descritas. También acepto los{' '}
+              <strong className="font-semibold">Términos de uso</strong> del juego.
             </span>
           </label>
 

@@ -29,6 +29,7 @@ export const initialState = {
   activeFeedback: null, // Dictamen del último caso resuelto (VerdictModal)
   decisionHistory: [], // Registro para estadísticas y certificado final
   hintsUsed: [], // IDs de casos en los que se pidió la pista normativa
+  briefingsSeen: [], // Sprints cuyo correo de inicio (briefing) ya se leyó
   endReason: null, // 'budget' | 'ethics' | 'legal' cuando hay GAME_OVER
   gameStatus: 'START', // 'START' | 'PLAYING' | 'SPRINT_SUMMARY' | 'GAME_OVER' | 'VICTORY'
 };
@@ -64,6 +65,10 @@ function gameReducer(state, action) {
     case 'START_GAME':
       if (!state.player.privacyAccepted) return state;
       return freshRun(state);
+
+    case 'SEE_BRIEFING':
+      if (state.briefingsSeen.includes(action.sprintId)) return state;
+      return { ...state, briefingsSeen: [...state.briefingsSeen, action.sprintId] };
 
     case 'USE_HINT': {
       if (state.gameStatus !== 'PLAYING' || state.activeFeedback) return state;
@@ -171,6 +176,7 @@ function readSave() {
       metrics: { ...initialState.metrics, ...saved.metrics },
       decisionHistory: Array.isArray(saved.decisionHistory) ? saved.decisionHistory : [],
       hintsUsed: Array.isArray(saved.hintsUsed) ? saved.hintsUsed : [],
+      briefingsSeen: Array.isArray(saved.briefingsSeen) ? saved.briefingsSeen : [],
     };
   } catch {
     return null;
@@ -201,6 +207,7 @@ export function GameProvider({ children }) {
     () => ({
       acceptPrivacy: (name) => dispatch({ type: 'ACCEPT_PRIVACY', name }),
       startGame: () => dispatch({ type: 'START_GAME' }),
+      seeBriefing: (sprintId) => dispatch({ type: 'SEE_BRIEFING', sprintId }),
       useHint: (caseId) => dispatch({ type: 'USE_HINT', caseId }),
       resolveCase: (caseData, optionId) => dispatch({ type: 'RESOLVE_CASE', caseData, optionId }),
       acknowledgeFeedback: () => dispatch({ type: 'ACKNOWLEDGE_FEEDBACK' }),

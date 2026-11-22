@@ -203,7 +203,7 @@
         "impacto": { "budget": -5, "ethics": 20, "legal": 15 },
         "esCorrecta": true,
         "retroalimentacion": "Dictamen correcto. Atiendes primero a la persona afectada, con confidencialidad, y canalizas la queja por el protocolo que la empresa debe tener: la NOM-035-STPS-2018 obliga a contar con una política de prevención de la violencia laboral y mecanismos seguros para denunciarla. Las medidas de protección y la audiencia al señalado hacen que el proceso sea justo y que la sanción, si procede, se sostenga.",
-        "fundamento": ["NOM-035-STPS-2018, num. 5.1", "ACM Code 1.2", "Código de Conducta NovaByte, sec. 8"]
+        "fundamento": ["NOM-035-STPS-2018, num. 5.1 y 8.1 b", "ACM Code 1.2", "Código de Conducta NovaByte, sec. 8"]
       }
     ],
     "aprendizaje": "El ciberacoso entre colegas es una falta ética y laboral: la empresa debe prevenirlo y atenderlo con un protocolo. No toda falta ética es un delito: solo ciertas conductas digitales están tipificadas penalmente (por ejemplo, difundir contenido íntimo sin consentimiento, que verás en la Unidad III). Confundir ambos planos lleva a respuestas desproporcionadas o insuficientes."

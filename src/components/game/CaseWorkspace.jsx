@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import CaseFile from './CaseFile.jsx';
 import DecisionDesk from './DecisionDesk.jsx';
 import VerdictModal from './VerdictModal.jsx';
+import SprintBriefing from './SprintBriefing.jsx';
 import ConstructionScreen from '../screens/ConstructionScreen.jsx';
 import { useGame } from '../../context/GameContext.jsx';
 import { getSprint } from '../../data/sprints.js';
@@ -12,9 +13,10 @@ import { playSound } from '../../utils/soundEffects.js';
  * la derecha. En escritorio ocupa el alto de la ventana y cada panel tiene su propio scroll.
  */
 export default function CaseWorkspace() {
-  const { state } = useGame();
+  const { state, actions } = useGame();
   const sprint = getSprint(state.currentSprint);
   const caso = sprint.casos[state.currentCaseIndex];
+  const showBriefing = Boolean(caso && sprint.briefing && !state.briefingsSeen.includes(sprint.id) && !state.activeFeedback);
 
   useEffect(() => {
     if (caso && !state.activeFeedback) playSound('ticket');
@@ -35,6 +37,7 @@ export default function CaseWorkspace() {
         </div>
       </div>
       <VerdictModal />
+      {showBriefing && <SprintBriefing sprint={sprint} onStart={() => actions.seeBriefing(sprint.id)} />}
     </>
   );
 }
