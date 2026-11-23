@@ -2,6 +2,7 @@ import { useId, useState } from 'react';
 import { ArrowRight, FolderOpen, User } from 'lucide-react';
 import EvidenceInspector, { EVIDENCE_ICONS, evidenceTitle } from './EvidenceInspector.jsx';
 import { getEvidenceList } from '../../data/taxonomy.js';
+import TicketGlossary from './TicketGlossary.jsx';
 
 /**
  * Panel izquierdo: carpeta del expediente con pestañas (resumen del ticket + una pestaña
@@ -114,6 +115,8 @@ function Brief({ caso, evidences, onOpen }) {
           </ul>
         </div>
       )}
+
+      <TicketGlossary caso={caso} />
     </article>
   );
 }

@@ -1,6 +1,7 @@
 import { useId, useState } from 'react';
-import { BookOpen, Gavel, Lightbulb, Stamp } from 'lucide-react';
+import { BookA, BookOpen, Gavel, Lightbulb, Stamp } from 'lucide-react';
 import LegalManualPanel from './LegalManualPanel.jsx';
+import GlossaryPanel from './GlossaryPanel.jsx';
 import { useGame, HINT_COST } from '../../context/GameContext.jsx';
 import { VERDICT_TYPES, getCaseHint } from '../../data/taxonomy.js';
 import { playSound } from '../../utils/soundEffects.js';
@@ -34,12 +35,17 @@ export default function DecisionDesk({ caso }) {
           Dictamen
         </DeskTab>
         <DeskTab active={tab === 'manual'} onClick={() => setTab('manual')} icon={BookOpen}>
-          Manual Jurídico
+          Manual
+        </DeskTab>
+        <DeskTab active={tab === 'glosario'} onClick={() => setTab('glosario')} icon={BookA}>
+          Glosario
         </DeskTab>
       </div>
 
       {tab === 'manual' ? (
         <LegalManualPanel relatedIds={caso.manualRefs} />
+      ) : tab === 'glosario' ? (
+        <GlossaryPanel />
       ) : (
         <div className="flex flex-col gap-3">
           <fieldset>

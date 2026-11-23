@@ -1,0 +1,568 @@
+[
+  {
+    "termino": "CEO",
+    "categoria": "Roles y empresa",
+    "alias": [
+      "CEO"
+    ],
+    "definicion": "Director o directora general. Es la persona de mayor rango en la empresa y responde por sus resultados."
+  },
+  {
+    "termino": "CTO",
+    "categoria": "Roles y empresa",
+    "alias": [
+      "CTO"
+    ],
+    "definicion": "Director o directora de tecnología. Decide la estrategia técnica y supervisa a los equipos de desarrollo."
+  },
+  {
+    "termino": "Tech Lead",
+    "categoria": "Roles y empresa",
+    "alias": [
+      "Tech Lead",
+      "tech lead"
+    ],
+    "definicion": "Líder técnico de un equipo de desarrollo: revisa el código, define cómo se construye el software y orienta a las demás personas desarrolladoras."
+  },
+  {
+    "termino": "QA",
+    "categoria": "Roles y empresa",
+    "alias": [
+      "QA"
+    ],
+    "definicion": "Aseguramiento de calidad (Quality Assurance). Equipo que prueba el software para encontrar defectos antes de que llegue a las personas usuarias."
+  },
+  {
+    "termino": "SOC",
+    "categoria": "Roles y empresa",
+    "alias": [
+      "SOC"
+    ],
+    "definicion": "Centro de Operaciones de Seguridad. Equipo que vigila los sistemas las 24 horas para detectar y responder a ataques informáticos."
+  },
+  {
+    "termino": "Growth",
+    "categoria": "Roles y empresa",
+    "alias": [
+      "Growth"
+    ],
+    "definicion": "Equipo de crecimiento: busca aumentar el número de clientes y su uso del producto mediante experimentos y campañas."
+  },
+  {
+    "termino": "UX",
+    "categoria": "Roles y empresa",
+    "alias": [
+      "UX"
+    ],
+    "definicion": "Experiencia de usuario. Disciplina que estudia cómo las personas usan un producto para hacerlo fácil, útil y agradable."
+  },
+  {
+    "termino": "Fintech",
+    "categoria": "Roles y empresa",
+    "alias": [
+      "fintech",
+      "empresa de pagos",
+      "empresas de pagos"
+    ],
+    "definicion": "Empresa que ofrece servicios financieros (pagos, créditos, monederos) mediante tecnología, como NovaByte."
+  },
+  {
+    "termino": "Sprint",
+    "categoria": "Desarrollo de software",
+    "alias": [
+      "Sprint",
+      "Sprints"
+    ],
+    "definicion": "Periodo corto de trabajo (por ejemplo, dos semanas) en el que un equipo se compromete a terminar un conjunto de tareas. En LexCode, cada Sprint es una unidad de la asignatura."
+  },
+  {
+    "termino": "Ticket",
+    "categoria": "Desarrollo de software",
+    "alias": [
+      "ticket",
+      "tickets"
+    ],
+    "definicion": "Registro de una tarea, problema o solicitud que alguien debe atender. En el juego, cada ticket es un caso que debes dictaminar."
+  },
+  {
+    "termino": "Daily",
+    "categoria": "Desarrollo de software",
+    "alias": [
+      "daily",
+      "dailies",
+      "juntas diarias"
+    ],
+    "definicion": "Junta diaria y breve del equipo para contar qué hizo cada quien, qué hará y qué le bloquea."
+  },
+  {
+    "termino": "Repositorio",
+    "categoria": "Desarrollo de software",
+    "alias": [
+      "repositorio",
+      "repositorios",
+      "repo"
+    ],
+    "definicion": "Lugar donde se guarda el código de un proyecto junto con todo su historial de cambios (por ejemplo, en GitHub)."
+  },
+  {
+    "termino": "Git",
+    "categoria": "Desarrollo de software",
+    "alias": [
+      "git",
+      "historial de git"
+    ],
+    "definicion": "Sistema de control de versiones: registra cada cambio al código, quién lo hizo y cuándo. Lo que se sube al historial puede recuperarse aunque después se borre."
+  },
+  {
+    "termino": "Pull Request (PR)",
+    "categoria": "Desarrollo de software",
+    "alias": [
+      "Pull Request",
+      "Pull Requests",
+      "PR"
+    ],
+    "definicion": "Solicitud para incorporar cambios de código al proyecto principal. Otras personas la revisan antes de aprobarla (revisión de código)."
+  },
+  {
+    "termino": "Diff",
+    "categoria": "Desarrollo de software",
+    "alias": [
+      "diff"
+    ],
+    "definicion": "Comparación que muestra exactamente qué líneas de código se agregaron (+) o eliminaron (−) en un cambio."
+  },
+  {
+    "termino": "Rama (branch)",
+    "categoria": "Desarrollo de software",
+    "alias": [
+      "rama",
+      "branch"
+    ],
+    "definicion": "Copia paralela del código donde se desarrolla un cambio sin afectar la versión principal hasta que se aprueba."
+  },
+  {
+    "termino": "Código fuente",
+    "categoria": "Desarrollo de software",
+    "alias": [
+      "código fuente"
+    ],
+    "definicion": "Instrucciones de un programa escritas por personas en un lenguaje de programación, antes de convertirse en un archivo ejecutable."
+  },
+  {
+    "termino": "Pipeline",
+    "categoria": "Desarrollo de software",
+    "alias": [
+      "pipeline"
+    ],
+    "definicion": "Cadena automática de pasos (compilar, probar, revisar licencias, publicar) que se ejecuta cada vez que cambia el código."
+  },
+  {
+    "termino": "Pase a producción",
+    "categoria": "Desarrollo de software",
+    "alias": [
+      "pase a producción",
+      "producción",
+      "liberar",
+      "liberación"
+    ],
+    "definicion": "Publicar una versión del software para que la usen los clientes reales (también se dice «liberar» o «desplegar»)."
+  },
+  {
+    "termino": "Feature flag",
+    "categoria": "Desarrollo de software",
+    "alias": [
+      "feature flag",
+      "desactivado",
+      "desactivada"
+    ],
+    "definicion": "Interruptor en el código que permite encender o apagar una función sin publicar una nueva versión."
+  },
+  {
+    "termino": "SDK",
+    "categoria": "Desarrollo de software",
+    "alias": [
+      "SDK"
+    ],
+    "definicion": "Kit de desarrollo de software: paquete de código que una empresa entrega a otras para que integren su servicio en sus propias aplicaciones."
+  },
+  {
+    "termino": "API",
+    "categoria": "Desarrollo de software",
+    "alias": [
+      "API",
+      "APIs"
+    ],
+    "definicion": "Interfaz de programación: puerta oficial por la que un sistema permite que otros programas consulten sus datos o usen sus funciones."
+  },
+  {
+    "termino": "Backend",
+    "categoria": "Desarrollo de software",
+    "alias": [
+      "backend"
+    ],
+    "definicion": "Parte del sistema que funciona en los servidores (datos, reglas de negocio), invisible para la persona usuaria."
+  },
+  {
+    "termino": "Dependencia",
+    "categoria": "Desarrollo de software",
+    "alias": [
+      "dependencia",
+      "dependencias",
+      "package.json",
+      "librería",
+      "librerías"
+    ],
+    "definicion": "Código de terceros (librería) que un proyecto usa. Se declara en archivos como package.json y cada una tiene su propia licencia."
+  },
+  {
+    "termino": "Código abierto",
+    "categoria": "Desarrollo de software",
+    "alias": [
+      "código abierto",
+      "open source"
+    ],
+    "definicion": "Software cuyo código fuente es público y puede usarse, estudiarse y modificarse según su licencia. Abierto no significa sin condiciones."
+  },
+  {
+    "termino": "Credenciales",
+    "categoria": "Seguridad informática",
+    "alias": [
+      "credenciales",
+      "contraseña",
+      ".env"
+    ],
+    "definicion": "Datos que permiten entrar a un sistema (usuario, contraseña, llaves de acceso). Si se exponen, cualquiera puede suplantar a su dueño."
+  },
+  {
+    "termino": "Phishing y smishing",
+    "categoria": "Seguridad informática",
+    "alias": [
+      "phishing",
+      "smishing",
+      "sitio falso"
+    ],
+    "definicion": "Engaño para robar datos haciéndose pasar por una empresa confiable: por correo (phishing) o por SMS (smishing)."
+  },
+  {
+    "termino": "Ransomware",
+    "categoria": "Seguridad informática",
+    "alias": [
+      "ransomware",
+      "rescate"
+    ],
+    "definicion": "Programa malicioso que cifra los archivos de una víctima y exige un pago (rescate) para devolverlos."
+  },
+  {
+    "termino": "Malware",
+    "categoria": "Seguridad informática",
+    "alias": [
+      "malware",
+      "binario no firmado"
+    ],
+    "definicion": "Cualquier programa diseñado para dañar, espiar o tomar control de un sistema sin permiso."
+  },
+  {
+    "termino": "Cifrado",
+    "categoria": "Seguridad informática",
+    "alias": [
+      "cifrado",
+      "cifró",
+      "cifrados",
+      "cifrar"
+    ],
+    "definicion": "Transformar información para que solo pueda leerla quien tiene la llave. Protege datos, pero los atacantes también lo usan en el ransomware."
+  },
+  {
+    "termino": "Respaldo fuera de línea",
+    "categoria": "Seguridad informática",
+    "alias": [
+      "respaldos",
+      "respaldo",
+      "fuera de línea",
+      "offline",
+      "backups"
+    ],
+    "definicion": "Copia de seguridad guardada sin conexión a la red, que un ataque no puede alcanzar ni cifrar."
+  },
+  {
+    "termino": "Exfiltración",
+    "categoria": "Seguridad informática",
+    "alias": [
+      "exfiltración"
+    ],
+    "definicion": "Robo o extracción no autorizada de datos desde los sistemas de una organización hacia el exterior."
+  },
+  {
+    "termino": "VPN",
+    "categoria": "Seguridad informática",
+    "alias": [
+      "VPN"
+    ],
+    "definicion": "Red privada virtual: conexión segura que permite entrar a los sistemas internos de una empresa desde fuera de la oficina."
+  },
+  {
+    "termino": "RDP",
+    "categoria": "Seguridad informática",
+    "alias": [
+      "RDP"
+    ],
+    "definicion": "Escritorio remoto: permite controlar una computadora a distancia. Dejarlo expuesto a Internet es una puerta común para los atacantes."
+  },
+  {
+    "termino": "MFA",
+    "categoria": "Seguridad informática",
+    "alias": [
+      "MFA",
+      "autenticación multifactor"
+    ],
+    "definicion": "Autenticación multifactor: además de la contraseña, pide una segunda prueba (código en el celular, huella). Frena la mayoría de los robos de cuenta."
+  },
+  {
+    "termino": "SIEM y EDR",
+    "categoria": "Seguridad informática",
+    "alias": [
+      "SIEM",
+      "EDR",
+      "siem-alerts",
+      "edr-timeline"
+    ],
+    "definicion": "Herramientas de vigilancia: el SIEM reúne y correlaciona alertas de todos los sistemas; el EDR detecta comportamientos maliciosos en cada equipo."
+  },
+  {
+    "termino": "Dirección IP y dominio",
+    "categoria": "Seguridad informática",
+    "alias": [
+      "IP",
+      "ASN",
+      "baja del dominio",
+      "dominio origen"
+    ],
+    "definicion": "La dirección IP identifica a un equipo en Internet; el dominio es el nombre legible de un sitio (por ejemplo, novapay.mx). Los atacantes registran dominios parecidos para engañar."
+  },
+  {
+    "termino": "Hack back",
+    "categoria": "Seguridad informática",
+    "alias": [
+      "hack back",
+      "contraatacar",
+      "panel del sitio falso",
+      "panel del atacante"
+    ],
+    "definicion": "Contraatacar los sistemas de quien te atacó. Aunque parezca justo, entrar sin autorización a un sistema ajeno también es delito."
+  },
+  {
+    "termino": "Cadena de custodia",
+    "categoria": "Seguridad informática",
+    "alias": [
+      "cadena de custodia",
+      "evidencia forense",
+      "imágenes forenses"
+    ],
+    "definicion": "Registro de cómo se obtuvo, guardó y quién tocó cada evidencia, para que sea válida ante una autoridad."
+  },
+  {
+    "termino": "Hash",
+    "categoria": "Seguridad informática",
+    "alias": [
+      "hash",
+      "hashing"
+    ],
+    "definicion": "Huella matemática única de un archivo o dato. Sirve para detectar copias (bloquear re-subidas) o guardar datos sin almacenarlos en claro."
+  },
+  {
+    "termino": "CAPTCHA",
+    "categoria": "Seguridad informática",
+    "alias": [
+      "CAPTCHA",
+      "CAPTCHAs"
+    ],
+    "definicion": "Prueba para distinguir personas de programas automáticos (por ejemplo, elegir imágenes). Evadirla con servicios automáticos es eludir una medida de seguridad."
+  },
+  {
+    "termino": "Scraping",
+    "categoria": "Datos e IA",
+    "alias": [
+      "scraping",
+      "scraper",
+      "robot",
+      "extracción"
+    ],
+    "definicion": "Uso de programas que copian datos de sitios web de forma automática y masiva."
+  },
+  {
+    "termino": "robots.txt",
+    "categoria": "Datos e IA",
+    "alias": [
+      "robots.txt"
+    ],
+    "definicion": "Archivo con el que un sitio web indica a los programas automáticos qué secciones no deben visitar."
+  },
+  {
+    "termino": "Bot",
+    "categoria": "Datos e IA",
+    "alias": [
+      "bot",
+      "bots",
+      "cuentas automatizadas",
+      "perfiles automatizados",
+      "cuentas falsas"
+    ],
+    "definicion": "Cuenta o programa que actúa de forma automática simulando ser una persona."
+  },
+  {
+    "termino": "Algoritmo de recomendación (feed)",
+    "categoria": "Datos e IA",
+    "alias": [
+      "feed",
+      "algoritmo de recomendaciones",
+      "algoritmo de recomendación",
+      "algoritmo de feed",
+      "amplificación",
+      "amplificó"
+    ],
+    "definicion": "Sistema que decide qué publicaciones ve cada persona y en qué orden, normalmente para maximizar el tiempo de uso."
+  },
+  {
+    "termino": "Engagement",
+    "categoria": "Datos e IA",
+    "alias": [
+      "engagement"
+    ],
+    "definicion": "Nivel de interacción con un contenido (reacciones, comentarios, tiempo de uso). Optimizarlo a toda costa puede premiar la indignación y la desinformación."
+  },
+  {
+    "termino": "Modelo de IA",
+    "categoria": "Datos e IA",
+    "alias": [
+      "modelo",
+      "modelos",
+      "inteligencia artificial",
+      "IA"
+    ],
+    "definicion": "Programa que aprende patrones a partir de datos para hacer predicciones o generar contenido."
+  },
+  {
+    "termino": "Entrenamiento y dataset",
+    "categoria": "Datos e IA",
+    "alias": [
+      "entrenar",
+      "entrenamiento",
+      "entrenado",
+      "dataset",
+      "datos de entrenamiento"
+    ],
+    "definicion": "Entrenar es alimentar un modelo con muchos ejemplos (el dataset) para que aprenda. Si los datos tienen sesgos, el modelo también los tendrá."
+  },
+  {
+    "termino": "Scoring",
+    "categoria": "Datos e IA",
+    "alias": [
+      "scoring",
+      "puntaje",
+      "calificación crediticia"
+    ],
+    "definicion": "Puntuación automática que estima, por ejemplo, el riesgo de que una persona no pague un crédito."
+  },
+  {
+    "termino": "Variable proxy",
+    "categoria": "Datos e IA",
+    "alias": [
+      "proxy",
+      "sustitutos"
+    ],
+    "definicion": "Dato aparentemente neutral (código postal, tipo de teléfono) que funciona como sustituto de una característica protegida, como la condición social o el origen."
+  },
+  {
+    "termino": "IA generativa y deepfake",
+    "categoria": "Datos e IA",
+    "alias": [
+      "IA generativa",
+      "deepfake",
+      "clonar",
+      "clonación",
+      "manipulada con IA",
+      "generada con IA",
+      "generadas con IA"
+    ],
+    "definicion": "La IA generativa crea textos, imágenes, audio o video nuevos. Un deepfake (ultrasuplantación) imita de forma realista a una persona real."
+  },
+  {
+    "termino": "Chatbot",
+    "categoria": "Datos e IA",
+    "alias": [
+      "chatbot",
+      "asistente de chat",
+      "asistente conversacional"
+    ],
+    "definicion": "Programa que conversa por texto o voz. En la UE es obligatorio avisar a las personas que están hablando con una IA."
+  },
+  {
+    "termino": "Checkout",
+    "categoria": "Comercio electrónico",
+    "alias": [
+      "checkout",
+      "proceso de compra"
+    ],
+    "definicion": "Pasos finales de una compra en línea: carrito, extras, datos de pago y confirmación."
+  },
+  {
+    "termino": "Conversión",
+    "categoria": "Comercio electrónico",
+    "alias": [
+      "conversión"
+    ],
+    "definicion": "Porcentaje de visitantes que terminan comprando o suscribiéndose. Subirla con engaños es un patrón oscuro."
+  },
+  {
+    "termino": "Terminal punto de venta (POS)",
+    "categoria": "Comercio electrónico",
+    "alias": [
+      "terminal",
+      "terminales",
+      "POS"
+    ],
+    "definicion": "Aparato con el que los comercios cobran con tarjeta o con el celular."
+  },
+  {
+    "termino": "Bitcoin (BTC)",
+    "categoria": "Comercio electrónico",
+    "alias": [
+      "BTC",
+      "bitcoin"
+    ],
+    "definicion": "Criptomoneda que los atacantes suelen exigir en los rescates porque es difícil de rastrear."
+  },
+  {
+    "termino": "UMA",
+    "categoria": "Términos legales",
+    "alias": [
+      "UMA"
+    ],
+    "definicion": "Unidad de Medida y Actualización: valor de referencia en pesos que usan las leyes mexicanas para fijar multas. Su monto se actualiza cada año."
+  },
+  {
+    "termino": "DOF",
+    "categoria": "Términos legales",
+    "alias": [
+      "DOF",
+      "Diario Oficial"
+    ],
+    "definicion": "Diario Oficial de la Federación: medio donde se publican las leyes y reformas en México. Una ley entra en vigor según lo que diga su publicación."
+  },
+  {
+    "termino": "Días multa",
+    "categoria": "Términos legales",
+    "alias": [
+      "días multa"
+    ],
+    "definicion": "Forma de calcular multas penales con base en los ingresos diarios de la persona sentenciada."
+  },
+  {
+    "termino": "Querella",
+    "categoria": "Términos legales",
+    "alias": [
+      "querella"
+    ],
+    "definicion": "Denuncia que solo puede presentar la persona afectada; sin ella, la autoridad no persigue ciertos delitos. Los delitos «de oficio» se persiguen aunque nadie se queje."
+  }
+]

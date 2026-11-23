@@ -7,6 +7,7 @@ export const PROJECT = {
   version: '0.1.0',
   year: 2026,
   repoUrl: 'https://github.com/IanRT08/lexcode-compliance-game',
+  siteUrl: 'https://lexcode-compliance-game.vercel.app/',
   institution: 'Universidad Tecnológica Emiliano Zapata del Estado de Morelos (UTEZ)',
   program: 'Ingeniería en Tecnologías de la Información e Innovación Digital — 7.º cuatrimestre',
   course: 'Ética y Legislación en Tecnologías de la Información (E-ELTI-3)',
@@ -84,7 +85,7 @@ export const INSTITUTIONAL_MARKS = [
 export const THIRD_PARTY = [
   {
     category: 'Librería',
-    resource: 'React y React DOM 18',
+    resource: 'React, React DOM 18 y scheduler',
     author: 'Meta Platforms, Inc. y afiliadas',
     license: 'MIT',
     url: 'https://github.com/facebook/react',
@@ -116,6 +117,13 @@ export const THIRD_PARTY = [
     author: 'Lucide Icons y colaboradores',
     license: 'ISC',
     url: 'https://github.com/lucide-icons/lucide',
+  },
+  {
+    category: 'Iconografía',
+    resource: 'Iconos derivados de Feather (incluidos en Lucide: x, info, lock, search, terminal, entre otros)',
+    author: 'Cole Bemis',
+    license: 'MIT',
+    url: 'https://github.com/feathericons/feather',
   },
   {
     category: 'Tipografía',

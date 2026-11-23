@@ -54,6 +54,19 @@ export default function CreditsLicensesModal({ open, onClose }) {
               </a>,
             ])}
           />
+          <p className="mt-2 text-xs text-olive">
+            El texto completo de cada licencia (MIT, ISC y SIL OFL 1.1), con sus avisos de copyright, se publica junto con
+            el juego en{' '}
+            <a
+              href="/THIRD_PARTY_LICENSES.txt"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-1 font-medium text-earth hover:underline"
+            >
+              THIRD_PARTY_LICENSES.txt <ExternalLink className="size-4" aria-hidden="true" />
+            </a>
+            , que se genera automáticamente en cada compilación.
+          </p>
         </section>
 
         <section aria-labelledby="credits-marks">

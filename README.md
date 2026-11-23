@@ -1,5 +1,7 @@
 # LexCode: Oficial de Cumplimiento
 
+**Jugar en línea:** [https://lexcode-compliance-game.vercel.app/](https://lexcode-compliance-game.vercel.app/)
+
 Simulador educativo de **auditoría ética y legal en Tecnologías de la Información**. El jugador es el Oficial de Cumplimiento de *NovaByte Solutions*, una startup mexicana ficticia: inspecciona código, contratos, chats y bitácoras, consulta un Manual Jurídico y emite dictámenes que afectan tres indicadores vitales de la empresa (**Presupuesto**, **Reputación Ética** y **Cumplimiento Legal**). Cada decisión recibe retroalimentación inmediata con su fundamento ético y legal.
 
 Proyecto final de **Ética y Legislación en Tecnologías de la Información (E-ELTI-3)** — Ingeniería en Tecnologías de la Información e Innovación Digital, 7.º cuatrimestre, Universidad Tecnológica Emiliano Zapata del Estado de Morelos (UTEZ). Docente: Mtra. Iris Nayeli Corona Aceves.
@@ -36,6 +38,7 @@ Proyecto final de **Ética y Legislación en Tecnologías de la Información (E-
 
 1. Cada ticket llega con un **expediente**: contexto y evidencias (correos, chats, código, diffs, bitácoras, contratos, configuraciones).
 2. El **Manual Jurídico** se consulta sin costo; la **pista normativa** del despacho externo cuesta presupuesto.
+   Un **glosario** de 60 términos técnicos (SDK, Pull Request, ransomware, scraping, UMA…) explica en lenguaje sencillo las palabras de cada ticket y tiene buscador propio.
 3. Se sella un **dictamen** (Aprobar, Bloquear, Remediar o Escalar). Cada dictamen muestra de inmediato el fundamento ético y legal, el modelo ético aplicado, el dictamen recomendado si fallaste y el aprendizaje clave.
 4. Si **Presupuesto**, **Reputación Ética** o **Cumplimiento Legal** llegan a 0, la partida termina con un final temático. Al cerrar cada Sprint se muestra el perfil de decisión ética del jugador.
 5. Cada Sprint abre con un correo de briefing (narrativa y objetivos de aprendizaje).
@@ -110,13 +113,16 @@ El juego solo pide un **alias** (recomendamos no usar el nombre real), después 
 
 | Categoría | Recurso | Autor / organización | Licencia | Referencia |
 | :--- | :--- | :--- | :--- | :--- |
-| Librería | React y React DOM 18 | Meta Platforms, Inc. y afiliadas | MIT | https://github.com/facebook/react |
+| Librería | React, React DOM 18 y scheduler | Meta Platforms, Inc. y afiliadas | MIT | https://github.com/facebook/react |
 | Librería | Vite | VoidZero Inc. y colaboradores de Vite | MIT | https://github.com/vitejs/vite |
 | Librería | @vitejs/plugin-react | Evan You y colaboradores de Vite | MIT | https://github.com/vitejs/vite-plugin-react |
 | Librería | Tailwind CSS y @tailwindcss/vite | Tailwind Labs, Inc. | MIT | https://github.com/tailwindlabs/tailwindcss |
 | Iconografía | Lucide (lucide-react) | Lucide Icons y colaboradores | ISC | https://github.com/lucide-icons/lucide |
+| Iconografía | Iconos derivados de Feather (incluidos en Lucide) | Cole Bemis | MIT | https://github.com/feathericons/feather |
 | Tipografía | Inter (vía @fontsource/inter) | The Inter Project Authors (Rasmus Andersson) | SIL OFL 1.1 | https://github.com/rsms/inter |
 | Tipografía | JetBrains Mono (vía @fontsource/jetbrains-mono) | The JetBrains Mono Project Authors | SIL OFL 1.1 | https://github.com/JetBrains/JetBrainsMono |
+
+El texto completo de cada licencia de terceros, con sus avisos de copyright, se publica con el sitio en [THIRD_PARTY_LICENSES.txt](https://lexcode-compliance-game.vercel.app/THIRD_PARTY_LICENSES.txt). Lo genera `scripts/generate-licenses.mjs` antes de cada compilación (`prebuild`), así que siempre corresponde a las versiones instaladas.
 
 ### Marcas institucionales (excluidas de las licencias del proyecto)
 
