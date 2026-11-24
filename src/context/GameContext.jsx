@@ -14,7 +14,7 @@ export const METRIC_KEYS = ['budget', 'ethics', 'legal'];
 /** Costo de pedir la pista normativa al área jurídica externa. */
 export const HINT_COST = 3;
 /** Presupuesto que la dirección asigna al iniciar cada nuevo Sprint (trimestre). */
-export const SPRINT_BUDGET_BONUS = 15;
+export const SPRINT_BUDGET_BONUS = 25;
 
 export const initialState = {
   player: {

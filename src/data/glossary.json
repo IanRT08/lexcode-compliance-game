@@ -434,8 +434,13 @@
     "termino": "Modelo de IA",
     "categoria": "Datos e IA",
     "alias": [
-      "modelo",
-      "modelos",
+      "modelo de IA",
+      "modelos de IA",
+      "modelo de riesgo",
+      "modelo de scoring",
+      "el modelo",
+      "un modelo",
+      "sus modelos",
       "inteligencia artificial",
       "IA"
     ],
@@ -482,7 +487,9 @@
       "clonación",
       "manipulada con IA",
       "generada con IA",
-      "generadas con IA"
+      "generadas con IA",
+      "ultrasuplantación",
+      "con su cara y su voz"
     ],
     "definicion": "La IA generativa crea textos, imágenes, audio o video nuevos. Un deepfake (ultrasuplantación) imita de forma realista a una persona real."
   },
@@ -564,5 +571,101 @@
       "querella"
     ],
     "definicion": "Denuncia que solo puede presentar la persona afectada; sin ella, la autoridad no persigue ciertos delitos. Los delitos «de oficio» se persiguen aunque nadie se queje."
+  },
+  {
+    "termino": "DBA",
+    "categoria": "Roles y empresa",
+    "alias": [
+      "DBA",
+      "administrador de bases de datos"
+    ],
+    "definicion": "Administrador o administradora de bases de datos: persona con acceso amplio a la información de la empresa para mantenerla, respaldarla y protegerla."
+  },
+  {
+    "termino": "Firmware",
+    "categoria": "Desarrollo de software",
+    "alias": [
+      "firmware"
+    ],
+    "definicion": "Programa que vive dentro de un aparato (una terminal, un router) y controla su funcionamiento básico. Como todo software, se protege por derecho de autor."
+  },
+  {
+    "termino": "Decompilar e ingeniería inversa",
+    "categoria": "Desarrollo de software",
+    "alias": [
+      "descompilar",
+      "descompilarlo",
+      "decompilar",
+      "decompilación",
+      "ingeniería inversa",
+      "compilado"
+    ],
+    "definicion": "Analizar un programa ya compilado para reconstruir cómo funciona o su código fuente. Es un derecho reservado al titular, con excepciones limitadas que fija la ley."
+  },
+  {
+    "termino": "Script y tarea programada",
+    "categoria": "Desarrollo de software",
+    "alias": [
+      "script",
+      "tarea programada"
+    ],
+    "definicion": "Un script es un pequeño programa que automatiza acciones; una tarea programada lo ejecuta sola en una fecha u hora. Sin revisión, puede usarse para sabotear."
+  },
+  {
+    "termino": "Bomba lógica",
+    "categoria": "Seguridad informática",
+    "alias": [
+      "bomba lógica"
+    ],
+    "definicion": "Código malicioso escondido que se activa cuando se cumple una condición (una fecha, un evento) para dañar sistemas o borrar información."
+  },
+  {
+    "termino": "Spyware",
+    "categoria": "Seguridad informática",
+    "alias": [
+      "spyware",
+      "aplicación de monitoreo",
+      "programa espía"
+    ],
+    "definicion": "Programa que espía la actividad de un dispositivo (mensajes, ubicación, fotos) sin que la persona lo sepa. Usarlo para leer comunicaciones privadas puede ser delito."
+  },
+  {
+    "termino": "Ingeniería social",
+    "categoria": "Seguridad informática",
+    "alias": [
+      "ingeniería social",
+      "videollamada"
+    ],
+    "definicion": "Manipular a las personas (urgencia, autoridad, confianza) para que entreguen datos o dinero. Es la base del phishing y de los fraudes con suplantación."
+  },
+  {
+    "termino": "Reconocimiento facial",
+    "categoria": "Datos e IA",
+    "alias": [
+      "reconocimiento facial",
+      "biometría",
+      "biométrico",
+      "biométricos"
+    ],
+    "definicion": "Tecnología que identifica a una persona por los rasgos de su cara. El rostro es un dato biométrico que exige consentimiento expreso y alternativas para quien no puede o no quiere usarlo."
+  },
+  {
+    "termino": "Lector de pantalla",
+    "categoria": "Datos e IA",
+    "alias": [
+      "lector de pantalla",
+      "lectores de pantalla"
+    ],
+    "definicion": "Programa que lee en voz alta lo que aparece en la pantalla; lo usan personas ciegas o con baja visión. Una app accesible debe ser compatible con él."
+  },
+  {
+    "termino": "Compliance",
+    "categoria": "Términos legales",
+    "alias": [
+      "compliance",
+      "programa de cumplimiento",
+      "cumplimiento normativo"
+    ],
+    "definicion": "Cumplimiento normativo: conjunto de políticas, controles y procesos con los que una organización se asegura de respetar las leyes y sus propias reglas."
   }
 ]

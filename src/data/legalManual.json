@@ -412,6 +412,7 @@
     "resumen": "La manifestación de las ideas no será objeto de inquisición judicial o administrativa, salvo que ataque la moral, la vida privada o los derechos de terceros, provoque algún delito o perturbe el orden público. El derecho a la información será garantizado por el Estado.",
     "puntosClave": [
       "Toda persona tiene derecho al libre acceso a información plural y oportuna, y a buscar, recibir y difundir información por cualquier medio.",
+      "El derecho de réplica se ejerce en los términos que disponga la ley: quien es aludido con información inexacta puede pedir que se publique su respuesta, sin censurar la opinión ajena.",
       "El Estado garantiza el acceso a las TIC, incluidos banda ancha e Internet.",
       "Apartado A, fr. I: la información en posesión de autoridades y de cualquier persona física o moral que reciba y ejerza recursos públicos es pública; solo puede reservarse temporalmente. Rige el principio de máxima publicidad.",
       "Apartado A, fr. II: la vida privada y los datos personales se protegen en los términos que fijen las leyes.",
@@ -426,7 +427,8 @@
       "versión pública",
       "libertad de expresión",
       "INAI",
-      "sujeto obligado"
+      "sujeto obligado",
+      "derecho de réplica"
     ],
     "fuentesOficiales": [
       {
@@ -1471,6 +1473,447 @@
       {
         "nombre": "LFPDPPP 2025 (Cámara de Diputados, texto vigente)",
         "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFPDPPP.pdf"
+      }
+    ]
+  },
+  {
+    "id": "U1_M15",
+    "unidad": 1,
+    "categoria": "Concepto",
+    "titulo": "Principios éticos",
+    "fuente": "Fundamentos de la ética en TIC",
+    "resumen": "Los principios son reglas generales de conducta que se derivan de los valores y sirven para decidir en situaciones concretas. Un valor dice qué es importante (la honestidad); un principio dice cómo actuar («no engañes a quien confía en tu software»).",
+    "puntosClave": [
+      "Principios frecuentes en TI: no causar daño, respeto a la autonomía y la privacidad, justicia, honestidad, responsabilidad y transparencia.",
+      "Un dilema ético aparece cuando dos principios válidos chocan (por ejemplo, privacidad frente a seguridad de una persona).",
+      "Los códigos de ética profesional (ACM, ACM/IEEE-CS) convierten los principios en compromisos concretos."
+    ],
+    "palabrasClave": [
+      "principios",
+      "dilema ético",
+      "valores",
+      "no maleficencia",
+      "autonomía",
+      "transparencia"
+    ]
+  },
+  {
+    "id": "U1_M16",
+    "unidad": 1,
+    "categoria": "Concepto",
+    "titulo": "Elementos éticos fundamentales en las TIC",
+    "fuente": "Temario E-ELTI-3 (DGUTyP, 2024), Unidad I",
+    "resumen": "El temario de la asignatura identifica cinco elementos éticos que toda solución tecnológica debe considerar desde su diseño.",
+    "puntosClave": [
+      "Privacidad: tratar solo los datos necesarios, con consentimiento e información clara.",
+      "Seguridad: proteger sistemas y datos contra accesos, pérdidas o alteraciones.",
+      "Responsabilidad: responder por las consecuencias del software que se construye, opera o aprueba.",
+      "Propiedad intelectual: respetar la autoría y las licencias de obras, código y marcas ajenas.",
+      "Acceso equitativo: que la tecnología no excluya a personas por edad, discapacidad, condición social, idioma o el dispositivo que pueden pagar."
+    ],
+    "palabrasClave": [
+      "privacidad",
+      "seguridad",
+      "responsabilidad",
+      "propiedad intelectual",
+      "acceso equitativo",
+      "brecha digital",
+      "inclusión"
+    ]
+  },
+  {
+    "id": "U1_M17",
+    "unidad": 1,
+    "categoria": "Concepto",
+    "titulo": "Proceso de toma de decisiones éticas",
+    "fuente": "Fundamentos de la ética en TIC",
+    "resumen": "Decidir éticamente no es improvisar: es un proceso que puede documentarse y explicarse ante cualquiera.",
+    "puntosClave": [
+      "1. Reconocer el problema ético y reunir los hechos (sin suposiciones).",
+      "2. Identificar a todas las personas afectadas y sus intereses.",
+      "3. Revisar el marco normativo (leyes, políticas internas, códigos profesionales).",
+      "4. Plantear alternativas y evaluarlas con varios modelos (consecuencias, deberes, derechos, virtud).",
+      "5. Decidir, documentar el porqué y actuar.",
+      "6. Revisar los resultados y aprender de ellos."
+    ],
+    "palabrasClave": [
+      "toma de decisiones",
+      "proceso",
+      "pasos",
+      "partes interesadas",
+      "alternativas",
+      "documentar"
+    ]
+  },
+  {
+    "id": "U1_M18",
+    "unidad": 1,
+    "categoria": "Ética aplicada",
+    "titulo": "Ética para empleados y usuarios de las TI",
+    "fuente": "ACM Code 1.6 y 2.8 · LFPDPPP Art. 20",
+    "resumen": "Quien tiene acceso privilegiado a sistemas y datos tiene también un deber reforzado de usarlo solo para lo que su trabajo requiere.",
+    "puntosClave": [
+      "Mínimo privilegio: cada persona accede solo a lo necesario para su función.",
+      "ACM 2.8: acceder a recursos de cómputo y comunicación solo cuando se está autorizado o lo exige el bien público.",
+      "LFPDPPP Art. 20: quienes intervienen en el tratamiento de datos guardan confidencialidad, incluso después de terminar la relación.",
+      "Uso aceptable: los recursos de la empresa no se usan para fines personales indebidos, curiosidad o venganza.",
+      "Las normas internas (política de uso aceptable, reglamento de TI) concretan estos principios y sus consecuencias."
+    ],
+    "palabrasClave": [
+      "empleados",
+      "usuarios",
+      "uso aceptable",
+      "mínimo privilegio",
+      "confidencialidad",
+      "acceso indebido",
+      "reglamento"
+    ],
+    "fuentesOficiales": [
+      {
+        "nombre": "ACM Code of Ethics and Professional Conduct",
+        "url": "https://www.acm.org/code-of-ethics"
+      },
+      {
+        "nombre": "LFPDPPP 2025 (Cámara de Diputados, texto vigente)",
+        "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFPDPPP.pdf"
+      }
+    ]
+  },
+  {
+    "id": "U1_M19",
+    "unidad": 1,
+    "categoria": "Práctica de cumplimiento",
+    "titulo": "Cumplimiento normativo: políticas, procedimientos y código de conducta",
+    "fuente": "NOM-035-STPS-2018 num. 5.1 y 8.1 b · LFT Arts. 47 y 132 fr. XXXI · LFPDPPP Art. 37",
+    "resumen": "Una política dice qué se espera y por qué; un procedimiento dice cómo se hace, quién lo hace y cuándo. Un código de conducta reúne ambos para orientar a todas las personas de la organización.",
+    "puntosClave": [
+      "Contenido recomendado de un código de conducta de TI: introducción, principios éticos, conductas esperadas y prohibidas, procedimiento de denuncia confidencial, medidas disciplinarias proporcionales, comunicación y capacitación, y revisión periódica.",
+      "NOM-035, num. 5.1 y 8.1 b: política escrita de prevención y mecanismos seguros y confidenciales de queja.",
+      "LFT Art. 47: las sanciones laborales deben basarse en causas previstas en la ley; la política no puede crear castigos arbitrarios.",
+      "LFPDPPP Art. 37: las empresas pueden adoptar esquemas de autorregulación vinculante con medidas para evaluar su eficacia.",
+      "Una política copiada que nadie conoce ni aplica no es cumplimiento: es simulación."
+    ],
+    "palabrasClave": [
+      "cumplimiento normativo",
+      "compliance",
+      "políticas",
+      "procedimientos",
+      "código de conducta",
+      "reglamento",
+      "denuncia"
+    ],
+    "fuentesOficiales": [
+      {
+        "nombre": "NOM-035-STPS-2018 (Diario Oficial de la Federación)",
+        "url": "https://dof.gob.mx/nota_detalle.php?codigo=5541828&fecha=23/10/2018"
+      },
+      {
+        "nombre": "Ley Federal del Trabajo (Cámara de Diputados, texto vigente)",
+        "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFT.pdf"
+      },
+      {
+        "nombre": "LFPDPPP 2025 (Cámara de Diputados, texto vigente)",
+        "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFPDPPP.pdf"
+      }
+    ]
+  },
+  {
+    "id": "U2_M14",
+    "unidad": 2,
+    "categoria": "Constitución",
+    "titulo": "Jurisprudencia y criterios de la Suprema Corte",
+    "fuente": "CPEUM Art. 94",
+    "resumen": "La jurisprudencia es la interpretación obligatoria de la Constitución y de las leyes que establecen los tribunales del Poder Judicial de la Federación. El Art. 94 constitucional dispone que la ley fijará los términos en que esa jurisprudencia es obligatoria.",
+    "puntosClave": [
+      "Se forma por reiteración (tribunales colegiados) o por precedentes de la Suprema Corte.",
+      "Sirve para entender cómo se aplican en la práctica derechos como la información, la libertad de expresión, la petición o la protección de datos.",
+      "Ejemplo reciente en TI: en el Amparo Directo 6/2025, la SCJN sostuvo que las obras generadas de forma autónoma por IA no son registrables como obras (Unidad IV).",
+      "Antes de citar un criterio, verifica en el Semanario Judicial de la Federación si es jurisprudencia obligatoria o una tesis aislada."
+    ],
+    "palabrasClave": [
+      "jurisprudencia",
+      "SCJN",
+      "Suprema Corte",
+      "tesis",
+      "precedentes",
+      "artículo 94",
+      "interpretación"
+    ],
+    "fuentesOficiales": [
+      {
+        "nombre": "CPEUM (Cámara de Diputados, texto vigente)",
+        "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf"
+      }
+    ]
+  },
+  {
+    "id": "U2_M15",
+    "unidad": 2,
+    "categoria": "Constitución y leyes",
+    "titulo": "Comunicaciones privadas y monitoreo en el trabajo",
+    "fuente": "CPEUM Art. 16 · CPF Art. 177 · LFPDPPP Art. 5",
+    "resumen": "Las comunicaciones privadas son inviolables (Art. 16 constitucional). Intervenirlas sin mandato de autoridad judicial competente es delito.",
+    "puntosClave": [
+      "CPF Art. 177: de 6 a 12 años de prisión y de 300 a 600 días multa a quien intervenga comunicaciones privadas sin mandato judicial.",
+      "El patrón puede supervisar herramientas corporativas (correo y equipos de la empresa) si lo informa previamente en una política clara y lo hace de forma proporcional.",
+      "Leer mensajes personales o instalar programas espía en teléfonos personales de los empleados no es supervisión: es intervención de comunicaciones.",
+      "Un consentimiento obtenido bajo amenaza de despido no es libre."
+    ],
+    "palabrasClave": [
+      "comunicaciones privadas",
+      "monitoreo",
+      "spyware",
+      "WhatsApp",
+      "empleados",
+      "BYOD",
+      "artículo 177",
+      "vigilancia"
+    ],
+    "fuentesOficiales": [
+      {
+        "nombre": "CPEUM (Cámara de Diputados, texto vigente)",
+        "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf"
+      },
+      {
+        "nombre": "Código Penal Federal (Cámara de Diputados, texto vigente)",
+        "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CPF.pdf"
+      },
+      {
+        "nombre": "LFPDPPP 2025 (Cámara de Diputados, texto vigente)",
+        "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFPDPPP.pdf"
+      }
+    ]
+  },
+  {
+    "id": "U2_M16",
+    "unidad": 2,
+    "categoria": "Ley",
+    "titulo": "Revisión y auditoría de programas de terceros",
+    "fuente": "LFDA Arts. 105, 106 fr. IV y 114 Quáter · LFPPI Art. 164",
+    "resumen": "Auditar software ajeno exige respetar los derechos de su titular. La decompilación y la ingeniería inversa de un programa son derechos patrimoniales del titular (LFDA, Art. 106, fr. IV), con excepciones limitadas.",
+    "puntosClave": [
+      "LFDA Art. 114 Quáter, fr. I: no se considera violación la ingeniería inversa no infractora, de buena fe, sobre una copia obtenida legalmente, en los términos de la ley.",
+      "LFDA Art. 114 Quáter, fr. III: tampoco las actividades de buena fe, con autorización del propietario de la computadora, sistema o red, con el único propósito de probar, investigar o corregir su seguridad.",
+      "LFPPI Art. 164, fr. II: estudiar o desmontar un producto que se posee lícitamente no es apropiación indebida de un secreto industrial, si no hay obligación de confidencialidad.",
+      "Alternativas sin decompilar: analizar el tráfico de la propia red, ejercer cláusulas contractuales de auditoría, pedir informes de seguridad y divulgar vulnerabilidades de forma coordinada.",
+      "Publicar el código ajeno obtenido por decompilación infringe el derecho de reproducción y distribución (LFDA Art. 106)."
+    ],
+    "palabrasClave": [
+      "revisión de código",
+      "auditoría",
+      "decompilar",
+      "ingeniería inversa",
+      "proveedor",
+      "licencia",
+      "divulgación coordinada",
+      "seguridad"
+    ],
+    "fuentesOficiales": [
+      {
+        "nombre": "Ley Federal del Derecho de Autor (Cámara de Diputados, texto vigente)",
+        "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFDA.pdf"
+      },
+      {
+        "nombre": "Ley Federal de Protección a la Propiedad Industrial (Cámara de Diputados, texto vigente)",
+        "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFPPI.pdf"
+      }
+    ]
+  },
+  {
+    "id": "U3_M11",
+    "unidad": 3,
+    "categoria": "Práctica de cumplimiento",
+    "titulo": "Programa de cumplimiento normativo (compliance)",
+    "fuente": "LFPDPPP Arts. 18 y 37 · NOM-035 num. 8.1 b · ACM Code 2.3",
+    "resumen": "Un programa de cumplimiento es el sistema permanente con el que una organización identifica las normas que le aplican, evalúa sus riesgos y demuestra que actúa para prevenir infracciones y delitos.",
+    "puntosClave": [
+      "Elementos: inventario normativo, análisis de riesgos, responsable con autoridad e independencia, políticas y procedimientos, capacitación, canal de denuncia, monitoreo y auditoría, respuesta a incidentes y mejora continua.",
+      "LFPDPPP Art. 18 (medidas de seguridad) y Art. 37 (esquemas de autorregulación vinculante con mecanismos para medir su eficacia).",
+      "NOM-035, num. 8.1 b: mecanismos seguros y confidenciales para recibir quejas.",
+      "Un certificado comprado o un documento que nadie aplica no protege a la empresa: lo que cuenta es la evidencia de que los controles funcionan."
+    ],
+    "palabrasClave": [
+      "compliance",
+      "programa de cumplimiento",
+      "riesgos",
+      "auditoría",
+      "autorregulación",
+      "oficial de cumplimiento",
+      "controles"
+    ],
+    "fuentesOficiales": [
+      {
+        "nombre": "LFPDPPP 2025 (Cámara de Diputados, texto vigente)",
+        "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFPDPPP.pdf"
+      },
+      {
+        "nombre": "NOM-035-STPS-2018 (Diario Oficial de la Federación)",
+        "url": "https://dof.gob.mx/nota_detalle.php?codigo=5541828&fecha=23/10/2018"
+      }
+    ]
+  },
+  {
+    "id": "U3_M12",
+    "unidad": 3,
+    "categoria": "Tratado y ley",
+    "titulo": "Movimientos transfronterizos de residuos (Convenio de Basilea)",
+    "fuente": "LGPGIR Arts. 85, 87 y 88 · Convenio de Basilea",
+    "resumen": "Exportar residuos peligrosos (por ejemplo, baterías y algunos componentes electrónicos) está sujeto a la ley mexicana y a los tratados internacionales. México es Parte del Convenio de Basilea: lo ratificó el 22/02/1991 y está en vigor desde el 05/05/1992.",
+    "puntosClave": [
+      "LGPGIR Art. 85: la importación y exportación de residuos peligrosos se sujeta a la ley y a los tratados de los que México es parte.",
+      "LGPGIR Art. 87: la exportación solo se autoriza con el consentimiento previo del país importador y, en su caso, de los países de tránsito.",
+      "LGPGIR Art. 88: la Secretaría lleva un sistema de rastreo de los movimientos transfronterizos.",
+      "Declarar residuos como «equipo usado» para evitar estos controles traslada la contaminación a otros países y viola la ley."
+    ],
+    "palabrasClave": [
+      "Basilea",
+      "exportación",
+      "residuos peligrosos",
+      "e-waste",
+      "tratado",
+      "consentimiento previo",
+      "transfronterizo"
+    ],
+    "fuentesOficiales": [
+      {
+        "nombre": "LGPGIR (Cámara de Diputados, texto vigente)",
+        "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LGPGIR.pdf"
+      },
+      {
+        "nombre": "Convenio de Basilea: Partes y signatarios (basel.int)",
+        "url": "https://www.basel.int/Countries/StatusofRatifications/PartiesSignatories/tabid/4499/Default.aspx"
+      }
+    ]
+  },
+  {
+    "id": "U3_M13",
+    "unidad": 3,
+    "categoria": "Código penal",
+    "titulo": "Fraude con ultrasuplantación (deepfake) e ingeniería social",
+    "fuente": "CPF Art. 386 · AI Act art. 50.4",
+    "resumen": "La IA generativa permite imitar la voz o la imagen de una persona para engañar a otras y obtener transferencias o datos. Jurídicamente, si hay engaño y lucro indebido, la conducta encuadra en el fraude (CPF Art. 386), con penas de hasta 12 años según el monto.",
+    "puntosClave": [
+      "La técnica es nueva; el tipo penal no: el engaño mediante IA es el medio comisivo del fraude.",
+      "Prevención: verificación por un segundo canal (devolver la llamada a un número conocido), doble autorización para transferencias, palabras clave internas y capacitación.",
+      "Ante el fraude: pedir al banco que congele la operación, preservar grabaciones y registros, y denunciar de inmediato.",
+      "AI Act art. 50.4: quien despliega sistemas que generan ultrasuplantaciones debe revelar que el contenido es artificial (obligación para usos legítimos en la UE)."
+    ],
+    "palabrasClave": [
+      "deepfake",
+      "ultrasuplantación",
+      "fraude del CEO",
+      "ingeniería social",
+      "vishing",
+      "transferencia",
+      "voz clonada"
+    ],
+    "fuentesOficiales": [
+      {
+        "nombre": "Código Penal Federal (Cámara de Diputados, texto vigente)",
+        "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CPF.pdf"
+      }
+    ]
+  },
+  {
+    "id": "U4_M11",
+    "unidad": 4,
+    "categoria": "Licenciamiento",
+    "titulo": "Elegir una licencia para publicar código: el caso de Apache 2.0",
+    "fuente": "Apache License 2.0, secciones 3 y 4",
+    "resumen": "Antes de liberar un proyecto hay que decidir qué se quiere permitir. Si se busca que cualquiera lo use, incluso en software propietario, y dar certeza sobre patentes, Apache 2.0 es una opción permisiva con licencia explícita de patentes.",
+    "puntosClave": [
+      "Sección 3: cada contribuyente otorga una licencia de patentes perpetua, mundial y gratuita sobre su contribución; termina para quien demande alegando que la obra infringe una patente.",
+      "Sección 4: quien redistribuye debe entregar copia de la licencia, marcar los archivos modificados y conservar los avisos y el archivo NOTICE.",
+      "MIT también es permisiva, pero no incluye una licencia expresa de patentes. GPLv3 es copyleft: exige que las obras derivadas distribuidas se liberen igual.",
+      "Publicar código sin ninguna licencia no lo vuelve libre: sin autorización, el titular conserva sus derechos exclusivos (LFDA Arts. 24 y 27)."
+    ],
+    "palabrasClave": [
+      "Apache",
+      "licencia de patentes",
+      "publicar código",
+      "open source",
+      "elegir licencia",
+      "NOTICE",
+      "permisiva"
+    ],
+    "fuentesOficiales": [
+      {
+        "nombre": "Apache License 2.0 (Apache Software Foundation)",
+        "url": "https://www.apache.org/licenses/LICENSE-2.0"
+      },
+      {
+        "nombre": "Ley Federal del Derecho de Autor (Cámara de Diputados, texto vigente)",
+        "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFDA.pdf"
+      }
+    ]
+  },
+  {
+    "id": "U4_M12",
+    "unidad": 4,
+    "categoria": "Ética aplicada",
+    "titulo": "Redes sociales en la empresa: política para el personal",
+    "fuente": "CPEUM Arts. 6 y 7 · LFT Art. 47 fr. IV y IX · LFPDPPP Art. 20",
+    "resumen": "Una política de redes sociales protege la información de la empresa y de sus clientes sin anular la libertad de expresión de las personas trabajadoras.",
+    "puntosClave": [
+      "Revelar asuntos reservados con perjuicio de la empresa es causa de rescisión (LFT Art. 47, fr. IX), y los datos de clientes son confidenciales (LFPDPPP Art. 20).",
+      "Opinar o criticar en una cuenta personal está protegido por los Arts. 6 y 7 constitucionales; solo actos graves fuera del servicio (como injurias que hagan imposible la relación) pueden ser causa de rescisión (LFT Art. 47, fr. IV).",
+      "Contenido recomendado: qué información es confidencial, cómo identificarse al hablar de la empresa, respeto a clientes y colegas, a quién consultar, consecuencias y capacitación.",
+      "Prohibir toda mención de la empresa es desproporcionado; lo que se regula es la conducta, no la opinión."
+    ],
+    "palabrasClave": [
+      "redes sociales",
+      "política",
+      "empleados",
+      "libertad de expresión",
+      "confidencialidad",
+      "rescisión",
+      "publicaciones"
+    ],
+    "fuentesOficiales": [
+      {
+        "nombre": "CPEUM (Cámara de Diputados, texto vigente)",
+        "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf"
+      },
+      {
+        "nombre": "Ley Federal del Trabajo (Cámara de Diputados, texto vigente)",
+        "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFT.pdf"
+      },
+      {
+        "nombre": "LFPDPPP 2025 (Cámara de Diputados, texto vigente)",
+        "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFPDPPP.pdf"
+      }
+    ]
+  },
+  {
+    "id": "U4_M13",
+    "unidad": 4,
+    "categoria": "Regulación de IA",
+    "titulo": "Uso de IA generativa en el trabajo: privacidad y confidencialidad",
+    "fuente": "LFPDPPP Arts. 18, 20 y 35 · LFPPI Art. 163",
+    "resumen": "Pegar datos de clientes, código o documentos internos en un servicio de IA público puede ser una transferencia de datos personales y una pérdida de confidencialidad.",
+    "puntosClave": [
+      "LFPDPPP Art. 35: transferir datos a terceros exige comunicarles el aviso de privacidad y las finalidades, y que el aviso indique si la persona titular acepta la transferencia.",
+      "LFPDPPP Arts. 18 y 20: medidas de seguridad y deber de confidencialidad de quienes tratan datos.",
+      "LFPPI Art. 163: un secreto industrial solo existe si se adoptan medios suficientes para preservar su confidencialidad; compartirlo con un servicio que lo reutiliza puede comprometerlo.",
+      "Política de uso de IA: herramientas aprobadas con contrato que impida reutilizar los datos, datos disociados, revisión humana de resultados y capacitación."
+    ],
+    "palabrasClave": [
+      "IA generativa",
+      "shadow AI",
+      "chatbot",
+      "datos personales",
+      "confidencialidad",
+      "política de IA",
+      "transferencia"
+    ],
+    "fuentesOficiales": [
+      {
+        "nombre": "LFPDPPP 2025 (Cámara de Diputados, texto vigente)",
+        "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFPDPPP.pdf"
+      },
+      {
+        "nombre": "Ley Federal de Protección a la Propiedad Industrial (Cámara de Diputados, texto vigente)",
+        "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFPPI.pdf"
       }
     ]
   }

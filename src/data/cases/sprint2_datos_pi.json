@@ -8,7 +8,11 @@
     "contexto": "NovaPay Lite es un monedero para pagar en tienditas de barrio. El registro pide nombre, celular, correo y CURP; al usarlo, la app trata el saldo y los movimientos de la cuenta.\n\nSofía preparó un aviso simplificado en la pantalla de registro con enlace al aviso integral. Rodrigo quiere quitarlo porque «espanta usuarios»; Iván, del equipo legal interno, opina lo contrario: exige firma electrónica para todos los datos, incluido el correo.\n\nRevisa el formulario y el aviso integral antes de decidir.",
     "pregunta": "¿El aviso de privacidad de NovaPay Lite puede publicarse?",
     "pistaNormativa": "Compara el aviso con el contenido mínimo de los Arts. 15 y 16 de la LFPDPPP. Recuerda qué tipo de consentimiento exige el Art. 7 para datos generales, cuál para datos financieros y cuál el Art. 8 para datos sensibles.",
-    "manualRefs": ["U2_M05", "U2_M06", "U2_M04"],
+    "manualRefs": [
+      "U2_M05",
+      "U2_M06",
+      "U2_M04"
+    ],
     "evidencias": [
       {
         "tipo": "formulario",
@@ -16,17 +20,38 @@
         "membrete": "NovaPay Lite · Registro",
         "titulo": "Crea tu cuenta",
         "campos": [
-          { "etiqueta": "Nombre completo", "valor": "________________" },
-          { "etiqueta": "Celular", "valor": "________________" },
-          { "etiqueta": "Correo electrónico", "valor": "________________" },
-          { "etiqueta": "CURP", "valor": "________________", "nota": "Necesaria para verificar identidad (obligación de identificación del cliente)." },
+          {
+            "etiqueta": "Nombre completo",
+            "valor": "________________"
+          },
+          {
+            "etiqueta": "Celular",
+            "valor": "________________"
+          },
+          {
+            "etiqueta": "Correo electrónico",
+            "valor": "________________"
+          },
+          {
+            "etiqueta": "CURP",
+            "valor": "________________",
+            "nota": "Necesaria para verificar identidad (obligación de identificación del cliente)."
+          },
           {
             "etiqueta": "Aviso de privacidad simplificado",
             "valor": "NovaByte Solutions, S.A. de C.V. (Av. Morelos 214, Cuernavaca) tratará tus datos de identificación y contacto, y los financieros de tu cuenta, para abrir y operar tu monedero (finalidades necesarias). Con tu permiso, también para enviarte promociones (finalidad voluntaria). Puedes negarte a las promociones en Ajustes > Privacidad. Consulta el aviso integral en novapay.mx/privacidad.",
             "ancho": "completo"
           },
-          { "etiqueta": "Casilla 1 (sin marcar por defecto)", "valor": "[ ] Acepto expresamente el tratamiento de mis datos financieros para operar mi cuenta.", "ancho": "completo" },
-          { "etiqueta": "Casilla 2 (sin marcar por defecto, opcional)", "valor": "[ ] Quiero recibir promociones.", "ancho": "completo" }
+          {
+            "etiqueta": "Casilla 1 (sin marcar por defecto)",
+            "valor": "[ ] Acepto expresamente el tratamiento de mis datos financieros para operar mi cuenta.",
+            "ancho": "completo"
+          },
+          {
+            "etiqueta": "Casilla 2 (sin marcar por defecto, opcional)",
+            "valor": "[ ] Quiero recibir promociones.",
+            "ancho": "completo"
+          }
         ]
       },
       {
@@ -34,14 +59,35 @@
         "nombreArchivo": "aviso_integral.pdf",
         "membrete": "NovaByte Solutions · Privacidad",
         "titulo": "Aviso de privacidad integral — NovaPay Lite",
-        "metadatos": { "Versión": "1.0", "Fecha": "18/11/2026" },
+        "metadatos": {
+          "Versión": "1.0",
+          "Fecha": "18/11/2026"
+        },
         "secciones": [
-          { "titulo": "I. Responsable", "texto": "NovaByte Solutions, S.A. de C.V., Av. Morelos 214, Cuernavaca, Morelos. Contacto: privacidad@novabyte.mx." },
-          { "titulo": "II. Datos que tratamos", "texto": "Identificación y contacto (nombre, celular, correo, CURP) y financieros (saldo, movimientos). No tratamos datos personales sensibles." },
-          { "titulo": "III. Finalidades", "texto": "Necesarias: abrir y operar tu cuenta, prevenir fraudes y cumplir obligaciones legales. Voluntarias (requieren tu consentimiento): promociones y encuestas." },
-          { "titulo": "IV. Cómo limitar el uso", "texto": "Desactiva las promociones en Ajustes > Privacidad o escríbenos. Te inscribimos en nuestra lista de exclusión." },
-          { "titulo": "V. Derechos ARCO", "texto": "Envía tu solicitud a privacidad@novabyte.mx o desde la app. Respondemos en máximo 20 días hábiles; el trámite es gratuito." },
-          { "titulo": "VI. Cambios al aviso", "texto": "Te avisaremos en la app y por correo antes de que un cambio entre en vigor." }
+          {
+            "titulo": "I. Responsable",
+            "texto": "NovaByte Solutions, S.A. de C.V., Av. Morelos 214, Cuernavaca, Morelos. Contacto: privacidad@novabyte.mx."
+          },
+          {
+            "titulo": "II. Datos que tratamos",
+            "texto": "Identificación y contacto (nombre, celular, correo, CURP) y financieros (saldo, movimientos). No tratamos datos personales sensibles."
+          },
+          {
+            "titulo": "III. Finalidades",
+            "texto": "Necesarias: abrir y operar tu cuenta, prevenir fraudes y cumplir obligaciones legales. Voluntarias (requieren tu consentimiento): promociones y encuestas."
+          },
+          {
+            "titulo": "IV. Cómo limitar el uso",
+            "texto": "Desactiva las promociones en Ajustes > Privacidad o escríbenos. Te inscribimos en nuestra lista de exclusión."
+          },
+          {
+            "titulo": "V. Derechos ARCO",
+            "texto": "Envía tu solicitud a privacidad@novabyte.mx o desde la app. Respondemos en máximo 20 días hábiles; el trámite es gratuito."
+          },
+          {
+            "titulo": "VI. Cambios al aviso",
+            "texto": "Te avisaremos en la app y por correo antes de que un cambio entre en vigor."
+          }
         ]
       }
     ],
@@ -52,10 +98,19 @@
         "etiqueta": "Aprobar: el aviso cumple el contenido mínimo, pide consentimiento expreso para datos financieros y separa la finalidad voluntaria con una casilla sin marcar.",
         "marcoEtico": "deontologia",
         "modeloEtico": "Deontología: cumplir con exactitud el deber de informar, sin quedarse corto ni exagerar.",
-        "impacto": { "budget": 10, "ethics": 10, "legal": 15 },
+        "impacto": {
+          "budget": 10,
+          "ethics": 10,
+          "legal": 15
+        },
         "esCorrecta": true,
         "retroalimentacion": "Dictamen correcto. El aviso integral cubre las seis fracciones del Art. 15 de la LFPDPPP (responsable, datos, finalidades necesarias y voluntarias, medios para limitar el uso, derechos ARCO y cambios). El simplificado contiene las fracciones I a IV e indica dónde consultar el integral, como permite el Art. 16 para la captación electrónica. Los datos de contacto admiten consentimiento tácito (Art. 7), los financieros reciben consentimiento expreso con casilla sin marcar, y no hay datos sensibles que exijan consentimiento por escrito.",
-        "fundamento": ["LFPDPPP Art. 7", "LFPDPPP Art. 15", "LFPDPPP Art. 16", "CPEUM Art. 16"]
+        "fundamento": [
+          "LFPDPPP Art. 7",
+          "LFPDPPP Art. 15",
+          "LFPDPPP Art. 16",
+          "CPEUM Art. 16"
+        ]
       },
       {
         "id": "opt_2",
@@ -63,10 +118,18 @@
         "etiqueta": "Bloquear hasta recabar consentimiento expreso y por escrito, con firma electrónica, para todos los datos, incluido el correo.",
         "marcoEtico": "deontologia",
         "modeloEtico": "Rigorismo mal informado: aplica a todos los datos una regla pensada solo para los sensibles.",
-        "impacto": { "budget": -15, "ethics": -5, "legal": 0 },
+        "impacto": {
+          "budget": -15,
+          "ethics": -5,
+          "legal": 0
+        },
         "esCorrecta": false,
         "retroalimentacion": "Exigir firma electrónica para todo confunde regímenes. El consentimiento expreso y por escrito es obligatorio solo para datos sensibles (Art. 8); para datos de identificación y contacto, la regla general es el consentimiento tácito (Art. 7) y para los financieros basta el expreso. Pedir más de lo necesario no hace al aviso más legal: agrega fricción y contradice el principio de proporcionalidad.",
-        "fundamento": ["LFPDPPP Art. 7", "LFPDPPP Art. 8", "LFPDPPP Art. 5"]
+        "fundamento": [
+          "LFPDPPP Art. 7",
+          "LFPDPPP Art. 8",
+          "LFPDPPP Art. 5"
+        ]
       },
       {
         "id": "opt_3",
@@ -74,10 +137,18 @@
         "etiqueta": "Aprobar, pero sustituir ambos avisos por una sola línea: «Al registrarte aceptas nuestra política de privacidad».",
         "marcoEtico": "egoismo",
         "modeloEtico": "Egoísmo ético: reducir la información para que nadie lea ni se oponga.",
-        "impacto": { "budget": 5, "ethics": -20, "legal": -25 },
+        "impacto": {
+          "budget": 5,
+          "ethics": -20,
+          "legal": -25
+        },
         "esCorrecta": false,
         "retroalimentacion": "Una línea genérica no cumple el contenido mínimo de los Arts. 15 y 16: no identifica al responsable, los datos ni las finalidades, ni cómo ejercer los derechos ARCO. Tampoco separa la finalidad voluntaria de promociones. El principio de información (Art. 5) exige que la persona sepa qué se hará con sus datos antes de entregarlos.",
-        "fundamento": ["LFPDPPP Art. 5", "LFPDPPP Art. 15", "LFPDPPP Art. 16"]
+        "fundamento": [
+          "LFPDPPP Art. 5",
+          "LFPDPPP Art. 15",
+          "LFPDPPP Art. 16"
+        ]
       }
     ],
     "aprendizaje": "Cumplir no es exagerar. El tipo de consentimiento depende del dato: tácito como regla general, expreso para datos financieros, y expreso y por escrito para datos sensibles. Un buen aviso de privacidad es completo y claro, y separa las finalidades necesarias de las voluntarias para que la persona pueda decir que no a lo opcional."
@@ -91,7 +162,12 @@
     "contexto": "NovaByte desarrolla SaludYa, una app de citas médicas. El equipo quiere lanzar hoy una actualización: para agilizar el registro, se pide el historial clínico y la huella digital, y una casilla premarcada autoriza compartir ambos con la aseguradora Prisma, socia comercial que paga por cada perfil.\n\nEl contrato con Prisma vence el viernes si no hay datos.",
     "pregunta": "¿Autorizas el pase a producción del nuevo registro de SaludYa?",
     "pistaNormativa": "Verifica qué datos son sensibles (Art. 2, fr. VI) y qué consentimiento exige el Art. 8 de la LFPDPPP. Una casilla premarcada, ¿es una manifestación expresa de voluntad?",
-    "manualRefs": ["U2_M05", "U2_M08", "U2_M06", "U2_M04"],
+    "manualRefs": [
+      "U2_M05",
+      "U2_M08",
+      "U2_M06",
+      "U2_M04"
+    ],
     "evidencias": [
       {
         "tipo": "codigo",
@@ -105,10 +181,24 @@
         "membrete": "SaludYa · Registro rápido",
         "titulo": "Completa tu perfil médico",
         "campos": [
-          { "etiqueta": "Historial clínico", "valor": "Diagnósticos, alergias, medicamentos, antecedentes", "ancho": "completo" },
-          { "etiqueta": "Huella digital", "valor": "Lectura biométrica obligatoria para continuar" },
-          { "etiqueta": "Casilla (marcada por defecto)", "valor": "[x] Acepto compartir mi información con socios para mejores ofertas de seguros." },
-          { "etiqueta": "Aviso de privacidad", "valor": "Enlace a «Términos y condiciones» (12 páginas). No menciona datos sensibles ni a la aseguradora.", "ancho": "completo" }
+          {
+            "etiqueta": "Historial clínico",
+            "valor": "Diagnósticos, alergias, medicamentos, antecedentes",
+            "ancho": "completo"
+          },
+          {
+            "etiqueta": "Huella digital",
+            "valor": "Lectura biométrica obligatoria para continuar"
+          },
+          {
+            "etiqueta": "Casilla (marcada por defecto)",
+            "valor": "[x] Acepto compartir mi información con socios para mejores ofertas de seguros."
+          },
+          {
+            "etiqueta": "Aviso de privacidad",
+            "valor": "Enlace a «Términos y condiciones» (12 páginas). No menciona datos sensibles ni a la aseguradora.",
+            "ancho": "completo"
+          }
         ]
       },
       {
@@ -127,10 +217,20 @@
         "etiqueta": "Aprobar el despliegue inmediato para no perder el contrato con la aseguradora.",
         "marcoEtico": "utilitarismo",
         "modeloEtico": "Utilitarismo comercial de corto plazo: el ingreso por perfil pesa más que los derechos de los pacientes.",
-        "impacto": { "budget": 10, "ethics": -30, "legal": -45 },
+        "impacto": {
+          "budget": 10,
+          "ethics": -30,
+          "legal": -45
+        },
         "esCorrecta": false,
         "retroalimentacion": "Infracción grave. El historial clínico es un dato sensible por definición (estado de salud, Art. 2, fr. VI) y la huella digital, como dato biométrico, implica un riesgo grave si se usa indebidamente. El Art. 8 de la LFPDPPP exige consentimiento expreso y por escrito, con firma autógrafa o electrónica; una casilla premarcada no es consentimiento expreso. Transferir esos datos sin él es infracción (Art. 58, fr. XIII), con multa de 200 a 320,000 UMA que puede duplicarse por tratarse de datos sensibles (Art. 59). Además, la aseguradora planea usarlos para rechazar personas por su salud: un uso discriminatorio.",
-        "fundamento": ["LFPDPPP Art. 2, fr. VI", "LFPDPPP Art. 8", "LFPDPPP Art. 58, fr. XIII", "LFPDPPP Art. 59", "CPEUM Art. 16"]
+        "fundamento": [
+          "LFPDPPP Art. 2, fr. VI",
+          "LFPDPPP Art. 8",
+          "LFPDPPP Art. 58, fr. XIII",
+          "LFPDPPP Art. 59",
+          "CPEUM Art. 16"
+        ]
       },
       {
         "id": "opt_2",
@@ -138,10 +238,19 @@
         "etiqueta": "Aprobar, pero mover la autorización de transferencia a la página 11 de los Términos y Condiciones para que no se note.",
         "marcoEtico": "egoismo",
         "modeloEtico": "Egoísmo ético con engaño: obtener el dato ocultando para qué se usará.",
-        "impacto": { "budget": 5, "ethics": -35, "legal": -40 },
+        "impacto": {
+          "budget": 5,
+          "ethics": -35,
+          "legal": -40
+        },
         "esCorrecta": false,
         "retroalimentacion": "Ocultar la transferencia viola los principios de lealtad e información (Art. 5) y la prohibición de obtener datos por medios engañosos o fraudulentos (Art. 6). Si además se busca un lucro indebido, puede configurarse el delito del Art. 63 (de 6 meses a 5 años de prisión), cuyas penas se duplican con datos sensibles (Art. 64). Esconder una cláusula no produce un consentimiento válido: lo invalida.",
-        "fundamento": ["LFPDPPP Art. 5", "LFPDPPP Art. 6", "LFPDPPP Art. 63", "LFPDPPP Art. 64"]
+        "fundamento": [
+          "LFPDPPP Art. 5",
+          "LFPDPPP Art. 6",
+          "LFPDPPP Art. 63",
+          "LFPDPPP Art. 64"
+        ]
       },
       {
         "id": "opt_3",
@@ -149,10 +258,18 @@
         "etiqueta": "Bloquear el pase a producción: exigir consentimiento expreso y por escrito (firma electrónica) para datos clínicos y biométricos, quitar la casilla premarcada, presentar la transferencia a la aseguradora como finalidad voluntaria separada y actualizar el aviso integral.",
         "marcoEtico": "deontologia",
         "modeloEtico": "Ética deontológica y cumplimiento normativo: el deber de proteger datos sensibles no se negocia.",
-        "impacto": { "budget": -10, "ethics": 20, "legal": 30 },
+        "impacto": {
+          "budget": -10,
+          "ethics": 20,
+          "legal": 30
+        },
         "esCorrecta": true,
         "retroalimentacion": "Dictamen correcto. Conforme al Art. 8 de la LFPDPPP, el tratamiento de datos sensibles exige consentimiento expreso y por escrito, con firma autógrafa, electrónica u otro mecanismo de autenticación. La transferencia a la aseguradora no es necesaria para agendar citas: debe ser una finalidad voluntaria, informada en el aviso integral que identifique los datos sensibles (Art. 15, fr. II y III), y la persona debe poder negarse sin perder el servicio. Si el negocio depende de esconderle algo al paciente, el negocio es el problema.",
-        "fundamento": ["LFPDPPP Art. 8", "LFPDPPP Art. 15, fr. II y III", "CPEUM Art. 16"]
+        "fundamento": [
+          "LFPDPPP Art. 8",
+          "LFPDPPP Art. 15, fr. II y III",
+          "CPEUM Art. 16"
+        ]
       }
     ],
     "aprendizaje": "Los datos sensibles (salud, información genética, origen étnico, creencias, preferencia sexual, y los biométricos por su riesgo) tienen el régimen más estricto: consentimiento expreso y por escrito, finalidades claras y nada de casillas premarcadas. Las multas pueden duplicarse y las penas de los delitos de la LFPDPPP también."
@@ -166,7 +283,11 @@
     "contexto": "Mariela Torres cerró su cuenta de NovaPay hace dos meses. Hoy pidió por correo: (1) una copia de todos sus datos, (2) cancelar sus datos y (3) que dejen de enviarle promociones, que siguen llegando.\n\nSoporte preparó una respuesta y pide tu visto bueno para enviarla. NovaPay, como empresa de pagos, debe conservar el registro de las transacciones durante el plazo que marcan las disposiciones financieras.",
     "pregunta": "¿Autorizas la respuesta de Soporte?",
     "pistaNormativa": "Revisa los plazos del Art. 31, la gratuidad del Art. 34 y cómo funciona la cancelación con bloqueo (Art. 24) de la LFPDPPP. ¿A quién pertenecen los datos de una base de datos?",
-    "manualRefs": ["U2_M07", "U2_M04", "U2_M05"],
+    "manualRefs": [
+      "U2_M07",
+      "U2_M04",
+      "U2_M05"
+    ],
     "evidencias": [
       {
         "tipo": "correo",
@@ -175,7 +296,9 @@
         "fecha": "Lun 16 nov 2026, 08:40",
         "asunto": "Ejercicio de derechos ARCO",
         "cuerpo": "Buenos días:\n\nCon fundamento en mis derechos ARCO solicito:\n1. Acceso: copia de todos los datos personales que conservan sobre mí.\n2. Cancelación: que eliminen mis datos.\n3. Oposición: que dejen de enviarme promociones.\n\nAdjunto identificación oficial. Pueden responderme a este correo.\n\nMariela Torres",
-        "adjuntos": ["INE_mariela_torres.pdf"]
+        "adjuntos": [
+          "INE_mariela_torres.pdf"
+        ]
       },
       {
         "tipo": "documento",
@@ -183,10 +306,22 @@
         "membrete": "NovaByte · Soporte",
         "titulo": "Borrador de respuesta (pendiente de visto bueno)",
         "secciones": [
-          { "titulo": "Plazo", "texto": "Su solicitud será atendida en un plazo aproximado de 60 días naturales." },
-          { "titulo": "Costo", "texto": "El trámite tiene un costo administrativo de $350 MXN por cada derecho solicitado." },
-          { "titulo": "Cancelación", "texto": "Para cancelar sus datos deberá acudir personalmente a nuestras oficinas en Monterrey con identificación original." },
-          { "titulo": "Promociones", "texto": "Las promociones se envían de forma automática y no es posible suspenderlas mientras su correo esté en nuestra base." }
+          {
+            "titulo": "Plazo",
+            "texto": "Su solicitud será atendida en un plazo aproximado de 60 días naturales."
+          },
+          {
+            "titulo": "Costo",
+            "texto": "El trámite tiene un costo administrativo de $350 MXN por cada derecho solicitado."
+          },
+          {
+            "titulo": "Cancelación",
+            "texto": "Para cancelar sus datos deberá acudir personalmente a nuestras oficinas en Monterrey con identificación original."
+          },
+          {
+            "titulo": "Promociones",
+            "texto": "Las promociones se envían de forma automática y no es posible suspenderlas mientras su correo esté en nuestra base."
+          }
         ]
       },
       {
@@ -202,10 +337,19 @@
         "etiqueta": "Aprobar el borrador de Soporte tal como está.",
         "marcoEtico": "egoismo",
         "modeloEtico": "Egoísmo ético: poner obstáculos para desalentar el ejercicio de derechos.",
-        "impacto": { "budget": 5, "ethics": -25, "legal": -30 },
+        "impacto": {
+          "budget": 5,
+          "ethics": -25,
+          "legal": -30
+        },
         "esCorrecta": false,
         "retroalimentacion": "El borrador viola la ley en cada punto. El Art. 31 de la LFPDPPP fija un máximo de 20 días hábiles para responder y 15 más para hacer efectivo el derecho; el Art. 34 establece que el trámite es gratuito (solo se cobran copias o envío); exigir acudir a otra ciudad es una barrera injustificada cuando la solicitud llegó por un medio válido, y el derecho de oposición a las promociones debe atenderse. Los derechos ARCO son un derecho humano reconocido en el Art. 16 constitucional.",
-        "fundamento": ["LFPDPPP Art. 31", "LFPDPPP Art. 34", "LFPDPPP Art. 26", "CPEUM Art. 16"]
+        "fundamento": [
+          "LFPDPPP Art. 31",
+          "LFPDPPP Art. 34",
+          "LFPDPPP Art. 26",
+          "CPEUM Art. 16"
+        ]
       },
       {
         "id": "opt_2",
@@ -213,10 +357,19 @@
         "etiqueta": "Reemplazar la respuesta: verificar la identidad, responder en máximo 20 días hábiles sin costo, entregar copia de los datos, suspender de inmediato las promociones, bloquear y luego suprimir los datos que no deban conservarse y explicar cuáles se retienen por obligación legal.",
         "marcoEtico": "justicia",
         "modeloEtico": "Justicia y derechos: la persona titular decide sobre sus datos.",
-        "impacto": { "budget": -5, "ethics": 15, "legal": 20 },
+        "impacto": {
+          "budget": -5,
+          "ethics": 15,
+          "legal": 20
+        },
         "esCorrecta": true,
         "retroalimentacion": "Dictamen correcto. Atiendes los tres derechos dentro de los plazos del Art. 31 (20 días hábiles para responder y 15 para ejecutar) y sin costo (Art. 34). La oposición a las promociones procede de inmediato (Art. 26). La cancelación implica bloquear los datos y después suprimirlos (Art. 24), salvo los que deban conservarse por una obligación legal, como el registro de transacciones; informarlo con claridad es parte del principio de información.",
-        "fundamento": ["LFPDPPP Arts. 22, 24 y 26", "LFPDPPP Art. 31", "LFPDPPP Art. 34", "CPEUM Art. 16"]
+        "fundamento": [
+          "LFPDPPP Arts. 22, 24 y 26",
+          "LFPDPPP Art. 31",
+          "LFPDPPP Art. 34",
+          "CPEUM Art. 16"
+        ]
       },
       {
         "id": "opt_3",
@@ -224,10 +377,18 @@
         "etiqueta": "Rechazar la solicitud: la señora ya no es cliente y NovaByte es dueña de su propia base de datos.",
         "marcoEtico": "egoismo",
         "modeloEtico": "Egoísmo ético basado en un error sobre la titularidad de los datos.",
-        "impacto": { "budget": 0, "ethics": -30, "legal": -35 },
+        "impacto": {
+          "budget": 0,
+          "ethics": -30,
+          "legal": -35
+        },
         "esCorrecta": false,
         "retroalimentacion": "Los derechos ARCO no dependen de seguir siendo cliente: pertenecen a la persona titular mientras alguien trate sus datos (Art. 16 constitucional). La LFDA protege la estructura de una base de datos como compilación, pero expresamente no los datos en sí mismos (Art. 107). Negarse sin causa legal expone a NovaByte a un procedimiento de protección de derechos ante la Secretaría Anticorrupción y Buen Gobierno.",
-        "fundamento": ["CPEUM Art. 16", "LFDA Art. 107", "LFPDPPP Art. 31"]
+        "fundamento": [
+          "CPEUM Art. 16",
+          "LFDA Art. 107",
+          "LFPDPPP Art. 31"
+        ]
       }
     ],
     "aprendizaje": "Los derechos ARCO (acceso, rectificación, cancelación y oposición) son derechos humanos. Se atienden en plazos cortos, gratis y por medios accesibles. Cancelar no siempre es borrar al instante: primero se bloquea y luego se suprime, y se conserva solo lo que una ley obliga a guardar."
@@ -241,7 +402,12 @@
     "contexto": "NovaByte desarrolla para el municipio de Valle Esmeralda (ficticio) la Ventanilla Ciudadana: un portal donde la población presenta peticiones a las autoridades y participa en un foro público.\n\nEl director de Innovación pide tres cambios de configuración antes del lanzamiento. Como proveedor, NovaByte debe validar que el sistema no vulnere derechos.",
     "pregunta": "¿Qué dictamen emites sobre los tres cambios solicitados?",
     "pistaNormativa": "El Art. 8 constitucional exige un acuerdo escrito y notificado en breve término. El Art. 7 prohíbe restringir la difusión de ideas por medios tecnológicos indirectos, y el Art. 6 fija los únicos límites: vida privada, derechos de terceros, delitos y orden público.",
-    "manualRefs": ["U2_M03", "U2_M02", "U2_M01", "U2_M04"],
+    "manualRefs": [
+      "U2_M03",
+      "U2_M02",
+      "U2_M01",
+      "U2_M04"
+    ],
     "evidencias": [
       {
         "tipo": "correo",
@@ -264,10 +430,19 @@
         "etiqueta": "Aprobar los tres cambios: el cliente es la autoridad y conoce sus necesidades.",
         "marcoEtico": "utilitarismo",
         "modeloEtico": "Utilitarismo de imagen: mejores indicadores para la autoridad a costa de los derechos de la población.",
-        "impacto": { "budget": 10, "ethics": -35, "legal": -35 },
+        "impacto": {
+          "budget": 10,
+          "ethics": -35,
+          "legal": -35
+        },
         "esCorrecta": false,
         "retroalimentacion": "Cerrar peticiones como «atendidas» sin respuesta vulnera el Art. 8 constitucional: a toda petición debe recaer un acuerdo escrito, notificado en breve término. Ocultar críticas por su contenido político es una restricción indirecta a la libertad de difundir ideas mediante tecnologías, prohibida por el Art. 7. Solo el tercer cambio tiene fundamento, pero aprobarlo junto con los otros no corrige nada. Construir la herramienta de censura también compromete la responsabilidad profesional de NovaByte.",
-        "fundamento": ["CPEUM Art. 8", "CPEUM Art. 7", "CPEUM Art. 6", "ACM Code 1.2"]
+        "fundamento": [
+          "CPEUM Art. 8",
+          "CPEUM Art. 7",
+          "CPEUM Art. 6",
+          "ACM Code 1.2"
+        ]
       },
       {
         "id": "opt_2",
@@ -275,10 +450,17 @@
         "etiqueta": "Rechazar los tres cambios: la libertad de expresión es absoluta, así que tampoco se elimina el comentario #2291.",
         "marcoEtico": "deontologia",
         "modeloEtico": "Deontología mal aplicada: trata un derecho como ilimitado e ignora los derechos de terceros.",
-        "impacto": { "budget": -5, "ethics": -15, "legal": -15 },
+        "impacto": {
+          "budget": -5,
+          "ethics": -15,
+          "legal": -15
+        },
         "esCorrecta": false,
         "retroalimentacion": "Rechazar el cierre automático y el filtro de críticas es correcto, pero la libertad de expresión no es absoluta. El Art. 6 constitucional admite límites cuando se ataca la vida privada o los derechos de terceros, y el Art. 16 protege los datos personales. Publicar el domicilio y el teléfono de una persona con la que se tiene un conflicto la expone a riesgos reales: ese comentario sí debe retirarse.",
-        "fundamento": ["CPEUM Art. 6", "CPEUM Art. 16"]
+        "fundamento": [
+          "CPEUM Art. 6",
+          "CPEUM Art. 16"
+        ]
       },
       {
         "id": "opt_3",
@@ -286,10 +468,18 @@
         "etiqueta": "Remediar: no cerrar peticiones sin un acuerdo escrito y notificado, no filtrar críticas, y retirar solo el comentario #2291 conforme a una política de moderación pública que avise al autor y permita apelar.",
         "marcoEtico": "justicia",
         "modeloEtico": "Justicia y derechos: equilibrar la libertad de expresión con la protección de la vida privada.",
-        "impacto": { "budget": -5, "ethics": 20, "legal": 20 },
+        "impacto": {
+          "budget": -5,
+          "ethics": 20,
+          "legal": 20
+        },
         "esCorrecta": true,
         "retroalimentacion": "Dictamen correcto. El flujo de peticiones debe garantizar el acuerdo escrito y su notificación (Art. 8). Las críticas a la autoridad están protegidas por los Arts. 6 y 7: no pueden ocultarse por su contenido. Retirar el comentario que expone el domicilio de un tercero es un límite legítimo (vida privada y datos personales, Arts. 6 y 16), y hacerlo con una política pública, aviso y apelación evita la arbitrariedad.",
-        "fundamento": ["CPEUM Art. 8", "CPEUM Art. 7", "CPEUM Arts. 6 y 16"]
+        "fundamento": [
+          "CPEUM Art. 8",
+          "CPEUM Art. 7",
+          "CPEUM Arts. 6 y 16"
+        ]
       }
     ],
     "aprendizaje": "El derecho de petición obliga a las autoridades a responder por escrito, no a «cerrar tickets». La libertad de expresión protege especialmente la crítica política, y sus límites son precisos: vida privada, derechos de terceros, delitos y orden público. Quien diseña plataformas cívicas decide, con su código, si esos derechos se cumplen."
@@ -303,17 +493,30 @@
     "contexto": "Una periodista solicitó al municipio, por la plataforma de transparencia, el monto del contrato de la Ventanilla Ciudadana, los entregables y la bitácora de fallas del sistema.\n\nLa oficina del presidente municipal pide a NovaByte, como proveedor que recibió recursos públicos, que marque todo el contrato como «confidencial» y borre la bitácora de fallas antes de entregar nada. Por su parte, el área legal de NovaByte quiere proteger el algoritmo que prioriza las peticiones, que considera secreto industrial.",
     "pregunta": "¿Cómo debe responder NovaByte?",
     "pistaNormativa": "El Art. 6, apartado A, de la Constitución establece la máxima publicidad, la protección de datos personales y la obligación de preservar documentos. El Art. 163 de la LFPPI define qué es (y qué no es) un secreto industrial.",
-    "manualRefs": ["U2_M01", "U2_M12", "U2_M04"],
+    "manualRefs": [
+      "U2_M01",
+      "U2_M12",
+      "U2_M04"
+    ],
     "evidencias": [
       {
         "tipo": "documento",
         "nombreArchivo": "solicitud_SIT-2026-0418.pdf",
         "membrete": "Plataforma de transparencia · Folio SIT-2026-0418",
         "titulo": "Solicitud de acceso a la información",
-        "metadatos": { "Sujeto obligado": "Municipio de Valle Esmeralda", "Fecha": "09/11/2026" },
+        "metadatos": {
+          "Sujeto obligado": "Municipio de Valle Esmeralda",
+          "Fecha": "09/11/2026"
+        },
         "secciones": [
-          { "titulo": "Información solicitada", "texto": "1. Monto total y forma de pago del contrato de la Ventanilla Ciudadana.\n2. Entregables recibidos y actas de aceptación.\n3. Bitácora de fallas e interrupciones del sistema desde su lanzamiento." },
-          { "titulo": "Modalidad", "texto": "Entrega por medios electrónicos." }
+          {
+            "titulo": "Información solicitada",
+            "texto": "1. Monto total y forma de pago del contrato de la Ventanilla Ciudadana.\n2. Entregables recibidos y actas de aceptación.\n3. Bitácora de fallas e interrupciones del sistema desde su lanzamiento."
+          },
+          {
+            "titulo": "Modalidad",
+            "texto": "Entrega por medios electrónicos."
+          }
         ]
       },
       {
@@ -337,10 +540,17 @@
         "etiqueta": "Escalar a la Unidad de Transparencia una opinión técnica: entregar monto, entregables y bitácora; elaborar una versión pública que teste solo datos personales y la parte del código que sea secreto industrial, y conservar todos los documentos.",
         "marcoEtico": "justicia",
         "modeloEtico": "Justicia y rendición de cuentas: el uso de recursos públicos es de interés de toda la sociedad.",
-        "impacto": { "budget": 0, "ethics": 20, "legal": 20 },
+        "impacto": {
+          "budget": 0,
+          "ethics": 20,
+          "legal": 20
+        },
         "esCorrecta": true,
         "retroalimentacion": "Dictamen correcto. La información sobre recursos públicos es pública y rige el principio de máxima publicidad (Art. 6, apartado A, fr. I); además, los sujetos obligados deben preservar sus documentos (fr. V), por lo que borrar la bitácora sería inadmisible. Lo que sí se protege son los datos personales (fr. II) y la información que realmente cumpla los requisitos del secreto industrial (LFPPI, Art. 163): el código del algoritmo puede testarse en una versión pública, pero el monto, los entregables y las fallas no son secretos comerciales, sino información sobre el uso de dinero público.",
-        "fundamento": ["CPEUM Art. 6, apartado A, fr. I, II y V", "LFPPI Art. 163"]
+        "fundamento": [
+          "CPEUM Art. 6, apartado A, fr. I, II y V",
+          "LFPPI Art. 163"
+        ]
       },
       {
         "id": "opt_2",
@@ -348,10 +558,16 @@
         "etiqueta": "Aprobar la petición del municipio: clasificar todo el contrato como confidencial y borrar la bitácora de fallas.",
         "marcoEtico": "egoismo",
         "modeloEtico": "Egoísmo ético: proteger la imagen del cliente a costa del derecho de la sociedad a saber.",
-        "impacto": { "budget": 5, "ethics": -35, "legal": -40 },
+        "impacto": {
+          "budget": 5,
+          "ethics": -35,
+          "legal": -40
+        },
         "esCorrecta": false,
         "retroalimentacion": "Clasificar todo de forma genérica contradice el principio de máxima publicidad: la reserva solo procede de forma temporal, por razones de interés público o seguridad nacional previstas en la ley (Art. 6, apartado A, fr. I). Borrar la bitácora viola la obligación de preservar documentos (fr. V) y elimina evidencia de cómo se usó el dinero público. «Afectar la imagen» no es una causa legal de reserva.",
-        "fundamento": ["CPEUM Art. 6, apartado A, fr. I y V"]
+        "fundamento": [
+          "CPEUM Art. 6, apartado A, fr. I y V"
+        ]
       },
       {
         "id": "opt_3",
@@ -359,10 +575,18 @@
         "etiqueta": "Entregar todo sin filtro alguno: el contrato, el código fuente completo y la base de peticiones con los nombres y domicilios de los ciudadanos.",
         "marcoEtico": "deontologia",
         "modeloEtico": "Deontología mal aplicada: la transparencia entendida sin sus límites legales.",
-        "impacto": { "budget": -15, "ethics": -20, "legal": -30 },
+        "impacto": {
+          "budget": -15,
+          "ethics": -20,
+          "legal": -30
+        },
         "esCorrecta": false,
         "retroalimentacion": "La transparencia tiene límites. La información sobre la vida privada y los datos personales se protege (Art. 6, apartado A, fr. II, y Art. 16): publicar los domicilios de quienes presentaron peticiones los expone. El código del algoritmo, si cumple los requisitos del Art. 163 de la LFPPI, puede protegerse como secreto industrial. La herramienta correcta es la versión pública, no la entrega indiscriminada.",
-        "fundamento": ["CPEUM Art. 6, apartado A, fr. II", "CPEUM Art. 16", "LFPPI Art. 163"]
+        "fundamento": [
+          "CPEUM Art. 6, apartado A, fr. II",
+          "CPEUM Art. 16",
+          "LFPPI Art. 163"
+        ]
       }
     ],
     "aprendizaje": "El acceso a la información pública y la protección de datos personales no se oponen: se equilibran con versiones públicas. Quien recibe recursos públicos debe rendir cuentas. El secreto industrial protege información comercial valiosa y confidencial, no la mala imagen ni las fallas de un servicio pagado con dinero público."
@@ -376,7 +600,13 @@
     "contexto": "El fondo Capital Norte invertirá $40 millones en NovaByte si la empresa firma una declaración de que es titular de toda su propiedad intelectual. Rodrigo quiere firmar hoy: «todo el código es nuestro porque lo pagamos, y el motor de pagos está patentado».\n\nAntes de firmar, pediste una auditoría legal del repositorio. Estos son los hallazgos.",
     "pregunta": "¿Qué dictamen emites sobre la declaración para el fondo?",
     "pistaNormativa": "Revisa la titularidad del software creado por empleados (LFDA, Art. 103) y por externos (Art. 83), si el software es patentable (LFPPI, Art. 47), cómo se protege un nombre comercial (marca) y qué exige el Art. 163 para que exista un secreto industrial.",
-    "manualRefs": ["U2_M13", "U2_M10", "U2_M11", "U2_M12", "U2_M09"],
+    "manualRefs": [
+      "U2_M13",
+      "U2_M10",
+      "U2_M11",
+      "U2_M12",
+      "U2_M09"
+    ],
     "evidencias": [
       {
         "tipo": "log",
@@ -389,10 +619,22 @@
         "membrete": "Capital Norte · Due diligence",
         "titulo": "Declaración de titularidad de propiedad intelectual",
         "secciones": [
-          { "titulo": "Cláusula 4.1", "texto": "La Compañía es titular exclusiva de todos los derechos patrimoniales sobre su software, documentación y activos gráficos." },
-          { "titulo": "Cláusula 4.2", "texto": "La Compañía cuenta con la patente del motor de pagos NovaPay y con el registro de la marca «NovaPay»." },
-          { "titulo": "Cláusula 4.3", "texto": "La información técnica clave se mantiene como secreto industrial con medidas de confidencialidad adecuadas." },
-          { "titulo": "Consecuencia", "texto": "Cualquier declaración falsa permite al fondo rescindir la inversión y reclamar daños." }
+          {
+            "titulo": "Cláusula 4.1",
+            "texto": "La Compañía es titular exclusiva de todos los derechos patrimoniales sobre su software, documentación y activos gráficos."
+          },
+          {
+            "titulo": "Cláusula 4.2",
+            "texto": "La Compañía cuenta con la patente del motor de pagos NovaPay y con el registro de la marca «NovaPay»."
+          },
+          {
+            "titulo": "Cláusula 4.3",
+            "texto": "La información técnica clave se mantiene como secreto industrial con medidas de confidencialidad adecuadas."
+          },
+          {
+            "titulo": "Consecuencia",
+            "texto": "Cualquier declaración falsa permite al fondo rescindir la inversión y reclamar daños."
+          }
         ]
       }
     ],
@@ -403,10 +645,19 @@
         "etiqueta": "Firmar la declaración tal cual: todo el código es nuestro porque lo pagamos y el motor está patentado.",
         "marcoEtico": "egoismo",
         "modeloEtico": "Egoísmo ético: asegurar la inversión con declaraciones que no son ciertas.",
-        "impacto": { "budget": 15, "ethics": -30, "legal": -35 },
+        "impacto": {
+          "budget": 15,
+          "ethics": -30,
+          "legal": -35
+        },
         "esCorrecta": false,
         "retroalimentacion": "La declaración sería falsa en varios puntos. Pagar no basta: sin contrato escrito y claro de encargo o cesión, la titularidad del ui-kit del freelancer es dudosa (LFDA, Art. 83). El software no es patentable como tal (LFPPI, Art. 47, fr. V) y no existe ninguna solicitud. La marca no está registrada, y un modelo publicado en un repositorio público ya no cumple el requisito de confidencialidad del secreto industrial (Art. 163). Firmar expone a NovaByte a la rescisión y a una reclamación de daños.",
-        "fundamento": ["LFDA Art. 83", "LFPPI Art. 47, fr. V", "LFPPI Art. 163", "ACM Code 1.3"]
+        "fundamento": [
+          "LFDA Art. 83",
+          "LFPPI Art. 47, fr. V",
+          "LFPPI Art. 163",
+          "ACM Code 1.3"
+        ]
       },
       {
         "id": "opt_2",
@@ -414,10 +665,18 @@
         "etiqueta": "Corregir antes de firmar: contrato de encargo y cesión con el freelancer, retirar la afirmación de patente y proteger el software por derecho de autor, solicitar la marca ante el IMPI, retirar el modelo del repositorio público con acuerdos de confidencialidad, reemplazar las imágenes sin licencia y rotar las credenciales.",
         "marcoEtico": "virtud",
         "modeloEtico": "Ética de la virtud: honestidad con los inversionistas y diligencia profesional.",
-        "impacto": { "budget": -5, "ethics": 15, "legal": 25 },
+        "impacto": {
+          "budget": -5,
+          "ethics": 15,
+          "legal": 25
+        },
         "esCorrecta": true,
         "retroalimentacion": "Dictamen correcto. El código de los empleados ya pertenece a NovaByte (LFDA, Art. 103), pero el del freelancer requiere un contrato claro de encargo o cesión (Art. 83). El software se protege por derecho de autor desde su creación, sin necesidad de registro (Art. 162), aunque registrarlo ante INDAUTOR da seguridad jurídica; no es patentable (LFPPI, Art. 47, fr. V). El nombre «NovaPay» se protege como marca ante el IMPI por 10 años renovables (Art. 178). El modelo solo será secreto industrial si se adoptan medidas reales de confidencialidad (Art. 163). Las credenciales expuestas son un riesgo de seguridad inmediato.",
-        "fundamento": ["LFDA Arts. 83, 103 y 162", "LFPPI Art. 47, fr. V", "LFPPI Arts. 163 y 178"]
+        "fundamento": [
+          "LFDA Arts. 83, 103 y 162",
+          "LFPPI Art. 47, fr. V",
+          "LFPPI Arts. 163 y 178"
+        ]
       },
       {
         "id": "opt_3",
@@ -425,12 +684,402 @@
         "etiqueta": "Cancelar la inversión: con estos hallazgos, NovaByte no tiene propiedad intelectual que ofrecer.",
         "marcoEtico": "utilitarismo",
         "modeloEtico": "Aversión al riesgo desproporcionada: renuncia a una oportunidad por problemas corregibles.",
-        "impacto": { "budget": -25, "ethics": 0, "legal": 5 },
+        "impacto": {
+          "budget": -25,
+          "ethics": 0,
+          "legal": 5
+        },
         "esCorrecta": false,
         "retroalimentacion": "La auditoría no muestra que NovaByte carezca de propiedad intelectual: el núcleo del código pertenece a la empresa (LFDA, Art. 103). Los hallazgos son corregibles con contratos, registros y medidas de seguridad. Una auditoría sirve para corregir antes de declarar, no para paralizar el negocio.",
-        "fundamento": ["LFDA Art. 103", "LFPPI Art. 178"]
+        "fundamento": [
+          "LFDA Art. 103",
+          "LFPPI Art. 178"
+        ]
       }
     ],
     "aprendizaje": "Cada activo tiene su figura: el código se protege por derecho de autor (INDAUTOR), el nombre comercial como marca (IMPI), la información confidencial como secreto industrial, y solo las invenciones técnicas como patente. Confundir patentes con derechos de autor es un error grave. La auditoría legal de código existe para descubrir estos huecos antes de que se conviertan en litigios."
+  },
+  {
+    "id": "U2_C07",
+    "unidad": 2,
+    "subtema": "Revisión de código: auditoría legal de programas de terceros",
+    "titulo": "¿Podemos descompilar el software del proveedor?",
+    "remitente": "Equipo de Seguridad",
+    "contexto": "NovaByte usa ShieldPay, un motor antifraude de un proveedor que se entrega como archivo compilado; su licencia prohíbe la ingeniería inversa. El equipo de seguridad sospecha que ShieldPay envía datos de clientes a un servidor desconocido.\n\nDaniela propone descompilarlo completo y publicar su código en GitHub «para exponer al proveedor». El contrato incluye una cláusula de auditoría de seguridad que nadie ha usado.",
+    "pregunta": "¿Cómo se audita ShieldPay?",
+    "pistaNormativa": "La decompilación es un derecho patrimonial del titular (LFDA, Art. 106, fr. IV), con excepciones limitadas (Art. 114 Quáter, fr. I y III). ¿Hace falta descompilar para saber a dónde se envían los datos? Recuerda tu deber de proteger los datos de tus clientes (LFPDPPP, Art. 18).",
+    "manualRefs": [
+      "U2_M16",
+      "U2_M13",
+      "U2_M09",
+      "U2_M08"
+    ],
+    "evidencias": [
+      {
+        "tipo": "log",
+        "nombreArchivo": "firewall-egress.log",
+        "contenido": "[2026-11-18 03:12:40] INFO  proceso shieldpay-engine conexión saliente\n[2026-11-18 03:12:41] WARN  destino 185.x.x.x:443 no declarado en el contrato\n[2026-11-18 03:12:41] WARN  volumen: 2.1 MB por cada 1,000 transacciones\n[2026-11-18 03:15:00] INFO  el tráfico va cifrado; no se puede leer el contenido"
+      },
+      {
+        "tipo": "documento",
+        "nombreArchivo": "contrato_shieldpay.pdf",
+        "membrete": "Contrato de licencia (extracto)",
+        "titulo": "Licencia de uso de ShieldPay",
+        "secciones": [
+          {
+            "titulo": "Cláusula 6",
+            "texto": "El licenciatario no descompilará ni realizará ingeniería inversa del software."
+          },
+          {
+            "titulo": "Cláusula 11",
+            "texto": "El licenciatario podrá solicitar una auditoría de seguridad por un tercero independiente, con aviso de 10 días hábiles."
+          },
+          {
+            "titulo": "Cláusula 12",
+            "texto": "El proveedor solo tratará los datos del licenciatario para prestar el servicio y no los transferirá a terceros."
+          }
+        ]
+      }
+    ],
+    "opciones": [
+      {
+        "id": "opt_1",
+        "tipo": "aprobar",
+        "etiqueta": "Descompilar ShieldPay completo y publicar su código en GitHub para exponer al proveedor.",
+        "marcoEtico": "egoismo",
+        "modeloEtico": "Justicia por mano propia que viola derechos ajenos.",
+        "impacto": {
+          "budget": -5,
+          "ethics": -15,
+          "legal": -35
+        },
+        "esCorrecta": false,
+        "retroalimentacion": "Publicar el código descompilado reproduce y distribuye un programa ajeno sin autorización, derechos reservados al titular (LFDA, Art. 106, fr. I, III y IV), además de incumplir el contrato. Las excepciones del Art. 114 Quáter son limitadas, de buena fe y no amparan difundir el código. Y puedes confirmar la fuga sin descompilar: con el tráfico de tu propia red.",
+        "fundamento": [
+          "LFDA Art. 106",
+          "LFDA Art. 114 Quáter"
+        ]
+      },
+      {
+        "id": "opt_2",
+        "tipo": "bloquear",
+        "etiqueta": "No hacer nada: el contrato prohíbe revisar el software, así que no podemos investigar.",
+        "marcoEtico": "deontologia",
+        "modeloEtico": "Legalismo pasivo: usa una cláusula como excusa para no proteger a los clientes.",
+        "impacto": {
+          "budget": 0,
+          "ethics": -25,
+          "legal": -25
+        },
+        "esCorrecta": false,
+        "retroalimentacion": "El contrato prohíbe descompilar, no investigar. NovaByte tiene el deber de proteger los datos de sus clientes (LFPDPPP, Art. 18) y puede analizar el tráfico de su propia red, ejercer la cláusula de auditoría y exigir el cumplimiento de la cláusula 12. Si se confirma una vulneración, debe informar a los afectados (Art. 19). No investigar es una omisión grave.",
+        "fundamento": [
+          "LFPDPPP Arts. 18 y 19"
+        ]
+      },
+      {
+        "id": "opt_3",
+        "tipo": "remediar",
+        "etiqueta": "Auditar legalmente: analizar el tráfico de la propia red, activar la cláusula de auditoría con un tercero independiente, exigir al proveedor explicación y su informe de seguridad, y suspender el flujo de datos si se confirma la fuga.",
+        "marcoEtico": "deontologia",
+        "modeloEtico": "Deontología: cumplir el deber de proteger los datos respetando los derechos del titular del software.",
+        "impacto": {
+          "budget": -5,
+          "ethics": 20,
+          "legal": 25
+        },
+        "esCorrecta": true,
+        "retroalimentacion": "Dictamen correcto. La revisión de código de terceros se hace dentro de la ley: el tráfico de tu red es tuyo, el contrato prevé una auditoría independiente y el proveedor se obligó a no transferir datos. La decompilación es un derecho del titular (LFDA, Art. 106, fr. IV) y sus excepciones (Art. 114 Quáter, fr. I y III) son limitadas, por lo que solo se usarían con asesoría legal. Si la fuga se confirma, suspender el flujo y notificar a los afectados cumple los Arts. 18 y 19 de la LFPDPPP.",
+        "fundamento": [
+          "LFDA Arts. 106, fr. IV, y 114 Quáter",
+          "LFPDPPP Arts. 18 y 19",
+          "ACM Code 2.3"
+        ]
+      }
+    ],
+    "aprendizaje": "Revisar y auditar programas es parte del cumplimiento normativo, pero tiene reglas: el código ajeno pertenece a su titular, la decompilación tiene excepciones limitadas y casi siempre hay caminos legales (tráfico propio, cláusulas de auditoría, divulgación coordinada) para proteger a los usuarios."
+  },
+  {
+    "id": "U2_C08",
+    "unidad": 2,
+    "subtema": "Privacidad de datos: inviolabilidad de las comunicaciones privadas",
+    "titulo": "Spyware para encontrar al filtrador",
+    "remitente": "Fernanda Gil — Capital Humano",
+    "contexto": "Alguien filtró a la prensa el plan de precios de 2027. Capital Humano quiere instalar una aplicación de monitoreo en los teléfonos personales de todo el personal para leer sus conversaciones de WhatsApp y encontrar al responsable. La aplicación se instalaría «como actualización de seguridad», sin explicar lo que hace.",
+    "pregunta": "¿Autorizas la instalación?",
+    "pistaNormativa": "Las comunicaciones privadas son inviolables (Art. 16 constitucional) y su intervención sin mandato judicial es delito (CPF, Art. 177). ¿Qué puede revisar legítimamente la empresa?",
+    "manualRefs": [
+      "U2_M15",
+      "U2_M04",
+      "U2_M12",
+      "U4_M12"
+    ],
+    "evidencias": [
+      {
+        "tipo": "correo",
+        "de": "fernanda.gil@novabyte.mx",
+        "para": "cumplimiento@novabyte.mx",
+        "fecha": "Mar 17 nov 2026, 08:15",
+        "asunto": "Aplicación de monitoreo para todo el personal",
+        "cuerpo": "Necesitamos encontrar al filtrador ya. El proveedor de MonitorPro dice que su app lee WhatsApp, fotos y ubicación en tiempo real.\n\nLa instalamos en los teléfonos personales como «actualización de seguridad» para que nadie sospeche. ¿Me das el visto bueno?"
+      },
+      {
+        "tipo": "log",
+        "nombreArchivo": "acceso-documento-precios.log",
+        "contenido": "[2026-11-12 10:02:11] INFO  documento precios_2027.pdf (repositorio corporativo)\n[2026-11-12 10:02:11] INFO  accesos en las 48 h previas a la filtración: 7 usuarios\n[2026-11-12 19:44:03] WARN  descarga a dispositivo no administrado: usuario m.vega\n[2026-11-12 19:50:27] INFO  sin registros de reenvío desde el correo corporativo"
+      }
+    ],
+    "opciones": [
+      {
+        "id": "opt_1",
+        "tipo": "bloquear",
+        "etiqueta": "Bloquear la instalación: investigar con los registros de acceso del repositorio corporativo, aplicar el procedimiento disciplinario con debido proceso y, si hay indicios de delito, acudir a la autoridad; y definir una política de supervisión limitada a herramientas corporativas e informada previamente.",
+        "marcoEtico": "justicia",
+        "modeloEtico": "Justicia y derechos: investigar sin vulnerar los derechos de todo el personal.",
+        "impacto": {
+          "budget": 0,
+          "ethics": 25,
+          "legal": 25
+        },
+        "esCorrecta": true,
+        "retroalimentacion": "Dictamen correcto. Leer conversaciones privadas sin mandato judicial es el delito de intervención de comunicaciones privadas (CPF, Art. 177: de 6 a 12 años de prisión) y viola el Art. 16 constitucional. La empresa sí puede revisar sus propios sistemas: los registros ya muestran una descarga a un dispositivo no administrado, un indicio que se investiga con debido proceso. La filtración de información reservada puede ser causa de rescisión (LFT, Art. 47, fr. IX) y, si es secreto industrial, un delito perseguible por querella.",
+        "fundamento": [
+          "CPEUM Art. 16",
+          "CPF Art. 177",
+          "LFT Art. 47, fr. IX",
+          "LFPDPPP Art. 5"
+        ]
+      },
+      {
+        "id": "opt_2",
+        "tipo": "aprobar",
+        "etiqueta": "Aprobar la instalación oculta: la empresa necesita proteger su información.",
+        "marcoEtico": "egoismo",
+        "modeloEtico": "Egoísmo ético: el interés de la empresa por encima de los derechos y la ley.",
+        "impacto": {
+          "budget": 5,
+          "ethics": -40,
+          "legal": -45
+        },
+        "esCorrecta": false,
+        "retroalimentacion": "Instalar a escondidas un programa que lee WhatsApp en teléfonos personales es intervenir comunicaciones privadas sin mandato judicial (CPF, Art. 177), con penas de 6 a 12 años de prisión, y engañar al personal con una falsa actualización agrava la conducta. Las pruebas obtenidas así son ilícitas y la empresa se expone a responsabilidad penal de sus directivos.",
+        "fundamento": [
+          "CPEUM Art. 16",
+          "CPF Art. 177"
+        ]
+      },
+      {
+        "id": "opt_3",
+        "tipo": "remediar",
+        "etiqueta": "Pedir a cada persona que entregue su teléfono desbloqueado para una revisión «voluntaria», advirtiendo que quien se niegue será considerado sospechoso.",
+        "marcoEtico": "utilitarismo",
+        "modeloEtico": "Consentimiento simulado: la amenaza anula la voluntad.",
+        "impacto": {
+          "budget": -5,
+          "ethics": -30,
+          "legal": -25
+        },
+        "esCorrecta": false,
+        "retroalimentacion": "Una revisión «voluntaria» bajo amenaza no es voluntaria: el consentimiento obtenido con presión no es libre. Además, revisar teléfonos personales expone las comunicaciones privadas de todas las personas, la mayoría inocentes, y la información de terceros que aparece en ellos. La investigación debe partir de los sistemas corporativos.",
+        "fundamento": [
+          "CPEUM Art. 16",
+          "LFPDPPP Art. 5"
+        ]
+      }
+    ],
+    "aprendizaje": "La privacidad de las comunicaciones es un derecho fundamental: ni siquiera una filtración grave justifica espiar los teléfonos personales del personal. La empresa puede supervisar sus propias herramientas con reglas claras y avisadas, e investigar con debido proceso."
+  },
+  {
+    "id": "U2_C09",
+    "unidad": 2,
+    "subtema": "Libertad de expresión, derecho a la información y derecho de réplica",
+    "titulo": "La reseña viral contra NovaPay",
+    "remitente": "Rodrigo Salas — Director Comercial",
+    "contexto": "Un bloguero publicó una reseña muy crítica de NovaPay: dice que la app es «lenta, confusa y cara», con datos reales de comisiones. Al final añade una afirmación falsa: que «NovaPay vende los datos de sus clientes a casinos en línea». La publicación tiene 80,000 visitas.\n\nRodrigo quiere obligar a la plataforma a borrar toda la reseña y comprar 2,000 reseñas positivas.",
+    "pregunta": "¿Cómo responde NovaByte?",
+    "pistaNormativa": "La crítica está protegida (Arts. 6 y 7 constitucionales). El Art. 6 prevé el derecho de réplica para responder a información inexacta. Distingue entre la opinión del bloguero y la afirmación de un hecho falso.",
+    "manualRefs": [
+      "U2_M01",
+      "U2_M02",
+      "U2_M14",
+      "U1_M14"
+    ],
+    "evidencias": [
+      {
+        "tipo": "documento",
+        "nombreArchivo": "resena_blog.html",
+        "membrete": "Blog «Finanzas sin filtro»",
+        "titulo": "NovaPay: lo bueno, lo malo y lo feo",
+        "secciones": [
+          {
+            "titulo": "Opinión",
+            "texto": "«La app es lenta, confusa y cara. Cobran 3.5 % por retiro, más que la competencia.» (La comisión es real.)"
+          },
+          {
+            "titulo": "Afirmación de hecho",
+            "texto": "«Y lo peor: NovaPay vende los datos de sus clientes a casinos en línea.» (Sin fuente. Falso según el registro de transferencias de NovaByte.)"
+          }
+        ]
+      },
+      {
+        "tipo": "correo",
+        "de": "rodrigo.salas@novabyte.mx",
+        "para": "cumplimiento@novabyte.mx",
+        "fecha": "Jue 19 nov 2026, 14:02",
+        "asunto": "Hay que borrar esa reseña",
+        "cuerpo": "Exijamos a la plataforma que borre toda la publicación por difamación y contratemos 2,000 reseñas positivas para enterrarla. Nadie critica a NovaPay así."
+      }
+    ],
+    "opciones": [
+      {
+        "id": "opt_1",
+        "tipo": "bloquear",
+        "etiqueta": "Exigir que se borre toda la reseña, incluida la crítica sobre las comisiones, y comprar 2,000 reseñas positivas.",
+        "marcoEtico": "egoismo",
+        "modeloEtico": "Egoísmo ético: silenciar la crítica y fabricar opiniones.",
+        "impacto": {
+          "budget": -5,
+          "ethics": -35,
+          "legal": -25
+        },
+        "esCorrecta": false,
+        "retroalimentacion": "La opinión sobre la app y las comisiones reales es crítica legítima, protegida por los Arts. 6 y 7 constitucionales; pedir que se borre es intentar censurarla. Comprar reseñas falsas es publicidad engañosa (LFPC, Art. 32) y desinformación. Solo la afirmación falsa sobre la venta de datos puede combatirse, y para eso existe la réplica.",
+        "fundamento": [
+          "CPEUM Arts. 6 y 7",
+          "LFPC Art. 32"
+        ]
+      },
+      {
+        "id": "opt_2",
+        "tipo": "remediar",
+        "etiqueta": "Respetar la crítica, ejercer el derecho de réplica sobre la afirmación falsa con datos verificables, pedir al autor que la rectifique y atender las quejas reales sobre comisiones y usabilidad.",
+        "marcoEtico": "virtud",
+        "modeloEtico": "Ética de la virtud: responder con hechos y aprender de la crítica.",
+        "impacto": {
+          "budget": 0,
+          "ethics": 20,
+          "legal": 15
+        },
+        "esCorrecta": true,
+        "retroalimentacion": "Dictamen correcto. Distingues opinión de hecho: la crítica sobre lentitud y comisiones está protegida por la libertad de expresión (Arts. 6 y 7), mientras que afirmar falsamente que NovaPay vende datos es información inexacta que afecta los derechos de la empresa. El Art. 6 prevé el derecho de réplica para responder sin censurar, y la información veraz es la mejor defensa. Atender las quejas reales convierte la crisis en mejora.",
+        "fundamento": [
+          "CPEUM Art. 6 (derecho de réplica)",
+          "CPEUM Art. 7",
+          "LFPC Art. 32"
+        ]
+      },
+      {
+        "id": "opt_3",
+        "tipo": "aprobar",
+        "etiqueta": "Ignorar todo: cualquier respuesta solo le dará más visitas.",
+        "marcoEtico": "relativismo",
+        "modeloEtico": "Indiferencia: deja circular una afirmación falsa que alarma a los clientes.",
+        "impacto": {
+          "budget": -5,
+          "ethics": -10,
+          "legal": -5
+        },
+        "esCorrecta": false,
+        "retroalimentacion": "Ignorar la crítica legítima desaprovecha la oportunidad de mejorar, y dejar sin respuesta la afirmación falsa sobre la venta de datos permite que los clientes crean que sus datos están en riesgo. El derecho a la información también protege a los usuarios, que merecen conocer los hechos.",
+        "fundamento": [
+          "CPEUM Art. 6"
+        ]
+      }
+    ],
+    "aprendizaje": "La libertad de expresión protege especialmente la crítica, incluso la dura. Frente a información falsa, la respuesta es la réplica y la rectificación, no la censura ni la manipulación con reseñas falsas. Distinguir opinión de hecho es clave para el derecho a la información."
+  },
+  {
+    "id": "U2_C10",
+    "unidad": 2,
+    "subtema": "Régimen jurídico de la información: propiedad industrial frente a derecho de autor",
+    "titulo": "Cómo proteger la nueva terminal NovaPOS",
+    "remitente": "Área Legal — propiedad intelectual",
+    "contexto": "NovaByte desarrolló NovaPOS, su primera terminal de cobro. Tiene un diseño exterior original, un circuito nuevo que reduce a la mitad el consumo de batería, un firmware propio, el nombre y logotipo «NovaPOS» y un proceso de ensamblaje que la competencia no conoce.\n\nMarketing quiere presentarla en una feria la próxima semana. Legal propuso una estrategia de protección; hay otras dos propuestas sobre la mesa.",
+    "pregunta": "¿Qué estrategia de protección apruebas?",
+    "pistaNormativa": "Cada elemento tiene su figura: patente o modelo de utilidad, diseño industrial, marca, secreto industrial (LFPPI) y derecho de autor (LFDA). ¿Qué pasa con la novedad de una invención si se muestra en público antes de solicitar la patente (LFPPI, Art. 45)?",
+    "manualRefs": [
+      "U2_M11",
+      "U2_M09",
+      "U2_M12",
+      "U2_M14"
+    ],
+    "evidencias": [
+      {
+        "tipo": "documento",
+        "nombreArchivo": "propuestas_proteccion_novapos.pdf",
+        "membrete": "NovaByte · Legal",
+        "titulo": "Propuestas para proteger NovaPOS",
+        "secciones": [
+          {
+            "titulo": "Propuesta 1 (Marketing)",
+            "texto": "Presentar todo en la feria y después «patentar NovaPOS completa»: diseño, circuito, firmware, nombre y proceso, en una sola patente."
+          },
+          {
+            "titulo": "Propuesta 2 (Producto)",
+            "texto": "Registrar todo ante INDAUTOR como una sola obra: así queda protegido por toda la vida del autor y cien años más."
+          },
+          {
+            "titulo": "Propuesta 3 (Legal)",
+            "texto": "Antes de la feria: solicitar patente (o modelo de utilidad) del circuito y registro de diseño industrial del exterior ante el IMPI; solicitar la marca «NovaPOS»; mantener el proceso de ensamblaje como secreto industrial con acuerdos de confidencialidad. El firmware queda protegido por derecho de autor y puede registrarse ante INDAUTOR."
+          }
+        ]
+      }
+    ],
+    "opciones": [
+      {
+        "id": "opt_1",
+        "tipo": "aprobar",
+        "etiqueta": "Aprobar la propuesta 1: presentar en la feria y luego patentar todo junto.",
+        "marcoEtico": "egoismo",
+        "modeloEtico": "Prisa comercial que ignora cómo funciona cada figura jurídica.",
+        "impacto": {
+          "budget": 5,
+          "ethics": -10,
+          "legal": -30
+        },
+        "esCorrecta": false,
+        "retroalimentacion": "Mostrar el circuito en público antes de solicitar la patente lo incorpora al estado de la técnica y puede destruir su novedad (LFPPI, Art. 45). Además, no se puede «patentar todo»: el software no es invención (Art. 47, fr. V), el nombre se protege como marca y el diseño exterior como diseño industrial. Y un proceso que se patenta se vuelve público.",
+        "fundamento": [
+          "LFPPI Arts. 45, 47 fr. V y 48"
+        ]
+      },
+      {
+        "id": "opt_2",
+        "tipo": "remediar",
+        "etiqueta": "Aprobar la propuesta 2: registrar todo ante INDAUTOR como una sola obra.",
+        "marcoEtico": "deontologia",
+        "modeloEtico": "Confusión de figuras: aplica el derecho de autor a lo que es propiedad industrial.",
+        "impacto": {
+          "budget": -5,
+          "ethics": 0,
+          "legal": -25
+        },
+        "esCorrecta": false,
+        "retroalimentacion": "El derecho de autor protege la expresión de obras como el firmware, pero no protege invenciones técnicas como el circuito, ni sustituye a la marca o al diseño industrial, que se registran ante el IMPI. Confundir patentes con derechos de autor es un error grave: dejaría sin protección real lo más valioso de NovaPOS.",
+        "fundamento": [
+          "LFDA Arts. 13 y 102",
+          "LFPPI Arts. 48, 78 y 178"
+        ]
+      },
+      {
+        "id": "opt_3",
+        "tipo": "aprobar",
+        "etiqueta": "Aprobar la propuesta 3 de Legal: patente o modelo de utilidad, diseño industrial, marca y secreto industrial ante el IMPI antes de la feria, y derecho de autor para el firmware.",
+        "marcoEtico": "virtud",
+        "modeloEtico": "Prudencia profesional: cada creación con la figura que le corresponde, a tiempo.",
+        "impacto": {
+          "budget": 0,
+          "ethics": 15,
+          "legal": 25
+        },
+        "esCorrecta": true,
+        "retroalimentacion": "Dictamen correcto. El circuito, si es nuevo, inventivo y de aplicación industrial, es patentable (LFPPI, Art. 48; patente por 20 años, Art. 53) o protegible como modelo de utilidad (15 años, Art. 62), y debe solicitarse antes de mostrarlo para no perder su novedad (Art. 45). El exterior se protege como diseño industrial (Art. 78), el nombre como marca (10 años renovables, Art. 178) y el proceso como secreto industrial (Art. 163). El firmware es obra protegida por derecho de autor desde su creación (LFDA, Arts. 102 y 162).",
+        "fundamento": [
+          "LFPPI Arts. 45, 48, 53, 62, 78, 163 y 178",
+          "LFDA Arts. 102 y 162"
+        ]
+      }
+    ],
+    "aprendizaje": "El régimen jurídico de la información en México combina la LFDA (obras, incluido el software) y la LFPPI (invenciones, diseños, marcas y secretos). Cada creación tiene su figura, su autoridad (INDAUTOR o IMPI) y su momento: proteger después de divulgar puede ser demasiado tarde."
   }
 ]

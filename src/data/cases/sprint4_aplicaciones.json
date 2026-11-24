@@ -739,5 +739,292 @@
       }
     ],
     "aprendizaje": "La IA generativa no opera en un vacío legal: en México, la LFDA reformada en 2026 protege la voz y la imagen frente a la clonación, la reproducción de obras para entrenar requiere autorización, y la SCJN ha dicho que el derecho de autor protege la creación humana. Ser transparente sobre el uso de IA es una obligación legal en Europa y una responsabilidad ética en todas partes."
+  },
+  {
+    "id": "U4_C08",
+    "unidad": 4,
+    "subtema": "Ética en el uso de las redes sociales: normas para el personal de la empresa",
+    "titulo": "Dos publicaciones y una política que no existe",
+    "remitente": "Fernanda Gil — Capital Humano",
+    "contexto": "Esta semana hubo dos publicaciones de empleados en redes sociales:\n1) Iker, desarrollador, publicó una captura del panel interno para presumir el crecimiento de NovaPay; en la imagen se ven nombres y saldos de clientes.\n2) Paola, diseñadora, escribió en su cuenta personal, fuera de horario, que en NovaByte «se trabajan demasiadas horas extra».\n\nCapital Humano quiere despedir a ambos y prohibir a todo el personal mencionar a NovaByte en redes.",
+    "pregunta": "¿Qué dictamen emites?",
+    "pistaNormativa": "No es lo mismo revelar información confidencial que expresar una opinión. Revisa la LFT (Art. 47, fr. IV y IX), la LFPDPPP (Art. 20) y la libertad de expresión (Arts. 6 y 7 constitucionales).",
+    "manualRefs": [
+      "U4_M12",
+      "U4_M08",
+      "U2_M02",
+      "U1_M18"
+    ],
+    "evidencias": [
+      {
+        "tipo": "documento",
+        "nombreArchivo": "reporte_publicaciones.pdf",
+        "membrete": "NovaByte · Capital Humano",
+        "titulo": "Publicaciones reportadas",
+        "secciones": [
+          {
+            "titulo": "Publicación de Iker",
+            "texto": "«¡Miren cómo crecemos!» con captura del panel interno: se leen 14 nombres de clientes con sus saldos. 3,200 visualizaciones antes de borrarse."
+          },
+          {
+            "titulo": "Publicación de Paola",
+            "texto": "«En NovaByte se trabajan demasiadas horas extra. Ojalá lo cambien.» Cuenta personal, domingo 20:00 h. Sin datos confidenciales ni insultos."
+          },
+          {
+            "titulo": "Propuesta de Capital Humano",
+            "texto": "Despedir a ambos y prohibir cualquier mención de NovaByte en redes sociales personales."
+          }
+        ]
+      }
+    ],
+    "opciones": [
+      {
+        "id": "opt_1",
+        "tipo": "aprobar",
+        "etiqueta": "Aprobar la propuesta: despedir a ambos y prohibir mencionar a NovaByte en redes.",
+        "marcoEtico": "egoismo",
+        "modeloEtico": "Control de imagen por encima de los derechos del personal.",
+        "impacto": {
+          "budget": -10,
+          "ethics": -30,
+          "legal": -25
+        },
+        "esCorrecta": false,
+        "retroalimentacion": "Las dos conductas no son equivalentes. La crítica de Paola, sin datos confidenciales ni injurias, en su cuenta y fuera de horario, está protegida por la libertad de expresión (Arts. 6 y 7 constitucionales) y no encaja en las causas de rescisión de la LFT (Art. 47). Prohibir toda mención de la empresa es desproporcionado. El caso de Iker sí es grave, pero debe atenderse con procedimiento.",
+        "fundamento": [
+          "CPEUM Arts. 6 y 7",
+          "LFT Art. 47"
+        ]
+      },
+      {
+        "id": "opt_2",
+        "tipo": "bloquear",
+        "etiqueta": "No hacer nada: lo que cada persona publica en sus redes es asunto personal.",
+        "marcoEtico": "relativismo",
+        "modeloEtico": "Relativismo: confunde libertad de expresión con libertad para divulgar datos ajenos.",
+        "impacto": {
+          "budget": 0,
+          "ethics": -20,
+          "legal": -25
+        },
+        "esCorrecta": false,
+        "retroalimentacion": "Publicar nombres y saldos de clientes no es una opinión: es una vulneración de datos personales que la empresa debe atender y notificar a los afectados (LFPDPPP, Arts. 19 y 20), y revelar asuntos reservados es causa de rescisión (LFT, Art. 47, fr. IX). La libertad de expresión no ampara divulgar información de terceros.",
+        "fundamento": [
+          "LFPDPPP Arts. 19 y 20",
+          "LFT Art. 47, fr. IX"
+        ]
+      },
+      {
+        "id": "opt_3",
+        "tipo": "remediar",
+        "etiqueta": "Distinguir los casos: atender la filtración de Iker (retiro, aviso a los 14 clientes y procedimiento disciplinario con audiencia), respetar la opinión de Paola y aprobar una política de redes sociales con capacitación.",
+        "marcoEtico": "justicia",
+        "modeloEtico": "Justicia y proporcionalidad: regular conductas, no opiniones.",
+        "impacto": {
+          "budget": -5,
+          "ethics": 20,
+          "legal": 20
+        },
+        "esCorrecta": true,
+        "retroalimentacion": "Dictamen correcto. Divulgar datos de clientes es una vulneración que exige notificarles (LFPDPPP, Art. 19) y puede justificar una sanción por revelar asuntos reservados (LFT, Art. 47, fr. IX), siguiendo el debido proceso. La crítica de Paola es una opinión protegida (Arts. 6 y 7 constitucionales). Una política de redes sociales clara (qué es confidencial, cómo opinar a título personal, a quién consultar) previene futuros incidentes sin censurar.",
+        "fundamento": [
+          "LFPDPPP Arts. 19 y 20",
+          "LFT Art. 47, fr. IV y IX",
+          "CPEUM Arts. 6 y 7"
+        ]
+      }
+    ],
+    "aprendizaje": "Una política de redes sociales protege la información de la empresa y de sus clientes, pero no puede prohibir opinar. La clave es distinguir entre divulgar datos confidenciales (una falta grave) y expresar una crítica personal (un derecho)."
+  },
+  {
+    "id": "U4_C09",
+    "unidad": 4,
+    "subtema": "Licenciamiento de software: elegir una licencia para liberar código",
+    "titulo": "Liberar NovaCharts: ¿con qué licencia?",
+    "remitente": "Mariana Ortega — CTO",
+    "contexto": "NovaByte quiere liberar NovaCharts, su librería de gráficas, como código abierto. Mariana fijó tres objetivos: que cualquiera pueda usarla, incluso en productos propietarios; que quienes contribuyan otorguen una licencia clara sobre sus patentes para evitar demandas; y que se reconozca la autoría de NovaByte.\n\nEl equipo propuso cuatro opciones.",
+    "pregunta": "¿Qué licencia recomiendas?",
+    "pistaNormativa": "Compara cada opción con los tres objetivos. Revisa en el Manual la compatibilidad de licencias, la Apache License 2.0 (secciones 3 y 4) y qué pasa si se publica sin licencia (LFDA, Arts. 24 y 27).",
+    "manualRefs": [
+      "U4_M11",
+      "U4_M03",
+      "U4_M02",
+      "U4_M01"
+    ],
+    "evidencias": [
+      {
+        "tipo": "documento",
+        "nombreArchivo": "objetivos_novacharts.pdf",
+        "membrete": "NovaByte · Dirección de Tecnología",
+        "titulo": "Objetivos para liberar NovaCharts",
+        "secciones": [
+          {
+            "titulo": "Objetivo 1",
+            "texto": "Uso libre, incluido el comercial y la integración en software propietario."
+          },
+          {
+            "titulo": "Objetivo 2",
+            "texto": "Licencia explícita de patentes de quienes contribuyan, con protección frente a demandas."
+          },
+          {
+            "titulo": "Objetivo 3",
+            "texto": "Conservar avisos de copyright y atribución a NovaByte."
+          }
+        ]
+      }
+    ],
+    "opciones": [
+      {
+        "id": "opt_1",
+        "tipo": "remediar",
+        "etiqueta": "GNU GPLv3: es la licencia «más libre».",
+        "marcoEtico": "deontologia",
+        "modeloEtico": "Elección por ideología, sin revisar los objetivos.",
+        "impacto": {
+          "budget": -5,
+          "ethics": 0,
+          "legal": -10
+        },
+        "esCorrecta": false,
+        "retroalimentacion": "La GPLv3 es una excelente licencia copyleft, pero contradice el objetivo 1: quien integre NovaCharts en un producto que distribuya tendría que liberarlo también bajo GPLv3. Elegir una licencia es una decisión estratégica según lo que se quiere permitir.",
+        "fundamento": [
+          "GPLv3",
+          "FSF: lista de licencias"
+        ]
+      },
+      {
+        "id": "opt_2",
+        "tipo": "remediar",
+        "etiqueta": "Creative Commons Atribución 4.0 (CC BY 4.0): es conocida y pide atribución.",
+        "marcoEtico": "deontologia",
+        "modeloEtico": "Herramienta equivocada para el tipo de obra.",
+        "impacto": {
+          "budget": -5,
+          "ethics": 0,
+          "legal": -10
+        },
+        "esCorrecta": false,
+        "retroalimentacion": "Creative Commons no recomienda sus licencias para software: no regulan aspectos como el código fuente o las patentes. Para una librería de código conviene una licencia de software.",
+        "fundamento": [
+          "Creative Commons: licencias compatibles y FAQ"
+        ]
+      },
+      {
+        "id": "opt_3",
+        "tipo": "bloquear",
+        "etiqueta": "Publicarla sin ninguna licencia: si está en GitHub, ya es libre.",
+        "marcoEtico": "relativismo",
+        "modeloEtico": "Error frecuente: confundir público con libre.",
+        "impacto": {
+          "budget": -5,
+          "ethics": -5,
+          "legal": -15
+        },
+        "esCorrecta": false,
+        "retroalimentacion": "Sin licencia, nadie tiene permiso legal para usar, copiar o modificar el código: el titular conserva sus derechos exclusivos (LFDA, Arts. 24 y 27). Paradójicamente, publicar sin licencia impide el uso libre que se busca.",
+        "fundamento": [
+          "LFDA Arts. 24 y 27"
+        ]
+      },
+      {
+        "id": "opt_4",
+        "tipo": "aprobar",
+        "etiqueta": "Apache License 2.0: permisiva, con licencia explícita de patentes y obligación de conservar avisos y NOTICE.",
+        "marcoEtico": "virtud",
+        "modeloEtico": "Prudencia profesional: la licencia que cumple los tres objetivos.",
+        "impacto": {
+          "budget": 5,
+          "ethics": 15,
+          "legal": 20
+        },
+        "esCorrecta": true,
+        "retroalimentacion": "Dictamen correcto. Apache 2.0 es permisiva (objetivo 1), incluye una licencia de patentes de cada contribuyente que termina para quien inicie un litigio alegando infracción de patentes (sección 3, objetivo 2) y exige entregar la licencia, marcar los archivos modificados y conservar los avisos y el NOTICE (sección 4, objetivo 3). MIT también es permisiva, pero no tiene licencia expresa de patentes.",
+        "fundamento": [
+          "Apache License 2.0, secs. 3 y 4",
+          "FSF: lista de licencias"
+        ]
+      }
+    ],
+    "aprendizaje": "No existe la licencia «mejor», sino la adecuada a los objetivos: copyleft si se quiere que las mejoras sigan libres; permisiva si se quiere adopción amplia; con licencia de patentes si se busca certeza jurídica. Y publicar sin licencia no es liberar."
+  },
+  {
+    "id": "U4_C10",
+    "unidad": 4,
+    "subtema": "Inteligencia artificial y ética: privacidad y confidencialidad en el uso de IA generativa",
+    "titulo": "El chatbot que todos usan a escondidas",
+    "remitente": "Equipo de Seguridad",
+    "contexto": "Un análisis del tráfico de red reveló que 60 % del personal usa un chatbot gratuito de IA. Soporte pega conversaciones con datos de clientes para redactar respuestas; Desarrollo pega fragmentos del código del motor de riesgos. Los términos del servicio gratuito permiten al proveedor usar lo que se escribe para entrenar sus modelos.\n\nNovaByte no tiene ninguna política sobre el uso de IA.",
+    "pregunta": "¿Qué dictamen emites?",
+    "pistaNormativa": "Revisa la LFPDPPP (Arts. 18, 20 y 35): ¿enviar datos a un proveedor que los reutiliza es una transferencia? Revisa también qué pasa con un secreto industrial que se comparte sin medidas de confidencialidad (LFPPI, Art. 163).",
+    "manualRefs": [
+      "U4_M13",
+      "U2_M12",
+      "U2_M08",
+      "U3_M10"
+    ],
+    "evidencias": [
+      {
+        "tipo": "log",
+        "nombreArchivo": "dlp-alertas.log",
+        "contenido": "[2026-11-18 10:12:03] WARN  soporte: texto con 12 nombres, teléfonos y saldos enviado a chatbot público\n[2026-11-18 11:40:51] ALERT desarrollo: 340 líneas de /risk-model/ enviadas a chatbot público\n[2026-11-18 12:00:00] INFO  142 de 236 empleados usaron el servicio esta semana\n[2026-11-18 12:00:01] INFO  términos del servicio gratuito: «el contenido puede usarse para mejorar nuestros modelos»"
+      }
+    ],
+    "opciones": [
+      {
+        "id": "opt_1",
+        "tipo": "remediar",
+        "etiqueta": "Adoptar una política de uso de IA: herramientas aprobadas con contrato que impida reutilizar los datos, prohibición de ingresar datos personales o confidenciales sin disociar, revisión humana de los resultados y capacitación; evaluar y atender lo ya compartido.",
+        "marcoEtico": "justicia",
+        "modeloEtico": "Justicia y responsabilidad: aprovechar la IA sin trasladar riesgos a clientes y empresa.",
+        "impacto": {
+          "budget": -5,
+          "ethics": 20,
+          "legal": 25
+        },
+        "esCorrecta": true,
+        "retroalimentacion": "Dictamen correcto. Enviar datos de clientes a un proveedor que los reutiliza para sus propios fines es una transferencia que exige comunicarle el aviso y las finalidades, e informar en el aviso si la persona titular la acepta (LFPDPPP, Art. 35); además vulnera las medidas de seguridad y la confidencialidad (Arts. 18 y 20). Compartir el código del modelo sin protección puede hacer perder su carácter de secreto industrial (LFPPI, Art. 163). Una política con herramientas contratadas, datos disociados y capacitación permite usar la IA de forma responsable.",
+        "fundamento": [
+          "LFPDPPP Arts. 18, 20 y 35",
+          "LFPPI Art. 163",
+          "ACM Code 1.6"
+        ]
+      },
+      {
+        "id": "opt_2",
+        "tipo": "aprobar",
+        "etiqueta": "Permitir el uso libre: la IA aumenta la productividad y todos la usan.",
+        "marcoEtico": "relativismo",
+        "modeloEtico": "Relativismo: «todos lo hacen» y la productividad lo justifica.",
+        "impacto": {
+          "budget": 10,
+          "ethics": -25,
+          "legal": -30
+        },
+        "esCorrecta": false,
+        "retroalimentacion": "La productividad no justifica entregar datos de clientes y secretos industriales a un servicio que los usará para entrenar sus modelos. Es una transferencia sin base legal (LFPDPPP, Art. 35), una falla de seguridad y confidencialidad (Arts. 18 y 20) y un riesgo de perder el secreto industrial del modelo de riesgos (LFPPI, Art. 163).",
+        "fundamento": [
+          "LFPDPPP Arts. 18, 20 y 35",
+          "LFPPI Art. 163"
+        ]
+      },
+      {
+        "id": "opt_3",
+        "tipo": "bloquear",
+        "etiqueta": "Prohibir cualquier herramienta de IA y despedir a quien la haya usado.",
+        "marcoEtico": "deontologia",
+        "modeloEtico": "Prohibicionismo: castiga a las personas por una falla de la empresa.",
+        "impacto": {
+          "budget": -15,
+          "ethics": -15,
+          "legal": 0
+        },
+        "esCorrecta": false,
+        "retroalimentacion": "El uso indebido ocurrió porque NovaByte nunca dio reglas ni herramientas seguras: despedir a 142 personas castiga una falla de la organización. Prohibir toda IA tampoco es realista; empuja a usarla a escondidas. Lo responsable es regular, contratar herramientas seguras y capacitar.",
+        "fundamento": [
+          "ACM Code 2.3"
+        ]
+      }
+    ],
+    "aprendizaje": "La IA generativa trae dilemas de privacidad en su uso diario: lo que se escribe en un chatbot puede convertirse en datos de entrenamiento de otra empresa. Una política de uso de IA protege a clientes y secretos sin renunciar a la tecnología."
   }
 ]

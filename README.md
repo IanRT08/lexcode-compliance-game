@@ -18,12 +18,12 @@ Proyecto final de **Ética y Legislación en Tecnologías de la Información (E-
 
 ## Estructura del juego
 
-| Sprint | Unidad | Escenario | Temas |
-| :---: | :---: | :--- | :--- |
-| 1 | I | El Código del Desarrollador | Moral, valores, ética y normatividad; ética en el desarrollo de software; ciberacoso, plagio, discriminación y desinformación; modelos de decisión ética |
-| 2 | II | Bóveda de Datos y Autoría | Arts. 6, 7, 8 y 16 constitucionales; LFPDPPP; LFDA vs. LFPPI; auditoría legal de código |
-| 3 | III | Respuesta a Incidentes SOC | Delitos informáticos (CPF), Convenio de Budapest, *compliance*, *e-waste* y regulación de IA |
-| 4 | IV | Lanzamiento Disruptivo | Licenciamiento Copyright/Copyleft, LFPC Art. 76 Bis y patrones oscuros, investigación en línea, scraping, redes sociales, sesgos de IA e IA generativa |
+| Sprint | Unidad | Casos | Escenario | Temas del temario DGUTyP 2024 |
+| :---: | :---: | :---: | :--- | :--- |
+| 1 | I | 10 | El Código del Desarrollador | Moral, valores, principios y dilemas; ética en el desarrollo y uso de las TIC; ética para empleados y usuarios; elementos éticos (privacidad, seguridad, responsabilidad, PI, acceso equitativo); ciberacoso, plagio, discriminación y desinformación; toma de decisiones; cumplimiento normativo (políticas y procedimientos) |
+| 2 | II | 10 | Bóveda de Datos y Autoría | Derecho a la información; régimen jurídico (LFDA, LFPPI); marco constitucional y jurisprudencia; libertad de expresión y réplica; derecho de petición; privacidad y protección de datos (LFPDPPP); propiedad intelectual; revisión y auditoría de código |
+| 3 | III | 11 | Respuesta a Incidentes SOC | Responsabilidad social y ambiental (LGPGIR, Basilea); definición, clasificación y penas de delitos informáticos; normatividad nacional e internacional (CPF, Budapest); delitos contra el patrimonio y la propiedad intelectual; TI como medio delictivo; IA; cumplimiento normativo |
+| 4 | IV | 10 | Lanzamiento Disruptivo | Investigación en línea; redes sociales (plataformas y personal); propiedad industrial, licenciamiento y derechos de autor (Copyright/Copyleft); comercio electrónico y protección al consumidor; IA: sesgos, discriminación y privacidad |
 
 ## Tecnología
 
@@ -38,11 +38,11 @@ Proyecto final de **Ética y Legislación en Tecnologías de la Información (E-
 
 1. Cada ticket llega con un **expediente**: contexto y evidencias (correos, chats, código, diffs, bitácoras, contratos, configuraciones).
 2. El **Manual Jurídico** se consulta sin costo; la **pista normativa** del despacho externo cuesta presupuesto.
-   Un **glosario** de 60 términos técnicos (SDK, Pull Request, ransomware, scraping, UMA…) explica en lenguaje sencillo las palabras de cada ticket y tiene buscador propio.
+   Un **glosario** de 70 términos técnicos (SDK, Pull Request, ransomware, scraping, UMA…) explica en lenguaje sencillo las palabras de cada ticket y tiene buscador propio.
 3. Se sella un **dictamen** (Aprobar, Bloquear, Remediar o Escalar). Cada dictamen muestra de inmediato el fundamento ético y legal, el modelo ético aplicado, el dictamen recomendado si fallaste y el aprendizaje clave.
 4. Si **Presupuesto**, **Reputación Ética** o **Cumplimiento Legal** llegan a 0, la partida termina con un final temático. Al cerrar cada Sprint se muestra el perfil de decisión ética del jugador.
 5. Cada Sprint abre con un correo de briefing (narrativa y objetivos de aprendizaje).
-6. Al completar los 4 Sprints (26 casos) se genera un **reconocimiento simbólico imprimible** con el desglose por unidad. Es solo un premio del juego: **no tiene validez legal, oficial ni académica**, no incluye logotipos institucionales y el juego lo advierte antes de descargarlo y dentro del propio documento.
+6. Al completar los 4 Sprints (41 casos: al menos 10 por unidad, conforme a la indicación de la docente) se genera un **reconocimiento simbólico imprimible** con el desglose por unidad. Es solo un premio del juego: **no tiene validez legal, oficial ni académica**, no incluye logotipos institucionales y el juego lo advierte antes de descargarlo y dentro del propio documento.
 
 ## Fuentes normativas oficiales
 
@@ -63,6 +63,8 @@ El contenido jurídico se verificó en noviembre de 2026 contra los textos vigen
 | NOM-035-STPS-2018 (vigente) | [Diario Oficial de la Federación](https://dof.gob.mx/nota_detalle.php?codigo=5541828&fecha=23/10/2018) | Publicación original |
 | Amparo Directo 6/2025 (IA y derecho de autor) | [SCJN](https://transparencia-ciudadana.scjn.gob.mx/resoluciones-relevantes-de-la-SCJN/derechos-digitales/ad-6-2025) | 2025 |
 | Reglamento (UE) 2024/1689 (AI Act) y Reglamento (UE) 2026/1744 | [EUR-Lex](https://eur-lex.europa.eu/legal-content/ES/TXT/?uri=CELEX:32024R1689) · [EUR-Lex](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32026R1744) | 08/07/2026 |
+| Convenio de Basilea (movimientos transfronterizos de residuos) | [Basel Convention](https://www.basel.int/Countries/StatusofRatifications/PartiesSignatories/tabid/4499/Default.aspx) | México: ratificación 22/02/1991 |
+| Apache License 2.0 | [Apache Software Foundation](https://www.apache.org/licenses/LICENSE-2.0) | Vigente |
 | Convenio de Budapest | [Consejo de Europa](https://rm.coe.int/cyber-buda-benefits-1-julio-2026-es/48802c5c23) | Julio de 2026 |
 | Recomendación sobre la Ética de la IA | [UNESCO](https://www.unesco.org/es/artificial-intelligence/recommendation-ethics) | Vigente |
 | Compatibilidad de licencias | [FSF](https://www.gnu.org/licenses/license-list.html) · [Apache](https://www.apache.org/licenses/GPL-compatibility.html) · [Creative Commons](https://creativecommons.org/share-your-work/licensing-considerations/compatible-licenses/) | 2026 |

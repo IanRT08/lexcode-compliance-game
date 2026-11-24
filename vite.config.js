@@ -6,4 +6,8 @@ import tailwindcss from '@tailwindcss/vite';
 // (Build Command: npm run build · Output Directory: dist).
 export default defineConfig({
   plugins: [react(), tailwindcss()],
+  build: {
+    // La mayor parte del bundle es texto didáctico (41 casos, manual y glosario): ~175 KB con gzip.
+    chunkSizeWarningLimit: 750,
+  },
 });

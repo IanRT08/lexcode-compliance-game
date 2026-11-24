@@ -8,7 +8,13 @@
     "contexto": "Banco Solaris, el cliente más grande de NovaByte, espera hoy a las 18:00 la versión 2.4 de NovaPay, la app de pagos que integra en su banca móvil.\n\nEsta mañana QA reportó un defecto en el cálculo de mensualidades sin intereses: el redondeo cobra hasta $1.00 MXN de más en cada mensualidad. Rodrigo exige liberar a tiempo. Luis, el tech lead, opina que «no hay ninguna ley que diga cómo redondear, así que no es ilegal».\n\nComo Oficial de Cumplimiento, tu firma es necesaria para el pase a producción.",
     "pregunta": "¿Qué dictamen emites sobre el pase a producción de la versión 2.4?",
     "pistaNormativa": "Que una conducta no esté prohibida por la ley no la vuelve correcta. Revisa en el Manual la diferencia entre moral, ética y normatividad, y los principios de calidad y honestidad de los códigos ACM y ACM/IEEE-CS.",
-    "manualRefs": ["U1_M01", "U1_M03", "U1_M04", "U1_M05", "U1_M06"],
+    "manualRefs": [
+      "U1_M01",
+      "U1_M03",
+      "U1_M04",
+      "U1_M05",
+      "U1_M06"
+    ],
     "evidencias": [
       {
         "tipo": "correo",
@@ -18,7 +24,9 @@
         "fecha": "Lun 16 nov 2026, 09:14",
         "asunto": "URGENTE: firma para liberar NovaPay 2.4 hoy",
         "cuerpo": "Hola:\n\nNecesito tu firma para liberar la 2.4 hoy a las 18:00. Banco Solaris ya anunció la función de mensualidades a sus clientes y no podemos fallarles.\n\nSé que QA encontró un detalle con el redondeo, pero son centavos. Luis ya confirmó que no hay ninguna ley que lo prohíba y lo arreglamos en la 2.5 sin hacer ruido.\n\nSi movemos la fecha, el banco puede aplicar la penalización del contrato ($350,000 MXN).\n\nSaludos,\nRodrigo",
-        "adjuntos": ["QA-2291_reporte.pdf"]
+        "adjuntos": [
+          "QA-2291_reporte.pdf"
+        ]
       },
       {
         "tipo": "documento",
@@ -60,10 +68,18 @@
         "etiqueta": "Aprobar el pase a producción: ninguna ley regula el redondeo y el cliente espera la fecha comprometida.",
         "marcoEtico": "egoismo",
         "modeloEtico": "Legalismo mínimo y egoísmo ético: «si no es ilegal, es aceptable».",
-        "impacto": { "budget": 10, "ethics": -30, "legal": -15 },
+        "impacto": {
+          "budget": 10,
+          "ethics": -30,
+          "legal": -15
+        },
         "esCorrecta": false,
         "retroalimentacion": "Confundes legalidad con ética. La normatividad marca el mínimo exigible con sanción; la ética profesional exige más: no liberar software que sabes que perjudica a las personas usuarias. El Código ACM/IEEE-CS pide aprobar software solo si hay fundamento para creer que cumple su especificación (1.03), y el Código ACM exige calidad (2.1) y evaluar los riesgos (2.5). Además, cobrar cantidades no pactadas expone a NovaByte y al banco a reclamaciones de los consumidores.",
-        "fundamento": ["ACM/IEEE-CS SE Code 1.03", "ACM Code 2.1", "ACM Code 2.5"]
+        "fundamento": [
+          "ACM/IEEE-CS SE Code 1.03",
+          "ACM Code 2.1",
+          "ACM Code 2.5"
+        ]
       },
       {
         "id": "opt_2",
@@ -71,10 +87,18 @@
         "etiqueta": "Liberar la 2.4 con el módulo de mensualidades desactivado, corregir y probar el redondeo antes de activarlo, e informar por escrito al banco del defecto y de la nueva fecha.",
         "marcoEtico": "deontologia",
         "modeloEtico": "Deontología profesional: deber de calidad y de transparencia con el cliente.",
-        "impacto": { "budget": -5, "ethics": 15, "legal": 10 },
+        "impacto": {
+          "budget": -5,
+          "ethics": 15,
+          "legal": 10
+        },
         "esCorrecta": true,
         "retroalimentacion": "Dictamen correcto. Cumples la fecha con lo que sí funciona y retienes lo defectuoso hasta corregirlo. Informar al cliente con honestidad aplica el principio 1.3 del Código ACM (ser honesto y digno de confianza) y el 1.04 del Código ACM/IEEE-CS (revelar a quien corresponda los riesgos conocidos del software). Además, la comunicación oportuna permite negociar la penalización en lugar de esconder el problema.",
-        "fundamento": ["ACM Code 1.3", "ACM/IEEE-CS SE Code 1.04", "ACM Code 2.1"]
+        "fundamento": [
+          "ACM Code 1.3",
+          "ACM/IEEE-CS SE Code 1.04",
+          "ACM Code 2.1"
+        ]
       },
       {
         "id": "opt_3",
@@ -82,10 +106,17 @@
         "etiqueta": "Liberar hoy y corregir en silencio en la 2.5; reembolsar solo a quien presente una queja.",
         "marcoEtico": "utilitarismo",
         "modeloEtico": "Utilitarismo mal aplicado: suma los beneficios de la empresa e ignora el daño a miles de usuarios.",
-        "impacto": { "budget": 5, "ethics": -25, "legal": -20 },
+        "impacto": {
+          "budget": 5,
+          "ethics": -25,
+          "legal": -20
+        },
         "esCorrecta": false,
         "retroalimentacion": "Un cálculo utilitarista honesto debe contar a todas las personas afectadas: miles de cobros indebidos pesan más que una fecha de entrega. Corregir en silencio y reembolsar solo a quien reclame traslada el costo a quienes no lo notan; viola la honestidad (ACM 1.3) y el deber de revelar riesgos (ACM/IEEE-CS 1.04). Si se descubre, el daño reputacional y las reclamaciones serán mayores que la penalización.",
-        "fundamento": ["ACM Code 1.3", "ACM/IEEE-CS SE Code 1.04"]
+        "fundamento": [
+          "ACM Code 1.3",
+          "ACM/IEEE-CS SE Code 1.04"
+        ]
       }
     ],
     "aprendizaje": "Moral: convicciones personales o de un grupo sobre lo bueno y lo malo («a mí no me parece grave»). Ética: reflexión racional sobre esas conductas; en la profesión se concreta en códigos como los de ACM e IEEE. Normatividad: reglas jurídicas obligatorias cuyo incumplimiento tiene una sanción. Que algo no esté prohibido no lo vuelve correcto: la ley es el mínimo y la ética profesional es el estándar."
@@ -99,7 +130,11 @@
     "contexto": "Daniela se incorporó hace tres semanas. Desde entonces, en el canal del equipo circulan memes sobre su acento, apodos como «la de servicio social» y capturas de su código con burlas. Óscar, desarrollador senior, inicia la mayoría; otros reaccionan con risas.\n\nHoy Daniela te escribió en privado: dejó de hablar en las juntas diarias y piensa renunciar. NovaByte tiene un Código de Conducta con una política de prevención de violencia laboral, pero nadie la ha aplicado.",
     "pregunta": "¿Cómo atiendes la situación?",
     "pistaNormativa": "El ciberacoso entre colegas es una falta ética grave que la empresa está obligada a prevenir y atender. Revisa la NOM-035-STPS-2018 y el protocolo del Código de Conducta de NovaByte.",
-    "manualRefs": ["U1_M11", "U1_M05", "U1_M09"],
+    "manualRefs": [
+      "U1_M11",
+      "U1_M05",
+      "U1_M09"
+    ],
     "evidencias": [
       {
         "tipo": "chat",
@@ -154,7 +189,10 @@
         "nombreArchivo": "codigo_conducta.pdf",
         "membrete": "NovaByte · Capital Humano",
         "titulo": "Código de Conducta (extracto)",
-        "metadatos": { "Versión": "3.1", "Vigente desde": "01/03/2026" },
+        "metadatos": {
+          "Versión": "3.1",
+          "Vigente desde": "01/03/2026"
+        },
         "secciones": [
           {
             "titulo": "4. Respeto y no violencia",
@@ -178,10 +216,18 @@
         "etiqueta": "Archivar el asunto: es humor de equipo. Sugerir a Daniela que no lo tome personal.",
         "marcoEtico": "relativismo",
         "modeloEtico": "Relativismo moral: «es la cultura del equipo, no es para tanto».",
-        "impacto": { "budget": 0, "ethics": -35, "legal": -15 },
+        "impacto": {
+          "budget": 0,
+          "ethics": -35,
+          "legal": -15
+        },
         "esCorrecta": false,
         "retroalimentacion": "Normalizar burlas reiteradas es tolerar violencia laboral. La repetición, el blanco fijo y la humillación pública distinguen el acoso de una broma, y pedirle a la víctima que «no lo tome personal» la revictimiza. El Código ACM exige evitar el daño (1.2) y la NOM-035-STPS-2018 obliga a la empresa a prevenir y atender la violencia laboral; ignorar la queja expone a NovaByte ante la autoridad laboral y le hace perder talento.",
-        "fundamento": ["ACM Code 1.2", "NOM-035-STPS-2018", "Código de Conducta NovaByte, sec. 4"]
+        "fundamento": [
+          "ACM Code 1.2",
+          "NOM-035-STPS-2018",
+          "Código de Conducta NovaByte, sec. 4"
+        ]
       },
       {
         "id": "opt_2",
@@ -189,10 +235,18 @@
         "etiqueta": "Exhibir a Óscar en el canal general con las capturas y expulsarlo de inmediato de todos los canales.",
         "marcoEtico": "justicia",
         "modeloEtico": "Justicia punitiva sin debido proceso.",
-        "impacto": { "budget": -10, "ethics": -15, "legal": -20 },
+        "impacto": {
+          "budget": -10,
+          "ethics": -15,
+          "legal": -20
+        },
         "esCorrecta": false,
         "retroalimentacion": "La intención de proteger es válida, pero exhibir el caso expone otra vez a Daniela sin su consentimiento, humilla públicamente a otra persona y omite el derecho de audiencia del señalado. Una sanción sin procedimiento puede impugnarse y debilita el protocolo. La justicia exige proteger a la víctima y, a la vez, seguir un proceso confidencial y proporcional.",
-        "fundamento": ["ACM Code 1.4", "NOM-035-STPS-2018", "Código de Conducta NovaByte, sec. 8"]
+        "fundamento": [
+          "ACM Code 1.4",
+          "NOM-035-STPS-2018",
+          "Código de Conducta NovaByte, sec. 8"
+        ]
       },
       {
         "id": "opt_3",
@@ -200,10 +254,18 @@
         "etiqueta": "Activar el protocolo: resguardar la evidencia, ofrecer apoyo confidencial a Daniela, turnar la queja a Capital Humano y pedir medidas de protección mientras se escucha a Óscar.",
         "marcoEtico": "deontologia",
         "modeloEtico": "Deontología y ética del cuidado: deber de proteger a la persona afectada con debido proceso.",
-        "impacto": { "budget": -5, "ethics": 20, "legal": 15 },
+        "impacto": {
+          "budget": -5,
+          "ethics": 20,
+          "legal": 15
+        },
         "esCorrecta": true,
         "retroalimentacion": "Dictamen correcto. Atiendes primero a la persona afectada, con confidencialidad, y canalizas la queja por el protocolo que la empresa debe tener: la NOM-035-STPS-2018 obliga a contar con una política de prevención de la violencia laboral y mecanismos seguros para denunciarla. Las medidas de protección y la audiencia al señalado hacen que el proceso sea justo y que la sanción, si procede, se sostenga.",
-        "fundamento": ["NOM-035-STPS-2018, num. 5.1 y 8.1 b", "ACM Code 1.2", "Código de Conducta NovaByte, sec. 8"]
+        "fundamento": [
+          "NOM-035-STPS-2018, num. 5.1 y 8.1 b",
+          "ACM Code 1.2",
+          "Código de Conducta NovaByte, sec. 8"
+        ]
       }
     ],
     "aprendizaje": "El ciberacoso entre colegas es una falta ética y laboral: la empresa debe prevenirlo y atenderlo con un protocolo. No toda falta ética es un delito: solo ciertas conductas digitales están tipificadas penalmente (por ejemplo, difundir contenido íntimo sin consentimiento, que verás en la Unidad III). Confundir ambos planos lleva a respuestas desproporcionadas o insuficientes."
@@ -217,7 +279,12 @@
     "contexto": "Óscar abrió el Pull Request #482 con un motor de puntaje de riesgo para el SDK móvil que NovaByte vende a bancos con licencia propietaria. En la descripción afirma que es «desarrollo original».\n\nEl escáner de similitud del pipeline encontró una coincidencia del 96 % con un repositorio público de GitHub, publicado bajo GNU GPLv3 por la desarrolladora Ana Villalobos. El diff muestra que se eliminaron su aviso de copyright y su licencia. La entrega al banco es el viernes.",
     "pregunta": "¿Qué dictamen emites sobre el Pull Request #482?",
     "pistaNormativa": "Que un código sea público no significa que sea de dominio público. Revisa los derechos morales en la LFDA y lo que la GPLv3 exige al distribuir software.",
-    "manualRefs": ["U1_M12", "U1_M05", "U4_M01", "U1_M10"],
+    "manualRefs": [
+      "U1_M12",
+      "U1_M05",
+      "U4_M01",
+      "U1_M10"
+    ],
     "evidencias": [
       {
         "tipo": "diff",
@@ -242,10 +309,19 @@
         "etiqueta": "Rechazar el PR: restaurar el reconocimiento de autoría, retirar el código del SDK propietario y reescribir el módulo desde cero (implementación limpia) o negociar una licencia con la autora.",
         "marcoEtico": "virtud",
         "modeloEtico": "Ética de la virtud: honestidad e integridad profesional.",
-        "impacto": { "budget": -10, "ethics": 20, "legal": 20 },
+        "impacto": {
+          "budget": -10,
+          "ethics": 20,
+          "legal": 20
+        },
         "esCorrecta": true,
         "retroalimentacion": "Dictamen correcto. Presentar como propio el trabajo de otra persona es plagio: una falta de honestidad (ACM 1.3) y de respeto al trabajo creativo ajeno (ACM 1.5). Eliminar el aviso de copyright desconoce además el derecho moral de paternidad de la autora (LFDA, Art. 21, fr. II) y las condiciones de la GPLv3, que exige conservar los avisos y licenciar bajo GPL toda obra derivada que se distribuya, algo incompatible con un SDK propietario. Reescribir o negociar es la salida legítima.",
-        "fundamento": ["ACM Code 1.3", "ACM Code 1.5", "LFDA Art. 21, fr. II", "GPLv3, secs. 4 y 5"]
+        "fundamento": [
+          "ACM Code 1.3",
+          "ACM Code 1.5",
+          "LFDA Art. 21, fr. II",
+          "GPLv3, secs. 4 y 5"
+        ]
       },
       {
         "id": "opt_2",
@@ -253,10 +329,18 @@
         "etiqueta": "Aprobar: el código está publicado en GitHub, así que cualquiera puede usarlo como quiera.",
         "marcoEtico": "egoismo",
         "modeloEtico": "Egoísmo ético basado en un error: «si está en internet, es gratis».",
-        "impacto": { "budget": 10, "ethics": -25, "legal": -35 },
+        "impacto": {
+          "budget": 10,
+          "ethics": -25,
+          "legal": -35
+        },
         "esCorrecta": false,
         "retroalimentacion": "Público no es lo mismo que dominio público. El código en GitHub conserva sus derechos de autor y solo puede usarse según su licencia. La GPLv3 permite usarlo, pero al distribuirlo exige conservar los avisos y liberar el código derivado bajo la misma licencia. Incorporarlo a un SDK propietario sin cumplir esas condiciones, y además borrando la autoría, infringe los derechos de la autora y expone a NovaByte a reclamaciones.",
-        "fundamento": ["LFDA Art. 21, fr. II", "GPLv3, secs. 4 y 5", "ACM Code 1.5"]
+        "fundamento": [
+          "LFDA Art. 21, fr. II",
+          "GPLv3, secs. 4 y 5",
+          "ACM Code 1.5"
+        ]
       },
       {
         "id": "opt_3",
@@ -264,10 +348,17 @@
         "etiqueta": "Aprobar si Óscar cambia nombres de variables y reordena funciones para que el escáner ya no detecte la coincidencia.",
         "marcoEtico": "egoismo",
         "modeloEtico": "Encubrimiento: prioriza no ser descubierto sobre actuar correctamente.",
-        "impacto": { "budget": 5, "ethics": -35, "legal": -30 },
+        "impacto": {
+          "budget": 5,
+          "ethics": -35,
+          "legal": -30
+        },
         "esCorrecta": false,
         "retroalimentacion": "Disfrazar el código no cambia su origen: sigue siendo una obra derivada del trabajo de Ana Villalobos y su uso sigue sujeto a la GPLv3. Además agrega encubrimiento deliberado, lo que agrava la falta ética (ACM 1.3) y elimina cualquier argumento de buena fe ante una reclamación.",
-        "fundamento": ["ACM Code 1.3", "LFDA Art. 21, fr. II"]
+        "fundamento": [
+          "ACM Code 1.3",
+          "LFDA Art. 21, fr. II"
+        ]
       }
     ],
     "aprendizaje": "Plagio es atribuirse la autoría de un trabajo ajeno; es una falta ética aunque nadie lo descubra. Puede ser además una infracción de derechos de autor (Unidad II) y, si hay reproducción con fines de lucro, incluso un delito (Unidad III). Reutilizar código es legítimo cuando respetas su licencia y reconoces a sus autores."
@@ -281,7 +372,11 @@
     "contexto": "Después del caso del PR #482, Óscar revisa todo con lupa. Ahora marcó como «plagio» el Pull Request #490 de Daniela: para normalizar nombres en el buscador de clientes, ella integró la librería de código abierto slug-mx (licencia MIT) en el backend.\n\nÓscar exige rechazarlo y que Daniela escriba todo desde cero «para que nadie nos acuse de copiar». Reescribir costaría una semana de trabajo.",
     "pregunta": "¿Qué dictamen emites sobre el Pull Request #490?",
     "pistaNormativa": "Distingue entre plagio (atribuirse algo ajeno) y reutilización legítima (usar una obra conforme a su licencia y con crédito). Revisa qué exige la licencia MIT.",
-    "manualRefs": ["U4_M01", "U1_M12", "U1_M05"],
+    "manualRefs": [
+      "U4_M01",
+      "U1_M12",
+      "U1_M05"
+    ],
     "evidencias": [
       {
         "tipo": "diff",
@@ -326,10 +421,17 @@
         "etiqueta": "Rechazar el PR: usar cualquier código escrito por otra persona es plagio; Daniela debe reescribir todo desde cero.",
         "marcoEtico": "deontologia",
         "modeloEtico": "Rigorismo mal informado: aplica una regla que no existe y confunde reutilizar con plagiar.",
-        "impacto": { "budget": -15, "ethics": -10, "legal": 0 },
+        "impacto": {
+          "budget": -15,
+          "ethics": -10,
+          "legal": 0
+        },
         "esCorrecta": false,
         "retroalimentacion": "Rechazar sin fundamento castiga a quien actuó bien y cuesta una semana de trabajo. Plagio es ocultar o usurpar la autoría; aquí la autoría está reconocida y la licencia se cumple. Confundir la reutilización legítima con el plagio frena la innovación y desconoce cómo funciona el software libre y de código abierto.",
-        "fundamento": ["Licencia MIT", "ACM Code 1.5"]
+        "fundamento": [
+          "Licencia MIT",
+          "ACM Code 1.5"
+        ]
       },
       {
         "id": "opt_2",
@@ -337,10 +439,18 @@
         "etiqueta": "Aprobar el PR: es reutilización legítima. La dependencia está declarada, la licencia MIT lo permite y se conserva el aviso de copyright del autor.",
         "marcoEtico": "deontologia",
         "modeloEtico": "Deontología: cumplir las condiciones de la licencia y reconocer la autoría.",
-        "impacto": { "budget": 5, "ethics": 10, "legal": 10 },
+        "impacto": {
+          "budget": 5,
+          "ethics": 10,
+          "legal": 10
+        },
         "esCorrecta": true,
         "retroalimentacion": "Dictamen correcto. No hay plagio: Daniela no se atribuye la obra, la usa conforme a su licencia y acredita a su autor. La licencia MIT permite usar, copiar, modificar y distribuir el software con la condición de conservar el aviso de copyright y de licencia, que es justo lo que hace THIRD_PARTY_NOTICES.md. Reutilizar componentes probados respetando sus licencias es una buena práctica profesional (ACM 1.5 y 2.3).",
-        "fundamento": ["Licencia MIT", "ACM Code 1.5", "ACM Code 2.3"]
+        "fundamento": [
+          "Licencia MIT",
+          "ACM Code 1.5",
+          "ACM Code 2.3"
+        ]
       },
       {
         "id": "opt_3",
@@ -348,10 +458,17 @@
         "etiqueta": "Escalar al área legal y congelar todas las dependencias de código abierto del proyecto hasta nuevo aviso.",
         "marcoEtico": "utilitarismo",
         "modeloEtico": "Aversión al riesgo desproporcionada: sacrifica la operación de todo el equipo para evitar un riesgo inexistente.",
-        "impacto": { "budget": -20, "ethics": -5, "legal": 0 },
+        "impacto": {
+          "budget": -20,
+          "ethics": -5,
+          "legal": 0
+        },
         "esCorrecta": false,
         "retroalimentacion": "Revisar licencias es sano, pero congelar todo el código abierto es desproporcionado: casi cualquier sistema moderno depende de él. Lo profesional es contar con una política de dependencias (inventario, licencias permitidas, avisos) y aplicarla caso por caso. Esta dependencia ya cumple: escalarla solo retrasa al equipo.",
-        "fundamento": ["ACM Code 2.3", "Licencia MIT"]
+        "fundamento": [
+          "ACM Code 2.3",
+          "Licencia MIT"
+        ]
       }
     ],
     "aprendizaje": "Plagio y reutilización no son lo mismo. Usar código ajeno es legítimo si cumples su licencia y reconoces a sus autores; es plagio cuando ocultas su origen o te lo atribuyes. Las licencias permisivas (MIT, Apache 2.0) piden sobre todo conservar los avisos; las copyleft (GPL) además exigen compartir las obras derivadas bajo la misma licencia, como verás a fondo en la Unidad IV."
@@ -365,7 +482,11 @@
     "contexto": "NovaByte abrió 15 vacantes y recibió más de 2,000 postulaciones. Para ahorrar tiempo, Capital Humano configuró TalentScreen, un filtro automático que descarta candidaturas antes de que una persona las lea. Jorge, el CEO, pidió «gente joven que aguante el ritmo».\n\nAntes de activarse, el sistema requiere el visto bueno de Cumplimiento.",
     "pregunta": "¿Autorizas la configuración del filtro?",
     "pistaNormativa": "La libertad de contratar tiene límites. Revisa la prohibición de discriminación del artículo 1.º constitucional y lo que el artículo 133 de la Ley Federal del Trabajo prohíbe a las personas empleadoras.",
-    "manualRefs": ["U1_M13", "U1_M09", "U1_M05"],
+    "manualRefs": [
+      "U1_M13",
+      "U1_M09",
+      "U1_M05"
+    ],
     "evidencias": [
       {
         "tipo": "json",
@@ -388,10 +509,18 @@
         "etiqueta": "Autorizar el filtro tal cual: es una empresa privada y la eficiencia justifica reducir candidaturas.",
         "marcoEtico": "utilitarismo",
         "modeloEtico": "Utilitarismo eficientista: maximiza el ahorro de tiempo e ignora a las personas excluidas.",
-        "impacto": { "budget": 10, "ethics": -35, "legal": -35 },
+        "impacto": {
+          "budget": 10,
+          "ethics": -35,
+          "legal": -35
+        },
         "esCorrecta": false,
         "retroalimentacion": "La eficiencia no justifica excluir personas por su edad, su lugar de residencia, una discapacidad, un embarazo o su origen étnico. El artículo 1.º constitucional prohíbe toda discriminación que atente contra la dignidad humana, y la Ley Federal del Trabajo (Art. 133, fr. I) prohíbe a las personas empleadoras negarse a aceptar trabajadores por esos motivos. Automatizar la exclusión la vuelve masiva e invisible, y expone a NovaByte a quejas ante el CONAPRED y a demandas.",
-        "fundamento": ["CPEUM Art. 1, último párrafo", "LFT Art. 133, fr. I", "ACM Code 1.4"]
+        "fundamento": [
+          "CPEUM Art. 1, último párrafo",
+          "LFT Art. 133, fr. I",
+          "ACM Code 1.4"
+        ]
       },
       {
         "id": "opt_2",
@@ -399,10 +528,19 @@
         "etiqueta": "Devolver la configuración: eliminar las reglas discriminatorias (edad, zona, fotografía, embarazo, discapacidad u origen), filtrar por competencias del puesto, hacer accesible el formulario y garantizar revisión humana.",
         "marcoEtico": "justicia",
         "modeloEtico": "Justicia y derechos: igualdad de oportunidades y no discriminación.",
-        "impacto": { "budget": -5, "ethics": 20, "legal": 20 },
+        "impacto": {
+          "budget": -5,
+          "ethics": 20,
+          "legal": 20
+        },
         "esCorrecta": true,
         "retroalimentacion": "Dictamen correcto. Conservas la automatización, pero con criterios relacionados con el puesto (competencias técnicas verificables) y eliminas los que excluyen por condiciones protegidas, como exigen el artículo 1.º constitucional y el artículo 133, fr. I, de la LFT. Un formulario accesible y no limitado a la app móvil reduce la exclusión digital, y la revisión humana permite corregir errores del sistema. Es lo que pide el Código ACM: ser justo y actuar para no discriminar (1.4).",
-        "fundamento": ["CPEUM Art. 1, último párrafo", "LFT Art. 133, fr. I", "LFPED", "ACM Code 1.4"]
+        "fundamento": [
+          "CPEUM Art. 1, último párrafo",
+          "LFT Art. 133, fr. I",
+          "LFPED",
+          "ACM Code 1.4"
+        ]
       },
       {
         "id": "opt_3",
@@ -410,10 +548,18 @@
         "etiqueta": "Activar el filtro, pero sin publicar los criterios de descarte para evitar quejas.",
         "marcoEtico": "egoismo",
         "modeloEtico": "Egoísmo ético con opacidad: evitar las consecuencias en lugar de corregir la conducta.",
-        "impacto": { "budget": 5, "ethics": -40, "legal": -30 },
+        "impacto": {
+          "budget": 5,
+          "ethics": -40,
+          "legal": -30
+        },
         "esCorrecta": false,
         "retroalimentacion": "Ocultar los criterios no elimina la discriminación: la agrava, porque impide que las personas afectadas se defiendan. La opacidad algorítmica es en sí un problema ético; el Código ACM exige honestidad (1.3) y no discriminar (1.4). Si se descubre, la sanción reputacional y legal será mayor.",
-        "fundamento": ["CPEUM Art. 1, último párrafo", "ACM Code 1.3", "ACM Code 1.4"]
+        "fundamento": [
+          "CPEUM Art. 1, último párrafo",
+          "ACM Code 1.3",
+          "ACM Code 1.4"
+        ]
       }
     ],
     "aprendizaje": "La discriminación tecnológica ocurre cuando un sistema excluye a personas por condiciones como edad, discapacidad, origen o situación social, aunque nadie lo haga «a propósito». La exclusión digital aparece cuando un diseño deja fuera a quien no tiene cierto dispositivo o usa tecnologías de asistencia. En la Unidad IV verás cómo estos sesgos aparecen en modelos de inteligencia artificial."
@@ -427,14 +573,22 @@
     "contexto": "NovaByte lanzará NovaPay Protect, un módulo antifraude. Para ganar mercado rápido, Marketing preparó una campaña con tres piezas: un anuncio que promete bloquear «el 99.9 % de los fraudes», 300 cuentas automatizadas que publicarán testimonios de «clientes felices» y una nota con apariencia de noticia que insinúa que un banco competidor «fue vaciado por hackers», sin ninguna fuente.\n\nAdemás, se ajustará el algoritmo de recomendaciones de la app para dar prioridad a las publicaciones que generen indignación.",
     "pregunta": "¿Qué dictamen emites sobre la campaña?",
     "pistaNormativa": "La publicidad debe ser veraz y comprobable (LFPC, Art. 32), y la libertad de expresión no ampara afectar derechos de terceros (Art. 6.º constitucional). Compara la cifra anunciada con los resultados de QA.",
-    "manualRefs": ["U1_M14", "U1_M05", "U1_M10"],
+    "manualRefs": [
+      "U1_M14",
+      "U1_M05",
+      "U1_M10"
+    ],
     "evidencias": [
       {
         "tipo": "documento",
         "nombreArchivo": "brief_campana.pdf",
         "membrete": "NovaByte · Marketing",
         "titulo": "Brief de campaña: NovaPay Protect",
-        "metadatos": { "Presupuesto": "$1.2 M MXN", "Lanzamiento": "25/11/2026", "Estado": "Pendiente de Cumplimiento" },
+        "metadatos": {
+          "Presupuesto": "$1.2 M MXN",
+          "Lanzamiento": "25/11/2026",
+          "Estado": "Pendiente de Cumplimiento"
+        },
         "secciones": [
           {
             "titulo": "Mensaje principal",
@@ -467,10 +621,19 @@
         "etiqueta": "Aprobar la campaña completa: el mercado es competitivo y el engagement financiará el crecimiento.",
         "marcoEtico": "egoismo",
         "modeloEtico": "Egoísmo ético: el crecimiento de la empresa justifica engañar.",
-        "impacto": { "budget": 15, "ethics": -40, "legal": -30 },
+        "impacto": {
+          "budget": 15,
+          "ethics": -40,
+          "legal": -30
+        },
         "esCorrecta": false,
         "retroalimentacion": "La campaña engaña con una cifra falsa (99.9 % frente al 71 % medido), simula opiniones con cuentas falsas y difunde una noticia inventada contra un competidor. La LFPC (Art. 32) exige publicidad veraz, comprobable y clara, y la nota falsa puede afectar derechos de terceros, un límite a la libertad de expresión (Art. 6.º constitucional). Premiar la indignación en el algoritmo agrava la desinformación. El Código ACM exige honestidad (1.3) y evitar el daño (1.2).",
-        "fundamento": ["LFPC Art. 32", "CPEUM Art. 6", "ACM Code 1.2", "ACM Code 1.3"]
+        "fundamento": [
+          "LFPC Art. 32",
+          "CPEUM Art. 6",
+          "ACM Code 1.2",
+          "ACM Code 1.3"
+        ]
       },
       {
         "id": "opt_2",
@@ -478,10 +641,17 @@
         "etiqueta": "Aprobar los testimonios de las 300 cuentas y el ajuste al algoritmo, pero retirar la nota sobre el competidor.",
         "marcoEtico": "utilitarismo",
         "modeloEtico": "Utilitarismo parcial: elimina el riesgo más visible y conserva el engaño rentable.",
-        "impacto": { "budget": 5, "ethics": -25, "legal": -15 },
+        "impacto": {
+          "budget": 5,
+          "ethics": -25,
+          "legal": -15
+        },
         "esCorrecta": false,
         "retroalimentacion": "Retirar la nota falsa es necesario pero insuficiente. Los testimonios de cuentas automatizadas son opiniones simuladas que inducen a error a los consumidores, y la cifra del 99.9 % sigue sin sustento. Ajustar el algoritmo para premiar la indignación amplifica contenido polarizante y desinformación en la propia plataforma de NovaByte. Corregir a medias sigue siendo engañar.",
-        "fundamento": ["LFPC Art. 32", "ACM Code 1.3"]
+        "fundamento": [
+          "LFPC Art. 32",
+          "ACM Code 1.3"
+        ]
       },
       {
         "id": "opt_3",
@@ -489,12 +659,422 @@
         "etiqueta": "Bloquear la campaña: usar solo la cifra comprobada (71 %), eliminar las cuentas falsas y la nota inventada, identificar el contenido patrocinado y no ajustar el algoritmo para premiar la indignación.",
         "marcoEtico": "virtud",
         "modeloEtico": "Ética de la virtud: veracidad y responsabilidad con la sociedad.",
-        "impacto": { "budget": -10, "ethics": 20, "legal": 15 },
+        "impacto": {
+          "budget": -10,
+          "ethics": 20,
+          "legal": 15
+        },
         "esCorrecta": true,
         "retroalimentacion": "Dictamen correcto. La campaña puede salir con información veraz y comprobable, como exige la LFPC (Art. 32). Eliminar perfiles falsos y la nota inventada evita engañar a los consumidores y dañar a un tercero, un límite a la libertad de expresión reconocido en el artículo 6.º constitucional. Rechazar la amplificación de la indignación es responsabilidad de quien diseña algoritmos: el Código ACM pide contribuir al bienestar social (1.1) y evitar el daño (1.2).",
-        "fundamento": ["LFPC Art. 32", "CPEUM Art. 6", "ACM Code 1.1", "ACM Code 1.2"]
+        "fundamento": [
+          "LFPC Art. 32",
+          "CPEUM Art. 6",
+          "ACM Code 1.1",
+          "ACM Code 1.2"
+        ]
       }
     ],
     "aprendizaje": "La desinformación no es solo publicar noticias falsas: también incluye cifras sin sustento, opiniones simuladas con bots y algoritmos que premian el contenido que más enoja. Quien diseña sistemas de recomendación tiene responsabilidad ética sobre lo que amplifica. La libertad de expresión es un derecho fundamental, pero no ampara engañar ni dañar a otras personas."
+  },
+  {
+    "id": "U1_C07",
+    "unidad": 1,
+    "subtema": "Ética para empleados y usuarios de las TI: acceso indebido y uso aceptable",
+    "titulo": "El administrador que miraba la cuenta de su expareja",
+    "remitente": "Auditoría interna de accesos",
+    "contexto": "La auditoría mensual detectó que Raúl Domínguez, administrador de bases de datos, consultó 37 veces en dos semanas la cuenta de una clienta de NovaPay: movimientos, ubicaciones de pago y contactos. Ningún ticket de soporte justificaba esas consultas.\n\nEn el chat del equipo, Raúl bromeó: «solo estaba viendo con quién sale ahora mi ex». No modificó ningún dato. NovaByte no tiene una política escrita de uso aceptable.",
+    "pregunta": "¿Cómo procede Cumplimiento?",
+    "pistaNormativa": "Tener acceso técnico no es lo mismo que estar autorizado para consultar. Revisa los principios para empleados de TI (ACM 1.6 y 2.8) y el deber de confidencialidad de la LFPDPPP (Art. 20). ¿La clienta debe enterarse (Art. 19)?",
+    "manualRefs": [
+      "U1_M18",
+      "U1_M16",
+      "U2_M08",
+      "U1_M19"
+    ],
+    "evidencias": [
+      {
+        "tipo": "log",
+        "nombreArchivo": "db-access-audit.log",
+        "contenido": "[2026-11-02 23:14:51] QUERY rdominguez SELECT * FROM movimientos WHERE cliente_id=88412\n[2026-11-02 23:16:08] QUERY rdominguez SELECT ubicacion, fecha FROM pagos WHERE cliente_id=88412\n[2026-11-04 01:02:33] QUERY rdominguez SELECT * FROM contactos_frecuentes WHERE cliente_id=88412\n[2026-11-15 22:40:12] WARN  37 consultas al mismo cliente sin ticket asociado\n[2026-11-16 09:00:00] INFO  rol de rdominguez: DBA con acceso total de lectura"
+      },
+      {
+        "tipo": "chat",
+        "canal": "equipo-datos",
+        "plataforma": "Chat corporativo",
+        "mensajes": [
+          {
+            "autor": "Raúl Domínguez",
+            "rol": "DBA",
+            "hora": "10:12",
+            "texto": "No exageren, solo estaba viendo con quién sale ahora mi ex. No cambié nada."
+          },
+          {
+            "autor": "Luis Cárdenas",
+            "rol": "Tech lead",
+            "hora": "10:15",
+            "texto": "Eso no se hace, Raúl. Pero tampoco tenemos ninguna política que lo prohíba por escrito."
+          }
+        ]
+      }
+    ],
+    "opciones": [
+      {
+        "id": "opt_1",
+        "tipo": "escalar",
+        "etiqueta": "Escalar a Capital Humano y Legal: suspender sus privilegios mientras se investiga con debido proceso, informar a la clienta de la vulneración, aplicar mínimo privilegio y auditoría continua, y aprobar una política escrita de uso aceptable.",
+        "marcoEtico": "deontologia",
+        "modeloEtico": "Deontología: el deber de confidencialidad no depende de que haya una política escrita.",
+        "impacto": {
+          "budget": -5,
+          "ethics": 20,
+          "legal": 20
+        },
+        "esCorrecta": true,
+        "retroalimentacion": "Dictamen correcto. Tener acceso técnico no autoriza a consultar datos por motivos personales: el Código ACM pide respetar la privacidad (1.6) y acceder a recursos solo cuando se está autorizado (2.8), y la LFPDPPP impone confidencialidad a quienes intervienen en el tratamiento (Art. 20). Espiar a una expareja afecta de forma significativa los derechos de la clienta, por lo que debe ser informada (Art. 19). La falta de una política escrita es una falla de la empresa que debe corregirse, no una excusa.",
+        "fundamento": [
+          "ACM Code 1.6 y 2.8",
+          "LFPDPPP Arts. 18, 19 y 20"
+        ]
+      },
+      {
+        "id": "opt_2",
+        "tipo": "aprobar",
+        "etiqueta": "Cerrar el asunto con una advertencia verbal: solo miró, no modificó datos y no existe una política que lo prohíba.",
+        "marcoEtico": "relativismo",
+        "modeloEtico": "Relativismo moral: «no hubo daño y nadie lo había prohibido».",
+        "impacto": {
+          "budget": 0,
+          "ethics": -30,
+          "legal": -25
+        },
+        "esCorrecta": false,
+        "retroalimentacion": "Mirar sí es dañar: consultar sin justificación los movimientos, ubicaciones y contactos de una persona vulnera su privacidad y puede ponerla en riesgo. El deber de confidencialidad existe por ley (LFPDPPP, Art. 20) aunque la empresa no tenga política, y el acceso sin finalidad laboral contradice la ética profesional (ACM 2.8). Además, la clienta tiene derecho a saber que sus datos fueron consultados indebidamente (Art. 19).",
+        "fundamento": [
+          "LFPDPPP Arts. 19 y 20",
+          "ACM Code 2.8"
+        ]
+      },
+      {
+        "id": "opt_3",
+        "tipo": "bloquear",
+        "etiqueta": "Despedirlo de inmediato y publicar el caso con su nombre en el canal general como advertencia para todos.",
+        "marcoEtico": "justicia",
+        "modeloEtico": "Justicia punitiva sin debido proceso.",
+        "impacto": {
+          "budget": -10,
+          "ethics": -15,
+          "legal": -15
+        },
+        "esCorrecta": false,
+        "retroalimentacion": "La conducta es grave, pero exhibir públicamente a la persona y saltarse el procedimiento expone a la empresa a impugnaciones y vuelve a difundir información de la clienta. Las medidas disciplinarias deben seguir un proceso y basarse en causas previstas en la ley laboral. La prioridad es proteger a la clienta, cortar el acceso y corregir los controles.",
+        "fundamento": [
+          "LFPDPPP Art. 20",
+          "LFT Art. 47"
+        ]
+      }
+    ],
+    "aprendizaje": "Las personas que trabajan en TI suelen tener más acceso del que necesitan; la ética profesional exige usarlo solo para su función. Los principios para empleados y usuarios (confidencialidad, mínimo privilegio, uso aceptable) deben quedar escritos en normas internas, pero existen aunque nadie los haya escrito."
+  },
+  {
+    "id": "U1_C08",
+    "unidad": 1,
+    "subtema": "Elementos éticos fundamentales en las TIC: acceso equitativo",
+    "titulo": "NovaPay Apoyos: ¿una app para todas las personas?",
+    "remitente": "Sofía Méndez — Líder de Producto",
+    "contexto": "El gobierno estatal contrató a NovaByte para entregar un apoyo económico a 40,000 personas adultas mayores mediante la app NovaPay Apoyos. El diseño actual exige un teléfono con Android 13 o superior, inicio de sesión solo con reconocimiento facial, interfaz únicamente en español con letra pequeña y ningún canal de atención presencial o telefónico.\n\nEl lanzamiento es en dos semanas.",
+    "pregunta": "¿Autorizas el diseño de NovaPay Apoyos?",
+    "pistaNormativa": "Revisa los elementos éticos fundamentales, en especial el acceso equitativo. ¿Qué dicen el Art. 1.º constitucional y la LFPED (Arts. 1, fr. III, y 9, fr. XXX) sobre excluir a personas adultas mayores, «con intención o sin ella»?",
+    "manualRefs": [
+      "U1_M16",
+      "U1_M13",
+      "U4_M09",
+      "U2_M05"
+    ],
+    "evidencias": [
+      {
+        "tipo": "documento",
+        "nombreArchivo": "requisitos_apoyos.pdf",
+        "membrete": "NovaByte · Producto",
+        "titulo": "Requisitos de NovaPay Apoyos",
+        "metadatos": {
+          "Beneficiarios": "40,000 personas de 65 años o más",
+          "Lanzamiento": "2 semanas"
+        },
+        "secciones": [
+          {
+            "titulo": "Dispositivo",
+            "texto": "Solo teléfonos Android 13 o superior."
+          },
+          {
+            "titulo": "Acceso",
+            "texto": "Inicio de sesión exclusivamente con reconocimiento facial. Sin PIN ni alternativa."
+          },
+          {
+            "titulo": "Interfaz",
+            "texto": "Solo en español. Tamaño de letra fijo (12 px). Sin compatibilidad con lectores de pantalla."
+          },
+          {
+            "titulo": "Atención",
+            "texto": "Solo chat dentro de la app. Sin teléfono ni módulos presenciales."
+          }
+        ]
+      },
+      {
+        "tipo": "log",
+        "nombreArchivo": "piloto-apoyos.log",
+        "contenido": "[2026-11-10 09:00:00] INFO  piloto con 500 beneficiarios\n[2026-11-10 18:00:00] WARN  38 % no logró registrarse (teléfono incompatible)\n[2026-11-10 18:00:01] WARN  21 % falló el reconocimiento facial (cataratas, iluminación)\n[2026-11-10 18:00:02] WARN  9 % hablante de lengua indígena sin interfaz en su lengua\n[2026-11-10 18:00:03] INFO  promedio de edad de quienes abandonaron: 78 años"
+      }
+    ],
+    "opciones": [
+      {
+        "id": "opt_1",
+        "tipo": "aprobar",
+        "etiqueta": "Aprobar: la mayoría de las personas ya tiene smartphone y quien no pueda usar la app que pida ayuda a un familiar.",
+        "marcoEtico": "utilitarismo",
+        "modeloEtico": "Utilitarismo de mayorías: optimiza para el promedio y deja fuera a quien más necesita el apoyo.",
+        "impacto": {
+          "budget": 10,
+          "ethics": -30,
+          "legal": -25
+        },
+        "esCorrecta": false,
+        "retroalimentacion": "El piloto muestra que más de la mitad de las personas quedaría fuera por su teléfono, su vista o su lengua. Excluir a personas adultas mayores de un apoyo por el diseño de la tecnología es una distinción que no es objetiva ni proporcional: discriminación aunque no sea intencional (LFPED, Art. 1, fr. III), prohibida por el Art. 1.º constitucional. Depender de un familiar además expone a abusos y a la pérdida de autonomía.",
+        "fundamento": [
+          "CPEUM Art. 1",
+          "LFPED Art. 1, fr. III",
+          "LFPED Art. 9, fr. XXX"
+        ]
+      },
+      {
+        "id": "opt_2",
+        "tipo": "remediar",
+        "etiqueta": "Rediseñar con acceso equitativo: canales alternativos (tarjeta, teléfono y módulos presenciales), PIN como alternativa a la biometría, letra ajustable y lector de pantalla, versiones en las lenguas de la región y compatibilidad con teléfonos básicos.",
+        "marcoEtico": "justicia",
+        "modeloEtico": "Justicia y derechos: la tecnología debe llegar a todas las personas con derecho al apoyo.",
+        "impacto": {
+          "budget": -5,
+          "ethics": 25,
+          "legal": 20
+        },
+        "esCorrecta": true,
+        "retroalimentacion": "Dictamen correcto. El acceso equitativo es uno de los elementos éticos fundamentales de las TIC: un servicio público digital debe diseñarse para quienes tienen más barreras, no para el usuario promedio. Ofrecer alternativas evita la discriminación por edad, discapacidad o condición social (CPEUM, Art. 1; LFPED, Arts. 1, fr. III, y 9, fr. XXX), y una opción distinta a la biometría respeta que el rostro es un dato que exige consentimiento expreso (LFPDPPP, Art. 8).",
+        "fundamento": [
+          "CPEUM Arts. 1 y 6",
+          "LFPED Arts. 1, fr. III, y 9, fr. XXX",
+          "LFPDPPP Art. 8",
+          "ACM Code 1.4"
+        ]
+      },
+      {
+        "id": "opt_3",
+        "tipo": "bloquear",
+        "etiqueta": "Cancelar la app y entregar el apoyo solo en efectivo: la tecnología no es para personas mayores.",
+        "marcoEtico": "relativismo",
+        "modeloEtico": "Prejuicio paternalista: decide por las personas mayores en lugar de diseñar para ellas.",
+        "impacto": {
+          "budget": -15,
+          "ethics": -10,
+          "legal": 0
+        },
+        "esCorrecta": false,
+        "retroalimentacion": "Suponer que las personas mayores no pueden usar tecnología es otro prejuicio por edad. Muchas sí la usan y se benefician de recibir el apoyo sin traslados. El problema no es la tecnología, sino un diseño que no ofrece alternativas: la solución es la inclusión, no la exclusión total.",
+        "fundamento": [
+          "CPEUM Art. 1"
+        ]
+      }
+    ],
+    "aprendizaje": "Acceso equitativo significa que nadie quede fuera por su edad, discapacidad, lengua, ubicación o el teléfono que puede pagar. En servicios esenciales, diseñar para el caso más difícil y ofrecer canales alternativos es una obligación ética y una forma de evitar la discriminación."
+  },
+  {
+    "id": "U1_C09",
+    "unidad": 1,
+    "subtema": "Cumplimiento normativo: políticas, procedimientos y código de conducta",
+    "titulo": "El nuevo Código de Conducta de TI",
+    "remitente": "Jorge Paredes — CEO",
+    "contexto": "Después de un año de incidentes, Jorge pide un Código de Conducta de TI para presentarlo al consejo el viernes. Llegaron tres propuestas distintas y debes elegir cuál aprobar.",
+    "pregunta": "¿Qué propuesta apruebas?",
+    "pistaNormativa": "Una política dice qué se espera; un procedimiento dice cómo se hace. Revisa qué debe contener un código de conducta, la NOM-035 (num. 5.1 y 8.1 b) y los límites del Art. 16 constitucional y del CPF (Art. 177).",
+    "manualRefs": [
+      "U1_M19",
+      "U1_M18",
+      "U2_M15",
+      "U1_M11"
+    ],
+    "evidencias": [
+      {
+        "tipo": "documento",
+        "nombreArchivo": "propuestas_codigo_conducta.pdf",
+        "membrete": "NovaByte · Dirección General",
+        "titulo": "Tres propuestas de Código de Conducta de TI",
+        "secciones": [
+          {
+            "titulo": "Propuesta A (Marketing)",
+            "texto": "Copiar el código de conducta publicado por una empresa tecnológica extranjera, cambiar el nombre por NovaByte y subirlo a la intranet. Listo en una hora."
+          },
+          {
+            "titulo": "Propuesta B (Seguridad)",
+            "texto": "Reglamento con monitoreo total: revisar sin aviso los celulares personales y las redes sociales privadas de todo el personal, y despido inmediato por cualquier falta."
+          },
+          {
+            "titulo": "Propuesta C (Cumplimiento)",
+            "texto": "Principios éticos propios; conductas esperadas y prohibidas (uso aceptable, confidencialidad, respeto, propiedad intelectual); procedimiento de denuncia confidencial y sin represalias; medidas disciplinarias proporcionales con derecho de audiencia; capacitación anual; revisión periódica."
+          }
+        ]
+      }
+    ],
+    "opciones": [
+      {
+        "id": "opt_1",
+        "tipo": "aprobar",
+        "etiqueta": "Aprobar la propuesta A: es rápida y la empresa extranjera ya la usa.",
+        "marcoEtico": "egoismo",
+        "modeloEtico": "Egoísmo ético: cumplir en apariencia con el menor esfuerzo.",
+        "impacto": {
+          "budget": 5,
+          "ethics": -25,
+          "legal": -15
+        },
+        "esCorrecta": false,
+        "retroalimentacion": "Copiar un código ajeno y presentarlo como propio es plagio (Unidad I) y puede infringir derechos de autor (LFDA, Art. 21). Además, una política que no responde a los riesgos reales de NovaByte, que nadie conoce ni aplica, no es cumplimiento normativo: es simulación.",
+        "fundamento": [
+          "LFDA Art. 21",
+          "ACM Code 1.3"
+        ]
+      },
+      {
+        "id": "opt_2",
+        "tipo": "bloquear",
+        "etiqueta": "Aprobar la propuesta B: el monitoreo total evita cualquier incidente futuro.",
+        "marcoEtico": "utilitarismo",
+        "modeloEtico": "Utilitarismo de seguridad: sacrifica los derechos de todas las personas para prevenir riesgos.",
+        "impacto": {
+          "budget": -5,
+          "ethics": -30,
+          "legal": -35
+        },
+        "esCorrecta": false,
+        "retroalimentacion": "Revisar sin aviso los celulares personales y las conversaciones privadas vulnera la inviolabilidad de las comunicaciones (Art. 16 constitucional) y puede constituir el delito de intervención de comunicaciones privadas (CPF, Art. 177). Los despidos «por cualquier falta» contradicen la LFT, que fija causas específicas de rescisión (Art. 47).",
+        "fundamento": [
+          "CPEUM Art. 16",
+          "CPF Art. 177",
+          "LFT Art. 47"
+        ]
+      },
+      {
+        "id": "opt_3",
+        "tipo": "aprobar",
+        "etiqueta": "Aprobar la propuesta C: código propio con principios, conductas esperadas, procedimiento de denuncia, medidas proporcionales, capacitación y revisión periódica.",
+        "marcoEtico": "deontologia",
+        "modeloEtico": "Deontología: normas claras, conocidas y aplicadas con debido proceso.",
+        "impacto": {
+          "budget": 0,
+          "ethics": 20,
+          "legal": 20
+        },
+        "esCorrecta": true,
+        "retroalimentacion": "Dictamen correcto. Un código de conducta eficaz traduce los principios éticos en conductas concretas y procedimientos: dice qué se espera, cómo denunciar sin represalias (NOM-035, num. 8.1 b), qué consecuencias hay y cómo se aplican con audiencia (LFT, Art. 47). La capacitación y la revisión periódica hacen que la norma se conozca y se mantenga vigente. Es lo que el temario llama promover normativas conforme a los desafíos éticos identificados.",
+        "fundamento": [
+          "NOM-035-STPS-2018, num. 5.1 y 8.1 b",
+          "LFT Arts. 47 y 132, fr. XXXI",
+          "ACM Code 2.3"
+        ]
+      }
+    ],
+    "aprendizaje": "El cumplimiento normativo se construye con políticas (qué y por qué) y procedimientos (cómo, quién y cuándo). Un buen código de conducta es propio, proporcional, conocido por todas las personas y aplicado con debido proceso; ni la copia ni la vigilancia total sustituyen ese trabajo."
+  },
+  {
+    "id": "U1_C10",
+    "unidad": 1,
+    "subtema": "Toma de decisiones éticas: principios en conflicto (privacidad frente a seguridad)",
+    "titulo": "La llamada de la policía",
+    "remitente": "Mesa de soporte — llamada entrante",
+    "contexto": "A las 23:40 llama al soporte de NovaPay una persona que se identifica como agente de la policía municipal. Dice que una adolescente de 17 años está desaparecida y pide, por teléfono y sin ningún oficio, todo el historial de pagos de su cuenta y la ubicación de su última compra.\n\nEl operador no puede confirmar que la llamada sea auténtica. La madre de la adolescente sí había reportado el caso en redes sociales hace dos horas.",
+    "pregunta": "¿Qué debe hacer NovaByte?",
+    "pistaNormativa": "Aquí chocan dos principios: privacidad y protección de la vida. Sigue el proceso de toma de decisiones y revisa las excepciones al consentimiento de la LFPDPPP (Art. 9, fr. V y VII). ¿Cómo sabes que quien llama es realmente la autoridad?",
+    "manualRefs": [
+      "U1_M17",
+      "U1_M15",
+      "U2_M05",
+      "U3_M13"
+    ],
+    "evidencias": [
+      {
+        "tipo": "documento",
+        "nombreArchivo": "transcripcion_llamada.txt",
+        "membrete": "NovaPay · Soporte",
+        "titulo": "Transcripción de la llamada (23:40)",
+        "secciones": [
+          {
+            "titulo": "Solicitante",
+            "texto": "«Soy el agente Ramírez de la policía municipal. Es urgente: mándeme por correo todo el historial de la menor y su última ubicación. No hay tiempo para oficios.»"
+          },
+          {
+            "titulo": "Datos de contacto",
+            "texto": "Correo de respuesta indicado: agente.ramirez.policia@correo-gratuito.com"
+          },
+          {
+            "titulo": "Nota del operador",
+            "texto": "No proporcionó número de expediente ni un teléfono institucional verificable."
+          }
+        ]
+      }
+    ],
+    "opciones": [
+      {
+        "id": "opt_1",
+        "tipo": "aprobar",
+        "etiqueta": "Enviar de inmediato todo el historial y la ubicación al correo que dio el agente: hay una vida en riesgo.",
+        "marcoEtico": "utilitarismo",
+        "modeloEtico": "Utilitarismo apresurado: actúa por la urgencia sin verificar los hechos.",
+        "impacto": {
+          "budget": 0,
+          "ethics": -25,
+          "legal": -30
+        },
+        "esCorrecta": false,
+        "retroalimentacion": "La urgencia es real, pero no se verificó nada: un correo gratuito y la falta de expediente son señales clásicas de ingeniería social. Si quien llama no es policía (por ejemplo, un agresor), entregarle la ubicación pone a la adolescente en mayor peligro. La LFPDPPP permite compartir sin consentimiento ante una orden o mandato fundado y motivado de autoridad competente (Art. 9, fr. VII) o una emergencia (fr. V), pero eso exige verificar y compartir solo lo necesario.",
+        "fundamento": [
+          "LFPDPPP Art. 9, fr. V y VII",
+          "LFPDPPP Art. 18"
+        ]
+      },
+      {
+        "id": "opt_2",
+        "tipo": "escalar",
+        "etiqueta": "Escalar al protocolo de requerimientos de autoridad: verificar a la autoridad por un canal oficial, pedir la solicitud fundada y motivada, y ante riesgo inminente compartir solo el dato mínimo necesario con la autoridad verificada, documentándolo y preservando la información.",
+        "marcoEtico": "virtud",
+        "modeloEtico": "Ética de la virtud: prudencia para proteger la vida sin poner en riesgo a la persona que se quiere proteger.",
+        "impacto": {
+          "budget": 0,
+          "ethics": 25,
+          "legal": 20
+        },
+        "esCorrecta": true,
+        "retroalimentacion": "Dictamen correcto. Seguiste el proceso de decisión: hechos verificables, personas afectadas, marco legal y alternativas. La LFPDPPP prevé tratar datos sin consentimiento ante una emergencia que pueda dañar a una persona (Art. 9, fr. V) o un mandato fundado y motivado de autoridad competente (fr. VII). Verificar a la autoridad por un canal oficial evita entregar la ubicación a un impostor, y compartir solo lo mínimo respeta la proporcionalidad. Documentar la decisión permite rendir cuentas.",
+        "fundamento": [
+          "LFPDPPP Art. 9, fr. V y VII",
+          "LFPDPPP Art. 5",
+          "ACM Code 1.2 y 1.6"
+        ]
+      },
+      {
+        "id": "opt_3",
+        "tipo": "bloquear",
+        "etiqueta": "Negarse a cualquier colaboración hasta recibir una orden judicial, aunque eso tarde varios días.",
+        "marcoEtico": "deontologia",
+        "modeloEtico": "Deontología rígida: aplica la regla de privacidad sin considerar la excepción por emergencia.",
+        "impacto": {
+          "budget": 0,
+          "ethics": -20,
+          "legal": -5
+        },
+        "esCorrecta": false,
+        "retroalimentacion": "Proteger los datos es correcto, pero la ley no exige esperar días cuando hay un riesgo para la vida: la LFPDPPP prevé la emergencia como excepción (Art. 9, fr. V) y también el mandato fundado y motivado de autoridad, no solo la orden judicial (fr. VII). Una regla aplicada sin pensar en su propósito puede causar el daño que buscaba evitar.",
+        "fundamento": [
+          "LFPDPPP Art. 9, fr. V y VII"
+        ]
+      }
+    ],
+    "aprendizaje": "Los dilemas éticos más difíciles enfrentan dos principios valiosos, como la privacidad y la protección de la vida. Un proceso ordenado (hechos, personas afectadas, marco normativo, alternativas, decisión documentada) evita tanto la reacción impulsiva como la regla aplicada a ciegas."
   }
 ]

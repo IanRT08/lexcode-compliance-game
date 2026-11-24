@@ -1,5 +1,5 @@
 LexCode: Oficial de Cumplimiento — Licencias de terceros
-Generado automáticamente el 2026-11-23 a partir de los paquetes instalados.
+Generado automáticamente el 2026-11-24 a partir de los paquetes instalados.
 
 El código propio de LexCode se distribuye bajo GNU GPL v3.0 o posterior (ver LICENSE en el
 repositorio: https://github.com/IanRT08/lexcode-compliance-game) y su contenido didáctico bajo
